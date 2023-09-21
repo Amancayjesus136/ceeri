@@ -3,6 +3,10 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\EventosController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\FormularioUsuarioController;
+use App\Http\Controllers\ListadoUsuarioController;
+use App\Http\Controllers\PsicologiaController;
+
+
 
 
 use Illuminate\Support\Facades\Route;
@@ -30,8 +34,12 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-    Route::resource('eventos_tabla', EventoController::class);
     Route::resource('formulario', FormularioUsuarioController::class);
+    Route::resource('listado', ListadoUsuarioController::class);
+    Route::resource('psicologia', PsicologiaController::class);
+
+    
+
     
 
     

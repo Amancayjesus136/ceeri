@@ -2,11 +2,14 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Reserva extends Model
+class Psicologia extends Model
 {
-    protected $table = 'reservas'; // Nombre de la tabla en la base de datos
+    use HasFactory;
+    
+    protected $table = 'psicologia'; // Nombre de la tabla en la base de datos
 
     protected $fillable = [
         'tipo_documento',

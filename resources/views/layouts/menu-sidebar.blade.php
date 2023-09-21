@@ -154,18 +154,52 @@
                 <li class="menu-title"><span data-key="t-menu">Menu</span></li>
 
 <!-- ============================================================== -->
-<!-- INICIO -->
+<!-- INICIO -->     
 <!-- ============================================================== --> 
 
                 <li class="nav-item">
                     <a class="nav-link menu-link" href="{{ route('login') }}">
                         <i class="fas fa-home"></i> <span data-key="t-Usuarios">Inicio</span>
                     </a>
+                        </li>
+
+                        <li class="nav-item">
+                        <a class="nav-link menu-link" href="#sidebarPlanCurricular" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarPlanCurricular">
+                        <i class="fas fa-clipboard-list"></i> <span data-key="t-Configuración">Reserva</span>
+                        </a>
+                        <div class="collapse menu-dropdown" id="sidebarPlanCurricular">
+                            <ul class="nav nav-sm flex-column">
+                                <li class="nav-item">
+                                    <a href="{{ route('formulario.index') }}" class="nav-link">
+                                    <i class="fas fa-book"></i> Formulario
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{ route('listado.index') }}" class="nav-link">
+                                    <i class="fas fa-graduation-cap"></i> listado
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    </li>
+                        <!-- otro menu de la parte izquierda -->
+                        <li class="nav-item">
+                        <a class="nav-link menu-link" href="#sidebarPlanCurricular" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarPlanCurricular">
+                <i class="fas fa-clipboard-list"></i> <span data-key="t-Configuración">Especilidades</span>
+                </a>
+                <div class="collapse menu-dropdown" id="sidebarPlanCurricular">
+                    <ul class="nav nav-sm flex-column">
+                        <li class="nav-item">
+                            <a href="{{ route('psicologia.index') }}" class="nav-link">
+                            <i class="fas fa-book"></i> Psicologia
+                            </a>
+                        </li>
+                    </ul>
+                </div>
                 </li>
-
-
-         
-
+                    <!-- fin de menu -->
         </div> 
         <!-- Sidebar -->
     </div>
