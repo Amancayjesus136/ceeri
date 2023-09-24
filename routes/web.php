@@ -65,99 +65,19 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
         //rutas para listado de los formularios
     Route::resource('lstpsicologia', ListadoPsicologiaController::class);
+    Route::get('/formulario', [ListadoPsicologiaController::class, 'formulario'])->name('lstpsicologia.formulario');
+
     Route::resource('lsttfisica', ListadoTerapiaFisicaController::class);
+    Route::get('/formulariofisica', [ListadoTerapiaFisicaController::class, 'formulario'])->name('lsttfisica.formulario');
+
     Route::resource('lsttinfantil', ListadoTerapiaInfantilController::class);
+
+
     Route::resource('lsttlenguaje', ListadoTerapiaLenguajeController::class);
+
+
     Route::resource('lsttocupacional', ListadoTerapiaOcupacionalController::class);
 
-
-
-
-
-
-
-
-
-
-    
-
-    
-
-    
-
-
-
-
-    
-
-
-    
-
-
-
-
-
-
-
-    
-
-    
-
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-    
-    // // Rutas para la administración de publicacion de eventos usando 'resource'
-    // Route::resource('publicacion', PublicacionController::class);
-
-    // // Rutas para la administración de tipo de eventos usando 'resource'
-    // Route::resource('tipoevento', TipoEventoController::class);
-
-    // // Rutas para la administración de contenido de eventos usando 'resource'
-    // Route::resource('contenidoeventos', ContenidoEventoController::class);
-
-    // Route::resource('publicaciones', 'PublicacionEventoController');
-
-
-    
 
 
 });

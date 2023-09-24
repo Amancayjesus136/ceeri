@@ -9,7 +9,7 @@
     </div>
     <div class="row justify-content-between align-items-center mb-4">
         <div class="col-md-6">
-            <a href="{{ route('lstpsicologia.create') }}" class="btn btn-primary btn-block">Agregar</a>
+            <a href="{{ route('psicologia.create') }}" class="btn btn-primary btn-block">Agregar</a>
         </div>
     </div>
     

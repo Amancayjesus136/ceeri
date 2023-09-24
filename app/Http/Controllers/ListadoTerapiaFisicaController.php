@@ -25,6 +25,12 @@ class ListadoTerapiaFisicaController extends Controller
         return view('lsttfisica.create');
     }
 
+    public function formulario()
+    {
+        return view ('lsttfisica.formulario');
+
+    }
+
     /**
      * Store a newly created resource in storage.
      */

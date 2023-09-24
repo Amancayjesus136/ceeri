@@ -227,13 +227,13 @@
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="{{ route('psicologia.index') }}" class="nav-link">
+                                    <a href="{{ route('lstpsicologia.formulario') }}" class="nav-link">
                                     <i class="fas fa-graduation-cap"></i>  Psicologia
                                     </a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="{{ route('terapiafisica.index') }}" class="nav-link">
+                                    <a href="{{ route('lsttfisica.formulario') }}" class="nav-link">
                                     <i class="fas fa-graduation-cap"></i> Terapia Fisica y Rehabilitacion
                                     </a>
                                 </li>

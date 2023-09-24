@@ -25,6 +25,11 @@ class ListadoPsicologiaController extends Controller
         return view ('lstpsicologia.create');
 
     }
+    public function formulario()
+    {
+        return view ('lstpsicologia.formulario');
+
+    }
 
     /**
      * Store a newly created resource in storage.
