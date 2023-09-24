@@ -5,14 +5,16 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\TerapiaLenguaje;
 
-class TerapiaLenguajeController extends Controller
+
+class ListadoTerapiaLenguajeController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view ('terapialenguaje.index');
+        $lenguajes = TerapiaLenguaje::all();
+        return view('lsttlenguaje.index', compact('lenguajes'));
     }
 
     /**
@@ -20,7 +22,8 @@ class TerapiaLenguajeController extends Controller
      */
     public function create()
     {
-        //
+        return view('lsttlenguaje.create');
+        
     }
 
     /**
@@ -37,9 +40,8 @@ class TerapiaLenguajeController extends Controller
         $lenguaje->especialidad = $request->especialidad;
         $lenguaje->genero = $request->genero;
         $lenguaje->fecha_hora = now(); 
-
         $lenguaje->save();
-        return redirect()->route('terapialenguaje.index');
+        return redirect()->route('lsttlenguaje.index');
     }
 
     /**
@@ -55,7 +57,8 @@ class TerapiaLenguajeController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $lenguaje = TerapiaLenguaje::findOrFail($id);
+        return view ('lsttlenguaje.edit', compact('lenguaje'));
     }
 
     /**
@@ -63,7 +66,17 @@ class TerapiaLenguajeController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $lenguaje = TerapiaLenguaje::FindOrFail($id);
+        $lenguaje->tipo_documento = $request->tipo_documento;
+        $lenguaje->numero_documento = $request->numero_documento;
+        $lenguaje->nombres = $request->nombres;
+        $lenguaje->apellidos = $request->apellidos;
+        $lenguaje->telefono = $request->telefono;
+        $lenguaje->especialidad = $request->especialidad;
+        $lenguaje->genero = $request->genero;
+        $lenguaje->fecha_hora = now(); 
+        $lenguaje->save();
+        return redirect()->route('lsttlenguaje.index');
     }
 
     /**
@@ -71,6 +84,8 @@ class TerapiaLenguajeController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $lenguaje = Terapialenguaje::findOrFail($id);
+        $lenguaje-> delete();
+        return redirect()->route('lsttlenguaje.index');
     }
 }

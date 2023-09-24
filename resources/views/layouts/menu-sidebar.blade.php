@@ -164,40 +164,85 @@
                         </li>
 
                         <li class="nav-item">
-                        <a class="nav-link menu-link" href="#sidebarPlanCurricular" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarPlanCurricular">
-                        <i class="fas fa-clipboard-list"></i> <span data-key="t-Configuración">Reserva</span>
-                        </a>
-                        <div class="collapse menu-dropdown" id="sidebarPlanCurricular">
+                            <a class="nav-link menu-link" href="#sidebarListado" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarPlanCurricular">
+                            <i class="fas fa-clipboard-list"></i> <span data-key="t-Configuración">Listado de Reservas</span>
+                            </a>
+                            <div class="collapse menu-dropdown" id="sidebarListado">
                             <ul class="nav nav-sm flex-column">
                                 <li class="nav-item">
-                                    <a href="{{ route('psicologia.index') }}" class="nav-link">
-                                    <i class="fas fa-book"></i> Formulario
+                                    <a href="{{ route('lstpsicologia.index') }}" class="nav-link">
+                                    <i class="fas fa-book"></i> Citas De Psicologia
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{ route('listado.index') }}" class="nav-link">
-                                    <i class="fas fa-graduation-cap"></i> listado
+                                    <a href="{{ route('lsttfisica.index') }}" class="nav-link">
+                                    <i class="fas fa-graduation-cap"></i> Citas de Terapia Fisica y Rehabilitacion
                                     </a>
                                 </li>
-                            </ul>
-                        </div>
-                    </li>
 
-                    </li>
+                                <li class="nav-item">
+                                    <a href="{{ route('lsttinfantil.index') }}" class="nav-link">
+                                    <i class="fas fa-graduation-cap"></i> Citas de Terapia Infantil
+                                    </a>
+                                </li>
+                                
+                                <li class="nav-item">
+                                    <a href="{{ route('lsttlenguaje.index') }}" class="nav-link">
+                                    <i class="fas fa-graduation-cap"></i> Citas de Terapia de Lenguaje
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="{{ route('lsttocupacional.index') }}" class="nav-link">
+                                    <i class="fas fa-graduation-cap"></i> Citas de Terapia Ocupacional
+                                    </a>
+                                </li>
+
+                            </ul>
+                                 </div>
+                             </li>
+
+                         </li>
                         <!-- otro menu de la parte izquierda -->
                         <li class="nav-item">
-                        <a class="nav-link menu-link" href="#sidebarPsicologia" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarPlanCurricular">
-                <i class="fas fa-clipboard-list"></i> <span data-key="t-Configuración">Especilidades</span>
-                </a>
-                <div class="collapse menu-dropdown" id="sidebarPsicologia">
-                    <ul class="nav nav-sm flex-column">
-                        <li class="nav-item">
-                            <a href="{{ route('psicologia.index') }}" class="nav-link">
-                            <i class="fas fa-book"></i> Psicologia
+                            <a class="nav-link menu-link" href="#sidebarespecialidades" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarPlanCurricular">
+                            <i class="fas fa-clipboard-list"></i> <span data-key="t-Configuración">Reservar Citas</span>
                             </a>
-                        </li>
-                    </ul>
-                </div>
+                            <div class="collapse menu-dropdown" id="sidebarespecialidades">
+                            <ul class="nav nav-sm flex-column">
+                                <li class="nav-item">
+                                    <a href="{{ route('terapiaocupacional.index') }}" class="nav-link">
+                                    <i class="fas fa-book"></i> Terapia Ocupacional
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{ route('terapiainfantil.index') }}" class="nav-link">
+                                    <i class="fas fa-graduation-cap"></i> Terapia Infantil
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{{ route('terapialenguaje.index') }}" class="nav-link">
+                                    <i class="fas fa-graduation-cap"></i> Terapia Lenguaje
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="{{ route('psicologia.index') }}" class="nav-link">
+                                    <i class="fas fa-graduation-cap"></i>  Psicologia
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="{{ route('terapiafisica.index') }}" class="nav-link">
+                                    <i class="fas fa-graduation-cap"></i> Terapia Fisica y Rehabilitacion
+                                    </a>
+                                </li>
+
+                            </ul>
+                                 </div>
+                             </li>
+
+                         </li>
                 </li>
                     <!-- fin de menu -->
 

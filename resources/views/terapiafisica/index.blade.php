@@ -6,7 +6,7 @@
         <div class="col-lg-12">
             <div class="card shadow p-3 mb-5 bg-white rounded">
                 <div class="card-body">
-                    <h3 class="card-title text-center">Reservar Citas</h3><br><br>
+                    <h3 class="card-title text-center">Reservar Citas de Terapia Fisica y Rehabiltiacion</h3><br><br>
                     @if(session('success'))
                     <div id="success-alert" class="alert alert-success alert-dismissible bg-success text-white alert-label-icon fade show" role="alert">
                         <i class="ri-notification-off-line label-icon"></i><strong>Éxito</strong> - Reserva registrada correctamente

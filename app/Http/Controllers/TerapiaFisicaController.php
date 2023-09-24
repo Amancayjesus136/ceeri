@@ -29,17 +29,17 @@ class TerapiaFisicaController extends Controller
      */
     public function store(Request $request)
     {
-        $terapiafisica = new TerapiaFisica;
-        $terapiafisica->tipo_documento = $request->tipo_documento;
-        $terapiafisica->numero_documento = $request->numero_documento;
-        $terapiafisica->nombres = $request->nombres;
-        $terapiafisica->apellidos = $request->apellidos;
-        $terapiafisica->telefono = $request->telefono;
-        $terapiafisica->especialidad = $request->especialidad;
-        $terapiafisica->genero = $request->genero;
-        $terapiafisica->fecha_hora = now(); 
+        $fisica = new TerapiaFisica;
+        $fisica->tipo_documento = $request->tipo_documento;
+        $fisica->numero_documento = $request->numero_documento;
+        $fisica->nombres = $request->nombres;
+        $fisica->apellidos = $request->apellidos;
+        $fisica->telefono = $request->telefono;
+        $fisica->especialidad = $request->especialidad;
+        $fisica->genero = $request->genero;
+        $fisica->fecha_hora = now(); 
 
-        $terapiafisica->save();
+        $fisica->save();
         return redirect()->route('terapiafisica.index');
     }
 

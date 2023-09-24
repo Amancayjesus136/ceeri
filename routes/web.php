@@ -10,6 +10,18 @@ use App\Http\Controllers\TerapiaLenguajeController;
 use App\Http\Controllers\TerapiaOcupacionalController;
 use App\Http\Controllers\TerapiaInfantilController;
 
+use App\Http\Controllers\ListadoPsicologiaController;
+use App\Http\Controllers\ListadoTerapiaFisicaController;
+use App\Http\Controllers\ListadoTerapiaInfantilController;
+use App\Http\Controllers\ListadoTerapiaLenguajeController;
+use App\Http\Controllers\ListadoTerapiaOcupacionalController;
+
+
+
+
+
+
+
 
 
 
@@ -44,13 +56,26 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
         Route::resource('listado', ListadoUsuarioController::class);
     
+        //rutas de formularios para especialidad 
     Route::resource('psicologia', PsicologiaController::class);
     Route::resource('terapiafisica', TerapiaFisicaController::class);
     Route::resource('terapialenguaje', TerapiaLenguajeController::class);
     Route::resource('terapiaocupacional', TerapiaOcupacionalController::class);
     Route::resource('terapiainfantil', TerapiaInfantilController::class);
 
-    
+        //rutas para listado de los formularios
+    Route::resource('lstpsicologia', ListadoPsicologiaController::class);
+    Route::resource('lsttfisica', ListadoTerapiaFisicaController::class);
+    Route::resource('lsttinfantil', ListadoTerapiaInfantilController::class);
+    Route::resource('lsttlenguaje', ListadoTerapiaLenguajeController::class);
+    Route::resource('lsttocupacional', ListadoTerapiaOcupacionalController::class);
+
+
+
+
+
+
+
 
 
 

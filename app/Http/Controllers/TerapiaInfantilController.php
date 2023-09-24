@@ -28,17 +28,17 @@ class TerapiaInfantilController extends Controller
      */
     public function store(Request $request)
     {
-        $terapiainfantil = new TerapiaInfantil;
-        $terapiainfantil->tipo_documento = $request->tipo_documento;
-        $terapiainfantil->numero_documento = $request->numero_documento;
-        $terapiainfantil->nombres = $request->nombres;
-        $terapiainfantil->apellidos = $request->apellidos;
-        $terapiainfantil->telefono = $request->telefono;
-        $terapiainfantil->especialidad = $request->especialidad;
-        $terapiainfantil->genero = $request->genero;
-        $terapiainfantil->fecha_hora = now(); 
+        $infantil = new TerapiaInfantil;
+        $infantil->tipo_documento = $request->tipo_documento;
+        $infantil->numero_documento = $request->numero_documento;
+        $infantil->nombres = $request->nombres;
+        $infantil->apellidos = $request->apellidos;
+        $infantil->telefono = $request->telefono;
+        $infantil->especialidad = $request->especialidad;
+        $infantil->genero = $request->genero;
+        $infantil->fecha_hora = now(); 
 
-        $terapiainfantil->save();
+        $infantil->save();
         return redirect()->route('terapiainfantil.index');
 
     }

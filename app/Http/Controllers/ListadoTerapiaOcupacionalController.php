@@ -5,14 +5,16 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\TerapiaOcupacional;
 
-class TerapiaOcupacionalController extends Controller
+
+class ListadoTerapiaOcupacionalController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('terapiaocupacional.index');
+        $ocupacionals = TerapiaOcupacional::all();
+        return view('lsttocupacional.index', compact('ocupacionals'));
     }
 
     /**
@@ -20,7 +22,7 @@ class TerapiaOcupacionalController extends Controller
      */
     public function create()
     {
-        //
+        return view('lsttocupacional.create');
     }
 
     /**
@@ -37,9 +39,8 @@ class TerapiaOcupacionalController extends Controller
         $ocupacional->especialidad = $request->especialidad;
         $ocupacional->genero = $request->genero;
         $ocupacional->fecha_hora = now(); 
-
         $ocupacional->save();
-        return redirect()->route('terapiaocupacional.index');
+        return redirect()->route('lsttocupacional.index');
     }
 
     /**
@@ -55,7 +56,8 @@ class TerapiaOcupacionalController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $ocupacional = TerapiaOcupacional::findOrFail($id);
+        return view ('lsttocupacional.edit', compact('ocupacional'));
     }
 
     /**
@@ -63,7 +65,17 @@ class TerapiaOcupacionalController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $ocupacional = TerapiaOcupacional::FindOrFail($id);
+        $ocupacional->tipo_documento = $request->tipo_documento;
+        $ocupacional->numero_documento = $request->numero_documento;
+        $ocupacional->nombres = $request->nombres;
+        $ocupacional->apellidos = $request->apellidos;
+        $ocupacional->telefono = $request->telefono;
+        $ocupacional->especialidad = $request->especialidad;
+        $ocupacional->genero = $request->genero;
+        $ocupacional->fecha_hora = now(); 
+        $ocupacional->save();
+        return redirect()->route('lsttocupacional.index');
     }
 
     /**
@@ -71,6 +83,8 @@ class TerapiaOcupacionalController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $ocupacional = TerapiaOcupacional::findOrFail($id);
+        $ocupacional-> delete();
+        return redirect()->route('lsttocupacional.index');
     }
 }
