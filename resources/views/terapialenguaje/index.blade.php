@@ -14,7 +14,7 @@
                     </div>
                     @endif
 
-                    <form action="{{ route('psicologia.store') }}" method="POST" id="reservation-form">
+                    <form action="{{ route('terapialenguaje.store') }}" method="POST" id="reservation-form">
                         @csrf
                         <div class="row">
                             <div class="col-md-6">
@@ -70,8 +70,6 @@
                                     <select class="form-select" id="genero" name="especialidad" required>
                                         <option value="" disabled selected>Seleccionar especialidad...</option>
                                         <option value="terapia_fisica">Terapia Fisica</option>
-                                        <option value="psicologia">Psicologia</option>
-                                        <option value="terapia_lenguaje">Terapia de lenguaje</option>
                                     </select>
                                 </div>
                                 <div>

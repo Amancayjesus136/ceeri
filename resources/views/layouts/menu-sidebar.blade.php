@@ -170,7 +170,7 @@
                         <div class="collapse menu-dropdown" id="sidebarPlanCurricular">
                             <ul class="nav nav-sm flex-column">
                                 <li class="nav-item">
-                                    <a href="{{ route('formulario.index') }}" class="nav-link">
+                                    <a href="{{ route('psicologia.index') }}" class="nav-link">
                                     <i class="fas fa-book"></i> Formulario
                                     </a>
                                 </li>
@@ -186,10 +186,10 @@
                     </li>
                         <!-- otro menu de la parte izquierda -->
                         <li class="nav-item">
-                        <a class="nav-link menu-link" href="#sidebarPlanCurricular" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarPlanCurricular">
+                        <a class="nav-link menu-link" href="#sidebarPsicologia" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarPlanCurricular">
                 <i class="fas fa-clipboard-list"></i> <span data-key="t-Configuración">Especilidades</span>
                 </a>
-                <div class="collapse menu-dropdown" id="sidebarPlanCurricular">
+                <div class="collapse menu-dropdown" id="sidebarPsicologia">
                     <ul class="nav nav-sm flex-column">
                         <li class="nav-item">
                             <a href="{{ route('psicologia.index') }}" class="nav-link">
@@ -200,6 +200,8 @@
                 </div>
                 </li>
                     <!-- fin de menu -->
+
+                    
         </div> 
         <!-- Sidebar -->
     </div>
