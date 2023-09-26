@@ -211,17 +211,17 @@
                             <div class="collapse menu-dropdown" id="sidebarespecialidades">
                             <ul class="nav nav-sm flex-column">
                                 <li class="nav-item">
-                                    <a href="{{ route('terapiaocupacional.index') }}" class="nav-link">
+                                    <a href="{{ route('lsttocupacional.formulario') }}" class="nav-link">
                                     <i class="fas fa-book"></i> Terapia Ocupacional
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{ route('terapiainfantil.index') }}" class="nav-link">
+                                    <a href="{{ route('lsttinfantil.formulario') }}" class="nav-link">
                                     <i class="fas fa-graduation-cap"></i> Terapia Infantil
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{{ route('terapialenguaje.index') }}" class="nav-link">
+                                    <a href="{{ route('lsttlenguaje.formulario') }}" class="nav-link">
                                     <i class="fas fa-graduation-cap"></i> Terapia Lenguaje
                                     </a>
                                 </li>

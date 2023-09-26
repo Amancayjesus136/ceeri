@@ -26,6 +26,12 @@ class ListadoTerapiaLenguajeController extends Controller
         
     }
 
+    public function formulario()
+    {
+        return view ('lsttlenguaje.formulario');
+
+    }
+
     /**
      * Store a newly created resource in storage.
      */

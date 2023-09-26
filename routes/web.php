@@ -4,12 +4,6 @@ use App\Http\Controllers\EventosController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\ListadoUsuarioController;
 
-use App\Http\Controllers\PsicologiaController;
-use App\Http\Controllers\TerapiaFisicaController;
-use App\Http\Controllers\TerapiaLenguajeController;
-use App\Http\Controllers\TerapiaOcupacionalController;
-use App\Http\Controllers\TerapiaInfantilController;
-
 use App\Http\Controllers\ListadoPsicologiaController;
 use App\Http\Controllers\ListadoTerapiaFisicaController;
 use App\Http\Controllers\ListadoTerapiaInfantilController;
@@ -56,12 +50,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
         Route::resource('listado', ListadoUsuarioController::class);
     
-        //rutas de formularios para especialidad 
-    Route::resource('psicologia', PsicologiaController::class);
-    Route::resource('terapiafisica', TerapiaFisicaController::class);
-    Route::resource('terapialenguaje', TerapiaLenguajeController::class);
-    Route::resource('terapiaocupacional', TerapiaOcupacionalController::class);
-    Route::resource('terapiainfantil', TerapiaInfantilController::class);
+      
 
         //rutas para listado de los formularios
     Route::resource('lstpsicologia', ListadoPsicologiaController::class);
@@ -71,12 +60,18 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/formulariofisica', [ListadoTerapiaFisicaController::class, 'formulario'])->name('lsttfisica.formulario');
 
     Route::resource('lsttinfantil', ListadoTerapiaInfantilController::class);
+    Route::get('/formularioinfantil', [ListadoTerapiaInfantilController::class, 'formulario'])->name('lsttinfantil.formulario');
+
 
 
     Route::resource('lsttlenguaje', ListadoTerapiaLenguajeController::class);
+    Route::get('/formulariolenguaje', [ListadoTerapiaLenguajeController::class, 'formulario'])->name('lsttlenguaje.formulario');
+
 
 
     Route::resource('lsttocupacional', ListadoTerapiaOcupacionalController::class);
+    Route::get('/formularioocupacional', [ListadoTerapiaLenguajeOcupacionalController::class, 'formulario'])->name('lsttocupacional.formulario');
+
 
 
 

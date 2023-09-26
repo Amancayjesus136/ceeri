@@ -26,6 +26,12 @@ class ListadoTerapiaInfantilController extends Controller
         
     }
 
+    public function formulario()
+    {
+        return view ('lsttinfantil.formulario');
+
+    }
+
     /**
      * Store a newly created resource in storage.
      */

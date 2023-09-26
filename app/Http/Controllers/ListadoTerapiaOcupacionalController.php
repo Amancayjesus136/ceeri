@@ -25,6 +25,12 @@ class ListadoTerapiaOcupacionalController extends Controller
         return view('lsttocupacional.create');
     }
 
+    public function formulario()
+    {
+        return view ('lsttocupacional.formulario');
+
+    }
+
     /**
      * Store a newly created resource in storage.
      */

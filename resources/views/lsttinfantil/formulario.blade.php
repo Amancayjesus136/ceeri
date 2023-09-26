@@ -6,7 +6,7 @@
         <div class="col-lg-12">
             <div class="card shadow p-3 mb-5 bg-white rounded">
                 <div class="card-body">
-                    <h3 class="card-title text-center">Reservar Citas de Psicologia</h3><br><br>
+                    <h3 class="card-title text-center">Reservar Citas de Terapia Infantil</h3><br><br>
                     @if(session('success'))
                     <div id="success-alert" class="alert alert-success alert-dismissible bg-success text-white alert-label-icon fade show" role="alert">
                         <i class="ri-notification-off-line label-icon"></i><strong>Éxito</strong> - Reserva registrada correctamente
@@ -14,7 +14,7 @@
                     </div>
                     @endif
 
-                    <form action="{{ route('psicologia.store') }}" method="POST" id="reservation-form">
+                    <form action="{{ route('lsttinfantil.store') }}" method="POST" id="reservation-form">
                         @csrf
                         <div class="row">
                             <div class="col-md-6">
@@ -31,7 +31,7 @@
                                 
                                 <div class="mb-3">
                                     <label for="numero_documento" class="form-label">Número de Documento</label>
-                                    <input type="number" class="form-control" id="numero_documento" name="numero_documento" required>
+                                    <input type="number" class="form-control" id="numero_documento" name="numero_documento" value="Terapia Intantil" required>
                                 </div>
                             </div>
 
@@ -69,9 +69,7 @@
                                     <label for="especialidad" class="form-label">Especialidad</label>
                                     <select class="form-select" id="genero" name="especialidad" required>
                                         <option value="" disabled selected>Seleccionar especialidad...</option>
-                                        <option value="terapia_fisica">Terapia Fisica</option>
-                                        <option value="psicologia">Psicologia</option>
-                                        <option value="terapia_lenguaje">Terapia de lenguaje</option>
+                                        <option value="terapia_fisica">TERAPIA INFANTIL</option>
                                     </select>
                                 </div>
                                 <div>
