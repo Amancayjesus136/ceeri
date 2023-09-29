@@ -29,7 +29,6 @@
 
     <body data-bs-spy="scroll" data-bs-target="#navbar-example">
 
-        <!-- Begin page -->
         <div class="layout-wrapper landing">
             <nav class="navbar navbar-expand-lg navbar-landing fixed-top job-navbar" id="navbar">
                 <div class="container-fluid custom-container">
@@ -75,17 +74,7 @@
 
                 </div>
             </nav>
-            <!-- end navbar -->
-            <style>
-                .bg-verde {
-                    background-color: #BEDA13; 
-                }
-                .bg-crema {
-                    background-color: #499BE7
-; 
-                }
-
-            </style>
+            
 
 <!-- Modal para Crear Nuevo reserva -->
 <div class="modal fade" id="agregarModal" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
@@ -149,6 +138,23 @@
         </div>
     </div>
 <!-- Modal para Crear Nuevo reserva -->
+            <style>
+                .bg-verde {
+                    background-color: #BEDA13; 
+                }
+                .bg-crema {
+                    background-color: #499BE7
+                }
+                .texto-azul {
+                    color: white;
+                }
+                .navbar-light .navbar-nav .nav-link {
+                    color: white;
+                }
+                .bg-soft-warning {
+                    color: green;
+                }
+            </style>
 
             <!-- start hero section -->
             <section class="section job-hero-section bg-crema pb-0" id="hero">
@@ -156,7 +162,7 @@
                     <div class="row justify-content-between align-items-center">
                         <div class="col-lg-6">
                             <div>
-                                <h1 class="display-6 fw-semibold text-capitalize mb-3 lh-base">Consulta tu cita en menos de lo que esperas</h1>
+                            <h1 class="display-6 fw-semibold text-capitalize mb-3 lh-base texto-azul">Consulta tu cita en menos de lo que esperas</h1>
                                 <p  style="color: white;">Brindamos a nuestros usuarios la facilidad de consultar sus citas por si se les olvidaron.</p>
                                 <form action="{{ route('consultar') }}" class="job-panel-filter" method="POST">
                                     @csrf 
@@ -175,15 +181,12 @@
                                                 <input type="number" id="job-title" class="form-control filter-input-box" placeholder="Insertar dato...">
                                             </div>
                                         </div>
-                                        <!--end col-->
                                         <div class="col-md-4">
                                             <div class="h-100">
                                                 <button id="consultarBtn" class="btn btn-primary submit-btn w-100 h-100" type="button" data-bs-toggle="modal" data-bs-target="#myModal"><i class="ri-search-2-line align-bottom me-1"></i> Consultar</button>
                                             </div>
                                         </div>
-                                        <!--end col-->
                                     </div>
-                                    <!--end row-->
                                 </form>
 
                                 <!-- Modal -->
@@ -191,7 +194,7 @@
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                                <h5 class="modal-title" id="crearModalLabel">Crear nuevo registro</h5>
+                                                <h5 class="modal-title" id="crearModalLabel">Consulta tu Reserva</h5>
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                             </div>
                                             <div class="modal-body">
@@ -205,7 +208,15 @@
                                                         <label for="nombres" class="form-label">Nombres</label>
                                                         <input type="text" class="form-control" id="nombres" name="nombres">
                                                     </div>
-                                                    <button type="submit" class="btn btn-primary">Reservar cita</button>
+                                                    <div class="mb-3">
+                                                        <label for="apellidos" class="form-label">Apellidos</label>
+                                                        <input type="text" class="form-control" id="apellidos" name="apellidos">
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="fecha_hora" class="form-label">Fecha de reserva</label>
+                                                        <input type="date" class="form-control" id="fecha_hora" name="fecha_hora">
+                                                    </div>
+                                                        <button type="button" class="btn btn-success ml-auto" data-bs-dismiss="modal">Retroceder</button>
                                                 </form>
                                             </div>
                                         </div>
@@ -222,10 +233,12 @@
                                     <div class="d-flex align-items-center">
                                         <div class="avatar-sm flex-shrink-0 me-3">
                                             <div class="avatar-title bg-soft-warning text-warning rounded fs-18">
-                                                <i class="ri-mail-send-line"></i>
+                                                <a class="nav-link" href="https://wa.me/tunumerodetelefono">
+                                                    <i class="ri-whatsapp-line"></i>
+                                                </a>
                                             </div>
                                         </div>
-                                        <a href="#"><h5 class="fs-15 lh-base mb-0">Contactanos por Correo Electrónico</h5></a>
+                                        <h5 class="fs-15 lh-base mb-0">Contactanos por WhatsApp</h5>
                                     </div>
                                 </div>
 
@@ -407,14 +420,10 @@
                                 </div> -->
                             </div>
                         </div>
-                        <!-- end col -->
                     </div>
-                    <!-- end row -->
                 </div>
-                <!-- end container -->
             </section>
         </div>
-            <!-- end features -->
 
              <!-- start blog -->
              <section class="section" id="blog">
@@ -427,7 +436,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- end row -->
 
                     <div class="row">
                         <div class="col-lg-4 col-md-6">
@@ -532,9 +540,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- end container -->
             </section>
-            <!-- end blog -->
 
             <!-- start candidates -->
             <section class="section bg-light" id="candidates">
@@ -547,9 +553,7 @@
                                 <p class="text-muted mb-4">Hiring experts costs more per hour than hiring entry- or mid-level freelancers, but they can usually get the work done faster—and better.</p>
                             </div>
                         </div>
-                        <!-- end col -->
                     </div>
-                    <!-- end row -->
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="swiper candidate-swiper">
@@ -724,11 +728,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- end container -->
             </section>
-            <!-- end candidates -->
-
-           
 
             <!-- start cta -->
             <div id="contactanos">
@@ -742,18 +742,13 @@
                                 <p class="text-white-75 mb-0">Solo estamos a un mensaje de ayudarte.</p>
                             </div>
                         </div>
-                        <!-- end col -->
                         <div class="col-sm-auto">
                             <button class="btn btn-danger" type="button">Contactar <i class="ri-arrow-right-line align-bottom"></i></button>
                         </div>
-                        <!-- end col -->
                     </div>
-                    <!-- end row -->
                 </div>
-                <!-- end container -->
             </section>
             </div>
-            <!-- end cta -->
 
             <!-- Start footer -->
             <footer class="custom-footer bg-dark py-5 position-relative">
@@ -874,46 +869,41 @@
             </footer>
             <!-- end footer -->
 
-            <!--start back-to-top-->
             <button onclick="topFunction()" class="btn btn-info btn-icon landing-back-top" id="back-to-top">
                 <i class="ri-arrow-up-line"></i>
             </button>
-            <!--end back-to-top-->
 
         </div>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <!-- end layout wrapper -->
 
         <script>
-    $(document).ready(function() {
-        $("#consultarBtn").on("click", function() {
-            var tipoDocumento = $("#tipoDocumento").val();
-            var numeroDocumento = $("#job-title").val();
+        $(document).ready(function() {
+            $("#consultarBtn").on("click", function() {
+                var tipoDocumento = $("#tipoDocumento").val();
+                var numeroDocumento = $("#job-title").val();
 
-            $.ajax({
-                type: "POST",
-                url: "{{ route('consultar') }}",
-                data: {
-                    tipo_documento: tipoDocumento,
-                    numero_documento: numeroDocumento,
-                    _token: "{{ csrf_token() }}"
-                },
-                success: function(response) {
-                    // Construir el contenido del modal con los resultados
-                    var modalContent = '<ul>';
-                    $.each(response, function(index, resultado) {
-                        modalContent += '<li>Nombre: ' + resultado.nombres + ' ' + resultado.apellidos + ', Especialidad: ' + resultado.especialidad + '</li>';
-                    });
-                    modalContent += '</ul>';
+                $.ajax({
+                    type: "POST",
+                    url: "{{ route('consultar') }}",
+                    data: {
+                        tipo_documento: tipoDocumento,
+                        numero_documento: numeroDocumento,
+                        _token: "{{ csrf_token() }}"
+                    },
+                    success: function(response) {
+                        var modalContent = '<ul>';
+                        $.each(response, function(index, resultado) {
+                            modalContent += '<li>Nombre: ' + resultado.nombres + ' ' + resultado.apellidos + ', Especialidad: ' + resultado.especialidad + '</li>';
+                        });
+                        modalContent += '</ul>';
 
-                    // Mostrar el contenido en el modal
-                    $("#modalBody").html(modalContent);
-                    $("#myModal").modal();
-                }
+                        $("#modalBody").html(modalContent);
+                        $("#myModal").modal();
+                    }
+                });
             });
         });
-    });
-</script>
+    </script>
 
 
         <!-- JAVASCRIPT -->
