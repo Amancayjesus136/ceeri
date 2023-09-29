@@ -13,7 +13,20 @@ class ListadoTerapiaLenguajeController extends Controller
      */
     public function index()
     {
-        $lenguajes = TerapiaLenguaje::all();
+        $lenguajes = TerapiaLenguaje::query();
+        if (!empty($_GET['s'])) {
+            $lenguajes = $lenguajes->where('id', 'LIKE', '%'.$_GET['s'].'%')
+                                ->orWhere('tipo_documento', 'LIKE', '%'.$_GET['s'].'%')
+                                ->orWhere('numero_documento', 'LIKE', '%'.$_GET['s'].'%')
+                                ->orWhere('nombres', 'LIKE', '%'.$_GET['s'].'%')
+                                ->orWhere('apellidos', 'LIKE', '%'.$_GET['s'].'%')
+                                ->orWhere('telefono', 'LIKE', '%'.$_GET['s'].'%')
+                                ->orWhere('especialidad', 'LIKE', '%'.$_GET['s'].'%')
+                                ->orWhere('genero', 'LIKE', '%'.$_GET['s'].'%')
+                                ->orWhere('fecha_hora', 'LIKE', '%'.$_GET['s'].'%');
+            }
+    
+            $lenguajes = $lenguajes->get();
         return view('lsttlenguaje.index', compact('lenguajes'));
     }
 

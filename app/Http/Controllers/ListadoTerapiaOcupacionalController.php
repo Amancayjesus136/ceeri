@@ -13,8 +13,21 @@ class ListadoTerapiaOcupacionalController extends Controller
      */
     public function index()
     {
-        $ocupacionals = TerapiaOcupacional::all();
-        return view('lsttocupacional.index', compact('ocupacionals'));
+        $ocupacionales = TerapiaOcupacional::query();
+        if (!empty($_GET['s'])) {
+            $ocupacionales = $ocupacionales->where('id', 'LIKE', '%'.$_GET['s'].'%')
+                                ->orWhere('tipo_documento', 'LIKE', '%'.$_GET['s'].'%')
+                                ->orWhere('numero_documento', 'LIKE', '%'.$_GET['s'].'%')
+                                ->orWhere('nombres', 'LIKE', '%'.$_GET['s'].'%')
+                                ->orWhere('apellidos', 'LIKE', '%'.$_GET['s'].'%')
+                                ->orWhere('telefono', 'LIKE', '%'.$_GET['s'].'%')
+                                ->orWhere('especialidad', 'LIKE', '%'.$_GET['s'].'%')
+                                ->orWhere('genero', 'LIKE', '%'.$_GET['s'].'%')
+                                ->orWhere('fecha_hora', 'LIKE', '%'.$_GET['s'].'%');
+            }
+    
+            $ocupacionales = $ocupacionales->get();
+        return view('lsttocupacional.index', compact('ocupacionales'));
     }
 
     /**

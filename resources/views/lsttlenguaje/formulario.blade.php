@@ -6,7 +6,7 @@
         <div class="col-lg-12">
             <div class="card shadow p-3 mb-5 bg-white rounded">
                 <div class="card-body">
-                    <h3 class="card-title text-center">Reservar Citas de Terapia Lenguaje</h3><br><br>
+                    <h3 class="card-title text-center">Reservar Citas Terapia Leguaje</h3><br><br>
                     @if(session('success'))
                     <div id="success-alert" class="alert alert-success alert-dismissible bg-success text-white alert-label-icon fade show" role="alert">
                         <i class="ri-notification-off-line label-icon"></i><strong>Éxito</strong> - Reserva registrada correctamente
@@ -48,13 +48,14 @@
                                     <input type="text" class="form-control" id="apellidos" name="apellidos" required>
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-md-4">
                                 <div class="mb-3">
                                     <label for="telefono" class="form-label">Teléfono</label>
                                     <input type="number" class="form-control" id="telefono" name="telefono" required>
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-4">
                                 <div class="mb-3">
                                     <label for="genero" class="form-label">Género</label>
                                     <select class="form-select" id="genero" name="genero" required>
@@ -65,24 +66,17 @@
                                     </select>
                                 </div>
                             </div>
+                            <div class="col-md-4">
                                 <div class="mb-3">
-                                    <label for="especialidad" class="form-label">Especialidad</label>
-                                    <select class="form-select" id="genero" name="especialidad" required>
-                                        <option value="" disabled selected>Seleccionar especialidad...</option>
-                                        <option value="terapia_fisica">TERAPIA DE LENGUAJE</option>
-                                    </select>
-                                </div>
-                                <div>
-                                    <div class="col-lg-6">
-                                        <div class="mt-3">
-                                            <label class="form-label mb-0">Fecha y hora</label>
-                                            <input type="text" class="form-control" data-provider="flatpickr" data-date-format="d M, Y H:i" data-minDate="today" data-enable-time="true" name="fecha_hora">
-                                        </div>
-                                    </div>
+                                    <label for="fecha_hora" class="form-label">Fecha y hora</label>
+                                    <input type="date" class="form-control" data-provider="flatpickr" data-date-format="d M, Y H:i" data-minDate="today" data-enable-time="true" name="fecha_hora" required>
                                 </div>
                             </div>
-                        <div class="col-12 text-center mt-4">
-                            <button type="submit" class="btn btn-success">Enviar Reserva</button>
+                        </div>
+                        <div class="col-12 mt-4">
+                            <button type="submit" class="btn btn-info">
+                                <i class="fas fa-paper-plane"></i> Enviar
+                            </button>
                         </div>
                     </form>
                 </div>
