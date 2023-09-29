@@ -13,7 +13,20 @@ class ListadoPsicologiaController extends Controller
      */
     public function index()
     {
-        $psicologias = Psicologia::all();
+        $psicologias = Psicologia::query();
+        if (!empty($_GET['s'])) {
+            $psicologias = $psicologias->where('id', 'LIKE', '%'.$_GET['s'].'%')
+                                ->orWhere('tipo_documento', 'LIKE', '%'.$_GET['s'].'%')
+                                ->orWhere('numero_documento', 'LIKE', '%'.$_GET['s'].'%')
+                                ->orWhere('nombres', 'LIKE', '%'.$_GET['s'].'%')
+                                ->orWhere('apellidos', 'LIKE', '%'.$_GET['s'].'%')
+                                ->orWhere('telefono', 'LIKE', '%'.$_GET['s'].'%')
+                                ->orWhere('especialidad', 'LIKE', '%'.$_GET['s'].'%')
+                                ->orWhere('genero', 'LIKE', '%'.$_GET['s'].'%')
+                                ->orWhere('fecha_hora', 'LIKE', '%'.$_GET['s'].'%');
+            }
+    
+            $psicologias = $psicologias->get();
         return view('lstpsicologia.index', compact('psicologias'));
     }
 
@@ -37,16 +50,16 @@ class ListadoPsicologiaController extends Controller
     public function store(Request $request)
     {
         $psicologia = new Psicologia;
-    $psicologia->tipo_documento = $request->tipo_documento;
-    $psicologia->numero_documento = $request->numero_documento;
-    $psicologia->nombres = $request->nombres;
-    $psicologia->apellidos = $request->apellidos;
-    $psicologia->telefono = $request->telefono;
-    $psicologia->especialidad = $request->especialidad;
-    $psicologia->genero = $request->genero;
-    $psicologia->fecha_hora = now(); 
-    $psicologia->save();
-    return redirect()->route('lstpsicologia.index');
+        $psicologia->tipo_documento = $request->tipo_documento;
+        $psicologia->numero_documento = $request->numero_documento;
+        $psicologia->nombres = $request->nombres;
+        $psicologia->apellidos = $request->apellidos;
+        $psicologia->telefono = $request->telefono;
+        $psicologia->especialidad = $request->especialidad;
+        $psicologia->genero = $request->genero;
+        $psicologia->fecha_hora = now(); 
+        $psicologia->save();
+        return redirect()->route('lstpsicologia.index');
 
     }
 

@@ -8,7 +8,7 @@
             <div class="card-body p-4">
                 <div class="text-center mt-2">
                     <h5 class="text-primary">Bienvenid@ de nuevo!</h5>
-                    <p class="text-muted">Iniciar sesión para continuar a Sunarp.</p>
+                    <p class="text-muted">Iniciar sesión para continuar a Ceeri.</p>
                 </div>
                 <div class="mb-3">
                     <form method="POST" action="{{ route('login') }}">

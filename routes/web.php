@@ -9,19 +9,7 @@ use App\Http\Controllers\ListadoTerapiaFisicaController;
 use App\Http\Controllers\ListadoTerapiaInfantilController;
 use App\Http\Controllers\ListadoTerapiaLenguajeController;
 use App\Http\Controllers\ListadoTerapiaOcupacionalController;
-
-
-
-
-
-
-
-
-
-
-
-
-
+use App\Http\Controllers\SeleccionarController;
 
 use Illuminate\Support\Facades\Route;
 
@@ -43,16 +31,14 @@ Route::middleware(['auth', 'verified'])->group(function () {
         return view('ModuloAlumno.listado');
     })->name('listado.eventos');
     
-    
     // Rutas para el perfil de usuario
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-        Route::resource('listado', ListadoUsuarioController::class);
+    Route::resource('listado', ListadoUsuarioController::class);
     
-      
 
-        //rutas para listado de los formularios
+    //rutas para listado de los formularios
     Route::resource('lstpsicologia', ListadoPsicologiaController::class);
     Route::get('/formulario', [ListadoPsicologiaController::class, 'formulario'])->name('lstpsicologia.formulario');
 
@@ -62,17 +48,13 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::resource('lsttinfantil', ListadoTerapiaInfantilController::class);
     Route::get('/formularioinfantil', [ListadoTerapiaInfantilController::class, 'formulario'])->name('lsttinfantil.formulario');
 
-
-
     Route::resource('lsttlenguaje', ListadoTerapiaLenguajeController::class);
     Route::get('/formulariolenguaje', [ListadoTerapiaLenguajeController::class, 'formulario'])->name('lsttlenguaje.formulario');
-
-
 
     Route::resource('lsttocupacional', ListadoTerapiaOcupacionalController::class);
     Route::get('/formularioocupacional', [ListadoTerapiaLenguajeOcupacionalController::class, 'formulario'])->name('lsttocupacional.formulario');
 
-
+    Route::resource('seleccionar', SeleccionarController::class);
 
 
 });

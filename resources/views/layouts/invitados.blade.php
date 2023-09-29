@@ -46,10 +46,10 @@
                         <div class="text-center mt-sm-5 mb-4 text-white-50">
                             <div>
                                 <a href="index.html" class="d-inline-block auth-logo">
-                                    <img src="assets/images/logo-light.png" alt="" height="110">
+                                    <!-- <img src="assets/images/logo-light.png" alt="" height="110"> -->
                                 </a>
                             </div>
-                            <p class="mt-3 fs-15 fw-medium">SGA - Sistema de Gestión Académico</p>
+                            <p class="mt-3 fs-15 fw-medium">Ceeri</p>
                         </div>
                     </div>
                 </div>
@@ -63,7 +63,7 @@
                     <div class="col-lg-12">
                         <div class="text-center">
                             <p class="mb-0 text-muted">&copy;
-                                <script>document.write(new Date().getFullYear())</script> Sunarp.
+                                <script>document.write(new Date().getFullYear())</script> Ceeri.
                             </p>
                         </div>
                     </div>

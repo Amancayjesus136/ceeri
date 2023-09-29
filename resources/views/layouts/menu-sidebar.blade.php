@@ -1,4 +1,5 @@
 <!-- Begin page -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 <div id="layout-wrapper">
 
 <header id="page-topbar">
@@ -9,19 +10,19 @@
         <div class="navbar-brand-box horizontal-logo">
             <a href="{{ route('dashboard') }}" class="logo logo-dark">
                 <span class="logo-sm">
-                    <img src="{{ asset('assets/images/logo-sm.png') }}" alt="" height="22">
+                    <!-- <img src="{{ asset('assets/images/logo-sm.png') }}" alt="" height="22"> -->
                 </span>
                 <span class="logo-lg">
-                    <img src="{{ asset('assets/images/logo-dark.png') }}" alt="" height="17">
+                    <!-- <img src="{{ asset('assets/images/logo-dark.png') }}" alt="" height="17"> -->
                 </span>
             </a>
 
             <a href="{{ route('dashboard') }}" class="logo logo-light">
                 <span class="logo-sm">
-                    <img src="{{ asset('assets/images/logo-sm.png') }}" alt="" height="22">
+                    <!-- <img src="{{ asset('assets/images/logo-sm.png') }}" alt="" height="22"> -->
                 </span>
                 <span class="logo-lg">
-                    <img src="{{ asset('assets/images/logo-light.png') }}" alt="" height="100">
+                    <!-- <img src="{{ asset('assets/images/logo-light.png') }}" alt="" height="100"> -->
                 </span>
             </a>
         </div>
@@ -125,16 +126,16 @@
         <!-- Dark Logo-->
         <a href="{{ route('dashboard') }}" class="logo logo-dark">
             <span class="logo-sm">
-                <img src="{{ asset('assets/images/logo-sm.png') }}" alt="" height="22">
+                <!-- <img src="{{ asset('assets/images/logo-sm.png') }}" alt="" height="22"> -->
             </span>
             <span class="logo-lg">
-                <img src="{{ asset('assets/images/logo-dark.png') }}" alt="" height="17">
+                <!-- <img src="{{ asset('assets/images/logo-dark.png') }}" alt="" height="17"> -->
             </span>
         </a>
         <!-- Light Logo-->
         <a href="{{ route('dashboard') }}" class="logo logo-light">
             <span class="logo-sm">
-                <img src="{{ asset('assets/images/logo-sm.png') }}" alt="" height="22">
+                <!-- <img src="{{ asset('assets/images/logo-sm.png') }}" alt="" height="22"> -->
             </span>
             <span class="logo-lg">
             <!-- <img src="{{ asset('assets/images/logo-light.png') }}" alt="" height="70" style="margin-top: 20px;"> -->
@@ -156,97 +157,56 @@
 <!-- ============================================================== -->
 <!-- INICIO -->     
 <!-- ============================================================== --> 
-
-                <li class="nav-item">
-                    <a class="nav-link menu-link" href="{{ route('login') }}">
-                        <i class="fas fa-home"></i> <span data-key="t-Usuarios">Inicio</span>
-                    </a>
+            <li class="nav-item">
+                <a class="nav-link menu-link" href="{{ route('login') }}">
+                    <i class="fas fa-home"></i> <span data-key="t-Usuarios">Inicio</span>
+                </a>
+            </li>
+<!-- ============================================================== -->
+<!-- Seleccionar -->     
+<!-- ============================================================== --> 
+            <li class="nav-item">
+                <a class="nav-link menu-link" href="{{ route('seleccionar.index') }}">
+                    <i class="far fa-calendar-alt"></i> <span data-key="t-Usuarios">Reserva</span>
+                </a>
+            </li>
+<!-- ============================================================== -->
+<!-- Listado -->     
+<!-- ============================================================== --> 
+            <li class="nav-item">
+                <a class="nav-link menu-link" href="#sidebarListado" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarPlanCurricular">
+                    <i class="fas fa-clipboard-list"></i> <span data-key="t-Configuración">Listado de Reservas</span>
+                </a>
+                <div class="collapse menu-dropdown" id="sidebarListado">
+                    <ul class="nav nav-sm flex-column">
+                        <li class="nav-item">
+                            <a href="{{ route('lstpsicologia.index') }}" class="nav-link">
+                                <i class="fas fa-brain"></i>Psicologia
+                            </a>
                         </li>
-
                         <li class="nav-item">
-                            <a class="nav-link menu-link" href="#sidebarListado" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarPlanCurricular">
-                            <i class="fas fa-clipboard-list"></i> <span data-key="t-Configuración">Listado de Reservas</span>
+                            <a href="{{ route('lsttfisica.index') }}" class="nav-link">
+                                <i class="fas fa-heartbeat"></i>Terapia Fisica y Rehabilitacion
                             </a>
-                            <div class="collapse menu-dropdown" id="sidebarListado">
-                            <ul class="nav nav-sm flex-column">
-                                <li class="nav-item">
-                                    <a href="{{ route('lstpsicologia.index') }}" class="nav-link">
-                                    <i class="fas fa-book"></i> Citas De Psicologia
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="{{ route('lsttfisica.index') }}" class="nav-link">
-                                    <i class="fas fa-graduation-cap"></i> Citas de Terapia Fisica y Rehabilitacion
-                                    </a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a href="{{ route('lsttinfantil.index') }}" class="nav-link">
-                                    <i class="fas fa-graduation-cap"></i> Citas de Terapia Infantil
-                                    </a>
-                                </li>
-                                
-                                <li class="nav-item">
-                                    <a href="{{ route('lsttlenguaje.index') }}" class="nav-link">
-                                    <i class="fas fa-graduation-cap"></i> Citas de Terapia de Lenguaje
-                                    </a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a href="{{ route('lsttocupacional.index') }}" class="nav-link">
-                                    <i class="fas fa-graduation-cap"></i> Citas de Terapia Ocupacional
-                                    </a>
-                                </li>
-
-                            </ul>
-                                 </div>
-                             </li>
-
-                         </li>
-                        <!-- otro menu de la parte izquierda -->
+                        </li>
                         <li class="nav-item">
-                            <a class="nav-link menu-link" href="#sidebarespecialidades" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarPlanCurricular">
-                            <i class="fas fa-clipboard-list"></i> <span data-key="t-Configuración">Reservar Citas</span>
+                            <a href="{{ route('lsttinfantil.index') }}" class="nav-link">
+                                <i class="fas fa-baby"></i>Terapia Infantil
                             </a>
-                            <div class="collapse menu-dropdown" id="sidebarespecialidades">
-                            <ul class="nav nav-sm flex-column">
-                                <li class="nav-item">
-                                    <a href="{{ route('lsttocupacional.formulario') }}" class="nav-link">
-                                    <i class="fas fa-book"></i> Terapia Ocupacional
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="{{ route('lsttinfantil.formulario') }}" class="nav-link">
-                                    <i class="fas fa-graduation-cap"></i> Terapia Infantil
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="{{ route('lsttlenguaje.formulario') }}" class="nav-link">
-                                    <i class="fas fa-graduation-cap"></i> Terapia Lenguaje
-                                    </a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a href="{{ route('lstpsicologia.formulario') }}" class="nav-link">
-                                    <i class="fas fa-graduation-cap"></i>  Psicologia
-                                    </a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a href="{{ route('lsttfisica.formulario') }}" class="nav-link">
-                                    <i class="fas fa-graduation-cap"></i> Terapia Fisica y Rehabilitacion
-                                    </a>
-                                </li>
-
-                            </ul>
-                                 </div>
-                             </li>
-
-                         </li>
-                </li>
-                    <!-- fin de menu -->
-
-                    
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('lsttlenguaje.index') }}" class="nav-link">
+                                <i class="fas fa-comment"></i>Terapia de Lenguaje
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('lsttocupacional.index') }}" class="nav-link">
+                                <i class="fas fa-user-md"></i>Terapia Ocupacional
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
         </div> 
         <!-- Sidebar -->
     </div>
