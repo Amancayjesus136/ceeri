@@ -53,7 +53,7 @@
                                     <a class="dropdown-item" href="#conocenos">Conocenos</a>
                                     <a class="dropdown-item" href="#process">Como reservar tu cita</a>
                                     <a class="dropdown-item" href="#blog">Lo que ofrecemos</a>
-                                    <a class="dropdown-item" href="#candidates">Galeria</a>
+                                    <a class="dropdown-item" href="#candidates">Especialistas</a>
                                     <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="#">Ayuda</a>
                                 </div>
@@ -81,7 +81,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="crearModalLabel">Crear nuevo registro</h5>
+                    <h5 class="modal-title" id="crearModalLabel">Reservar Cita</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -143,7 +143,7 @@
                     background-color: #BEDA13; 
                 }
                 .bg-crema {
-                    background-color: #499BE7
+                    background-color: #499BE7;
                 }
                 .texto-azul {
                     color: white;
@@ -153,6 +153,33 @@
                 }
                 .bg-soft-warning {
                     color: green;
+                }
+                .circle-icon {
+                    width: 80px;
+                    height: 80px;
+                    border-radius: 50%;
+                    background-color:#499BE7;
+                    color: white;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    margin: 10px;
+                }
+
+                .circle-text {
+                    text-align: center;
+                    margin: 10px;
+                }
+
+                .circle-text a {
+                    color: #007bff;
+                    text-decoration: none;
+                    font-weight: bold;
+                }
+
+                .circle-text a:hover {
+                    text-decoration: underline;
                 }
             </style>
 
@@ -743,12 +770,38 @@
                             </div>
                         </div>
                         <div class="col-sm-auto">
-                            <button class="btn btn-danger" type="button">Contactar <i class="ri-arrow-right-line align-bottom"></i></button>
+                            <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#agregarContactar" type="button">Contactar <i class="ri-arrow-right-line align-bottom"></i></button>
                         </div>
                     </div>
                 </div>
             </section>
             </div>
+
+            <!-- Modal -->
+            <div class="modal fade rounded-circle" id="agregarContactar" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
+                <div class="modal-dialog rounded-circle">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body d-flex flex-column align-items-center">
+                            <div class="circle-icon mb-2">
+                                <a href="#"><i class="ri-mail-send-line"></i></a>
+                            </div>
+                            <div class="circle-text mb-2">
+                                <a href="#">Correo Electrónico</a>
+                            </div>
+                            <div class="circle-icon mb-2">
+                                <a href="#"><i class="ri-whatsapp-line"></i></a>
+                            </div>
+                            <div class="circle-text">
+                                <a href="#">WhatsApp</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal para Crear Nuevo reserva -->
 
             <!-- Start footer -->
             <footer class="custom-footer bg-dark py-5 position-relative">
