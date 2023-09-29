@@ -13,7 +13,19 @@ class ListadoTerapiaFisicaController extends Controller
      */
     public function index()
     {
-        $fisicas = TerapiaFisica::all();
+        $fisicas = TerapiaFisica::query();
+        if (!empty($_GET['s'])) {
+            $fisicas = $fisicas->where('id', 'LIKE', '%'.$_GET['s'].'%')
+                                ->orWhere('tipo_documento', 'LIKE', '%'.$_GET['s'].'%')
+                                ->orWhere('numero_documento', 'LIKE', '%'.$_GET['s'].'%')
+                                ->orWhere('nombres', 'LIKE', '%'.$_GET['s'].'%')
+                                ->orWhere('apellidos', 'LIKE', '%'.$_GET['s'].'%')
+                                ->orWhere('telefono', 'LIKE', '%'.$_GET['s'].'%')
+                                ->orWhere('especialidad', 'LIKE', '%'.$_GET['s'].'%')
+                                ->orWhere('genero', 'LIKE', '%'.$_GET['s'].'%')
+                                ->orWhere('fecha_hora', 'LIKE', '%'.$_GET['s'].'%');
+            }
+            $fisicas = $fisicas->get();
         return view('lsttfisica.index', compact('fisicas'));
     }
 
