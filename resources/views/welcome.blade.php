@@ -60,7 +60,7 @@
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Reserva tu cita</a>
+                                <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#agregarModal">Reserva tu cita</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#contactanos">Contactanos</a>
@@ -87,6 +87,69 @@
 
             </style>
 
+<!-- Modal para Crear Nuevo reserva -->
+<div class="modal fade" id="agregarModal" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="crearModalLabel">Crear nuevo registro</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="#" method="POST">
+                        @csrf
+                        <div class="mb-3">
+                            <label for="tipo_documento" class="form-label">Tipo de Documento</label>
+                            <select class="form-select" id="tipo_documento" name="tipo_documento">
+                                <option value="" disabled selected>Seleccionar tipo de documento...</option>
+                                <option value="DNI">DNI</option>
+                                <option value="Pasaporte">Pasaporte</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="numero_documento" class="form-label">Número de Documento</label>
+                            <input type="number" class="form-control" id="numero_documento" name="numero_documento">
+                        </div>
+                        <div class="mb-3">
+                            <label for="nombres" class="form-label">Nombres</label>
+                            <input type="text" class="form-control" id="nombres" name="nombres">
+                        </div>
+                        <div class="mb-3">
+                            <label for="apellidos" class="form-label">Apellidos</label>
+                            <input type="text" class="form-control" id="apellidos" name="apellidos">
+                        </div>
+                        <div class="mb-3">
+                            <label for="telefono" class="form-label">Teléfono</label>
+                            <input type="number" class="form-control" id="telefono" name="telefono">
+                        </div>
+                        <div class="mb-3">
+                            <label for="especialidad" class="form-label">Especialidad</label>
+                            <select class="form-select" id="especialidad" name="especialidad">
+                                <option value="" disabled selected>Seleccionar género...</option>
+                                <option value="Psicologia">Psicologia</option>
+                                <option value="Terapia fisica">Terapia fisica</option>
+                                <option value="Terapia infantil">Terapia infantil</option>
+                                <option value="Terapia ocupacional">Terapia ocupacional</option>
+                                <option value="Terapia lenguaje">Terapia lenguaje</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="genero" class="form-label">Género</label>
+                            <select class="form-select" id="genero" name="genero">
+                                <option value="" disabled selected>Seleccionar género...</option>
+                                <option value="Masculino">Masculino</option>
+                                <option value="Femenino">Femenino</option>
+                                <option value="Otro">Otro</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Reservar cita</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- Modal para Crear Nuevo reserva -->
+
             <!-- start hero section -->
             <section class="section job-hero-section bg-crema pb-0" id="hero">
                 <div class="container">
@@ -95,9 +158,9 @@
                             <div>
                                 <h1 class="display-6 fw-semibold text-capitalize mb-3 lh-base">Consulta tu cita en menos de lo que esperas</h1>
                                 <p  style="color: white;">Brindamos a nuestros usuarios la facilidad de consultar sus citas por si se les olvidaron.</p>
-                                <form action="#" class="job-panel-filter">
+                                <form action="{{ route('consultar') }}" class="job-panel-filter" method="POST">
+                                    @csrf 
                                     <div class="row g-md-0 g-2">
-                                        <!--end col-->
                                         <div class="col-md-4">
                                             <div>
                                                 <select class="form-control" data-choices>
@@ -115,7 +178,7 @@
                                         <!--end col-->
                                         <div class="col-md-4">
                                             <div class="h-100">
-                                                <button class="btn btn-primary submit-btn w-100 h-100" type="submit"><i class="ri-search-2-line align-bottom me-1"></i> Consultar</button>
+                                                <button id="consultarBtn" class="btn btn-primary submit-btn w-100 h-100" type="button"><i class="ri-search-2-line align-bottom me-1" data-bs-toggle="modal" data-bs-target="#myModal"></i> Consultar</button>
                                             </div>
                                         </div>
                                         <!--end col-->
@@ -123,7 +186,23 @@
                                     <!--end row-->
                                 </form>
 
-                                
+                                <!-- Modal -->
+                                    <div class="modal" id="myModal">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <!-- Modal Header -->
+                                                <div class="modal-header">
+                                                    <h4 class="modal-title">Respuesta de la Consulta</h4>
+                                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                </div>
+                                                <!-- Modal Body -->
+                                                <div class="modal-body" id="modalBody">
+                                                    <!-- Aquí se mostrará la respuesta de la consulta -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <!-- Modal -->
                             </div>
                         </div>
                         <!--end col-->
@@ -792,7 +871,39 @@
             <!--end back-to-top-->
 
         </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <!-- end layout wrapper -->
+
+        <script>
+    $(document).ready(function() {
+        $("#consultarBtn").on("click", function() {
+            var tipoDocumento = $("#tipoDocumento").val();
+            var numeroDocumento = $("#job-title").val();
+
+            $.ajax({
+                type: "POST",
+                url: "{{ route('consultar') }}",
+                data: {
+                    tipo_documento: tipoDocumento,
+                    numero_documento: numeroDocumento,
+                    _token: "{{ csrf_token() }}"
+                },
+                success: function(response) {
+                    // Construir el contenido del modal con los resultados
+                    var modalContent = '<ul>';
+                    $.each(response, function(index, resultado) {
+                        modalContent += '<li>Nombre: ' + resultado.nombres + ' ' + resultado.apellidos + ', Especialidad: ' + resultado.especialidad + '</li>';
+                    });
+                    modalContent += '</ul>';
+
+                    // Mostrar el contenido en el modal
+                    $("#modalBody").html(modalContent);
+                    $("#myModal").modal();
+                }
+            });
+        });
+    });
+</script>
 
 
         <!-- JAVASCRIPT -->

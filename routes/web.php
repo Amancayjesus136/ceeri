@@ -10,6 +10,7 @@ use App\Http\Controllers\ListadoTerapiaInfantilController;
 use App\Http\Controllers\ListadoTerapiaLenguajeController;
 use App\Http\Controllers\ListadoTerapiaOcupacionalController;
 use App\Http\Controllers\SeleccionarController;
+use App\Http\Controllers\ConsultarController;
 
 use Illuminate\Support\Facades\Route;
 
@@ -55,6 +56,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/formularioocupacional', [ListadoTerapiaOcupacionalController::class, 'formulario'])->name('lsttocupacional.formulario');
 
     Route::resource('seleccionar', SeleccionarController::class);
+
+    Route::post('/consultar', [ConsultaController::class, 'consultar'])->name('consultar');
+
 
 
 });
