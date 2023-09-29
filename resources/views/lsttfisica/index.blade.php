@@ -174,7 +174,7 @@
                         @method('PUT')
                             <div class="mb-3">
                                 <label for="tipo_documento" class="form-label">Tipo de Documento</label>
-                                <select class="form-select" id="tipo_documento" name="tipo_documento" value="{{ $fisica->tipo_documento }}" >
+                                <select class="form-select" id="tipo_documento" name="tipo_documento" value="{{ $fisica->tipo_documento }}" required>
                                     <option value="" disabled selected>Seleccionar tipo de documento...</option>
                                     <option value="DNI">DNI</option>
                                     <option value="Pasaporte">Pasaporte</option>
@@ -198,7 +198,7 @@
                             </div>
                             <div class="mb-3">
                                 <label for="genero" class="form-label">Género</label>
-                                <select class="form-select" id="genero" name="genero" value="{{ $fisica->genero }}">
+                                <select class="form-select" id="genero" name="genero" value="{{ $fisica->genero }}" required>
                                     <option value="" disabled selected>Seleccionar género...</option>
                                     <option value="Masculino">Masculino</option>
                                     <option value="Femenino">Femenino</option>
