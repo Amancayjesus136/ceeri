@@ -178,7 +178,7 @@
                                         <!--end col-->
                                         <div class="col-md-4">
                                             <div class="h-100">
-                                                <button id="consultarBtn" class="btn btn-primary submit-btn w-100 h-100" type="button"><i class="ri-search-2-line align-bottom me-1" data-bs-toggle="modal" data-bs-target="#myModal"></i> Consultar</button>
+                                                <button id="consultarBtn" class="btn btn-primary submit-btn w-100 h-100" type="button" data-bs-toggle="modal" data-bs-target="#myModal"><i class="ri-search-2-line align-bottom me-1"></i> Consultar</button>
                                             </div>
                                         </div>
                                         <!--end col-->
@@ -187,21 +187,31 @@
                                 </form>
 
                                 <!-- Modal -->
-                                    <div class="modal" id="myModal">
-                                        <div class="modal-dialog">
-                                            <div class="modal-content">
-                                                <!-- Modal Header -->
-                                                <div class="modal-header">
-                                                    <h4 class="modal-title">Respuesta de la Consulta</h4>
-                                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                                </div>
-                                                <!-- Modal Body -->
-                                                <div class="modal-body" id="modalBody">
-                                                    <!-- Aquí se mostrará la respuesta de la consulta -->
-                                                </div>
+                                <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="crearModalLabel">Crear nuevo registro</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form action="#" method="POST">
+                                                    @csrf
+                                                    <div class="mb-3">
+                                                        <label for="numero_documento" class="form-label">Número de Documento</label>
+                                                        <input type="number" class="form-control" id="numero_documento" name="numero_documento">
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <label for="nombres" class="form-label">Nombres</label>
+                                                        <input type="text" class="form-control" id="nombres" name="nombres">
+                                                    </div>
+                                                    <button type="submit" class="btn btn-primary">Reservar cita</button>
+                                                </form>
                                             </div>
                                         </div>
                                     </div>
+                                </div>
+                            <!-- Modal para Crear Nuevo reserva -->
                                 <!-- Modal -->
                             </div>
                         </div>
