@@ -260,7 +260,7 @@
                                     <div class="d-flex align-items-center">
                                         <div class="avatar-sm flex-shrink-0 me-3">
                                             <div class="avatar-title bg-soft-warning text-warning rounded fs-18">
-                                                <a class="nav-link" href="https://wa.me/tunumerodetelefono">
+                                                <a class="nav-link" href="https://wa.me/+51963795809">
                                                     <i class="ri-whatsapp-line"></i>
                                                 </a>
                                             </div>
