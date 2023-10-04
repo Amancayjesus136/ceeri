@@ -67,7 +67,7 @@
                         </ul>
                     
                         <div class="">
-                            <a href="{{ route('login') }}" class="btn btn-soft-primary"><i class="ri-user-3-line align-bottom me-1"></i> Iniciar Sección</a>
+                            <a href="{{ route('login') }}" class="btn btn-soft-primary"><i class="ri-user-3-line align-bottom me-1"></i> Iniciar Sesión</a>
                         </div>
                     </div>
                     
@@ -85,7 +85,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="#" method="POST">
+                    <form action="{{route('registroPrincipal')}}" method="POST">
                         @csrf
                         <div class="mb-3">
                             <label for="tipo_documento" class="form-label">Tipo de Documento</label>

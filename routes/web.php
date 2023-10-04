@@ -11,6 +11,7 @@ use App\Http\Controllers\ListadoTerapiaLenguajeController;
 use App\Http\Controllers\ListadoTerapiaOcupacionalController;
 use App\Http\Controllers\SeleccionarController;
 use App\Http\Controllers\ConsultarController;
+use App\Http\Controllers\ReservaPrincipalController;
 
 use Illuminate\Support\Facades\Route;
 
@@ -31,6 +32,10 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/listado-eventos', function () {
         return view('ModuloAlumno.listado');
     })->name('listado.eventos');
+
+    //ruta para el formulario de registro de la pagina principal
+    Route::post('/', [ReservaPrincipalController::class, 'create'])->name('registroPrincipal');
+
     
     // Rutas para el perfil de usuario
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
