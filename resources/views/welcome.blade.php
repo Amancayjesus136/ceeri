@@ -24,7 +24,23 @@
         <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
         <!-- custom Css-->
         <link href="assets/css/custom.min.css" rel="stylesheet" type="text/css" />
+        <script>//script para el campo fecha y hora
+            // Obtén el campo de fecha y hora
+            var fechaHoraInput = document.getElementById('fecha_hora');
 
+            // Escucha el evento submit del formulario
+            document.querySelector('form').addEventListener('submit', function() {
+            // Obtiene el valor del campo datetime-local
+            var fechaHora = fechaHoraInput.value;
+
+            // Formatea la fecha y hora para que cumpla con el formato ISO 8601 (YYYY-MM-DDTHH:MM)
+            // Puedes ajustar el formato según tus necesidades
+            var fechaHoraFormateada = fechaHora.replace('T', ' ');
+
+            // Asigna el valor formateado nuevamente al campo
+            fechaHoraInput.value = fechaHoraFormateada;
+            });
+        </script>
     </head>
 
     <body data-bs-spy="scroll" data-bs-target="#navbar-example">
@@ -110,6 +126,10 @@
                         <div class="mb-3">
                             <label for="telefono" class="form-label">Teléfono</label>
                             <input type="number" class="form-control" id="telefono" name="telefono">
+                        </div>
+                        <div class="mb-3">
+                            <label for="fecha_hora" class="form-label">Fecha y Hora</label>
+                            <input type="datetime-local" class="form-control" id="fecha_hora" name="fecha_hora" required>
                         </div>
                         <div class="mb-3">
                             <label for="especialidad" class="form-label">Especialidad</label>

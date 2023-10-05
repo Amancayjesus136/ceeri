@@ -20,6 +20,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//ruta para el formulario de registro de la pagina principal
+Route::post('/', [ReservaPrincipalController::class, 'create'])->name('registroPrincipal');
 
 // Rutas protegidas por el middleware de autenticación y verificación
 Route::middleware(['auth', 'verified'])->group(function () {
@@ -32,10 +34,6 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/listado-eventos', function () {
         return view('ModuloAlumno.listado');
     })->name('listado.eventos');
-
-    //ruta para el formulario de registro de la pagina principal
-    Route::post('/', [ReservaPrincipalController::class, 'create'])->name('registroPrincipal');
-
     
     // Rutas para el perfil de usuario
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

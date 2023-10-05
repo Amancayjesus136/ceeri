@@ -143,6 +143,10 @@
                             <input type="number" class="form-control" id="telefono" name="telefono">
                         </div>
                         <div class="mb-3">
+                            <label for="fecha_hora" class="form-label">Fecha y Hora</label>
+                            <input type="datetime-local" class="form-control" id="fecha_hora" name="fecha_hora" required>
+                        </div>
+                        <div class="mb-3">
                             <label for="genero" class="form-label">Género</label>
                             <select class="form-select" id="genero" name="genero">
                                 <option value="" disabled selected>Seleccionar género...</option>
@@ -153,6 +157,24 @@
                         </div>
                         <button type="submit" class="btn btn-primary">Registrar</button>
                     </form>
+
+                    <script>//script para el campo fecha y hora
+                        // Obtén el campo de fecha y hora
+                        var fechaHoraInput = document.getElementById('fecha_hora');
+
+                        // Escucha el evento submit del formulario
+                            document.querySelector('form').addEventListener('submit', function() {
+                        // Obtiene el valor del campo datetime-local
+                        var fechaHora = fechaHoraInput.value;
+
+                        // Formatea la fecha y hora para que cumpla con el formato ISO 8601 (YYYY-MM-DDTHH:MM)
+                        // Puedes ajustar el formato según tus necesidades
+                        var fechaHoraFormateada = fechaHora.replace('T', ' ');
+
+                        // Asigna el valor formateado nuevamente al campo
+                        fechaHoraInput.value = fechaHoraFormateada;
+                        });
+                    </script>   
                 </div>
             </div>
         </div>
@@ -206,12 +228,28 @@
                                 </select>
                             </div>
                         <button type="submit" class="btn btn-primary">Registrar</button>
-                    </form>
+                    </form>                
                 </div>
             </div>
         </div>
     </div>
     @endforeach
 <!-- Modal para Editar -->
+<script>//script para el campo fecha y hora
+        // Obtén el campo de fecha y hora
+        var fechaHoraInput = document.getElementById('fecha_hora');
 
+        // Escucha el evento submit del formulario
+            document.querySelector('form').addEventListener('submit', function() {
+        // Obtiene el valor del campo datetime-local
+        var fechaHora = fechaHoraInput.value;
+
+        // Formatea la fecha y hora para que cumpla con el formato ISO 8601 (YYYY-MM-DDTHH:MM)
+        // Puedes ajustar el formato según tus necesidades
+         var fechaHoraFormateada = fechaHora.replace('T', ' ');
+
+        // Asigna el valor formateado nuevamente al campo
+        fechaHoraInput.value = fechaHoraFormateada;
+        });
+    </script>   
 @endsection

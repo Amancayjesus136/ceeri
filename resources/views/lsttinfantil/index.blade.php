@@ -143,6 +143,10 @@
                             <input type="number" class="form-control" id="telefono" name="telefono">
                         </div>
                         <div class="mb-3">
+                            <label for="fecha_hora" class="form-label">Fecha y Hora</label>
+                            <input type="datetime-local" class="form-control" id="fecha_hora" name="fecha_hora" required>
+                        </div>
+                        <div class="mb-3">
                             <label for="genero" class="form-label">Género</label>
                             <select class="form-select" id="genero" name="genero">
                                 <option value="" disabled selected>Seleccionar género...</option>

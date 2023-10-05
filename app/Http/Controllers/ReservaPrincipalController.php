@@ -41,7 +41,7 @@ class ReservaPrincipalController extends Controller
         }
         
         // Redirige o realiza alguna acción adicional después de guardar los datos
-        return redirect()->back()->with('success', 'Cita reservada exitosamente');
+        return view('welcome');
     }
 }
 
