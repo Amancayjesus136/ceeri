@@ -22,6 +22,8 @@ Route::get('/', function () {
 
 //ruta para el formulario de registro de la pagina principal
 Route::post('/', [ReservaPrincipalController::class, 'create'])->name('registroPrincipal');
+Route::post('/consultar', [ConsultarController::class, 'consultar'])->name('consultar');
+
 
 // Rutas protegidas por el middleware de autenticación y verificación
 Route::middleware(['auth', 'verified'])->group(function () {
@@ -40,7 +42,10 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::resource('listado', ListadoUsuarioController::class);
-    
+
+    // RUTAS DE FORMULARIO PRINCIPAL
+    Route::resource('seleccionar', SeleccionarController::class);
+
 
     //rutas para listado de los formularios
     Route::resource('lstpsicologia', ListadoPsicologiaController::class);
@@ -58,9 +63,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::resource('lsttocupacional', ListadoTerapiaOcupacionalController::class);
     Route::get('/formularioocupacional', [ListadoTerapiaOcupacionalController::class, 'formulario'])->name('lsttocupacional.formulario');
 
-    Route::resource('seleccionar', SeleccionarController::class);
-
-    Route::post('/consultar', [ConsultaController::class, 'consultar'])->name('consultar');
+    
 
 
 

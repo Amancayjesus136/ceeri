@@ -2,75 +2,58 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Psicologia;
+use App\Models\TerapiaFisica;
+use App\Models\TerapiaInfantil;
+use App\Models\TerapiaLenguaje;
+use App\Models\TerapiaOcupacional;
 
 class ConsultarController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Muestra el formulario de consulta.
      */
     public function index()
     {
-        //
+        return view('welcome');
     }
+    
+    /**
+     * Realiza la consulta según el tipo de documento y número de documento.
+     */
     public function consultar(Request $request)
     {
-        $tipoDocumento = $request->input('tipo_documento');
-        $numeroDocumento = $request->input('numero_documento');
+        $tipoDocumento = trim($request->input('tipo_documento'));
+        $numeroDocumento = trim($request->input('numero_documento'));
 
-        $resultados = Psicologia::where('tipo_documento', $tipoDocumento)
-                                ->where('numero_documento', $numeroDocumento)
-                                ->get();
+        // Realizar la consulta en cada tabla
+        $psicologiaResult = Psicologia::where('tipo_documento', $tipoDocumento)
+            ->where('numero_documento', $numeroDocumento)
+            ->first();
 
-        return response()->json($resultados);
-    }
+        $terapiaFisicaResult = TerapiaFisica::where('tipo_documento', $tipoDocumento)
+            ->where('numero_documento', $numeroDocumento)
+            ->first();
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
+        $terapiaInfantilResult = TerapiaInfantil::where('tipo_documento', $tipoDocumento)
+            ->where('numero_documento', $numeroDocumento)
+            ->first();
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
+        $terapiaLenguajeResult = TerapiaLenguaje::where('tipo_documento', $tipoDocumento)
+            ->where('numero_documento', $numeroDocumento)
+            ->first();
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
+        $terapiaOcupacionalResult = TerapiaOcupacional::where('tipo_documento', $tipoDocumento)
+            ->where('numero_documento', $numeroDocumento)
+            ->first();
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
+        return response()->json([
+            'psicologiaResult' => $psicologiaResult,
+            'terapiaFisicaResult' => $terapiaFisicaResult,
+            'terapiaInfantilResult' => $terapiaInfantilResult,
+            'terapiaLenguajeResult' => $terapiaLenguajeResult,
+            'terapiaOcupacionalResult' => $terapiaOcupacionalResult,
+        ]);
     }
 }

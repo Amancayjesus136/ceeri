@@ -25,7 +25,6 @@ class ListadoPsicologiaController extends Controller
                                 ->orWhere('genero', 'LIKE', '%'.$_GET['s'].'%')
                                 ->orWhere('fecha_hora', 'LIKE', '%'.$_GET['s'].'%');
             }
-    
             $psicologias = $psicologias->get();
         return view('lstpsicologia.index', compact('psicologias'));
     }

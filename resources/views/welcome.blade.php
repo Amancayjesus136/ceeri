@@ -40,6 +40,49 @@
             // Asigna el valor formateado nuevamente al campo
             fechaHoraInput.value = fechaHoraFormateada;
             });
+
+            $(document).ready(function() {
+    $('#consultarBtn').click(function() {
+        var tipoDocumento = $('#tipoDocumento').val();
+        var numeroDocumento = $('#numeroDocumento').val();
+
+        // Realizar la consulta AJAX
+        $.ajax({
+            url: '{{ route("consultar") }}',
+            type: 'POST',
+            data: {
+                _token: '{{ csrf_token() }}',
+                tipo_documento: tipoDocumento,
+                numero_documento: numeroDocumento
+            },
+            success: function(response) {
+                // Rellenar los campos del modal con los datos de la respuesta
+                if (response.psicologiaResult) {
+                    $('#numero_documento').val(response.psicologiaResult.numero_documento);
+                    $('#nombres').val(response.psicologiaResult.nombres);
+                    // Agregar más campos según necesites
+                } else if (response.terapiaFisicaResult) {
+                    // Llenar campos de terapia física
+                } else if (response.terapiaInfantilResult) {
+                    // Llenar campos de terapia infantil
+                } else if (response.terapiaLenguajeResult) {
+                    // Llenar campos de terapia de lenguaje
+                } else if (response.terapiaOcupacionalResult) {
+                    // Llenar campos de terapia ocupacional
+                } else {
+                    // Manejar caso en que no se encuentren resultados
+                }
+
+                // Mostrar el modal
+                $('#myModal').modal('show');
+            },
+            error: function(xhr) {
+                console.log(xhr.responseText); // Manejar errores si es necesario
+            }
+        });
+    });
+});
+
         </script>
     </head>
 
@@ -216,27 +259,29 @@
                                     <div class="row g-md-0 g-2">
                                         <div class="col-md-4">
                                             <div>
-                                                <select class="form-control" data-choices>
+                                                <select class="form-control" data-choices id="tipoDocumento">
                                                     <option value="">Seleccionar tipo</option>
-                                                    <option value="Full Time">DNI</option>
-                                                    <option value="Part Time">Pasaporte</option>
+                                                    <option value="DNI">DNI</option>
+                                                    <option value="Pasaporte">Pasaporte</option>
                                                 </select>
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div>
-                                                <input type="number" id="job-title" class="form-control filter-input-box" placeholder="Insertar dato...">
+                                                <input type="number" id="numeroDocumento" class="form-control filter-input-box" placeholder="Insertar dato...">
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="h-100">
-                                                <button id="consultarBtn" class="btn btn-primary submit-btn w-100 h-100" type="button" data-bs-toggle="modal" data-bs-target="#myModal"><i class="ri-search-2-line align-bottom me-1"></i> Consultar</button>
+                                                <button id="consultarBtn" class="btn btn-primary submit-btn w-100 h-100" type="button" data-bs-toggle="modal" data-bs-target="#myModal">
+                                                    <i class="ri-search-2-line align-bottom me-1"></i> Consultar
+                                                </button>
                                             </div>
                                         </div>
                                     </div>
                                 </form>
 
-                                <!-- Modal -->
+                                <!-- Contenido del modal -->
                                 <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
@@ -245,30 +290,30 @@
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                             </div>
                                             <div class="modal-body">
-                                                <form action="#" method="POST">
-                                                    @csrf
+                                                @if(isset($psicologiaResult))
                                                     <div class="mb-3">
                                                         <label for="numero_documento" class="form-label">Número de Documento</label>
-                                                        <input type="number" class="form-control" id="numero_documento" name="numero_documento">
+                                                        <input type="number" class="form-control" id="numero_documento" name="numero_documento" value="{{ $psicologiaResult->numero_documento }}">
                                                     </div>
-                                                    <div class="mb-3">
-                                                        <label for="nombres" class="form-label">Nombres</label>
-                                                        <input type="text" class="form-control" id="nombres" name="nombres">
-                                                    </div>
-                                                    <div class="mb-3">
-                                                        <label for="apellidos" class="form-label">Apellidos</label>
-                                                        <input type="text" class="form-control" id="apellidos" name="apellidos">
-                                                    </div>
-                                                    <div class="mb-3">
-                                                        <label for="fecha_hora" class="form-label">Fecha de reserva</label>
-                                                        <input type="date" class="form-control" id="fecha_hora" name="fecha_hora">
-                                                    </div>
-                                                        <button type="button" class="btn btn-success ml-auto" data-bs-dismiss="modal">Retroceder</button>
-                                                </form>
+                                                    <!-- Mostrar otros campos según necesites -->
+                                                @elseif(isset($terapiaFisicaResult))
+                                                    <!-- Mostrar campos de Terapia Fisica aquí -->
+                                                @elseif(isset($terapiaInfantilResult))
+                                                    <!-- Mostrar campos de Terapia Infantil aquí -->
+                                                @elseif(isset($terapiaLenguajeResult))
+                                                    <!-- Mostrar campos de Terapia Lenguaje aquí -->
+                                                @elseif(isset($terapiaOcupacionalResult))
+                                                    <!-- Mostrar campos de Terapia Ocupacional aquí -->
+                                                @else
+                                                    <p>No se encontraron resultados.</p>
+                                                @endif
+
+                                                <button type="button" class="btn btn-success ml-auto" data-bs-dismiss="modal">Retroceder</button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+
                             <!-- Modal para Crear Nuevo reserva -->
                                 <!-- Modal -->
                             </div>
@@ -949,35 +994,8 @@
         </div>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-        <script>
-        $(document).ready(function() {
-            $("#consultarBtn").on("click", function() {
-                var tipoDocumento = $("#tipoDocumento").val();
-                var numeroDocumento = $("#job-title").val();
-
-                $.ajax({
-                    type: "POST",
-                    url: "{{ route('consultar') }}",
-                    data: {
-                        tipo_documento: tipoDocumento,
-                        numero_documento: numeroDocumento,
-                        _token: "{{ csrf_token() }}"
-                    },
-                    success: function(response) {
-                        var modalContent = '<ul>';
-                        $.each(response, function(index, resultado) {
-                            modalContent += '<li>Nombre: ' + resultado.nombres + ' ' + resultado.apellidos + ', Especialidad: ' + resultado.especialidad + '</li>';
-                        });
-                        modalContent += '</ul>';
-
-                        $("#modalBody").html(modalContent);
-                        $("#myModal").modal();
-                    }
-                });
-            });
-        });
-    </script>
-
+        <!-- Agrega este script a tu archivo Blade para realizar la consulta AJAX -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
         <!-- JAVASCRIPT -->
         <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
