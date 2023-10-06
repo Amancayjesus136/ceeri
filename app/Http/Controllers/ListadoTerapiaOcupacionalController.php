@@ -58,6 +58,13 @@ class ListadoTerapiaOcupacionalController extends Controller
         $ocupacional->especialidad = $request->especialidad;
         $ocupacional->genero = $request->genero;
         $ocupacional->fecha_hora = now(); 
+        $ocupacional->estado = $request->estado ; 
+
+        if ($request->numero_documento == 'condicion') {
+            $ocupacional->estado = 'Faltan Datos';
+        } else {
+            $ocupacional->estado = 'pendiente';
+        }
         $ocupacional->save();
         return redirect()->route('lsttocupacional.index');
     }

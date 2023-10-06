@@ -34,6 +34,7 @@ class ListadoPsicologiaController extends Controller
      */
     public function create()
     {
+
         return view ('lstpsicologia.create');
 
     }
@@ -48,18 +49,25 @@ class ListadoPsicologiaController extends Controller
      */
     public function store(Request $request)
     {
-        $psicologia = new Psicologia;
-        $psicologia->tipo_documento = $request->tipo_documento;
-        $psicologia->numero_documento = $request->numero_documento;
-        $psicologia->nombres = $request->nombres;
-        $psicologia->apellidos = $request->apellidos;
-        $psicologia->telefono = $request->telefono;
-        $psicologia->especialidad = $request->especialidad;
-        $psicologia->genero = $request->genero;
-        $psicologia->fecha_hora = now(); 
-        $psicologia->save();
-        return redirect()->route('lstpsicologia.index');
+            $psicologia = new Psicologia;
+            $psicologia->tipo_documento = $request->tipo_documento;
+            $psicologia->numero_documento = $request->numero_documento;
+            $psicologia->nombres = $request->nombres;
+            $psicologia->apellidos = $request->apellidos;
+            $psicologia->telefono = $request->telefono;
+            $psicologia->especialidad = $request->especialidad;
+            $psicologia->genero = $request->genero;
+            $psicologia->fecha_hora = now(); 
+            $psicologia->estado = $request->estado; 
 
+
+            if ($request->numero_documento == 'condicion') {
+                $psicologia->estado = 'Faltan Datos';
+            } else {
+                $psicologia->estado = 'pendiente';
+            }
+            $psicologia->save();
+            return redirect()->route('lstpsicologia.index');
     }
 
     /**

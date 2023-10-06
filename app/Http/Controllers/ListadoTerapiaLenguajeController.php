@@ -59,6 +59,13 @@ class ListadoTerapiaLenguajeController extends Controller
         $lenguaje->especialidad = $request->especialidad;
         $lenguaje->genero = $request->genero;
         $lenguaje->fecha_hora = now(); 
+        $lenguaje->estado = $request->estado ; 
+
+        if ($request->numero_documento == 'condicion') {
+            $lenguaje->estado = 'Faltan Datos';
+        } else {
+            $lenguaje->estado = 'pendiente';
+        }
         $lenguaje->save();
         return redirect()->route('lsttlenguaje.index');
     }

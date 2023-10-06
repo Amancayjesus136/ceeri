@@ -8,10 +8,7 @@
                 <div class="card-body">
                     <h3 class="card-title text-center">Reservar Citas de Psicologia</h3><br><br>
                     @if(session('success'))
-                    <div id="success-alert" class="alert alert-success alert-dismissible bg-success text-white alert-label-icon fade show" role="alert">
-                        <i class="ri-notification-off-line label-icon"></i><strong>Éxito</strong> - Reserva registrada correctamente
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
+                    
                     @endif
 
                     <form action="{{ route('lstpsicologia.store') }}" method="POST" id="reservation-form">

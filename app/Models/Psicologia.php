@@ -20,6 +20,7 @@ class Psicologia extends Model
         'especialidad',
         'genero',
         'fecha_hora',
+        'estado',
     ];
 
     // Puedes agregar relaciones aquí si es necesario

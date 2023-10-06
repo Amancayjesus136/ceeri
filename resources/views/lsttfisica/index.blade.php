@@ -70,7 +70,7 @@
                                         <td>{{ $fisica->telefono }}</td>
                                         <td>{{ $fisica->genero }}</td>
                                         <td>{{ $fisica->fecha_hora }}</td>
-                                        <td><span class="badge bg-success">Cumplido</span></td>
+                                        <td><span class="badge bg-success">{{ $fisica->estado }}</span></td>
                                         <td>
                                                 <a href="#" class="btn btn-primary btn-sm"
                                                     data-bs-toggle="modal"

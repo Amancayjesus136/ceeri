@@ -50,17 +50,24 @@ class ListadoTerapiaInfantilController extends Controller
      */
     public function store(Request $request)
     {
-        $infantil = new TerapiaInfantil;
-    $infantil->tipo_documento = $request->tipo_documento;
-    $infantil->numero_documento = $request->numero_documento;
-    $infantil->nombres = $request->nombres;
-    $infantil->apellidos = $request->apellidos;
-    $infantil->telefono = $request->telefono;
-    $infantil->especialidad = $request->especialidad;
-    $infantil->genero = $request->genero;
-    $infantil->fecha_hora = now(); 
-    $infantil->save();
-    return redirect()->route('lsttinfantil.index');
+        $infantil = new TerapIainfantil;
+        $infantil->tipo_documento = $request->tipo_documento;
+        $infantil->numero_documento = $request->numero_documento;
+        $infantil->nombres = $request->nombres;
+        $infantil->apellidos = $request->apellidos;
+        $infantil->telefono = $request->telefono;
+        $infantil->especialidad = $request->especialidad;
+        $infantil->genero = $request->genero;
+        $infantil->fecha_hora = now(); 
+        $infantil->estado = $request->estado; 
+
+        if ($request->numero_documento == 'condicion') {
+            $infantil->estado = 'Faltan Datos';
+        } else {
+            $infantil->estado = 'pendiente';
+        }
+        $infantil->save();
+        return redirect()->route('lsttinfantil.index');
     }
 
     /**

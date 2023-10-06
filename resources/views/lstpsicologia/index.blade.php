@@ -70,7 +70,9 @@
                                         <td>{{ $psicologia->telefono }}</td>
                                         <td>{{ $psicologia->genero }}</td>
                                         <td>{{ $psicologia->fecha_hora }}</td>
-                                        <td><span class="badge bg-success">Cumplido</span></td>
+                                        <td><span class="badge bg-success">{{ $psicologia->estado }}</span></td>
+
+                                       
                                         <td>
                                                 <a href="#" class="btn btn-primary btn-sm"
                                                     data-bs-toggle="modal"
@@ -85,11 +87,14 @@
                                                         <i class="fas fa-trash-alt"></i>
                                                     </button>
                                                 </form>
-                                                <select class="form-select btn btn-success btn-sm form-select-sm w-auto" style="font-size: 0.75rem; height: 1.775rem;">
+
+
+                                                
+                                                <select class="form-select btn btn-success btn-sm form-select-sm w-auto" style="font-size: 0.75rem; height: 1.775rem;"  >
                                                     <option value="" disabled selected>Seleccionar</option>
-                                                    <option value="modal">Cumplido</option>
-                                                    <option value="link">Cancelado</option>
-                                                </select>
+                                                    <option value="cumplido">Cumplido</option>
+                                                    <option value="cancelado">Cancelado</option>
+                                                </select></form>
                                         </td>
                                     </tr>
                                     @php 
@@ -252,4 +257,5 @@
         fechaHoraInput.value = fechaHoraFormateada;
         });
     </script>   
+
 @endsection

@@ -70,7 +70,8 @@
                                         <td>{{ $ocupacional->telefono }}</td>
                                         <td>{{ $ocupacional->genero }}</td>
                                         <td>{{ $ocupacional->fecha_hora }}</td>
-                                        <td><span class="badge bg-success">Cumplido</span></td>
+                                        <td><span class="badge bg-success">{{ $ocupacional->estado }}</span></td>
+
                                         <td>
                                                 <a href="#" class="btn btn-primary btn-sm"
                                                     data-bs-toggle="modal"

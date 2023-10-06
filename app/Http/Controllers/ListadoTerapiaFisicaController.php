@@ -49,16 +49,23 @@ class ListadoTerapiaFisicaController extends Controller
     public function store(Request $request)
     {
         $fisica = new TerapiaFisica;
-    $fisica->tipo_documento = $request->tipo_documento;
-    $fisica->numero_documento = $request->numero_documento;
-    $fisica->nombres = $request->nombres;
-    $fisica->apellidos = $request->apellidos;
-    $fisica->telefono = $request->telefono;
-    $fisica->especialidad = $request->especialidad;
-    $fisica->genero = $request->genero;
-    $fisica->fecha_hora = now(); 
-    $fisica->save();
-    return redirect()->route('lsttfisica.index');
+        $fisica->tipo_documento = $request->tipo_documento;
+        $fisica->numero_documento = $request->numero_documento;
+        $fisica->nombres = $request->nombres;
+        $fisica->apellidos = $request->apellidos;
+        $fisica->telefono = $request->telefono;
+        $fisica->especialidad = $request->especialidad;
+        $fisica->genero = $request->genero;
+        $fisica->fecha_hora = now(); 
+        $fisica->estado = $request->estado; 
+
+        if ($request->numero_documento == 'condicion') {
+            $fisica->estado = 'Faltan Datos';
+        } else {
+            $fisica->estado = 'pendiente';
+        }
+        $fisica->save();
+        return redirect()->route('lsttfisica.index');
 
     }
 

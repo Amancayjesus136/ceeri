@@ -70,7 +70,8 @@
                                         <td>{{ $infantil->telefono }}</td>
                                         <td>{{ $infantil->genero }}</td>
                                         <td>{{ $infantil->fecha_hora }}</td>
-                                        <td><span class="badge bg-success">Cumplido</span></td>
+                                        <td><span class="badge bg-success">{{ $infantil->estado }}</span></td>
+
                                         <td>
                                                 <a href="#" class="btn btn-primary btn-sm"
                                                     data-bs-toggle="modal"
