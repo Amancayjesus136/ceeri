@@ -236,7 +236,7 @@
                     if (response.success) {
                         Swal.fire({
                             icon: 'success',
-                            title: 'El paciente fue registrado con éxito',
+                            title: 'El paciente fue registrado exitosamente',
                             showConfirmButton: false,
                             timer: 2000
                         });

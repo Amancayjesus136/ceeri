@@ -279,7 +279,7 @@
                     if (response.success) {
                         Swal.fire({
                             icon: 'success',
-                            title: 'Usuario registrado correctamente',
+                            title: 'El paciente fue registrado exitosamente',
                             showConfirmButton: false,
                             timer: 2000
                         });
