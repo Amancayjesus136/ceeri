@@ -59,16 +59,28 @@ class ListadoPsicologiaController extends Controller
             $psicologia->genero = $request->genero;
             $psicologia->fecha_hora = now(); 
             $psicologia->estado = $request->estado; 
-
-
-            if ($request->numero_documento == 'condicion') {
-                $psicologia->estado = 'Faltan Datos';
-            } else {
-                $psicologia->estado = 'pendiente';
-            }
+            
             $psicologia->save();
-            return redirect()->route('lstpsicologia.index');
-    }
+            return response()->json(['success' => true]);
+        }
+
+    // Importa el modelo correspondiente si no lo has hecho ya
+ // Asegúrate de reemplazar 'TuModelo' con el nombre de tu modelo
+
+public function actualizarEstado(Request $request) {
+    // Obtén el valor del estado desde la solicitud POST
+    $estado = $request->input('estado');
+
+    // Realiza la actualización del campo "estado" en tu modelo o base de datos
+    // Por ejemplo, asumiendo que tienes un modelo llamado 'Psicologia':
+    $psicologia = Psicologia::find($request->id);
+    $psicologia->estado = $estado;
+    $psicologia->save();
+
+    // Puedes devolver una respuesta JSON si es necesario
+    return response()->json(['message' => 'Estado actualizado correctamente']);
+}
+
 
     /**
      * Display the specified resource.
@@ -101,6 +113,8 @@ class ListadoPsicologiaController extends Controller
     $psicologia->especialidad = $request->especialidad;
     $psicologia->genero = $request->genero;
     $psicologia->fecha_hora = now(); 
+    $psicologia->estado = $request->estado;
+
     $psicologia->save();
     return redirect()->route('lstpsicologia.index');
         

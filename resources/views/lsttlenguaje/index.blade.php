@@ -218,4 +218,39 @@
     @endforeach
 <!-- Modal para Editar -->
 
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    $(document).ready(function() {
+        $('form').submit(function(e) {
+            e.preventDefault();
+
+            var form = $(this);
+
+            $.ajax({
+                type: "POST",
+                url: form.attr('action'),
+                data: form.serialize(),
+                success: function(response) {
+                    if (response.success) {
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'El paciente fue registrado con éxito',
+                            showConfirmButton: false,
+                            timer: 2000
+                        });
+
+                        setTimeout(function() {
+                            window.location.href = "{{ route('lsttlenguaje.index') }}";
+                        }, 2000);
+                    }
+                },
+                error: function(response) {
+                }
+            });
+        });
+    });
+
+</script>
+
 @endsection

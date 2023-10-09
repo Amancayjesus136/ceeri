@@ -67,7 +67,7 @@ class ListadoTerapiaLenguajeController extends Controller
             $lenguaje->estado = 'pendiente';
         }
         $lenguaje->save();
-        return redirect()->route('lsttlenguaje.index');
+            return response()->json(['success' => true]);
     }
 
     /**

@@ -65,7 +65,7 @@ class ListadoTerapiaFisicaController extends Controller
             $fisica->estado = 'pendiente';
         }
         $fisica->save();
-        return redirect()->route('lsttfisica.index');
+            return response()->json(['success' => true]);
 
     }
 

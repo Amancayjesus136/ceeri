@@ -50,6 +50,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
     //rutas para listado de los formularios
     Route::resource('lstpsicologia', ListadoPsicologiaController::class);
     Route::get('/formulario', [ListadoPsicologiaController::class, 'formulario'])->name('lstpsicologia.formulario');
+    Route::post('/actualizar-estado', 'PsicologiaController@actualizarEstado')->name('actualizar.estado');
+
+
 
     Route::resource('lsttfisica', ListadoTerapiaFisicaController::class);
     Route::get('/formulariofisica', [ListadoTerapiaFisicaController::class, 'formulario'])->name('lsttfisica.formulario');
@@ -61,7 +64,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/formulariolenguaje', [ListadoTerapiaLenguajeController::class, 'formulario'])->name('lsttlenguaje.formulario');
 
     Route::resource('lsttocupacional', ListadoTerapiaOcupacionalController::class);
-    Route::get('/formularioocupacional', [ListadoTerapiaOcupacionalController::class, 'formulario'])->name('lsttocupacional.formulario');
+    Route::get('/formularioocupacional', [ListadoTerapiaOcupacionalController::class, 'formulario'])->name('lsttocupacional.formulario');   
 
     
 

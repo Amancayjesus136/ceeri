@@ -66,8 +66,8 @@ class ListadoTerapiaInfantilController extends Controller
         } else {
             $infantil->estado = 'pendiente';
         }
-        $infantil->save();
-        return redirect()->route('lsttinfantil.index');
+            $infantil->save();
+            return response()->json(['success' => true]);
     }
 
     /**

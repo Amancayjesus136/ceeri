@@ -66,7 +66,7 @@ class ListadoTerapiaOcupacionalController extends Controller
             $ocupacional->estado = 'pendiente';
         }
         $ocupacional->save();
-        return redirect()->route('lsttocupacional.index');
+            return response()->json(['success' => true]);
     }
 
     /**

@@ -70,7 +70,8 @@
                                         <td>{{ $psicologia->telefono }}</td>
                                         <td>{{ $psicologia->genero }}</td>
                                         <td>{{ $psicologia->fecha_hora }}</td>
-                                        <td><span class="badge bg-success">{{ $psicologia->estado }}</span></td>
+                                        <td><span class="badge bg-success">{{ $psicologia->estado }}</span>
+                                    </td>
 
                                        
                                         <td>
@@ -88,13 +89,13 @@
                                                     </button>
                                                 </form>
 
-
                                                 
-                                                <select class="form-select btn btn-success btn-sm form-select-sm w-auto" style="font-size: 0.75rem; height: 1.775rem;"  >
-                                                    <option value="" disabled selected>Seleccionar</option>
-                                                    <option value="cumplido">Cumplido</option>
-                                                    <option value="cancelado">Cancelado</option>
-                                                </select></form>
+                                                <select id="estadoSelect" class="form-select btn btn-success btn-sm form-select-sm w-auto" style="font-size: 0.75rem; height: 1.775rem;">
+                                                <option value="" disabled selected>Seleccionar</option>
+                                                <option value="cumplido">Cumplido</option>
+                                                <option value="cancelado">Cancelado</option>
+                                                </select>
+
                                         </td>
                                     </tr>
                                     @php 
@@ -161,7 +162,11 @@
                             </select>
                         </div>
                         <button type="submit" class="btn btn-primary">Registrar</button>
+                    
                     </form>
+
+
+
 
                     <script>//script para el campo fecha y hora
                         // Obtén el campo de fecha y hora
@@ -257,5 +262,41 @@
         fechaHoraInput.value = fechaHoraFormateada;
         });
     </script>   
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    $(document).ready(function() {
+        $('form').submit(function(e) {
+            e.preventDefault();
+
+            var form = $(this);
+
+            $.ajax({
+                type: "POST",
+                url: form.attr('action'),
+                data: form.serialize(),
+                success: function(response) {
+                    if (response.success) {
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Usuario registrado correctamente',
+                            showConfirmButton: false,
+                            timer: 2000
+                        });
+
+                        setTimeout(function() {
+                            window.location.href = "{{ route('lstpsicologia.index') }}";
+                        }, 2000);
+                    }
+                },
+                error: function(response) {
+                }
+            });
+        });
+    });
+
+</script>
+
+
 
 @endsection
