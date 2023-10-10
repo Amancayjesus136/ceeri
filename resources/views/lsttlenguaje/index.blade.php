@@ -77,14 +77,11 @@
                                                     data-bs-target="#editarModal{{ $lenguaje->id }}">
                                                     <i class="fas fa-pencil-alt"></i>
                                                 </a>
-                                                <form action="{{ route('lsttlenguaje.destroy', $lenguaje->id) }}" method="POST" style="display: inline;">
-                                                    @csrf
-                                                    @method('DELETE')
-                                                    <button type="submit" class="btn btn-sm btn-danger"
-                                                        onclick="return confirm('¿Estás seguro de eliminar este registro?')">
-                                                        <i class="fas fa-trash-alt"></i>
-                                                    </button>
-                                                </form>
+                                                <a href="#" class="btn btn-sm btn-danger"
+                                                    data-bs-toggle="modal"
+                                                    data-bs-target="#eliminarModal{{ $lenguaje->id }}">
+                                                    <i class="fas fa-trash-alt"></i>
+                                                </a>
                                                 <select class="form-select btn btn-success btn-sm form-select-sm w-auto" style="font-size: 0.75rem; height: 1.775rem;">
                                                     <option value="" disabled selected>Seleccionar</option>
                                                     <option value="modal">Cumplido</option>
@@ -215,42 +212,35 @@
             </div>
         </div>
     </div>
+
+    <!-- MODAL DE ELIMINAR -->
+        <!-- Button trigger modal -->
+
+
+        <div class="modal fade" id="eliminarModal{{ $lenguaje->id }}" tabindex="-1" aria-labelledby="eliminarModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editarModalLabel">Eliminar Registro</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form method="POST" action="{{ route('lsttlenguaje.destroy', $lenguaje->id) }}">
+                        @csrf
+                        @method('DELETE')
+                        <label for="aviso" class="form-label">Esta seguro de eliminar este registro de forma permanente?</label>
+                        <button type="button" class="btn btn-primary btn-sm" data-bs-dismiss="modal">Cancelar</button>    
+                        <button type="submit" class="btn btn-sm btn-danger">eliminar</button>
+                    </form>                
+                </div>
+            </div>
+        </div>
+    </div>   
     @endforeach
 <!-- Modal para Editar -->
 
 
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script>
-    $(document).ready(function() {
-        $('form').submit(function(e) {
-            e.preventDefault();
-
-            var form = $(this);
-
-            $.ajax({
-                type: "POST",
-                url: form.attr('action'),
-                data: form.serialize(),
-                success: function(response) {
-                    if (response.success) {
-                        Swal.fire({
-                            icon: 'success',
-                            title: 'El paciente fue registrado exitosamente',
-                            showConfirmButton: false,
-                            timer: 2000
-                        });
-
-                        setTimeout(function() {
-                            window.location.href = "{{ route('lsttlenguaje.index') }}";
-                        }, 2000);
-                    }
-                },
-                error: function(response) {
-                }
-            });
-        });
-    });
-
-</script>
+ 
+    
 
 @endsection

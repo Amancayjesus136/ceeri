@@ -80,16 +80,13 @@
                                                     data-bs-target="#editarModal{{ $psicologia->id }}">
                                                     <i class="fas fa-pencil-alt"></i>
                                                 </a>
-                                                <form action="{{ route('lstpsicologia.destroy', $psicologia->id) }}" method="POST" style="display: inline;">
-                                                    @csrf
-                                                    @method('DELETE')
-                                                    <button type="submit" class="btn btn-sm btn-danger"
-                                                        onclick="return confirm('¿Estás seguro de eliminar este registro?')">
-                                                        <i class="fas fa-trash-alt"></i>
-                                                    </button>
-                                                </form>
 
-                                                
+                                                <a href="#" class="btn btn-sm btn-danger"
+                                                    data-bs-toggle="modal"
+                                                    data-bs-target="#eliminarModal{{ $psicologia->id }}">
+                                                    <i class="fas fa-trash-alt"></i>
+                                                </a>
+    
                                                 <select id="estadoSelect" class="form-select btn btn-success btn-sm form-select-sm w-auto" style="font-size: 0.75rem; height: 1.775rem;">
                                                 <option value="" disabled selected>Seleccionar</option>
                                                 <option value="cumplido">Cumplido</option>
@@ -222,14 +219,36 @@
             </div>
         </div>
     </div>
+    <!-- MODAL DE ELIMINAR -->
+        <!-- Button trigger modal -->
+
+
+        <div class="modal fade" id="eliminarModal{{ $psicologia->id }}" tabindex="-1" aria-labelledby="eliminarModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editarModalLabel">Eliminar Registro</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form method="POST" action="{{ route('lstpsicologia.destroy', $psicologia->id) }}">
+                        @csrf
+                        @method('DELETE')
+                        <label for="aviso" class="form-label">Esta seguro de eliminar este registro de forma permanente?</label>
+                        <button type="button" class="btn btn-primary btn-sm" data-bs-dismiss="modal">Cancelar</button>    
+                        <button type="submit" class="btn btn-sm btn-danger">eliminar</button>
+                    </form>                
+                </div>
+            </div>
+        </div>
+    </div>    
+    
+
+
+
+
+    <!-- MODAL DE ELIMINAR -->
     @endforeach
 
-    <!-- MODAL DE ELIMINAR -->
-
-
-
-
-
-    <!-- MODAL DE ELIMINAR -->
 
 @endsection
