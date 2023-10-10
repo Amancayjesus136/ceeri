@@ -82,19 +82,37 @@
     </div>
 </div>
 
-<script>
-    // Agregar un evento cuando el documento esté listo
-    document.addEventListener("DOMContentLoaded", function() {
-        // Seleccionar el elemento del alert
-        var successAlert = document.getElementById("success-alert");
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-        // Verificar si el elemento del alert existe
-        if (successAlert) {
-            // Establecer un temporizador para ocultar el alert después de 2 segundos
-            setTimeout(function() {
-                successAlert.style.display = "none";
-            }, 2000); // 2000 milisegundos = 2 segundos
-        }
+<script>
+    $(document).ready(function() {
+        $('form').submit(function(e) {
+            e.preventDefault();
+
+            var form = $(this);
+
+            $.ajax({
+                type: "POST",
+                url: form.attr('action'),
+                data: form.serialize(),
+                success: function(response) {
+                    if (response.success) {
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'El paciente fue registrado exitosamente',
+                            showConfirmButton: false,
+                            timer: 2000
+                        });
+
+                        setTimeout(function() {
+                            window.location.href = "{{ route('lstpsicologia.index') }}";
+                        }, 2000);
+                    }
+                },
+                error: function(response) {
+                }
+            });
+        });
     });
 </script>
 @endsection

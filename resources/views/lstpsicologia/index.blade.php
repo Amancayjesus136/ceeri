@@ -164,27 +164,6 @@
                         <button type="submit" class="btn btn-primary">Registrar</button>
                     
                     </form>
-
-
-
-
-                    <script>//script para el campo fecha y hora
-                        // Obtén el campo de fecha y hora
-                        var fechaHoraInput = document.getElementById('fecha_hora');
-
-                        // Escucha el evento submit del formulario
-                            document.querySelector('form').addEventListener('submit', function() {
-                        // Obtiene el valor del campo datetime-local
-                        var fechaHora = fechaHoraInput.value;
-
-                        // Formatea la fecha y hora para que cumpla con el formato ISO 8601 (YYYY-MM-DDTHH:MM)
-                        // Puedes ajustar el formato según tus necesidades
-                        var fechaHoraFormateada = fechaHora.replace('T', ' ');
-
-                        // Asigna el valor formateado nuevamente al campo
-                        fechaHoraInput.value = fechaHoraFormateada;
-                        });
-                    </script>   
                 </div>
             </div>
         </div>
@@ -237,66 +216,20 @@
                                     <option value="Otro">Otro</option>
                                 </select>
                             </div>
-                        <button type="submit" class="btn btn-primary">Registrar</button>
+                        <button type="submit" class="btn btn-primary">Actualizar</button>
                     </form>                
                 </div>
             </div>
         </div>
     </div>
     @endforeach
-<!-- Modal para Editar -->
-<script>//script para el campo fecha y hora
-        // Obtén el campo de fecha y hora
-        var fechaHoraInput = document.getElementById('fecha_hora');
 
-        // Escucha el evento submit del formulario
-            document.querySelector('form').addEventListener('submit', function() {
-        // Obtiene el valor del campo datetime-local
-        var fechaHora = fechaHoraInput.value;
-
-        // Formatea la fecha y hora para que cumpla con el formato ISO 8601 (YYYY-MM-DDTHH:MM)
-        // Puedes ajustar el formato según tus necesidades
-         var fechaHoraFormateada = fechaHora.replace('T', ' ');
-
-        // Asigna el valor formateado nuevamente al campo
-        fechaHoraInput.value = fechaHoraFormateada;
-        });
-    </script>   
-
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script>
-    $(document).ready(function() {
-        $('form').submit(function(e) {
-            e.preventDefault();
-
-            var form = $(this);
-
-            $.ajax({
-                type: "POST",
-                url: form.attr('action'),
-                data: form.serialize(),
-                success: function(response) {
-                    if (response.success) {
-                        Swal.fire({
-                            icon: 'success',
-                            title: 'El paciente fue registrado exitosamente',
-                            showConfirmButton: false,
-                            timer: 2000
-                        });
-
-                        setTimeout(function() {
-                            window.location.href = "{{ route('lstpsicologia.index') }}";
-                        }, 2000);
-                    }
-                },
-                error: function(response) {
-                }
-            });
-        });
-    });
-
-</script>
+    <!-- MODAL DE ELIMINAR -->
 
 
+
+
+
+    <!-- MODAL DE ELIMINAR -->
 
 @endsection
