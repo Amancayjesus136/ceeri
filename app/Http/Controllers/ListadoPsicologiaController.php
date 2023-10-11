@@ -61,7 +61,7 @@ class ListadoPsicologiaController extends Controller
             $psicologia->estado = $request->estado; 
             
             $psicologia->save();
-            return response()->json(['success' => true]);
+            return view ('lstpsicologia.index');
         }
 
     // Importa el modelo correspondiente si no lo has hecho ya

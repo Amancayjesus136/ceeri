@@ -250,5 +250,41 @@
     <!-- MODAL DE ELIMINAR -->
     @endforeach
 
+<<<<<<< HEAD
 
+=======
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    $(document).ready(function() {
+        $('form').submit(function(e) {
+            e.preventDefault();
+
+            var form = $(this);
+
+            $.ajax({
+                type: "POST",
+                url: form.attr('action'),
+                data: form.serialize(),
+                success: function(response) {
+                    if (response.success) {
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Usuario registrado correctamente',
+                            showConfirmButton: false,
+                            timer: 2000
+                        });
+
+                        setTimeout(function() {
+                            window.location.href = "{{ route('lstpsicologia.index') }}";
+                        }, 2000);
+                    }
+                },
+                error: function(response) {
+                }
+            });
+        });
+    });
+
+</script>
+>>>>>>> c2f0f18ccf8b0f087b9a89bd01da60f72d74f541
 @endsection
