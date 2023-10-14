@@ -117,7 +117,6 @@ public function actualizarEstado(Request $request) {
 
     $psicologia->save();
     return redirect()->route('lstpsicologia.index');
-        
     }
 
     /**
