@@ -358,7 +358,7 @@
                         <div class="col-lg-8">
                             <div class="text-center mb-5">
                                 <h1 class="mb-3 ff-secondary fw-semibold lh-base">{{ $contenido->titulo_reservar }}</h1>
-                                <p class="text-muted">Seleccionar la opción <a href="#"><span class="text-primary">{{ $contenido->descripcion_reservar }}</p>
+                                <p class="text-muted">{{ $contenido->descripcion_reservar }}</p>
                             </div>
                         </div>
                         <!-- end col -->
