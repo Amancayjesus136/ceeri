@@ -8,7 +8,7 @@ use App\Models\ReservarCita;
 class MenuUsuarioController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * RETURN.
      */
     public function index()
     {
@@ -16,38 +16,36 @@ class MenuUsuarioController extends Controller
         return view('inicio.reservarcita', compact('contenido'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
+
+
+
+
 
     /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
+     * EDITS DE TODOS LAS CONFIGURACIONES
      */
     public function edit(string $id)
     {
         $contenido = ReservarCita::findOrFail($id);
         return redirect()->back()->with('success', 'Reservar actualizado exitosamente');
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /**
+     * UPDATE DE TODOS LAS CONFIGURACIONES
+     */
 
     public function editar_reservarcita(Request $request, string $id)
     {
