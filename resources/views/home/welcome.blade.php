@@ -524,7 +524,7 @@
                         <div class="col-lg-8">
                             <div class="text-center mb-5">
                                 <h1 class="mb-3 ff-secondary fw-semibold text-capitalize lh-base">{{ $contenido->titulo_reservar }}</h1>
-                                <p class="text-muted mb-4">Ofrecemos nuestra experiencia, seguridad y sobre todo transmitir confianza mostrando nuestros trabajo de día a día.</p>
+                                <p class="text-muted mb-4">{{ $contenido->descripcion_reservar }}</p>
                             </div>
                         </div>
                     </div>

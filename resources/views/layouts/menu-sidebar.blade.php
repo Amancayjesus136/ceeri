@@ -207,6 +207,24 @@
                     </ul>
                 </div>
             </li>
+
+<!-- ============================================================== -->
+<!-- CONFIGURACIÓN -->     
+<!-- ============================================================== -->  
+            <li class="nav-item">
+                <a class="nav-link menu-link" href="#sidebarConfiguracion" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarPlanCurricular">
+                    <i class="fas fa-cogs"></i> <span data-key="t-Configuración">Configuracion de Inicio</span>
+                </a>
+                <div class="collapse menu-dropdown" id="sidebarConfiguracion">
+                    <ul class="nav nav-sm flex-column">
+                        <li class="nav-item">
+                            <a href="{{ route('inicio.reservarcita') }}" class="nav-link">
+                                <i class="fas fa-stethoscope"></i>Lo que ofrecemos
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
         </div> 
         <!-- Sidebar -->
     </div>
