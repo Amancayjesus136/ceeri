@@ -29,6 +29,11 @@ Route::get('/inicio', [MenuUsuarioController::class, 'index'])->name('inicio.res
 Route::put('/inicio/editar_reservarcita/{id}', [MenuUsuarioController::class, 'editar_reservarcita'])->name('inicio.editar_reservarcita');
 
 
+
+
+
+
+
 //ruta para el formulario de registro de la pagina principal
 Route::post('/', [ReservaPrincipalController::class, 'create'])->name('registroPrincipal');
 Route::post('/consultar', [ConsultarController::class, 'consultar'])->name('consultar');
@@ -60,8 +65,6 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::resource('lstpsicologia', ListadoPsicologiaController::class);
     Route::get('/formulario', [ListadoPsicologiaController::class, 'formulario'])->name('lstpsicologia.formulario');
     Route::post('/actualizar-estado', 'PsicologiaController@actualizarEstado')->name('actualizar.estado');
-
-
 
     Route::resource('lsttfisica', ListadoTerapiaFisicaController::class);
     Route::get('/formulariofisica', [ListadoTerapiaFisicaController::class, 'formulario'])->name('lsttfisica.formulario');
