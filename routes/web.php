@@ -73,7 +73,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/menu', [WelcomeController::class, 'index'])->name('home.index');
 
     Route::get('/inicio', [MenuUsuarioController::class, 'index'])->name('inicio.reservarcita');   
-    Route::put('/inicio/editar_reservarcita/{id_reservar}', [MenuUsuarioController::class, 'editar_reservarcita'])->name('inicio.editar_reservarcita');
+    Route::put('/inicio/editar_reservarcita/{id}', [MenuUsuarioController::class, 'editar_reservarcita'])->name('inicio.editar_reservarcita');
 
 
 
