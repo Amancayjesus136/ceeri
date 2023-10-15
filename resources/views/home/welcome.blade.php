@@ -364,7 +364,7 @@
                         <!-- end col -->
                     </div>
                     <!--end row-->
-                    <div class="row">
+                    <div class="row"> 
                         <div class="col-lg-3 col-md-6">
                             <div class="card shadow-lg">
                                 <div class="card-body p-4">
