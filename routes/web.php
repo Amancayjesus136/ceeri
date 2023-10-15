@@ -12,12 +12,14 @@ use App\Http\Controllers\ListadoTerapiaOcupacionalController;
 use App\Http\Controllers\SeleccionarController;
 use App\Http\Controllers\ConsultarController;
 use App\Http\Controllers\ReservaPrincipalController;
+use App\Http\Controllers\WelcomeController;
+use App\Http\Controllers\MenuUsuarioController;
 
 use Illuminate\Support\Facades\Route;
 
 // Ruta para la página de inicio
 Route::get('/', function () {
-    return view('welcome');
+    return view('home.welcome');
 });
 
 //ruta para el formulario de registro de la pagina principal
@@ -64,7 +66,17 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/formulariolenguaje', [ListadoTerapiaLenguajeController::class, 'formulario'])->name('lsttlenguaje.formulario');
 
     Route::resource('lsttocupacional', ListadoTerapiaOcupacionalController::class);
-    Route::get('/formularioocupacional', [ListadoTerapiaOcupacionalController::class, 'formulario'])->name('lsttocupacional.formulario');   
+    Route::get('/formularioocupacional', [ListadoTerapiaOcupacionalController::class, 'formulario'])->name('lsttocupacional.formulario');
+    
+    //Configuracion Menú
+
+    Route::get('/menu', [WelcomeController::class, 'index'])->name('home.index');
+
+    Route::get('/inicio', [MenuUsuarioController::class, 'index'])->name('inicio.reservarcita');   
+    Route::put('/inicio/editar_reservarcita/{id_reservar}', [MenuUsuarioController::class, 'editar_reservarcita'])->name('inicio.editar_reservarcita');
+
+
+
 
     
 
