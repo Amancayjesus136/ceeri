@@ -357,8 +357,8 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
                             <div class="text-center mb-5">
-                                <h1 class="mb-3 ff-secondary fw-semibold lh-base">Como <span class="text-primary">reservar tu cita</span> en menos de un minuto!!</h1>
-                                <p class="text-muted">Seleccionar la opción <a href="#"><span class="text-primary">Reservar tu cita</span></a>, llenar los datos completos y obtener el mejor servicio por nustros especialistas. </p>
+                                <h1 class="mb-3 ff-secondary fw-semibold lh-base">{{ $contenido->titulo_reservar }}</h1>
+                                <p class="text-muted">Seleccionar la opción <a href="#"><span class="text-primary">{{ $contenido->descripcion_reservar }}</p>
                             </div>
                         </div>
                         <!-- end col -->
@@ -523,8 +523,8 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
                             <div class="text-center mb-5">
-                                <h1 class="mb-3 ff-secondary fw-semibold text-capitalize lh-base">{{ $contenido->titulo_reservar }}</h1>
-                                <p class="text-muted mb-4">{{ $contenido->descripcion_reservar }}</p>
+                                <h1 class="mb-3 ff-secondary fw-semibold text-capitalize lh-base">LO QUE OFRECEMOS</h1>
+                                <p class="text-muted mb-4">Ofrecemos nuestra experiencia, seguridad y sobre todo transmitir confianza mostrando nuestros trabajo de día a día.</p>
                             </div>
                         </div>
                     </div>
