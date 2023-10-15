@@ -58,10 +58,10 @@ class ListadoPsicologiaController extends Controller
             $psicologia->especialidad = $request->especialidad;
             $psicologia->genero = $request->genero;
             $psicologia->fecha_hora = now(); 
-            $psicologia->estado = $request->estado; 
+            $psicologia->estado = 'pendiente'; 
             
             $psicologia->save();
-            return view ('lstpsicologia.index');
+            return redirect()->back()->with('suscess', 'psicologia actualizado correctamente');
         }
 
     // Importa el modelo correspondiente si no lo has hecho ya
