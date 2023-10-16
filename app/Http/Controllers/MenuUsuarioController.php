@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\ReservarCita;
-use App\Models\ReservarNumero;
+use App\Models\ConocemeMas;
 
 class MenuUsuarioController extends Controller
 {
@@ -19,8 +19,13 @@ class MenuUsuarioController extends Controller
     public function reservarcita()
     {
         $contenido = ReservarCita::first();
-        $numeros = ReservarNumero::all();
-        return view('inicio.reservarcita', compact('contenido', 'numeros'));
+        return view('inicio.reservarcita', compact('contenido'));
+    }
+
+    public function conocememas()
+    {
+        $conoceno = ConocemeMas::first();
+        return view('inicio.conocenosunpoco', compact('conoceno'));
     }
 
 
@@ -39,6 +44,7 @@ class MenuUsuarioController extends Controller
     public function edit(string $id)
     {
         $contenido = ReservarCita::findOrFail($id);
+        $conoceno = ConocemeMas::findOrFail($id_conocenos);
         return redirect()->back()->with('success', 'Reservar actualizado exitosamente');
     }
 
@@ -54,6 +60,12 @@ class MenuUsuarioController extends Controller
         $contenido->update($request->all());
         return redirect()->back()->with('success', 'Reservar cita actualizado exitosamente');
     }
-
+   
+    public function editar_conocenos(Request $request, string $id_conocenos)
+    {
+        $conoceno = ConocemeMas::findOrFail($id_conocenos);
+        $conoceno->update($request->all());
+        return redirect()->back()->with('success', 'Conocenos actualizado exitosamente');
+    }
 
 }

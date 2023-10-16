@@ -223,8 +223,13 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="{{route('inicio.reservarnumero')}}" class="nav-link">
                                 <i class="fas fa-arrow-right"></i>Pasos a seguir
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('inicio.conocememas')}}" class="nav-link">
+                                <i class="fas fa-info-circle"></i> Conócenos
                             </a>
                         </li>
                     </ul>

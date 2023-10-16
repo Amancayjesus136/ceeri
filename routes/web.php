@@ -29,7 +29,10 @@ Route::get('/menu', [WelcomeController::class, 'index'])->name('home.welcome');
 Route::get('/inicio', [MenuUsuarioController::class, 'reservarcita'])->name('inicio.reservarcita');   
 Route::put('/inicio/editar_reservarcita/{id}', [MenuUsuarioController::class, 'editar_reservarcita'])->name('inicio.editar_reservarcita');
 
-Route::resource('numeros', NumerosController::class);
+Route::resource('numeros', NumerosController::class, ['names' => ['index' => 'inicio.reservarnumero']]);
+
+Route::get('/conocenos', [MenuUsuarioController::class, 'conocememas'])->name('inicio.conocememas');   
+Route::put('/conocenos/editar_conocenos/{id}', [MenuUsuarioController::class, 'editar_conocenos'])->name('inicio.editar_conocenos');
 
 
 
