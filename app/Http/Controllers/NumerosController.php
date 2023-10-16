@@ -63,7 +63,7 @@ class NumerosController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(string $id_numero)
     {
         $numero = ReservarNumero::findOrFail($id_numero);
         $numero->delete();

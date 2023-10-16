@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\ReservarCita;
-use App\Models\ConocemeMas;
+use App\Models\CeeriImagen;
 
 class MenuUsuarioController extends Controller
 {
@@ -26,6 +26,12 @@ class MenuUsuarioController extends Controller
     {
         $conoceno = ConocemeMas::first();
         return view('inicio.conocenosunpoco', compact('conoceno'));
+    }
+
+    public function imagenceeri()
+    {
+        $imagen = CeeriImagen::first();
+        return view('inicio.imagenceeri', compact('imagen'));
     }
 
 

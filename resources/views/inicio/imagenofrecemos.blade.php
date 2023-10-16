@@ -5,7 +5,7 @@
 <div class="row">
     <div class="col-12">
         <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-            <h4 class="mb-sm-0">VISTA > <span style="color: #BEDA13;">Pasos a Reservar</span></h4>
+            <h4 class="mb-sm-0">VISTA > <span style="color: #BEDA13;">Imagen de lo que ofrecemos</span></h4>
             <div class="page-title-right">
                 <div class="card-header align-items-center d-flex">
                     <h4 class="card-title mb-0 flex-grow-1"></h4>
@@ -27,9 +27,9 @@
                         <table class="table align-middle table-nowrap table-striped-columns mb-0">
                             <thead class="table-light">
                                 <tr>
-                                    <th scope="col">Número</th>
                                     <th scope="col">Titulo</th>
                                     <th scope="col">Descripcion</th>
+                                    <th scope="col">Imagen</th>
                                     <th scope="col" style="width: 150px;">Acciones</th>
                                 </tr>
                             </thead>
@@ -37,7 +37,7 @@
                                 <!-- FILAS DE LA TABLA -->
                                 @foreach($numeros as $numero)
                                     <tr>
-                                        <td>{{ $numero->numero }}</td>
+                                        <td>{{ $numero->titulo_imagen }}</td>
                                         <td>{{ $numero->titulo_numero }}</td>
                                         <td>{{ $numero->descripcion_numero }}</td>
                                         <td>
@@ -153,29 +153,6 @@
     </div>
 @endforeach
 
-@foreach ($numeros as $numero)
-     <!-- MODAL DE ELIMINAR -->
-        <div class="modal fade" id="eliminarModal{{ $numero->id_numero }}" tabindex="-1" aria-labelledby="eliminarModal" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="editarModalLabel">Eliminar</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form method="POST" action="{{ route('numeros.destroy', $numero->id_numero) }}">
-                        @csrf
-                        @method('DELETE')
-                        <label for="aviso" class="form-label">Esta seguro de eliminar esto de forma permanente?</label><br>
-                        <button type="button" class="btn btn-primary btn-sm" data-bs-dismiss="modal">Cancelar</button>    
-                        <button type="submit" class="btn btn-sm btn-danger">eliminar</button>
-                    </form>                
-                </div>
-            </div>
-        </div>
-    </div>   
-    <!-- MODAL DE ELIMINAR -->
-    @endforeach
 
 
 @endsection

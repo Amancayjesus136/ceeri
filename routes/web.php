@@ -34,6 +34,8 @@ Route::resource('numeros', NumerosController::class, ['names' => ['index' => 'in
 Route::get('/conocenos', [MenuUsuarioController::class, 'conocememas'])->name('inicio.conocememas');   
 Route::put('/conocenos/editar_conocenos/{id}', [MenuUsuarioController::class, 'editar_conocenos'])->name('inicio.editar_conocenos');
 
+Route::resource('imagen', ListadoUsuarioController::class);
+  
 
 
 //ruta para el formulario de registro de la pagina principal
