@@ -379,44 +379,6 @@
                             </div>
                         </div>
                     @endforeach
-
-                        <div class="col-lg-3 col-md-6">
-                            <div class="card shadow-none">
-                                <div class="card-body p-4">
-                                    <h1 class="fw-bold display-5 ff-secondary mb-4 text-success position-relative">
-                                        <div class="job-icon-effect"></div>
-                                        <span>2</span>
-                                    </h1>
-                                    <h6 class="fs-17 mb-2">Seleccionar la especialidad</h6>
-                                    <p class="text-muted mb-0 fs-15">Es importante seleccionar la especialidad de la consulta.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                            <div class="card shadow-none">
-                                <div class="card-body p-4">
-                                    <h1 class="fw-bold display-5 ff-secondary mb-4 text-success position-relative">
-                                        <div class="job-icon-effect"></div>
-                                        <span>3</span>
-                                    </h1>
-
-                                    <h6 class="fs-17 mb-2">Se deberá asignar Fecha y hora</h6>
-                                    <p class="text-muted mb-0 fs-15">Deberá registrar el horario de su reserva.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6">
-                            <div class="card shadow-none">
-                                <div class="card-body p-4">
-                                    <h1 class="fw-bold display-5 ff-secondary mb-4 text-success position-relative">
-                                        <div class="job-icon-effect"></div>
-                                        <span>4</span>
-                                    </h1>
-                                    <h6 class="fs-17 mb-2">SE REGISTRARÁ SU CITA!</h6>
-                                    <p class="text-muted mb-0 fs-15">Por ultimo se le asignará un horario para acercarse a nosotros.</p>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <!--end container-->

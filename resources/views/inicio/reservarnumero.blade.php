@@ -27,7 +27,6 @@
                         <table class="table align-middle table-nowrap table-striped-columns mb-0">
                             <thead class="table-light">
                                 <tr>
-                                    <th scope="col">ID</th>
                                     <th scope="col">Número</th>
                                     <th scope="col">Titulo</th>
                                     <th scope="col">Descripcion</th>
@@ -36,11 +35,8 @@
                             </thead>
                             <tbody>
                                 <!-- FILAS DE LA TABLA -->
-                                @php $contador = 1; @endphp
                                 @foreach($numeros as $numero)
                                     <tr>
-                                        <td>{{ $contador }}</td>
-                                        <td>{{ $numero->id_numero }}</td>
                                         <td>{{ $numero->numero }}</td>
                                         <td>{{ $numero->titulo_numero }}</td>
                                         <td>{{ $numero->descripcion_numero }}</td>
@@ -54,9 +50,6 @@
                                             </a>
                                         </td>   
                                     </tr>
-                                    @php 
-                                        $contador++; 
-                                    @endphp
                                 @endforeach
                             </tbody>
                         </table>
@@ -77,7 +70,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="#" method="POST">
+                    <form action="{{ route('numeros.store') }}" method="POST">
                         @csrf
                         <div class="row mb-3">
                             <div class="col-lg-3">
@@ -123,10 +116,9 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form method="post" action="#">
+                    <form method="post" action="{{ route('numeros.update', $numero->id_numero) }}">
                         @csrf
                         @method('PUT')
-
                         <div class="row mb-3">
                             <div class="col-lg-3">
                                 <label for="nameInput" class="form-label">Número</label>

@@ -29,7 +29,8 @@ class NumerosController extends Controller
      */
     public function store(Request $request)
     {
-       
+        ReservarNumero::create($request->all());
+        return redirect()->back()->with('suscess', 'Numeros registrado correctamente');
     }
 
     /** 
@@ -45,15 +46,18 @@ class NumerosController extends Controller
      */
     public function edit(string $id_numero)
     {
-       
+        $numero = ReservarNumero::findOrFail($id_numero);
+        return redirect()->back()->with('suscess', 'Numeros actualizado correctamente');
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, string $id_numero)
     {
-        //
+        $numero = ReservarNumero::findOrFail($id_numero);
+        $numero->update($request->all());
+        return redirect()->back()->with('suscess', 'Numeros editados correctamente');
     }
 
     /**
@@ -61,6 +65,8 @@ class NumerosController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $numero = ReservarNumero::findOrFail($id_numero);
+        $numero->delete();
+        return redirect()->back()->with('suscess', 'Numeros eliminados correctamente');
     }
 }

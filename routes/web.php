@@ -33,13 +33,6 @@ Route::resource('numeros', NumerosController::class);
 
 
 
-
-
-
-
-
-
-
 //ruta para el formulario de registro de la pagina principal
 Route::post('/', [ReservaPrincipalController::class, 'create'])->name('registroPrincipal');
 
