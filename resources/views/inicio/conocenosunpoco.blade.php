@@ -22,7 +22,7 @@
                 <label for="nameInput" class="form-label">Titulo</label>
             </div>
             <div class="col-lg-9">
-                <input type="text" class="form-control" id="nameInput" name="titulo" value="{{ $conoceno->titulo_conocenos }}" required>
+                <input type="text" class="form-control" id="nameInput" name="titulo_conocenos" value="{{ $conoceno->titulo_conocenos }}" required>
             </div>
         </div>
         <div class="row mb-3">
@@ -30,7 +30,15 @@
                 <label for="websiteUrl" class="form-label">Descripción</label>
             </div>
             <div class="col-lg-9">
-                <textarea class="form-control" id="descripcion" name="descripcion" rows="4" required>{{ $conoceno->descripcion_conocenos }}</textarea>
+                <textarea class="form-control" id="descripcion_conocenos" name="descripcion_conocenos" rows="4" required>{{ $conoceno->descripcion_conocenos }}</textarea>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-lg-3">
+                <label for="websiteUrl" class="form-label">Descripción2</label>
+            </div>
+            <div class="col-lg-9">
+                <textarea class="form-control" id="descripcion_conocenos" name="descripcion2_conocenos" rows="4" required>{{ $conoceno->descripcion2_conocenos }}</textarea>
             </div>
         </div>
         <div class="row mb-3">

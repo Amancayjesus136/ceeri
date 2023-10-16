@@ -418,9 +418,9 @@
                         
                         <div class="col-lg-6">
                             <div class="text-muted">
-                                <h1 class="mb-3 lh-base"><span class="text-primary">Conocenos</span> un poco más!</h1>
-                                <p class="ff-secondary fs-16 mb-2">Somos un centro dedicado a la atención de <b>pacientes con alteraciones motoras temporales y/o permanentes. </b> Preocurando su bienestar a travéz dun tratamiento multidisciplinado enfocado eneliminar el dolor y recuperar su movibilidad.
-                                <p class="ff-secondary fs-16">Contamos con equipos disioterapéuticos de la másavanzada tecnología.</p>
+                                <h1 class="mb-3 lh-base"><span class="text-primary">{{ $conoceno->titulo_conocenos }}</h1>
+                                <p class="ff-secondary fs-16 mb-2">{{ $conoceno->descripcion_conocenos }}
+                                <p class="ff-secondary fs-16">{{ $conoceno->descripcion2_conocenos }}</p>
                                 <div class="vstack gap-2 mb-4 pb-1">
                                     <div class="d-flex align-items-center">
                                         <div class="flex-shrink-0 me-2">
@@ -431,7 +431,7 @@
                                             </div>
                                         </div>
                                         <div class="flex-grow-1">
-                                            <p class="mb-0">Magento</p>
+                                            <p class="mb-0">{{ $conoceno->sub1 }}</p>
                                         </div>
                                     </div>
                                     <div class="d-flex align-items-center">
@@ -443,7 +443,7 @@
                                             </div>
                                         </div>
                                         <div class="flex-grow-1">
-                                            <p class="mb-0">Laser</p>
+                                            <p class="mb-0">{{ $conoceno->sub2 }}</p>
                                         </div>
                                     </div>
                                     <div class="d-flex align-items-center">
@@ -455,7 +455,7 @@
                                             </div>
                                         </div>
                                         <div class="flex-grow-1">
-                                            <p class="mb-0">Corrientes TENS</p>
+                                            <p class="mb-0">{{ $conoceno->sub3 }}</p>
                                         </div>
                                     </div>
                                     <div class="d-flex align-items-center">
@@ -467,7 +467,7 @@
                                             </div>
                                         </div>
                                         <div class="flex-grow-1">
-                                            <p class="mb-0">Agentes fisicos de calor y frío</p>
+                                            <p class="mb-0">{{ $conoceno->sub4 }}</p>
                                         </div>
                                     </div>
                                 </div>

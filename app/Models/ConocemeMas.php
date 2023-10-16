@@ -14,6 +14,7 @@ class ConocemeMas extends Model
     protected $fillable = [
         'titulo_conocenos',
         'descripcion_conocenos',
+        'descripcion2_conocenos',
         'sub1',
         'sub2',
         'sub3',
