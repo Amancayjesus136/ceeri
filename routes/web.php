@@ -28,6 +28,9 @@ Route::get('/menu', [WelcomeController::class, 'index'])->name('home.welcome');
 Route::get('/inicio', [MenuUsuarioController::class, 'index'])->name('inicio.reservarcita');   
 Route::put('/inicio/editar_reservarcita/{id}', [MenuUsuarioController::class, 'editar_reservarcita'])->name('inicio.editar_reservarcita');
 
+Route::get('/numero', [MenuUsuarioController::class, 'create'])->name('inicio.reservarnumero');   
+Route::put('/numero/editar_numero/{id}', [MenuUsuarioController::class, 'editar_numero'])->name('numero.editar_numero');
+
 
 
 

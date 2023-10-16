@@ -357,26 +357,29 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
                             <div class="text-center mb-5">
-                                <h1 class="mb-3 ff-secondary fw-semibold lh-base">{{ $contenido->titulo_reservar }}</h1>
-                                <p class="text-muted">{{ $contenido->descripcion_reservar }}</p>
+                                <h1 class="mb-3 ff-secondary fw-semibold lh-base">{{ $cita->titulo_reservar }}</h1>
+                                <p class="text-muted">{{ $cita->descripcion_reservar }}</p>
                             </div>
                         </div>
                         <!-- end col -->
                     </div>
                     <!--end row-->
                     <div class="row"> 
+                    @foreach($numeros as $numero)
                         <div class="col-lg-3 col-md-6">
                             <div class="card shadow-lg">
                                 <div class="card-body p-4">
                                     <h1 class="fw-bold display-5 ff-secondary mb-4 text-success position-relative">
                                         <div class="job-icon-effect"></div>
-                                        <span>1</span>
+                                        <span>{{ $numero->numero }}</span>
                                     </h1>
-                                    <h6 class="fs-17 mb-2">Registrar tus datos completos</h6>
-                                    <p class="text-muted mb-0 fs-15">Se deberá llenar los datos completos del solicitante.</p>
+                                    <h6 class="fs-17 mb-2">{{ $numero->titulo_numero }}</h6>
+                                    <p class="text-muted mb-0 fs-15">{{ $numero->descripcion_numero }}</p>
                                 </div>
                             </div>
                         </div>
+                    @endforeach
+
                         <div class="col-lg-3 col-md-6">
                             <div class="card shadow-none">
                                 <div class="card-body p-4">
