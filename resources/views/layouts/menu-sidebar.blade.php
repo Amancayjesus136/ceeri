@@ -222,6 +222,11 @@
                                 <i class="fas fa-stethoscope"></i>Lo que ofrecemos
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="fas fa-arrow-right"></i>Pasos a seguir
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </li>

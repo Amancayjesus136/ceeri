@@ -13,15 +13,20 @@ class MenuUsuarioController extends Controller
      */
     public function index()
     {
-        $contenido = ReservarCita::first();
-        return view('inicio.reservarcita', compact('contenido'));
+       
     }
 
-    public function create()
+    public function reservarcita()
     {
-        $numero = ReservarNumero::first();
-        return view('inicio.reservarnumero', compact('numero'));
+        $contenido = ReservarCita::first();
+        $numeros = ReservarNumero::all();
+        return view('inicio.reservarcita', compact('contenido', 'numeros'));
     }
+
+
+
+
+
 
 
 
@@ -34,18 +39,8 @@ class MenuUsuarioController extends Controller
     public function edit(string $id)
     {
         $contenido = ReservarCita::findOrFail($id);
-        $numero = ReservarNumero::findOrFail($id_numero);
         return redirect()->back()->with('success', 'Reservar actualizado exitosamente');
     }
-
-
-
-
-
-
-
-
-
 
 
 
@@ -60,11 +55,5 @@ class MenuUsuarioController extends Controller
         return redirect()->back()->with('success', 'Reservar cita actualizado exitosamente');
     }
 
-    public function editar_numero(Request $request, string $id)
-    {
-        $numero = ReservarNumero::findOrFail($id);
-        $numero->update($request->all());
-        return redirect()->back()->with('success', 'Reservar cita actualizado exitosamente');
-    }
 
 }

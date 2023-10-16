@@ -48,7 +48,7 @@
 
         // Realizar la consulta AJAX
         $.ajax({
-            url: '{{ route("consultar") }}',
+            url: '',
             type: 'POST',
             data: {
                 _token: '{{ csrf_token() }}',
@@ -254,7 +254,7 @@
                             <div>
                             <h1 class="display-6 fw-semibold text-capitalize mb-3 lh-base texto-azul">Consulta tu cita en menos de lo que esperas</h1>
                                 <p  style="color: white;">Brindamos a nuestros usuarios la facilidad de consultar sus citas por si se les olvidaron.</p>
-                                <form action="{{ route('consultar') }}" class="job-panel-filter" method="POST">
+                                <form action="#" class="job-panel-filter" method="POST">
                                     @csrf 
                                     <div class="row g-md-0 g-2">
                                         <div class="col-md-4">

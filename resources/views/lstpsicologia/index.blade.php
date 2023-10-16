@@ -220,19 +220,6 @@
             </div>
         </div>
     </div>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            // Agregar un escuchador para el evento "submit" del formulario
-            document.querySelectorAll("form").forEach(function(form) {
-                form.addEventListener("submit", function() {
-                    // Después de enviar el formulario, recargamos la página
-                    window.location.reload();
-                });
-            });
-        });
-    </script>
-
     <!-- MODAL DE ELIMINAR -->
         <!-- Button trigger modal -->
 

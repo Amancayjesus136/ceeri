@@ -14,6 +14,7 @@ use App\Http\Controllers\ConsultarController;
 use App\Http\Controllers\ReservaPrincipalController;
 use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\MenuUsuarioController;
+use App\Http\Controllers\NumerosController;
 
 use Illuminate\Support\Facades\Route;
 
@@ -25,11 +26,13 @@ Route::get('/', [WelcomeController::class, 'index']);
 
 Route::get('/menu', [WelcomeController::class, 'index'])->name('home.welcome');
 
-Route::get('/inicio', [MenuUsuarioController::class, 'index'])->name('inicio.reservarcita');   
+Route::get('/inicio', [MenuUsuarioController::class, 'reservarcita'])->name('inicio.reservarcita');   
 Route::put('/inicio/editar_reservarcita/{id}', [MenuUsuarioController::class, 'editar_reservarcita'])->name('inicio.editar_reservarcita');
 
-Route::get('/numero', [MenuUsuarioController::class, 'create'])->name('inicio.reservarnumero');   
-Route::put('/numero/editar_numero/{id}', [MenuUsuarioController::class, 'editar_numero'])->name('numero.editar_numero');
+Route::resource('numeros', NumerosController::class);
+
+
+
 
 
 
@@ -39,8 +42,6 @@ Route::put('/numero/editar_numero/{id}', [MenuUsuarioController::class, 'editar_
 
 //ruta para el formulario de registro de la pagina principal
 Route::post('/', [ReservaPrincipalController::class, 'create'])->name('registroPrincipal');
-Route::post('/consultar', [ConsultarController::class, 'consultar'])->name('consultar');
-
 
 // Rutas protegidas por el middleware de autenticación y verificación
 Route::middleware(['auth', 'verified'])->group(function () {
