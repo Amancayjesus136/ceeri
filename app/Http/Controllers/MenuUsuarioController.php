@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\ReservarCita;
 use App\Models\CeeriImagen;
+use App\Models\ConocemeMas;
 
 class MenuUsuarioController extends Controller
 {
