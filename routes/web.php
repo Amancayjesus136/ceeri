@@ -15,6 +15,7 @@ use App\Http\Controllers\ReservaPrincipalController;
 use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\MenuUsuarioController;
 use App\Http\Controllers\NumerosController;
+use App\Http\Controllers\ImagenCeeriController;
 
 use Illuminate\Support\Facades\Route;
 
@@ -34,7 +35,8 @@ Route::resource('numeros', NumerosController::class, ['names' => ['index' => 'in
 Route::get('/conocenos', [MenuUsuarioController::class, 'conocememas'])->name('inicio.conocememas');   
 Route::put('/conocenos/editar_conocenos/{id}', [MenuUsuarioController::class, 'editar_conocenos'])->name('inicio.editar_conocenos');
 
-Route::resource('imagen', ListadoUsuarioController::class);
+Route::resource('imagen', ImagenCeeriController::class, ['names' => ['index' => 'inicio.imagenceeri']]);
+
   
 
 

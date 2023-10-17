@@ -232,6 +232,11 @@
                                 <i class="fas fa-info-circle"></i> Conócenos
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="{{route('inicio.imagenceeri')}}" class="nav-link">
+                                <i class="ri-screenshot-2-line"></i> Imagen de Ceeri
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </li>

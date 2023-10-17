@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\CeeriImagen;
+
 
 class ImagenCeeriController extends Controller
 {
@@ -11,7 +13,8 @@ class ImagenCeeriController extends Controller
      */
     public function index()
     {
-        //
+        $imagen = CeeriImagen::all();
+        return view ('inicio.imagenceeri', compact ('imagen'));
     }
 
     /**
