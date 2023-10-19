@@ -416,6 +416,7 @@
                             </div>
                         </div>
                         
+                        
                         <div class="col-lg-6">
                             <div class="text-muted">
                                 <h1 class="mb-3 lh-base"><span class="text-primary">{{ $conoceno->titulo_conocenos }}</h1>
