@@ -35,6 +35,17 @@ class MenuUsuarioController extends Controller
         return view('inicio.imagenceeri', compact('imagen'));
     }
 
+   
+    
+
+    // METODO STORE
+
+    public function crear_imagen()
+    {
+        CeeriImagen::create($request->all());
+        return redirect()->back()->with('suscess', 'Imagen registrado correctamente');
+    }
+
 
 
 

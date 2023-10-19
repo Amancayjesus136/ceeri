@@ -37,6 +37,7 @@ Route::put('/conocenos/editar_conocenos/{id}', [MenuUsuarioController::class, 'e
 
 Route::resource('imagen', ImagenCeeriController::class, ['names' => ['index' => 'inicio.imagenceeri']]);
 
+
   
 
 

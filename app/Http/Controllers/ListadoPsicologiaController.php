@@ -64,20 +64,13 @@ class ListadoPsicologiaController extends Controller
             return redirect()->back()->with('suscess', 'psicologia actualizado correctamente');
         }
 
-    // Importa el modelo correspondiente si no lo has hecho ya
- // Asegúrate de reemplazar 'TuModelo' con el nombre de tu modelo
-
 public function actualizarEstado(Request $request) {
-    // Obtén el valor del estado desde la solicitud POST
     $estado = $request->input('estado');
 
-    // Realiza la actualización del campo "estado" en tu modelo o base de datos
-    // Por ejemplo, asumiendo que tienes un modelo llamado 'Psicologia':
     $psicologia = Psicologia::find($request->id);
     $psicologia->estado = $estado;
     $psicologia->save();
 
-    // Puedes devolver una respuesta JSON si es necesario
     return response()->json(['message' => 'Estado actualizado correctamente']);
 }
 

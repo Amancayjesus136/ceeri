@@ -30,7 +30,8 @@ class ImagenCeeriController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        CeeriImagen::create($request->all());
+        return redirect()->back()->with('suscess', 'Imagen registrado correctamente');
     }
 
     /**
