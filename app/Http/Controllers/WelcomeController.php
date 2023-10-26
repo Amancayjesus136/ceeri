@@ -12,7 +12,6 @@ class WelcomeController extends Controller
 {
     public function index()
     {
-        $numeros = ReservarNumero::all();
         $cita = ReservarCita::first();
         $conoceno = ConocemeMas::first();
         return view('home.welcome', compact('numeros', 'cita', 'conoceno'));

@@ -73,27 +73,24 @@
                                         <td>{{ $psicologia->fecha_hora }}</td>
                                         <td><span class="badge bg-success">{{ $psicologia->estado }}</span>
                                     </td>
-
-                                       
                                         <td>
-                                                <a href="#" class="btn btn-primary btn-sm"
-                                                    data-bs-toggle="modal"
-                                                    data-bs-target="#editarModal{{ $psicologia->id }}">
-                                                    <i class="fas fa-pencil-alt"></i>
-                                                </a>
+                                            <a href="#" class="btn btn-primary btn-sm"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#editarModal{{ $psicologia->id }}">
+                                                <i class="fas fa-pencil-alt"></i>
+                                            </a>
 
-                                                <a href="#" class="btn btn-sm btn-danger"
-                                                    data-bs-toggle="modal"
-                                                    data-bs-target="#eliminarModal{{ $psicologia->id }}">
-                                                    <i class="fas fa-trash-alt"></i>
-                                                </a>
-    
-                                                <select id="estadoSelect" class="form-select btn btn-success btn-sm form-select-sm w-auto" style="font-size: 0.75rem; height: 1.775rem;">
-                                                <option value="" disabled selected>Seleccionar</option>
-                                                <option value="cumplido">Cumplido</option>
-                                                <option value="cancelado">Cancelado</option>
-                                                </select>
+                                            <a href="#" class="btn btn-sm btn-danger"
+                                                data-bs-toggle="modal"
+                                                data-bs-target="#eliminarModal{{ $psicologia->id }}">
+                                                <i class="fas fa-trash-alt"></i>
+                                            </a>
 
+                                            <select id="estadoSelect" class="form-select btn btn-success btn-sm form-select-sm w-auto" style="font-size: 0.75rem; height: 1.775rem;">
+                                            <option value="" disabled selected>Seleccionar</option>
+                                            <option value="cumplido">Cumplido</option>
+                                            <option value="cancelado">Cancelado</option>
+                                            </select>
                                         </td>
                                     </tr>
                                     @php 

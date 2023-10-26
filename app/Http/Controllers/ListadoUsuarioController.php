@@ -7,7 +7,7 @@ use App\Models\Reserva;
 
 
 class ListadoUsuarioController extends Controller
-{
+{ 
     /**
      * Display a listing of the resource.
      */
