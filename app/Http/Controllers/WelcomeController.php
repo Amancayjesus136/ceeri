@@ -20,11 +20,9 @@ class WelcomeController extends Controller
 
     public function consultadni(Request $request)
     {
-        // Obtener los datos del formulario
         $tipoDocumento = $request->input('tipoDocumento');
         $numeroDocumento = $request->input('numeroDocumento');
 
-        // Realizar consultas en las tablas individuales y seleccionar solo los campos tipo_documento y numero_documento
         $psicologia = DB::table('psicologia')->select('tipo_documento', 'numero_documento')
                     ->where('tipo_documento', $tipoDocumento)
                     ->where('numero_documento', $numeroDocumento)
@@ -50,7 +48,6 @@ class WelcomeController extends Controller
                             ->where('numero_documento', $numeroDocumento)
                             ->first();
 
-        // Verificar en qué tabla existe el registro y devolver solo los datos de esa tabla
         if ($psicologia) {
             $resultados = ['psicologia' => $psicologia];
         } elseif ($terapiaFisica) {
@@ -62,10 +59,9 @@ class WelcomeController extends Controller
         } elseif ($terapiaOcupacional) {
             $resultados = ['terapia_ocupacional' => $terapiaOcupacional];
         } else {
-            $resultados = []; // Si no se encuentra en ninguna tabla, devolver un arreglo vacío
+            $resultados = []; 
         }
 
-        // Devolver los resultados en formato JSON
         return response()->json($resultados);
     }
 
