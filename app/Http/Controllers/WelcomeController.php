@@ -20,50 +20,48 @@ class WelcomeController extends Controller
 
     public function consultadni(Request $request)
     {
-        $tipoDocumento = $request->input('tipoDocumento');
         $numeroDocumento = $request->input('numeroDocumento');
+
+        $resultados = [];
 
         $psicologia = DB::table('psicologia')
             ->select('tipo_documento', 'numero_documento', 'nombres', 'apellidos', 'fecha_hora')
-            ->where('tipo_documento', $tipoDocumento)
             ->where('numero_documento', $numeroDocumento)
             ->first();
 
         $terapiaFisica = DB::table('terapia_fisica')
             ->select('tipo_documento', 'numero_documento', 'nombres', 'apellidos', 'fecha_hora')
-            ->where('tipo_documento', $tipoDocumento)
             ->where('numero_documento', $numeroDocumento)
             ->first();
 
         $terapiaInfantil = DB::table('terapia_infantil')
             ->select('tipo_documento', 'numero_documento', 'nombres', 'apellidos', 'fecha_hora')
-            ->where('tipo_documento', $tipoDocumento)
             ->where('numero_documento', $numeroDocumento)
             ->first();
 
         $terapiaLenguaje = DB::table('terapia_lenguaje')
             ->select('tipo_documento', 'numero_documento', 'nombres', 'apellidos', 'fecha_hora')
-            ->where('tipo_documento', $tipoDocumento)
             ->where('numero_documento', $numeroDocumento)
             ->first();
 
         $terapiaOcupacional = DB::table('terapia_ocupacional')
             ->select('tipo_documento', 'numero_documento', 'nombres', 'apellidos', 'fecha_hora')
-            ->where('tipo_documento', $tipoDocumento)
             ->where('numero_documento', $numeroDocumento)
             ->first();
 
-        $resultados = [];
-
         if ($psicologia) {
             $resultados['psicologia'] = $psicologia;
-        } elseif ($terapiaFisica) {
+        }
+        if ($terapiaFisica) {
             $resultados['terapia_fisica'] = $terapiaFisica;
-        } elseif ($terapiaInfantil) {
+        }
+        if ($terapiaInfantil) {
             $resultados['terapia_infantil'] = $terapiaInfantil;
-        } elseif ($terapiaLenguaje) {
+        }
+        if ($terapiaLenguaje) {
             $resultados['terapia_lenguaje'] = $terapiaLenguaje;
-        } elseif ($terapiaOcupacional) {
+        }
+        if ($terapiaOcupacional) {
             $resultados['terapia_ocupacional'] = $terapiaOcupacional;
         }
 
