@@ -37,6 +37,7 @@ Route::put('/conocenos/editar_conocenos/{id}', [MenuUsuarioController::class, 'e
 
 Route::resource('imagen', ImagenCeeriController::class, ['names' => ['index' => 'inicio.imagenceeri']]);
 
+Route::post('/consultadni', [WelcomeController::class, 'consultadni'])->name('consultadni');
 
   
 
@@ -64,6 +65,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
     // RUTAS DE FORMULARIO PRINCIPAL
     Route::resource('seleccionar', SeleccionarController::class);
+
+
 
 
     //rutas para listado de los formularios

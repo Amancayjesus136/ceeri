@@ -10,6 +10,13 @@
   width: calc(100% - 70px);
   display: inline-block;
 }
+
+.pagination {
+        width: 100px;
+        display: block;
+        height: 90px;
+        padding-top: 40px;
+    }
 </style>
 
 <!-- cabecera -->

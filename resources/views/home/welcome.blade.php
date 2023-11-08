@@ -254,12 +254,12 @@
                             <div>
                             <h1 class="display-6 fw-semibold text-capitalize mb-3 lh-base texto-azul">Consulta tu cita en menos de lo que esperas</h1>
                                 <p  style="color: white;">Brindamos a nuestros usuarios la facilidad de consultar sus citas por si se les olvidaron.</p>
-                                <form action="#" class="job-panel-filter" method="POST">
-                                    @csrf 
+                                <form action="{{ route('consultadni') }}" class="job-panel-filter" method="post">
+                                    @csrf
                                     <div class="row g-md-0 g-2">
                                         <div class="col-md-4">
                                             <div>
-                                                <select class="form-control" data-choices id="tipoDocumento">
+                                                <select class="form-control" name="tipoDocumento">
                                                     <option value="">Seleccionar tipo</option>
                                                     <option value="DNI">DNI</option>
                                                     <option value="Pasaporte">Pasaporte</option>
@@ -268,18 +268,19 @@
                                         </div>
                                         <div class="col-md-4">
                                             <div>
-                                                <input type="number" id="numeroDocumento" class="form-control filter-input-box" placeholder="Insertar dato...">
+                                                <input type="number" name="numeroDocumento" class="form-control filter-input-box" placeholder="Insertar dato...">
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="h-100">
-                                                <button id="consultarBtn" class="btn btn-primary submit-btn w-100 h-100" type="button" data-bs-toggle="modal" data-bs-target="#myModal">
+                                                <button class="btn btn-primary submit-btn w-100 h-100" type="submit">
                                                     <i class="ri-search-2-line align-bottom me-1"></i> Consultar
                                                 </button>
                                             </div>
                                         </div>
                                     </div>
                                 </form>
+
 
                                 <!-- Contenido del modal -->
                                 <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
