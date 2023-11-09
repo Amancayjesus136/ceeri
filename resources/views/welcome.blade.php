@@ -24,66 +24,6 @@
         <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
         <!-- custom Css-->
         <link href="assets/css/custom.min.css" rel="stylesheet" type="text/css" />
-        <script>//script para el campo fecha y hora
-            // Obtén el campo de fecha y hora
-            var fechaHoraInput = document.getElementById('fecha_hora');
-
-            // Escucha el evento submit del formulario
-            document.querySelector('form').addEventListener('submit', function() {
-            // Obtiene el valor del campo datetime-local
-            var fechaHora = fechaHoraInput.value;
-
-            // Formatea la fecha y hora para que cumpla con el formato ISO 8601 (YYYY-MM-DDTHH:MM)
-            // Puedes ajustar el formato según tus necesidades
-            var fechaHoraFormateada = fechaHora.replace('T', ' ');
-
-            // Asigna el valor formateado nuevamente al campo
-            fechaHoraInput.value = fechaHoraFormateada;
-            });
-
-            $(document).ready(function() {
-    $('#consultarBtn').click(function() {
-        var tipoDocumento = $('#tipoDocumento').val();
-        var numeroDocumento = $('#numeroDocumento').val();
-
-        // Realizar la consulta AJAX
-        $.ajax({
-            url: '{{ route("consultar") }}',
-            type: 'POST',
-            data: {
-                _token: '{{ csrf_token() }}',
-                tipo_documento: tipoDocumento,
-                numero_documento: numeroDocumento
-            },
-            success: function(response) {
-                // Rellenar los campos del modal con los datos de la respuesta
-                if (response.psicologiaResult) {
-                    $('#numero_documento').val(response.psicologiaResult.numero_documento);
-                    $('#nombres').val(response.psicologiaResult.nombres);
-                    // Agregar más campos según necesites
-                } else if (response.terapiaFisicaResult) {
-                    // Llenar campos de terapia física
-                } else if (response.terapiaInfantilResult) {
-                    // Llenar campos de terapia infantil
-                } else if (response.terapiaLenguajeResult) {
-                    // Llenar campos de terapia de lenguaje
-                } else if (response.terapiaOcupacionalResult) {
-                    // Llenar campos de terapia ocupacional
-                } else {
-                    // Manejar caso en que no se encuentren resultados
-                }
-
-                // Mostrar el modal
-                $('#myModal').modal('show');
-            },
-            error: function(xhr) {
-                console.log(xhr.responseText); // Manejar errores si es necesario
-            }
-        });
-    });
-});
-
-        </script>
     </head>
 
     <body data-bs-spy="scroll" data-bs-target="#navbar-example">
@@ -254,7 +194,7 @@
                             <div>
                             <h1 class="display-6 fw-semibold text-capitalize mb-3 lh-base texto-azul">Consulta tu cita en menos de lo que esperas</h1>
                                 <p  style="color: white;">Brindamos a nuestros usuarios la facilidad de consultar sus citas por si se les olvidaron.</p>
-                                <form action="{{ route('consultar') }}" class="job-panel-filter" method="POST">
+                                <form action="#" class="job-panel-filter" method="POST">
                                     @csrf 
                                     <div class="row g-md-0 g-2">
                                         <div class="col-md-4">
