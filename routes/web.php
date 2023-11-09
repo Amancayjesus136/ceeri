@@ -12,6 +12,7 @@ use App\Http\Controllers\ListadoTerapiaOcupacionalController;
 use App\Http\Controllers\SeleccionarController;
 use App\Http\Controllers\ConsultarController;
 use App\Http\Controllers\ReservaPrincipalController;
+use App\Http\Controllers\ReservaInternaController;
 use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\MenuUsuarioController;
 use App\Http\Controllers\NumerosController;
@@ -66,6 +67,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
     // RUTAS DE FORMULARIO PRINCIPAL
     Route::resource('seleccionar', SeleccionarController::class);
 
+    //reserva interna de la citas
+    Route::post('/', [ReservaInternaController::class, 'create'])->name('registroInterno');
 
 
 
