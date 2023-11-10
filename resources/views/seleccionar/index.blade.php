@@ -3,11 +3,25 @@
   <style>
     .contenedor {
       margin-top: 80px;
-      display: block;
-      clear: both;
-      text-align: center;
     }
 
+    
+    .container {
+        border: 2px;
+        border-radius: 10px;
+        border-color: rgb(151, 140, 140);
+        border-style: solid;
+        padding: 15px 15px 15px 15px;
+        background-color: #567797;
+    }
+
+    label {
+        font-weight: bold;
+    }
+        
+    h4  {
+        font-weight: bold;
+    }
     .contenedor button {
       margin-top: 20px; /* Ajusta el margen superior según sea necesario */
       background-color: blue;
@@ -29,14 +43,24 @@
   </style>
 
   <div class="contenedor">
-    <h2 style="font-size: 35px;">reservacion de citas en todas las especialidades disponibles</h2>
+  <h4 class="mb-sm-0">Reservacion de citas en todas las especialidades disponibles</h4>
     <br><br>
   </div>
  
-            <div class="modal-body">
+            <div class="container">
                 <form action="{{route('registroInterno')}}" method="POST">
                     @csrf
                     <div class="row mb-1">
+                        <div class="col-md-6">
+                            <label for="nombres" class="form-label">Nombres</label>
+                            <input type="text" class="form-control" id="nombres" name="nombres">                           
+                        </div>
+                        <div class="col-md-6">
+                            <label for="apellidos" class="form-label">Apellidos</label>
+                            <input type="text" class="form-control" id="apellidos" name="apellidos">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
                         <div class="col-md-6">
                             <label for="tipo_documento" class="form-label">Tipo de Documento</label>
                             <select class="form-select" id="tipo_documento" name="tipo_documento">
@@ -52,12 +76,17 @@
                     </div>
                     <div class="row mb-3">
                         <div class="col-md-6">
-                            <label for="nombres" class="form-label">Nombres</label>
-                            <input type="text" class="form-control" id="nombres" name="nombres">
+                            <label for="genero" class="form-label">Género</label>
+                            <select class="form-select" id="genero" name="genero">
+                                <option value="" disabled selected>Seleccionar género...</option>
+                                <option value="Masculino">Masculino</option>
+                                <option value="Femenino">Femenino</option>
+                                <option value="Otro">otro</option>
+                            </select>   
                         </div>
                         <div class="col-md-6">
-                            <label for="apellidos" class="form-label">Apellidos</label>
-                            <input type="text" class="form-control" id="apellidos" name="apellidos">
+                            <label for="telefono" class="form-label">Teléfono</label>
+                            <input type="number" class="form-control" id="telefono" name="telefono">    
                         </div>
                     </div>
                     <div class="row mb-3">
@@ -77,22 +106,7 @@
                             </select>
                         </div>
                     </div>
-                    <div class="row mb-3">
-                        <div class="col-md-6">
-                            <label for="genero" class="form-label">Género</label>
-                            <select class="form-select" id="genero" name="genero">
-                                <option value="" disabled selected>Seleccionar género...</option>
-                                <option value="Masculino">Masculino</option>
-                                <option value="Femenino">Femenino</option>
-                                <option value="Otro">otro</option>
-                            </select>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="telefono" class="form-label">Teléfono</label>
-                            <input type="number" class="form-control" id="telefono" name="telefono">
-                        </div>
-                    </div>
-                    <button type="submit" class="btn btn-primary" style="margin-top: 25px;">Reservar cita</button>
+                    <button type="submit" class="btn btn-primary" style="margin-top: 25px; font-weight: bold;">Reservar cita</button>
                 </form>
             </div>
 

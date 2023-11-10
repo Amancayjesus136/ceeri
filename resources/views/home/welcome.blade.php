@@ -148,6 +148,17 @@
                     @csrf
                     <div class="row mb-1">
                         <div class="col-md-6">
+                            <label for="nombres" class="form-label">Nombres</label>
+                            <input type="text" class="form-control" id="nombres" name="nombres">
+                            
+                        </div>
+                        <div class="col-md-6">
+                            <label for="apellidos" class="form-label">Apellidos</label>
+                            <input type="text" class="form-control" id="apellidos" name="apellidos">            
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
                             <label for="tipo_documento" class="form-label">Tipo de Documento</label>
                             <select class="form-select" id="tipo_documento" name="tipo_documento">
                                 <option value="" disabled selected>Seleccionar tipo de documento...</option>
@@ -157,17 +168,22 @@
                         </div>
                         <div class="col-md-6">
                             <label for="numero_documento" class="form-label">Número de Documento</label>
-                            <input type="number" class="form-control" id="numero_documento" name="numero_documento">
+                            <input type="number" class="form-control" id="numero_documento" name="numero_documento">  
                         </div>
                     </div>
                     <div class="row mb-3">
                         <div class="col-md-6">
-                            <label for="nombres" class="form-label">Nombres</label>
-                            <input type="text" class="form-control" id="nombres" name="nombres">
+                            <label for="genero" class="form-label">Género</label>
+                            <select class="form-select" id="genero" name="genero">
+                                <option value="" disabled selected>Seleccionar género...</option>
+                                <option value="Masculino">Masculino</option>
+                                <option value="Femenino">Femenino</option>
+                                <option value="Otro">otro</option>
+                            </select>
                         </div>
                         <div class="col-md-6">
-                            <label for="apellidos" class="form-label">Apellidos</label>
-                            <input type="text" class="form-control" id="apellidos" name="apellidos">
+                            <label for="telefono" class="form-label">Teléfono</label>
+                            <input type="number" class="form-control" id="telefono" name="telefono">   
                         </div>
                     </div>
                     <div class="row mb-3">
@@ -187,19 +203,8 @@
                             </select>
                         </div>
                     </div>
-                    <div class="row mb-3">
-                        <div class="col-md-6">
-                            <label for="genero" class="form-label">Género</label>
-                            <select class="form-select" id="genero" name="genero">
-                                <option value="" disabled selected>Seleccionar género...</option>
-                                <option value="Masculino">Masculino</option>
-                                <option value="Femenino">Femenino</option>
-                                <option value="Otro">otro</option>
-                            </select>
-                        </div>
-                        <div class="col-md-6">
-                            <button type="submit" class="btn btn-primary" style="margin-top: 25px;">Reservar cita</button>
-                        </div>
+                    <div class="col-md-6">
+                        <button type="submit" class="btn btn-primary" style="margin-top: 25px;">Reservar cita</button>
                     </div>
                 </form>
             </div>
@@ -998,11 +1003,11 @@
                                     <h5 class="text-white mb-0">Contactanos</h5>
                                     <div class="text-muted mt-3">
                                         <ul class="list-unstyled ff-secondary footer-list">
-                                            <li><a href="pages-faqs.html">WhatsApp</a></li>
-                                            <li><a href="pages-faqs.html">Correo Electrónico</a></li>
-                                            <li><a href="pages-faqs.html">Facebook</a></li>
-                                            <li><a href="pages-faqs.html">Instagram</a></li>
-                                            <li><a href="pages-faqs.html">Telefono personal</a></li>
+                                            <li><a href="https://wa.me/910558971">WhatsApp</a></li>
+                                            <li><a href="ceerirehabilitacion14@gmail.com">Correo Electrónico</a></li>
+                                            <li><a href="https://www.facebook.com/centrodeterapiafisicaceeri">Facebook</a></li>
+                                            <li><a href="https://www.instagram.com/ceeri.terapiafisica/">Instagram</a></li>
+                                            <li><a href="https://wa.me/910558971">Telefono personal</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -1029,7 +1034,7 @@
                                         <a href="pages-term-conditions.html">Terminos y condiciones</a>
                                     </li>
                                     <li class="list-inline-item">
-                                        <a href="pages-privacy-policy.html">Seguridad</a>
+                                        <a href="pages-security-policy.html">Seguridad</a>
                                     </li>
                                 </ul>
                             </div>
