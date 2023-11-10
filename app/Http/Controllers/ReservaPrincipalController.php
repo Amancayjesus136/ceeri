@@ -15,10 +15,6 @@ use App\Models\TerapiaLenguaje;
 class ReservaPrincipalController extends Controller
 {
 
-
-  
-
-
     public function create(Request $request)
     {
         $datos = $request->all();

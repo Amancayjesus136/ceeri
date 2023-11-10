@@ -21,7 +21,6 @@ class WelcomeController extends Controller
     public function consultadni(Request $request)
     {
         $numeroDocumento = $request->input('numeroDocumento');
-
         $resultados = [];
 
         $psicologia = DB::table('psicologia')
@@ -65,7 +64,16 @@ class WelcomeController extends Controller
             $resultados['terapia_ocupacional'] = $terapiaOcupacional;
         }
 
-        return response()->json($resultados);
+        if (empty($resultados)) {
+            // No se encontraron resultados
+            return redirect()->back()->with('error', 'No se encontraron resultados para el número de documento proporcionado.');
+        }
+
+        // Si hay resultados, almacenar el mensaje en la sesión y redirigir a la vista
+        session()->flash('success', 'Consulta realizada exitosamente');
+        session()->flash('resultados', $resultados);
+
+        return redirect()->back()->with('success', 'Consulta realizada exitosamente')->with('resultados', $resultados);
     }
 
 }

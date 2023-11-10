@@ -260,32 +260,111 @@
                             <div>
                             <h1 class="display-6 fw-semibold text-capitalize mb-3 lh-base texto-azul">Consulta tu cita en menos de lo que esperas</h1>
                                 <p  style="color: white;">Brindamos a nuestros usuarios la facilidad de consultar sus citas por si se les olvidaron.</p>
-                                <form action="{{ route('consultadni') }}" class="job-panel-filter" method="post">
-                                    @csrf
-                                    <div class="row g-md-0 g-2">
-                                        <div class="col-md-4">
-                                            <div>
-                                                <select class="form-control" name="tipoDocumento">
-                                                    <option value="">Seleccionar tipo</option>
-                                                    <option value="DNI">DNI</option>
-                                                    <option value="Pasaporte">Pasaporte</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div>
-                                                <input type="number" name="numeroDocumento" class="form-control filter-input-box" placeholder="Insertar dato...">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="h-100">
-                                                <button class="btn btn-primary submit-btn w-100 h-100" type="submit">
-                                                    <i class="ri-search-2-line align-bottom me-1"></i> Consultar
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
+                                @if(session('error'))
+    <div class="alert alert-danger mt-3">
+        {{ session('error') }}
+    </div>
+@endif
+
+@if(session('success'))
+    <div class="alert alert-success mt-3">
+        {{ session('success') }}
+    </div>
+
+    {{-- Verificar si session('resultados') no es null --}}
+    @if(session('resultados'))
+        {{-- Modal Bootstrap --}}
+        <div class="modal fade" id="resultadosModal" tabindex="-1" role="dialog" aria-labelledby="resultadosModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="resultadosModalLabel">Resultados de la Consulta</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        {{-- Mostrar los resultados --}}
+                        @foreach (session('resultados') as $key => $resultado)
+                            {{-- Muestra los detalles según la estructura de tu array --}}
+                            {{-- Por ejemplo, para psicologia --}}
+                            @if (isset($resultado->psicologia))
+                                {{-- Muestra los detalles de psicologia --}}
+                                {{ $resultado->psicologia->nombres }}
+                                {{-- ... --}}
+                            @endif
+                            {{-- Repite para otras consultas --}}
+                        @endforeach
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {{-- Script para mostrar el modal --}}
+        <script>
+            $(document).ready(function () {
+                // Manejar clic en el botón de Consultar
+                $('.submit-btn').click(function (e) {
+                    e.preventDefault(); // Evitar que el formulario se envíe
+
+                    // Obtener datos del formulario
+                    var formData = $('form.job-panel-filter').serialize();
+
+                    // Realizar la solicitud al servidor
+                    $.ajax({
+                        type: 'POST',
+                        url: '{{ route('consultadni') }}',
+                        data: formData,
+                        success: function (data) {
+                            // Mostrar el resultado en un cuadro de éxito
+                            $('#success-container').html('<div class="alert alert-success mt-3">' + data + '</div>');
+                        },
+                        error: function (error) {
+                            console.log('Error en la solicitud AJAX:', error);
+                        }
+                    });
+                });
+            });
+        </script>
+    @else
+        <div class="alert alert-warning mt-3">
+            No hay resultados para mostrar.
+        </div>
+    @endif
+@endif
+
+<form action="{{ route('consultadni') }}" class="job-panel-filter" method="post">
+    @csrf
+    <div class="row g-md-0 g-2">
+        <div class="col-md-4">
+            <div>
+                <select class="form-control" name="tipoDocumento">
+                    <option value="">Seleccionar tipo</option>
+                    <option value="DNI">DNI</option>
+                    <option value="Pasaporte">Pasaporte</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div>
+                <input type="number" name="numeroDocumento" class="form-control filter-input-box" placeholder="Insertar dato...">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="h-100">
+                <button class="btn btn-primary submit-btn w-100 h-100" type="submit">
+                    <i class="ri-search-2-line align-bottom me-1"></i> Consultar
+                </button>
+            </div>
+        </div>
+    </div>
+</form>
+
+<div id="success-container"></div>
+
 
 
                                 <!-- Contenido del modal -->
@@ -976,6 +1055,7 @@
         <script src="assets/libs/node-waves/waves.min.js"></script>
         <script src="assets/libs/feather-icons/feather.min.js"></script>
         <script src="assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
+        
         <script src="assets/js/plugins.js"></script>
 
         <!--Swiper slider js-->
