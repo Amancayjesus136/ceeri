@@ -21,7 +21,8 @@ use App\Http\Controllers\ImagenCeeriController;
 use Illuminate\Support\Facades\Route;
 
 // Ruta para la página de inicio
-Route::get('/', [WelcomeController::class, 'index']);
+
+Route::get('/', [WelcomeController::class, 'index'])->name('home.welcome');
 
 
 //Configuracion Menú
@@ -40,11 +41,9 @@ Route::resource('imagen', ImagenCeeriController::class, ['names' => ['index' => 
 
 Route::post('/consultadni', [WelcomeController::class, 'consultadni'])->name('consultadni');
 
-  
-
 
 //ruta para el formulario de registro de la pagina principal
-Route::post('/', [ReservaPrincipalController::class, 'create'])->name('registroPrincipal');
+Route::post('registroPrincipal', [ReservaPrincipalController::class, 'create'])->name('registroPrincipal');
 
 // Rutas protegidas por el middleware de autenticación y verificación
 Route::middleware(['auth', 'verified'])->group(function () {

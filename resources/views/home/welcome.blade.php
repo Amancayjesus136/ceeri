@@ -198,7 +198,7 @@
                             </select>
                         </div>
                         <div class="col-md-6">
-                          <button type="submit" class="btn btn-primary" style="margin-top: 25px;">Reservar cita</button>
+                            <button type="submit" class="btn btn-primary" style="margin-top: 25px;">Reservar cita</button>
                         </div>
                     </div>
                 </form>

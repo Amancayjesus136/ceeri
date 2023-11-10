@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 use DB;
 use Illuminate\Http\Request;
 use App\Models\Psicologia;
+use App\Models\ReservarCita;
+use App\Models\ReservarNumero;
+use App\Models\ConocemeMas;
 use App\Models\TerapiaFisica;
 use App\Models\TerapiaInfantil;
 use App\Models\TerapiaOcupacional;
@@ -11,9 +14,17 @@ use App\Models\TerapiaLenguaje;
 
 class ReservaPrincipalController extends Controller
 {
+
+
+  
+
+
     public function create(Request $request)
     {
         $datos = $request->all();
+        $numeros = ReservarNumero::all();
+        $cita = ReservarCita::first();
+        $conoceno = ConocemeMas::first();
         
         // Determina la especialidad seleccionada
         $especialidad = $request->input('especialidad');
@@ -41,7 +52,7 @@ class ReservaPrincipalController extends Controller
         }
         
         // Redirige o realiza alguna acción adicional después de guardar los datos
-        return view('welcome');
+        return view('home.welcome', compact('numeros', 'cita', 'conoceno'));
     }
 }
 
