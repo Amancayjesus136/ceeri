@@ -149,8 +149,7 @@
                     <div class="row mb-1">
                         <div class="col-md-6">
                             <label for="nombres" class="form-label">Nombres</label>
-                            <input type="text" class="form-control" id="nombres" name="nombres">
-                            
+                            <input type="text" class="form-control" id="nombres" name="nombres">                       
                         </div>
                         <div class="col-md-6">
                             <label for="apellidos" class="form-label">Apellidos</label>
@@ -1028,13 +1027,13 @@
                             <div class="text-sm-end mt-3 mt-sm-0">
                                 <ul class="list-inline mb-0 footer-list gap-4 fs-13">
                                     <li class="list-inline-item">
-                                        <a href="pages-privacy-policy.html">Politica y privacidad</a>
+                                        <a href="{{ route('politicas') }}">Politica y privacidad</a>
                                     </li>
                                     <li class="list-inline-item">
-                                        <a href="pages-term-conditions.html">Terminos y condiciones</a>
+                                        <a href="{{ route('condiciones') }}">Terminos y condiciones</a>
                                     </li>
                                     <li class="list-inline-item">
-                                        <a href="pages-security-policy.html">Seguridad</a>
+                                        <a href="{{ route('seguridad') }}">Seguridad</a>
                                     </li>
                                 </ul>
                             </div>

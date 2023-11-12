@@ -7,42 +7,56 @@
 </head>
 <body>
     <style>
-        p {
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto:wght@300&display=swap');
+        .container {
             display: block;
             clear: both;
             text-align: center;
-            margin-top: 10px;
+        }
+
+        .container img {
+            width: 300px;
+            height: 300px;
+        }
+
+        body {
+            background-color: black;
+            color: white;
+            font-size: 20px;
+            padding-left: 100px;
+            padding-right: 100px;
+            font-family: 'Montserrat', sans-serif;
         }
     </style>
 
     <div class="container">
-        <p>Protección de datos de carácter personal según la LOPDDD
-
-            _____________________________, en aplicación de la normativa vigente en materia de protección de datos de carácter personal,
-            informa que los datos personales que se recogen a través de los formularios del Sitio web: ________________________________,
-            se incluyen en los ficheros automatizados específicos de usuarios de los servicios de _______________________________
+        <img src="assets/images/logo-sinfondo.png" alt="">
+        <p>Protección de datos de carácter personal según la LOPDDD (Ley Orgánica de Protección de Datos Personales y garantía de los derechos digitales),
+            en aplicación de la normativa vigente en materia de protección de datos de carácter personal,
+            informa que los datos personales que se recogen a través de los formularios del Sitio web: Ceeri.com.pe,
+            se incluyen en los ficheros automatizados específicos de usuarios de los servicios de CEERI (Centro Especializado en Rehabilitación Integral)
             La recogida y tratamiento automatizado de los datos de carácter personal tiene como finalidad el mantenimiento de la relación
-            comercial y el desempeño de tareas de información, formación, asesoramiento y otras actividades propias de ______________________________________           
+            comercial y el desempeño de tareas de información, formación, asesoramiento y otras actividades propias de CEERI.          
             Estos datos únicamente serán cedidos a aquellas entidades que sean necesarias con el único objetivo de dar cumplimiento a la 
-            finalidad anteriormente expuesta. _______________________________________ adopta las medidas necesarias para garantizar la 
+            finalidad anteriormente expuesta. CEERI adopta las medidas necesarias para garantizar la 
             seguridad, integridad y confidencialidad de los datos conforme a lo dispuesto en el Reglamento (UE) 2016/679 del Parlamento 
             Europeo y del Consejo, de 27 de abril de 2016, relativo a la protección de las personas físicas en lo que respecta al tratamiento
             de datos personales y a la libre circulación de los mismos. El usuario podrá en cualquier momento ejercitar los derechos de acceso,
             oposición, rectificación y cancelación reconocidos en el citado Reglamento (UE). El ejercicio de estos derechos puede realizarlo
-            el propio usuario a través de email a: _________________________________ o en la dirección: ________________________________________ 
+            el propio usuario a través de email a: ceerirehabilitacion14@gmail.com o en la dirección: ________________________________________ 
             El usuario manifiesta que todos los datos facilitados por él son ciertos y correctos, y se compromete a mantenerlos actualizados,
             comunicando los cambios a _________________________________________Finalidad del tratamiento de los datos personales: 
             ¿Con qué finalidad trataremos tus datos personales?
-            En __________________________________, trataremos tus datos personales recabados a través del Sitio Web:
-            ______________________________, con las siguientes finalidades:
+            En CEERI, trataremos tus datos personales recabados a través del Sitio Web:
+            Ceeri.com.pe, con las siguientes finalidades:
             
-            1. En caso de contratación de los bienes y servicios ofertados a través de ____________________________, para
+            1. En caso de contratación de los bienes y servicios ofertados a través de Ceeri.com.pe, para
             mantener la relación contractual, así como la gestión, administración, información, prestación y mejora del
             servicio.
             
-            2. Envío de información solicitada a través de los formularios dispuestos en ____________________________
+            2. Envío de información solicitada a través de los formularios dispuestos en "reservar cita".
             3. Remitir boletines (newsletters), así como comunicaciones comerciales de promociones y/o publicidad de
-            ______________________________ y del sector.
+            CEERI y del sector.
             
             Te recordamos que puedes oponerte al envío de comunicaciones comerciales por cualquier vía y en cualquier momento, remitiendo un
             correo electrónico a la dirección indicada anteriormente.   
@@ -55,7 +69,7 @@
             
             El tratamiento de tus datos se realiza con las siguientes bases jurídicas que legitiman el mismo:
             
-            1. La solicitud de información y/o la contratación de los servicios de ___________________________, cuyos
+            1. La solicitud de información y/o la contratación de los servicios de CEERI, cuyos
             términos y condiciones se pondrán a tu disposición en todo caso, de forma previa a una eventual contratación.
             
             2. El consentimiento libre, específico, informado e inequívoco, en tanto que te informamos poniendo a tu
@@ -68,7 +82,7 @@
             
             Destinatarios:
             
-            Los datos no se comunicarán a ningún tercero ajeno a _________________________________, salvo obligación legal.       
+            Los datos no se comunicarán a ningún tercero ajeno a CEERI, salvo obligación legal.       
             Como encargados de tratamiento, tenemos contratados a los siguientes proveedores de servicios, habiéndose
             comprometido al cumplimiento de las disposiciones normativas, de aplicación en materia de protección de datos, en el momento de 
             su contratación:
@@ -76,22 +90,16 @@
             ___________________________________________, NIF/CIF nº ________________________, presta servicios de ________________________________________ .
             
              Puede consultar la política de privacidad y demás aspectos legales de la compañía en el siguiente
-            enlace: ____________________________________________
-            
-             (ENCARGADO) ____________________________________________, con domicilio en
-            ____________________________________________, NIF/CIF nº _________________________, presta servicios de ___________________________________________ .
-            
-             Puede consultar la política de privacidad y demás aspectos legales de la compañía en el siguiente
-            enlace: ______________________________________________
+            enlace: http://Ceeri.com.pe/politicas-privacidad
 
             Datos recopilados por usuarios de los servicios
             
             En los casos en que el usuario incluya ficheros con datos de carácter personal en los servidores de alojamiento
-            compartido, _______________________________________ no se hace responsable del incumplimiento por parte del usuario del RGPD.
+            compartido, CEERI no se hace responsable del incumplimiento por parte del usuario del RGPD.
             
             Retención de datos en conformidad a la LSSI
             
-            ______________________________________ informa de que, como prestador de servicio de alojamiento de datos y en virtud de lo 
+            (Ley de Servicios de la Sociedad de la Información) informa de que, como prestador de servicio de alojamiento de datos y en virtud de lo 
             establecido en la Ley 34/2002 de 11 de julio de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI), 
             retiene por un periodo máximo de 12 meses la información imprescindible para identificar el origen de los datos alojados y el
             momento en que se inició la prestación del servicio. La retención de estos datos no afecta al secreto de las comunicaciones y
@@ -103,17 +111,17 @@
             Derechos propiedad intelectual ______________________________
             
             _________________________________ es titular de todos los derechos de autor, propiedad intelectual, industrial, “know how” y 
-            cuantos otros derechos guardan relación con los contenidos del sitio web _______________________ y los servicios ofertados en
+            cuantos otros derechos guardan relación con los contenidos del sitio web Ceeri.com.pe y los servicios ofertados en
             el mismo, así como de los programas necesarios para su implementación y la información relacionada.
             
             No se permite la reproducción, publicación y/o uso no estrictamente privado de los contenidos, totales o parciales, del sitio web
-            __________________________________ sin el consentimiento previo y por escrito.
+            Ceeri.com.pe sin el consentimiento previo y por escrito.
 
             Propiedad intelectual del software
-            El usuario debe respetar los programas de terceros puestos a su disposición por ____________________________, aun siendo gratuitos
+            El usuario debe respetar los programas de terceros puestos a su disposición por CEERI, aun siendo gratuitos
             y/o de disposición pública.
             
-            __________________________ dispone de los derechos de explotación y propiedad intelectual necesarios del software.
+            CEERI dispone de los derechos de explotación y propiedad intelectual necesarios del software.
             
             El usuario no adquiere derecho alguno o licencia por el servicio contratado, sobre el software necesario para la prestación del 
             servicio, ni tampoco sobre la información técnica de seguimiento del servicio, excepción hecha de los derechos y licencias 

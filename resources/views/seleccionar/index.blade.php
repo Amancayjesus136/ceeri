@@ -1,22 +1,19 @@
 @extends('layouts.admin')
 @section('content')
   <style>
-    .contenedor {
-      margin-top: 80px;
-    }
-
-    
+ 
     .container {
         border: 2px;
         border-radius: 10px;
-        border-color: rgb(151, 140, 140);
+        border-color: #405189;
         border-style: solid;
         padding: 15px 15px 15px 15px;
-        background-color: #567797;
+        background-color: #405189;
     }
 
     label {
         font-weight: bold;
+        color: white;
     }
         
     h4  {
@@ -24,7 +21,6 @@
     }
     .contenedor button {
       margin-top: 20px; /* Ajusta el margen superior según sea necesario */
-      background-color: blue;
       color: white;
       border-radius: 7px;
       font-size: 30px;
@@ -43,8 +39,7 @@
   </style>
 
   <div class="contenedor">
-  <h4 class="mb-sm-0">Reservacion de citas en todas las especialidades disponibles</h4>
-    <br><br>
+  <h4 class="page-title-box d-sm-flex align-items-center justify-content-between">Reservacion de citas en todas las especialidades disponibles</h4>
   </div>
  
             <div class="container">
@@ -106,7 +101,7 @@
                             </select>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary" style="margin-top: 25px; font-weight: bold;">Reservar cita</button>
+                    <button type="submit" class="btn btn-primary" style="margin-top: 25px; font-weight: bold; background-color: skyblue;">Reservar cita</button>
                 </form>
             </div>
 

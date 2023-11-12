@@ -10,6 +10,7 @@ use App\Http\Controllers\ListadoTerapiaInfantilController;
 use App\Http\Controllers\ListadoTerapiaLenguajeController;
 use App\Http\Controllers\ListadoTerapiaOcupacionalController;
 use App\Http\Controllers\SeleccionarController;
+use App\Http\Controllers\footerPagesController;
 use App\Http\Controllers\ConsultarController;
 use App\Http\Controllers\ReservaPrincipalController;
 use App\Http\Controllers\ReservaInternaController;
@@ -40,6 +41,12 @@ Route::put('/conocenos/editar_conocenos/{id}', [MenuUsuarioController::class, 'e
 Route::resource('imagen', ImagenCeeriController::class, ['names' => ['index' => 'inicio.imagenceeri']]);
 
 Route::post('/consultadni', [WelcomeController::class, 'consultadni'])->name('consultadni');
+
+//rutas para las politicas y privacidad , terminos y condiciones , seguridad
+
+Route::get('/politicas-privacidad', [footerPagesController::class, 'politicas'])->name('politicas');   
+Route::get('/terminos-condiciones', [footerPagesController::class, 'condiciones'])->name('condiciones');   
+Route::get('/seguridad', [footerPagesController::class, 'seguridad'])->name('seguridad');   
 
 
 //ruta para el formulario de registro de la pagina principal
