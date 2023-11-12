@@ -9,6 +9,8 @@ use App\Http\Controllers\ListadoTerapiaFisicaController;
 use App\Http\Controllers\ListadoTerapiaInfantilController;
 use App\Http\Controllers\ListadoTerapiaLenguajeController;
 use App\Http\Controllers\ListadoTerapiaOcupacionalController;
+use App\Http\Controllers\CitasCanceladasController;
+
 use App\Http\Controllers\SeleccionarController;
 use App\Http\Controllers\footerPagesController;
 use App\Http\Controllers\ConsultarController;
@@ -18,6 +20,7 @@ use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\MenuUsuarioController;
 use App\Http\Controllers\NumerosController;
 use App\Http\Controllers\ImagenCeeriController;
+
 
 use Illuminate\Support\Facades\Route;
 
@@ -94,6 +97,14 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
     Route::resource('lsttocupacional', ListadoTerapiaOcupacionalController::class);
     Route::get('/formularioocupacional', [ListadoTerapiaOcupacionalController::class, 'formulario'])->name('lsttocupacional.formulario');
+
+
+    Route::resource('ccanceladas', CitasCanceladasController::class);
+    Route::resource('ccumplidas', CitasCanceladasController::class);
+    Route::resource('creservadas', CitasCanceladasController::class);
+
+
+
     
 
 

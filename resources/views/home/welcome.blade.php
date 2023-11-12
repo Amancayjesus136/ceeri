@@ -1076,10 +1076,10 @@
                                             <div class="carousel-item active" data-bs-interval="10000">
                                                 <img src="assets/images/prueba/pepe.png" alt="First slide" width="50%"/>
                                             </div>
-                                            <div class="carousel-item" data-bs-interval="2000">
+                                            <div class="carousel-item active" data-bs-interval="2000">
                                                 <img src="assets/images/small/img-11.jpg" class="d-block w-100" alt="two slide" />
                                             </div>
-                                            <div class="carousel-item">
+                                            <div class="carousel-item active">
                                                 <img src="assets/images/small/img-10.jpg" class="d-block w-100" alt="There slide" />
                                             </div>
                                         </div>
@@ -1111,9 +1111,6 @@
                                 </div>
                             </div>
                             <div class="card-body">
-                                <li>terapia</li>
-                                <li>terapia</li>
-                                <li>terapia</li>
                                 <li>terapia</li>
                                 <li>terapia</li>
                                 <li>terapia</li>
