@@ -1059,42 +1059,66 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
             </div>
             <div class="modal-body">
-                <!-- Contenido del carrusel -->
-                <div id="tfisicacarrusel" class="carousel slide carousel-fade" data-ride="carousel">
-                    <!-- Indicadores -->
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#tfisicacarrusel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#tfisicacarrusel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#tfisicacarrusel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+
+                <!-- codigo de contenido para todos -->
+                <div class="row">
+                    <div class="col-xl-6">
+                        <div class="card">
+                            <div class="card-header align-items-center d-flex">
+                                <div class="flex-shrink-0">
+                                    
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="live-preview">
+                                    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active" data-bs-interval="10000">
+                                                <img src="assets//images/small/img-12.jpg" class="d-block w-100" alt="First slide" />
+                                            </div>
+                                            <div class="carousel-item" data-bs-interval="2000">
+                                                <img src="assets/images/small/img-11.jpg" class="d-block w-100" alt="two slide" />
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="assets/images/small/img-10.jpg" class="d-block w-100" alt="There slide" />
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="d-none code-view">
+                                    <pre class="language-markup" style="height: 375px;">
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- imagenes -->
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img class="d-block img-fluid mx-auto" src="imagen1.jpg" alt="First slide">
-                            
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block img-fluid mx-auto" src="imagen2.jpg" alt="Second slide">
-                          
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block img-fluid mx-auto" src="imagen3.jpg" alt="Third slide">
-                          
+                    <!-- Contenido -->
+                    <div class="col-xl-6">
+                        <div class="card">
+                            <div class="card-header align-items-center d-flex">
+                                <div class="flex-shrink-0">
+                                    
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <li>terapia</li>
+                            </div>
                         </div>
                     </div>
+                    <!-- Contenido -->
 
-                    <!-- Flechas  -->
-                    <a class="carousel-control-prev" href="#tfisicacarrusel" role="button" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">atras</span>
-                    </a>
-                    
-                    <a class="carousel-control-next" href="#tfisicacarrusel" role="button" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">adelante</span>
-                    </a>
                 </div>
+                <!-- codigo de contenido para todos -->
             </div>
         </div>
     </div>
