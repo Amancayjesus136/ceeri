@@ -1074,10 +1074,10 @@
                                     <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
                                         <div class="carousel-inner">
                                             <div class="carousel-item active" data-bs-interval="10000">
-                                                <img src="assets/images/prueba/pepe.png" alt="First slide" width="50%"/>
+                                                <img src="assets/images/tfisica/fisica.png" class="d-block w-100" alt="First slide"/>
                                             </div>
                                             <div class="carousel-item active" data-bs-interval="2000">
-                                                <img src="assets/images/small/img-11.jpg" class="d-block w-100" alt="two slide" />
+                                                <img src="assets/images/tfisica/activo.png" class="d-block w-100" alt="two slide" />
                                             </div>
                                             <div class="carousel-item active">
                                                 <img src="assets/images/small/img-10.jpg" class="d-block w-100" alt="There slide" />
@@ -1135,7 +1135,7 @@
 <!-- Modal de vista en terapia Lenguaje -->
 
 
-                <!-- Modal para Crear Nuevo Tema -->
+    <!-- Modal para Crear Nuevo Tema -->
                 <div class="modal fade" id="tlenguaje" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl">
         <div class="modal-content">
@@ -1159,7 +1159,7 @@
                     <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active" data-bs-interval="10000">
-                                <img src="assets/images/prueba/pepe.png" alt="First slide" width="50%"/>
+                                <img src="assets/images/tlenguaje/img1.png" alt="First slide" width="50%"/>
                             </div>
                             <div class="carousel-item" data-bs-interval="2000">
                                 <img src="assets/images/small/img-11.jpg" class="d-block w-100" alt="two slide" />
