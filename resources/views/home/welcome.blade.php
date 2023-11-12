@@ -1048,104 +1048,317 @@
             </button>
 
 
+    <!-- Modals "Lo que ofrecemos" -->
 
                 <!-- Modal de vista en terapia fisica -->
-<div class="modal fade" id="tfisica" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl" >
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="crearModalLabel">Terapia Física y Rehabilitación</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
+                <div class="modal fade" id="tfisica" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="crearModalLabel">Terapia infantil</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Contenido del carrusel -->
+                <div id="tfisicacarrusel" class="carousel slide carousel-fade" data-ride="carousel">
+                    <!-- Indicadores -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#tfisicacarrusel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#tfisicacarrusel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#tfisicacarrusel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+
+                    <!-- imagenes -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block img-fluid mx-auto" src="imagen1.jpg" alt="First slide">
+                            
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid mx-auto" src="imagen2.jpg" alt="Second slide">
+                          
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid mx-auto" src="imagen3.jpg" alt="Third slide">
+                          
+                        </div>
+                    </div>
+
+                    <!-- Flechas  -->
+                    <a class="carousel-control-prev" href="#tfisicacarrusel" role="button" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">atras</span>
+                    </a>
                     
+                    <a class="carousel-control-next" href="#tfisicacarrusel" role="button" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">adelante</span>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
+</div>
 <!-- Modal de vista en terapia Lenguaje -->
 
 
                 <!-- Modal para Crear Nuevo Tema -->
-<div class="modal fade" id="tlenguaje" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl" >
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="crearModalLabel">Terapia Lenguaje</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
+                <div class="modal fade" id="tlenguaje" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="crearModalLabel">Terapia Lenguaje</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Contenido del carrusel -->
+                <div id="lenguajecarrusel" class="carousel slide carousel-fade" data-ride="carousel">
+                    <!-- Indicadores -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#lenguajecarrusel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#lenguajecarrusel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#lenguajecarrusel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+
+                    <!-- imagenes -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block img-fluid mx-auto" src="imagen1.jpg" alt="First slide">
+                            
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid mx-auto" src="imagen2.jpg" alt="Second slide">
+                          
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid mx-auto" src="imagen3.jpg" alt="Third slide">
+                          
+                        </div>
+                    </div>
+
+                    <!-- Flechas  -->
+                    <a class="carousel-control-prev" href="#lenguajecarrusel" role="button" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">atras</span>
+                    </a>
                     
+                    <a class="carousel-control-next" href="#lenguajecarrusel" role="button" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">adelante</span>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
+</div>
+
+
 
     <!-- Modal de vista en terapia ocupacional -->
 
-<div class="modal fade" id="tocupacional" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl" >
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="crearModalLabel">Terapia Ocupacional</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
+    <div class="modal fade" id="tocupacional" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="crearModalLabel">Terapia ocupacional</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Contenido del carrusel -->
+                <div id="ocupacionalcarrusel" class="carousel slide carousel-fade" data-ride="carousel">
+                    <!-- Indicadores -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#ocupacionalcarrusel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#ocupacionalcarrusel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#ocupacionalcarrusel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+
+                    <!-- imagenes -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block img-fluid mx-auto" src="imagen1.jpg" alt="First slide">
+                            
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid mx-auto" src="imagen2.jpg" alt="Second slide">
+                          
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid mx-auto" src="imagen3.jpg" alt="Third slide">
+                          
+                        </div>
+                    </div>
+
+                    <!-- Flechas  -->
+                    <a class="carousel-control-prev" href="#ocupacionalcarrusel" role="button" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">atras</span>
+                    </a>
                     
+                    <a class="carousel-control-next" href="#ocupacionalcarrusel" role="button" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">adelante</span>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
 
         <!-- Modal de vista en terapia infantil -->
 
-<div class="modal fade" id="tinfantil" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl" >
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="crearModalLabel">Terapia Infantil</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
+        <div class="modal fade" id="tinfantil" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="crearModalLabel">Terapia infantil</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Contenido del carrusel -->
+                <div id="infantilcarrusel" class="carousel slide carousel-fade" data-ride="carousel">
+                    <!-- Indicadores -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#infantilcarrusel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#infantilcarrusel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#infantilcarrusel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+
+                    <!-- imagenes -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block img-fluid mx-auto" src="imagen1.jpg" alt="First slide">
+                            
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid mx-auto" src="imagen2.jpg" alt="Second slide">
+                          
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid mx-auto" src="imagen3.jpg" alt="Third slide">
+                          
+                        </div>
+                    </div>
+
+                    <!-- Flechas  -->
+                    <a class="carousel-control-prev" href="#infantilcarrusel" role="button" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">atras</span>
+                    </a>
                     
+                    <a class="carousel-control-next" href="#infantilcarrusel" role="button" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">adelante</span>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
         <!-- Modal de vista en Psicologia -->
 
-<div class="modal fade" id="psicologia" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl" >
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="crearModalLabel">Psicologia</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
+ <div class="modal fade" id="psicologia" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="crearModalLabel">Terapia infantil</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Contenido del carrusel -->
+                <div id="psicologiacarrusel" class="carousel slide carousel-fade" data-ride="carousel">
+                    <!-- Indicadores -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#psicologiacarrusel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#psicologiacarrusel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#psicologiacarrusel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+
+                    <!-- imagenes -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block img-fluid mx-auto" src="imagen1.jpg" alt="First slide">
+                            
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid mx-auto" src="imagen2.jpg" alt="Second slide">
+                          
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid mx-auto" src="imagen3.jpg" alt="Third slide">
+                          
+                        </div>
+                    </div>
+
+                    <!-- Flechas  -->
+                    <a class="carousel-control-prev" href="#psicologiacarrusel" role="button" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">atras</span>
+                    </a>
                     
+                    <a class="carousel-control-next" href="#psicologiacarrusel" role="button" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">adelante</span>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
 
            <!-- Modal de vista en Equipos -->
 
-<div class="modal fade" id="equipos" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl" >
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="crearModalLabel">Lo mejor en Técnologia</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
+           <div class="modal fade" id="equipos" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="crearModalLabel">Terapia infantil</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Contenido del carrusel -->
+                <div id="equiposcarrusel" class="carousel slide carousel-fade" data-ride="carousel">
+                    <!-- Indicadores -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#equiposcarrusel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#equiposcarrusel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#equiposcarrusel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+
+                    <!-- imagenes -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block img-fluid mx-auto" src="imagen1.jpg" alt="First slide">
+                            
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid mx-auto" src="imagen2.jpg" alt="Second slide">
+                          
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid mx-auto" src="imagen3.jpg" alt="Third slide">
+                          
+                        </div>
+                    </div>
+
+                    <!-- Flechas  -->
+                    <a class="carousel-control-prev" href="#equiposcarrusel" role="button" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">atras</span>
+                    </a>
                     
+                    <a class="carousel-control-next" href="#equiposcarrusel" role="button" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">adelante</span>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
 
     
