@@ -573,7 +573,7 @@
             </section>
         </div>
 
-             <!-- start blog -->
+             <!-- Aqui empiezan los modals en el boton "VISTA" LO QUE OFRECEMOS -->
              <section class="section" id="blog">
                 <div class="container">
                     <div class="row justify-content-center">
@@ -614,7 +614,7 @@
                                     <p class="text-muted fs-14">Tratamiento que se enfoca en mejorar la función física, la movilidad y la calidad de vida de las personas.</p>
                         
                                     <div>
-                                        <a href="#!" class="link-success">Vista <i class="ri-arrow-right-line align-bottom ms-1"></i></a>
+                                        <a href="#!"  data-bs-toggle="modal" data-bs-target="#tlenguaje" class="link-success">Vista <i class="ri-arrow-right-line align-bottom ms-1"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -630,7 +630,7 @@
                                     </a>
                                     <p class="text-muted fs-14">Tratamiento que se enfoca en mejorar la función física, la movilidad y la calidad de vida de las personas.</p>
                                     <div>
-                                        <a href="#!" class="link-success">Vista <i class="ri-arrow-right-line align-bottom ms-1"></i></a>
+                                        <a href="#!"  data-bs-toggle="modal" data-bs-target="#tocupacional" class="link-success" data-bs-toggle="modal" data-bs-target="#tocupacional">Vista <i class="ri-arrow-right-line align-bottom ms-1"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -648,7 +648,7 @@
                                     </a>
                                     <p class="text-muted fs-14">Tratamiento que se enfoca en mejorar la función física, la movilidad y la calidad de vida de las personas.</p>
                                     <div>
-                                        <a href="#!" class="link-success">Vista <i class="ri-arrow-right-line align-bottom ms-1"></i></a>
+                                        <a href="#!" data-bs-toggle="modal" data-bs-target="#tinfantil" class="link-success">Vista <i class="ri-arrow-right-line align-bottom ms-1"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -665,7 +665,7 @@
                                     </a>
                                     <p class="text-muted fs-14">Tratamiento que se enfoca en mejorar la función física, la movilidad y la calidad de vida de las personas.</p>
                                     <div>
-                                        <a href="#!" class="link-success">Vista <i class="ri-arrow-right-line align-bottom ms-1"></i></a>
+                                        <a href="#!"  data-bs-toggle="modal" data-bs-target="#psicologia"  class="link-success">Vista <i class="ri-arrow-right-line align-bottom ms-1"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -677,11 +677,11 @@
                                 </div>
                                 <div class="card-body">
                                     <a href="javascript:void(0);">
-                                        <h5>Terapia Física</h5>
+                                        <h5>Los mejores equipos en Terapias</h5>
                                     </a>
                                     <p class="text-muted fs-14">Tratamiento que se enfoca en mejorar la función física, la movilidad y la calidad de vida de las personas.</p>
                                     <div>
-                                        <a href="#!" class="link-success">Vista <i class="ri-arrow-right-line align-bottom ms-1"></i></a>
+                                        <a href="#!"  data-bs-toggle="modal" data-bs-target="#equipos" class="link-success">Vista <i class="ri-arrow-right-line align-bottom ms-1"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -1049,12 +1049,12 @@
 
 
 
-                <!-- Modal para Crear Nuevo Tema -->
+                <!-- Modal de vista en terapia fisica -->
 <div class="modal fade" id="tfisica" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl" >
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="crearModalLabel">Crear nuevo registro</h5>
+                    <h5 class="modal-title" id="crearModalLabel">Terapia Física y Rehabilitación</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -1063,15 +1063,64 @@
             </div>
         </div>
     </div>
-<!-- Modal para Crear Nuevo Tema -->
+<!-- Modal de vista en terapia Lenguaje -->
 
 
                 <!-- Modal para Crear Nuevo Tema -->
+<div class="modal fade" id="tlenguaje" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl" >
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="crearModalLabel">Terapia Lenguaje</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de vista en terapia ocupacional -->
+
+<div class="modal fade" id="tocupacional" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl" >
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="crearModalLabel">Terapia Ocupacional</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+        <!-- Modal de vista en terapia infantil -->
+
+<div class="modal fade" id="tinfantil" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl" >
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="crearModalLabel">Terapia Infantil</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- Modal de vista en Psicologia -->
+
 <div class="modal fade" id="psicologia" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl" >
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="crearModalLabel">Crear nuevo registro</h5>
+                    <h5 class="modal-title" id="crearModalLabel">Psicologia</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -1080,7 +1129,27 @@
             </div>
         </div>
     </div>
-<!-- Modal para Crear Nuevo Tema -->
+
+
+           <!-- Modal de vista en Equipos -->
+
+<div class="modal fade" id="equipos" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl" >
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="crearModalLabel">Lo mejor en Técnologia</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+
 
 
 
