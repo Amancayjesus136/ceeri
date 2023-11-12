@@ -597,7 +597,7 @@
                                     </a>
                                     <p class="text-muted fs-14">Tratamiento que se enfoca en mejorar la función física, la movilidad y la calidad de vida de las personas.</p>
                                     <div>
-                                        <a href="#!" class="link-success">Vista <i class="ri-arrow-right-line align-bottom ms-1"></i></a>
+                                        <a href="#!"  data-bs-toggle="modal" data-bs-target="#tfisica" class="link-success">Vista <i class="ri-arrow-right-line align-bottom ms-1"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -1046,6 +1046,46 @@
             <button onclick="topFunction()" class="btn btn-info btn-icon landing-back-top" id="back-to-top">
                 <i class="ri-arrow-up-line"></i>
             </button>
+
+
+
+                <!-- Modal para Crear Nuevo Tema -->
+<div class="modal fade" id="tfisica" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl" >
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="crearModalLabel">Crear nuevo registro</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- Modal para Crear Nuevo Tema -->
+
+
+                <!-- Modal para Crear Nuevo Tema -->
+<div class="modal fade" id="psicologia" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl" >
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="crearModalLabel">Crear nuevo registro</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- Modal para Crear Nuevo Tema -->
+
+
+
+
+
 
         </div>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
