@@ -1080,7 +1080,7 @@
                                                 <img src="assets/images/tfisica/activo.png" class="d-block w-100" alt="two slide" width="100%" />
                                             </div>
                                             <div class="carousel-item active">
-                                                <img src="assets/images/small/img-10.png" class="d-block w-100" alt="There slide" />
+                                                <img src="assets/images/tfisica/img3.png" class="d-block w-100" alt="There slide" width="100%"/>
                                             </div>
                                         </div>
                                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
@@ -1245,23 +1245,23 @@
             </div>
             <div class="card-body">
                 <div class="live-preview">
-                    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                    <div id="carouselExampleInterval3" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active" data-bs-interval="10000">
-                                <img src="assets/images/prueba/pepe.png" alt="First slide" width="50%"/>
+                                <img src="assets/images/tocupacional/img1.png" alt="First slide" width="100%"/>
                             </div>
                             <div class="carousel-item" data-bs-interval="2000">
-                                <img src="assets/images/small/img-11.jpg" class="d-block w-100" alt="two slide" />
+                                <img src="assets/images/tocupacional/img2.png" class="d-block w-100" alt="two slide" width="100%"/>
                             </div>
                             <div class="carousel-item">
-                                <img src="assets/images/small/img-10.jpg" class="d-block w-100" alt="There slide" />
+                                <img src="assets/images/tocupacional/img3.png" class="d-block w-100" alt="There slide"width="100%" />
                             </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval3" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Previous</span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval3" data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
                         </button>
