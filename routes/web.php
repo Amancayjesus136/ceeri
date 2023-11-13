@@ -10,6 +10,8 @@ use App\Http\Controllers\ListadoTerapiaInfantilController;
 use App\Http\Controllers\ListadoTerapiaLenguajeController;
 use App\Http\Controllers\ListadoTerapiaOcupacionalController;
 use App\Http\Controllers\CitasCanceladasController;
+use App\Http\Controllers\CitasCumplidasController;
+use App\Http\Controllers\CitasReservadasController;
 
 use App\Http\Controllers\SeleccionarController;
 use App\Http\Controllers\footerPagesController;
@@ -100,8 +102,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
 
     Route::resource('ccanceladas', CitasCanceladasController::class);
-    Route::resource('ccumplidas', CitasCanceladasController::class);
-    Route::resource('creservadas', CitasCanceladasController::class);
+    Route::resource('ccumplidas', CitasCumplidasController::class);
+    Route::resource('creservadas', CitasReservadasController::class);
 
 
 

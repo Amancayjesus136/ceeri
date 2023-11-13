@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\CitasCumplidas;
+
 
 class CitasCumplidasController extends Controller
 {
@@ -11,7 +13,8 @@ class CitasCumplidasController extends Controller
      */
     public function index()
     {
-        //
+        return view('ccumplidas.index');
+
     }
 
     /**

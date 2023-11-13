@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\CitasReservadas;
+
 
 class CitasReservadasController extends Controller
 {
@@ -11,7 +13,8 @@ class CitasReservadasController extends Controller
      */
     public function index()
     {
-        //
+        return view('creservadas.index');
+        
     }
 
     /**

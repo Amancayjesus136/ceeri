@@ -206,12 +206,43 @@
                         </li>
                     </ul>
                 </div>
-            </li>
+             </li>
 
 <!-- ============================================================== -->
-<!-- CONFIGURACIÓN -->     
-<!-- ============================================================== -->  
-            <li class="nav-item">
+<!-- Reservas para hoy -->     
+<!-- ============================================================== --> 
+
+             <li class="nav-item">
+                <a class="nav-link menu-link" href="#reservashoy" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarPlanCurricular">
+                    <i class="fas fa-clipboard-list"></i> <span data-key="t-Configuración">Reservas para hoy</span>
+                </a>
+                <div class="collapse menu-dropdown" id="reservashoy">
+                    <ul class="nav nav-sm flex-column">
+                        <li class="nav-item">
+                            <a href="{{ route('creservadas.index') }}" class="nav-link">
+                                <i class="fas fa-clock"></i>Reservas para hoy
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('ccumplidas.index') }}" class="nav-link">
+                                <i class="fas fa-check"></i>Citas cumplidas
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('ccanceladas.index') }}" class="nav-link">
+                                <i class="fas fa-times"></i>Citas candeladas
+                            </a>
+                        </li>
+                        
+                        
+                    </ul>
+                </div>
+             </li>
+
+               <!-- ============================================================== -->
+                <!-- CONFIGURACIÓN -->     
+                <!-- ============================================================== -->  
+            <li lcass="nav-item">
                 <a class="nav-link menu-link" href="#sidebarConfiguracion" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarPlanCurricular">
                     <i class="fas fa-cogs"></i> <span data-key="t-Configuración">Configuracion de Inicio</span>
                 </a>
@@ -241,8 +272,22 @@
                 </div>
             </li>
         </div> 
-        <!-- Sidebar -->
+        
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <div class="sidebar-background"></div>
 </div>
