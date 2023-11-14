@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Politicas de privacidad</title>
 </head>
 <body>
     <style>
@@ -27,10 +27,15 @@
             padding-right: 100px;
             font-family: 'Montserrat', sans-serif;
         }
+
+        h1 {
+            font-size: 80px;
+        }
     </style>
 
     <div class="container">
         <img src="assets/images/logo-sinfondo.png" alt="">
+        <h1>Politicas de privacidad</h1>
         <p>Protección de datos de carácter personal según la LOPDDD (Ley Orgánica de Protección de Datos Personales y garantía de los derechos digitales),
             en aplicación de la normativa vigente en materia de protección de datos de carácter personal,
             informa que los datos personales que se recogen a través de los formularios del Sitio web: Ceeri.com.pe,
@@ -127,19 +132,18 @@
             servicio, ni tampoco sobre la información técnica de seguimiento del servicio, excepción hecha de los derechos y licencias 
             necesarios para el cumplimiento de los servicios contratados y únicamente durante la duración de los mismos.
             
-            Para toda actuación que exceda del cumplimiento del contrato, el usuario necesitará autorización por escrito por parte de _______________________________, 
+            Para toda actuación que exceda del cumplimiento del contrato, el usuario necesitará autorización por escrito por parte de CEERI, 
             quedando prohibido al usuario acceder, modificar, visualizar la configuración, estructura y ficheros de los servidores 
-            propiedad de _______________________________, asumiendo la responsabilidad civil y penal derivada de cualquier incidencia que
+            propiedad de CEERI , asumiendo la responsabilidad civil y penal derivada de cualquier incidencia que
             se pudiera producir en los servidores y sistemas de seguridad como consecuencia directa de una actuación negligente o maliciosa
             por su parte.
             
             Propiedad intelectual de los contenidos alojados
             
-            Se prohíbe el uso contrario a la legislación sobre propiedad intelectual de los servicios prestados por
-            _______________________________ y, en particular de:
+            Se prohíbe el uso contrario a la legislación sobre propiedad intelectual de los servicios prestados por CEERI y, en particular de:
             
             • La utilización que resulte contraria a las leyes españolas o que infrinja los derechos de terceros.
-            • La publicación o la transmisión de cualquier contenido que, a juicio de ________________________, resulte
+            • La publicación o la transmisión de cualquier contenido que, a juicio de CEERI, resulte
             violento, obsceno, abusivo, ilegal, racial, xenófobo o difamatorio.
             • Los cracks, números de serie de programas o cualquier otro contenido que vulnere derechos de la propiedad
             intelectual de terceros.
@@ -159,33 +163,33 @@
             funcionamiento del servicio online, comercio electrónico, derechos de autor, mantenimiento del orden público, así como principios
             universales de uso de Internet.
 
-            El usuario indemnizará a ___________________ por los gastos que generara la imputación de
-            ______________________________ en alguna causa cuya responsabilidad fuera atribuible al usuario, incluidos
+            El usuario indemnizará a CEERI por los gastos que generara la imputación de
+            cualquier violación de las leyes aplicables, términos de servicio o políticas de privacidad en alguna causa cuya responsabilidad fuera atribuible al usuario, incluidos
             honorarios y gastos de defensa jurídica, incluso en el caso de una decisión judicial no definitiva.
             
             Protección de la información alojada
             
-            ______________________________ realiza copias de seguridad de los contenidos alojados en sus servidores, sin
+            CEERI realiza copias de seguridad de los contenidos alojados en sus servidores, sin
             embargo no se responsabiliza de la pérdida o el borrado accidental de los datos por parte de los usuarios. De igual
             manera, no garantiza la reposición total de los datos borrados por los usuarios, ya que los citados datos podrían haber sido 
             suprimidos y/o modificados durante el periodo del tiempo transcurrido desde la última copia de seguridad.
             
             Los servicios ofertados, excepto los servicios específicos de backup, no incluyen la reposición de los contenidos
-            conservados en las copias de seguridad realizadas por ______________________________, cuando esta pérdida sea imputable al 
+            conservados en las copias de seguridad realizadas por el equipo desarrollador, cuando esta pérdida sea imputable al 
             usuario; en este caso, se determinará una tarifa acorde a la complejidad y volumen de la recuperación, siempre previa aceptación
             del usuario.
             
             La reposición de datos borrados sólo está incluida en el precio del servicio cuando la pérdida del contenido sea debida a causas
-            atribuibles a ________________________________
+            atribuibles a el personal que administra el sistema o los desarrolladores.
             
             Comunicaciones comerciales
             
-            En aplicación de la LSSI. _______________________________ no enviará comunicaciones publicitarias o promocionales por correo 
+            En aplicación de la LSSI. CEERI no enviará comunicaciones publicitarias o promocionales por correo 
             electrónico u otro medio de comunicación electrónica equivalente que previamente no hubieran sido solicitadas o expresamente 
             autorizadas por los destinatarios de las mismas.
             
-            En el caso de usuarios con los que exista una relación contractual previa, ______________________________ sí está autorizado 
-            al envío de comunicaciones comerciales referentes a productos o servicios de ____________________________ que sean similares 
+            En el caso de usuarios con los que exista una relación contractual previa, CEERI sí está autorizado 
+            al envío de comunicaciones comerciales referentes a productos o servicios de CEERI que sean similares 
             a los que inicialmente fueron objeto de contratación con el cliente.
             
             En todo caso, el usuario, tras acreditar su identidad, podrá solicitar que no se le haga llegar más información comercial a 
