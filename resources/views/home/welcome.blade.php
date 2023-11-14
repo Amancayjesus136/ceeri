@@ -1003,7 +1003,7 @@
                                     <div class="text-muted mt-3">
                                         <ul class="list-unstyled ff-secondary footer-list">
                                             <li><a href="https://wa.me/910558971">WhatsApp</a></li>
-                                            <li><a href="ceerirehabilitacion14@gmail.com">Correo Electrónico</a></li>
+                                            <li><a href="">Correo Electrónico: ceerirehabilitacion14@gmail.com</a></li>
                                             <li><a href="https://www.facebook.com/centrodeterapiafisicaceeri">Facebook</a></li>
                                             <li><a href="https://www.instagram.com/ceeri.terapiafisica/">Instagram</a></li>
                                             <li><a href="https://wa.me/910558971">Telefono personal</a></li>

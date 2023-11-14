@@ -48,9 +48,9 @@
             Europeo y del Consejo, de 27 de abril de 2016, relativo a la protección de las personas físicas en lo que respecta al tratamiento
             de datos personales y a la libre circulación de los mismos. El usuario podrá en cualquier momento ejercitar los derechos de acceso,
             oposición, rectificación y cancelación reconocidos en el citado Reglamento (UE). El ejercicio de estos derechos puede realizarlo
-            el propio usuario a través de email a: ceerirehabilitacion14@gmail.com o en la dirección: ________________________________________ 
+            el propio usuario a través de email a CEERI  o en la dirección: ceerirehabilitacion14@gmail.com.
             El usuario manifiesta que todos los datos facilitados por él son ciertos y correctos, y se compromete a mantenerlos actualizados,
-            comunicando los cambios a _________________________________________Finalidad del tratamiento de los datos personales: 
+            comunicando los cambios al numero de CEERI o ir a la cede que elegio con la Finalidad del tratamiento de los datos personales: 
             ¿Con qué finalidad trataremos tus datos personales?
             En CEERI, trataremos tus datos personales recabados a través del Sitio Web:
             Ceeri.com.pe, con las siguientes finalidades:
@@ -113,7 +113,7 @@
             La comunicación de datos a las Fuerzas y Cuerpos del Estado se hará en virtud a lo dispuesto en la normativa sobre protección de
             datos personales.
             
-            Derechos propiedad intelectual ______________________________
+            Derechos propiedad intelectual: CEERI Y el equipo desarrollador del sistema (jesus amancay, henri ortiz, jordan potenciano santamaria).
             
             _________________________________ es titular de todos los derechos de autor, propiedad intelectual, industrial, “know how” y 
             cuantos otros derechos guardan relación con los contenidos del sitio web Ceeri.com.pe y los servicios ofertados en
