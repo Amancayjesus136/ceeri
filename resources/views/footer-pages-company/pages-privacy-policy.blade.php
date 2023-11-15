@@ -11,17 +11,16 @@
         .container {
             display: block;
             clear: both;
-            text-align: center;
         }
 
         .container img {
             width: 300px;
-            height: 300px;
+            height: 130px;
         }
 
         body {
-            background-color: black;
-            color: white;
+            background-color: white;
+            color: black;
             font-size: 20px;
             padding-left: 100px;
             padding-right: 100px;
@@ -36,7 +35,7 @@
     <div class="container">
         <img src="assets/images/logo-sinfondo.png" alt="">
         <h1>Politicas de privacidad</h1>
-        <p>Protección de datos de carácter personal según la LOPDDD (Ley Orgánica de Protección de Datos Personales y garantía de los derechos digitales),
+        <p><b>Protección de datos de carácter personal</b><br><br> según la LOPDDD (Ley Orgánica de Protección de Datos Personales y garantía de los derechos digitales),
             en aplicación de la normativa vigente en materia de protección de datos de carácter personal,
             informa que los datos personales que se recogen a través de los formularios del Sitio web: Ceeri.com.pe,
             se incluyen en los ficheros automatizados específicos de usuarios de los servicios de CEERI (Centro Especializado en Rehabilitación Integral)
@@ -50,59 +49,62 @@
             oposición, rectificación y cancelación reconocidos en el citado Reglamento (UE). El ejercicio de estos derechos puede realizarlo
             el propio usuario a través de email a CEERI  o en la dirección: ceerirehabilitacion14@gmail.com.
             El usuario manifiesta que todos los datos facilitados por él son ciertos y correctos, y se compromete a mantenerlos actualizados,
-            comunicando los cambios al numero de CEERI o ir a la cede que elegio con la Finalidad del tratamiento de los datos personales: 
-            ¿Con qué finalidad trataremos tus datos personales?
+            comunicando los cambios al numero de CEERI o ir a la cede que elegio con la Finalidad del tratamiento de los datos personales: <br><br> 
+            <b>¿Con qué finalidad trataremos tus datos personales?</b><br><br>
             En CEERI, trataremos tus datos personales recabados a través del Sitio Web:
-            Ceeri.com.pe, con las siguientes finalidades:
+            Ceeri.com.pe, con las siguientes finalidades: <br><br>
             
             1. En caso de contratación de los bienes y servicios ofertados a través de Ceeri.com.pe, para
             mantener la relación contractual, así como la gestión, administración, información, prestación y mejora del
-            servicio.
+            servicio. <br><br>
             
-            2. Envío de información solicitada a través de los formularios dispuestos en "reservar cita".
+            2. Envío de información solicitada a través de los formularios dispuestos en "reservar cita". <br><br>
             3. Remitir boletines (newsletters), así como comunicaciones comerciales de promociones y/o publicidad de
-            CEERI y del sector.
+            CEERI y del sector. <br><br>
             
             Te recordamos que puedes oponerte al envío de comunicaciones comerciales por cualquier vía y en cualquier momento, remitiendo un
             correo electrónico a la dirección indicada anteriormente.   
             Los campos de dichos registros son de cumplimentación obligatoria, siendo imposible realizar las finalidades expresadas si no se
-            aportan esos datos.          
-            ¿Por cuánto tiempo se conservan los datos personales recabados?
+            aportan esos datos. <br><br> 
+            <b>¿Por cuánto tiempo se conservan los datos personales recabados?</b>         
+            <br><br>
             Los datos personales proporcionados se conservarán mientras se mantenga la relación comercial o no solicites su
-            supresión y durante el plazo por el cuál pudieran derivarse responsabilidades legales por los servicios prestados.
-            Legitimación:
-            
+            supresión y durante el plazo por el cuál pudieran derivarse responsabilidades legales por los servicios prestados. <br><br>
+
+            <b>Legitimación:</b>
+             
+            <br><br>
             El tratamiento de tus datos se realiza con las siguientes bases jurídicas que legitiman el mismo:
-            
+            <br><br>
             1. La solicitud de información y/o la contratación de los servicios de CEERI, cuyos
             términos y condiciones se pondrán a tu disposición en todo caso, de forma previa a una eventual contratación.
-            
+            <br><br>
             2. El consentimiento libre, específico, informado e inequívoco, en tanto que te informamos poniendo a tu
             disposición la presente política de privacidad, que tras la lectura de la misma, en caso de estar conforme, puedes
             aceptar mediante una declaración o una clara acción afirmativa, como el marcado de una casilla dispuesta al
             efecto.
-            
+            <br><br>
             En caso de que no nos facilites tus datos o lo hagas de forma errónea o incompleta, no podremos atender tu solicitud, resultando
-            del todo imposible proporcionarte la información solicitada o llevar a cabo la contratación de los servicios.
-            
-            Destinatarios:
-            
+            del todo imposible proporcionarte la información solicitada o llevar a cabo la contratación de los servicios. <br><br>
+            <b>Destinatarios:</b>
+           
+            <br><br>
             Los datos no se comunicarán a ningún tercero ajeno a CEERI, salvo obligación legal.       
             Como encargados de tratamiento, tenemos contratados a los siguientes proveedores de servicios, habiéndose
             comprometido al cumplimiento de las disposiciones normativas, de aplicación en materia de protección de datos, en el momento de 
-            su contratación:
+            su contratación: <br><br>
              (ENCARGADO) ______________________________________________________, con domicilio en
             ___________________________________________, NIF/CIF nº ________________________, presta servicios de ________________________________________ .
-            
+            <br><br>
              Puede consultar la política de privacidad y demás aspectos legales de la compañía en el siguiente
             enlace: http://Ceeri.com.pe/politicas-privacidad
-
-            Datos recopilados por usuarios de los servicios
+            <br><br>
+           <b>Datos recopilados por usuarios de los servicios</b><br><br>
             
             En los casos en que el usuario incluya ficheros con datos de carácter personal en los servidores de alojamiento
-            compartido, CEERI no se hace responsable del incumplimiento por parte del usuario del RGPD.
-            
-            Retención de datos en conformidad a la LSSI
+            compartido, CEERI no se hace responsable del incumplimiento por parte del usuario del RGPD. <br><br>
+            <b> Retención de datos en conformidad a la LSSI</b> 
+           <br><br>
             
             (Ley de Servicios de la Sociedad de la Información) informa de que, como prestador de servicio de alojamiento de datos y en virtud de lo 
             establecido en la Ley 34/2002 de 11 de julio de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI), 
@@ -112,17 +114,18 @@
             a disposición de los jueces y/o tribunales o del Ministerio que así los requiera.        
             La comunicación de datos a las Fuerzas y Cuerpos del Estado se hará en virtud a lo dispuesto en la normativa sobre protección de
             datos personales.
-            
-            Derechos propiedad intelectual: CEERI Y el equipo desarrollador del sistema (jesus amancay, henri ortiz, jordan potenciano santamaria).
-            
+            <br><br>
+            Derechos propiedad intelectual: CEERI Y el equipo desarrollador del sistema (jesus amancay, henri ortiz osores, jordan potenciano santamaria).
+            <br><br>
             _________________________________ es titular de todos los derechos de autor, propiedad intelectual, industrial, “know how” y 
             cuantos otros derechos guardan relación con los contenidos del sitio web Ceeri.com.pe y los servicios ofertados en
             el mismo, así como de los programas necesarios para su implementación y la información relacionada.
-            
+
             No se permite la reproducción, publicación y/o uso no estrictamente privado de los contenidos, totales o parciales, del sitio web
             Ceeri.com.pe sin el consentimiento previo y por escrito.
-
-            Propiedad intelectual del software
+            <br><br>
+            <b>Propiedad intelectual del software</b>
+            <br><br>
             El usuario debe respetar los programas de terceros puestos a su disposición por CEERI, aun siendo gratuitos
             y/o de disposición pública.
             
@@ -137,28 +140,28 @@
             propiedad de CEERI , asumiendo la responsabilidad civil y penal derivada de cualquier incidencia que
             se pudiera producir en los servidores y sistemas de seguridad como consecuencia directa de una actuación negligente o maliciosa
             por su parte.
+            <br><br>
+            <b>Propiedad intelectual de los contenidos alojados</b>
+            <br><br>
+            Se prohíbe el uso contrario a la legislación sobre propiedad intelectual de los servicios prestados por CEERI y, en particular de: <br><br>
             
-            Propiedad intelectual de los contenidos alojados
-            
-            Se prohíbe el uso contrario a la legislación sobre propiedad intelectual de los servicios prestados por CEERI y, en particular de:
-            
-            • La utilización que resulte contraria a las leyes españolas o que infrinja los derechos de terceros.
+            • La utilización que resulte contraria a las leyes españolas o que infrinja los derechos de terceros. <br><br>
             • La publicación o la transmisión de cualquier contenido que, a juicio de CEERI, resulte
-            violento, obsceno, abusivo, ilegal, racial, xenófobo o difamatorio.
+            violento, obsceno, abusivo, ilegal, racial, xenófobo o difamatorio. <br><br>
             • Los cracks, números de serie de programas o cualquier otro contenido que vulnere derechos de la propiedad
-            intelectual de terceros.
+            intelectual de terceros. <br><br>
             • La recogida y/o utilización de datos personales de otros usuarios sin su consentimiento expreso o contraviniendo
             lo dispuesto en Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo, de 27 de abril de 2016,
             relativo a la protección de las personas físicas en lo que respecta al tratamiento de datos personales y a la libre
-            circulación de los mismos.
+            circulación de los mismos. <br><br>
             • La utilización del servidor de correo del dominio y de las direcciones de correo electrónico para el envío de
-            correo masivo no deseado.
+            correo masivo no deseado. <br><br>
             
             El usuario tiene toda la responsabilidad sobre el contenido de su web, la información transmitida y almacenada, los enlaces de
             hipertexto, las reivindicaciones de terceros y las acciones legales en referencia a propiedad intelectual.
-            
-            Derechos de terceros y protección de menores.
-            
+            <br><br>
+            <b>Derechos de terceros y protección de menores.</b>
+            <br><br>
             El usuario es responsable respecto a las leyes y reglamentos en vigor y las reglas que tienen que ver con el
             funcionamiento del servicio online, comercio electrónico, derechos de autor, mantenimiento del orden público, así como principios
             universales de uso de Internet.
@@ -166,9 +169,9 @@
             El usuario indemnizará a CEERI por los gastos que generara la imputación de
             cualquier violación de las leyes aplicables, términos de servicio o políticas de privacidad en alguna causa cuya responsabilidad fuera atribuible al usuario, incluidos
             honorarios y gastos de defensa jurídica, incluso en el caso de una decisión judicial no definitiva.
-            
-            Protección de la información alojada
-            
+            <br><br>
+            <b>Protección de la información alojada</b>
+            <br><br>
             CEERI realiza copias de seguridad de los contenidos alojados en sus servidores, sin
             embargo no se responsabiliza de la pérdida o el borrado accidental de los datos por parte de los usuarios. De igual
             manera, no garantiza la reposición total de los datos borrados por los usuarios, ya que los citados datos podrían haber sido 
@@ -181,8 +184,9 @@
             
             La reposición de datos borrados sólo está incluida en el precio del servicio cuando la pérdida del contenido sea debida a causas
             atribuibles a el personal que administra el sistema o los desarrolladores.
-            
-            Comunicaciones comerciales
+            <br><br>
+            <b>Comunicaciones comerciales</b>
+            <br><br>
             
             En aplicación de la LSSI. CEERI no enviará comunicaciones publicitarias o promocionales por correo 
             electrónico u otro medio de comunicación electrónica equivalente que previamente no hubieran sido solicitadas o expresamente 
