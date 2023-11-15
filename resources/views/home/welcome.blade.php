@@ -717,7 +717,8 @@
                                                     <i class="ri-map-pin-2-line text-primary me-1 align-bottom"></i> Villa El Salvador
                                                 </p>
 
-                                                <a href="#!" class="btn btn-primary w-100">Ver detalles</a>
+                                                <a href="#!"  data-bs-toggle="modal" data-bs-target="#ronal1" class="btn btn-primary w-100">Vista</a>
+
                                             </div>
                                         </div>
                                     </div>
@@ -1046,12 +1047,10 @@
             <button onclick="topFunction()" class="btn btn-info btn-icon landing-back-top" id="back-to-top">
                 <i class="ri-arrow-up-line"></i>
             </button>
+<!-- Modals "Lo que ofrecemos" -->
 
-
-    <!-- Modals "Lo que ofrecemos" -->
-
-                <!-- Modal de vista en terapia fisica -->
-                <div class="modal fade" id="tfisica" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
+<!-- Modal de vista en terapia fisica -->
+<div class="modal fade" id="tfisica" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl">
         <div class="modal-content">
             <div class="modal-header">
@@ -1130,13 +1129,29 @@
         </div>
     </div>
 </div>
-
-
 <!-- Modal de vista en terapia Lenguaje -->
 
 
-    <!-- Modal para Crear Nuevo Tema -->
-                <div class="modal fade" id="tlenguaje" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
+<!-- RONAL -->
+    <!-- Modal de vista en terapia fisica -->
+    <div class="modal fade" id="ronal1" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="crearModalLabel">Nancy Martines</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <h2>aca va tu codigo</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal de vista en terapia Lenguaje -->
+<!-- RONAL -->
+
+<!-- Modal para Crear Nuevo Tema -->
+<div class="modal fade" id="tlenguaje" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl">
         <div class="modal-content">
             <div class="modal-header">
@@ -1207,11 +1222,10 @@
                 <li>terapia</li>
                 <li>terapia</li>
                 <li>terapia</li>
-
             </div>
         </div>
     </div>
-    <!-- Contenido -->
+<!-- Contenido -->
 
 </div>
 <!-- codigo de contenido para todos -->
@@ -1480,10 +1494,9 @@
     </div>
 </div>
 
+<!-- Modal de vista en Equipos -->
 
-           <!-- Modal de vista en Equipos -->
-
-           <div class="modal fade" id="equipos" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
+<div class="modal fade" id="equipos" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl">
         <div class="modal-content">
             <div class="modal-header">
@@ -1534,33 +1547,33 @@
         </div>
     </div>
 
-    <!-- Contenido -->
-    <div class="col-xl-6">
-        <div class="card">
-            <div class="card-header align-items-center d-flex">
-                <div class="flex-shrink-0">
-                    
+                <!-- Contenido -->
+                <div class="col-xl-6">
+                    <div class="card">
+                        <div class="card-header align-items-center d-flex">
+                            <div class="flex-shrink-0">
+                                
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <li>terapia</li>
+                            <li>terapia</li>
+                            <li>terapia</li>
+                            <li>terapia</li>
+                            <li>terapia</li>
+                            <li>terapia</li>
+                            <li>terapia</li>
+                            <li>terapia</li>
+                            <li>terapia</li>
+
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="card-body">
-                <li>terapia</li>
-                <li>terapia</li>
-                <li>terapia</li>
-                <li>terapia</li>
-                <li>terapia</li>
-                <li>terapia</li>
-                <li>terapia</li>
-                <li>terapia</li>
-                <li>terapia</li>
+                <!-- Contenido -->
 
-            </div>
-        </div>
-    </div>
-    <!-- Contenido -->
-
-</div>
-<!-- codigo de contenido para todos -->
-</div>
+                </div>
+                <!-- codigo de contenido para todos -->
+                </div>
             </div>
         </div>
     </div>
