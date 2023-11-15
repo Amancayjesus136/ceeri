@@ -86,6 +86,11 @@
         </script>
     </head>
 
+
+    <style>
+
+    </style>
+
     <body data-bs-spy="scroll" data-bs-target="#navbar-example">
 
         <div class="layout-wrapper landing">
@@ -733,7 +738,7 @@
                                                     <i class="ri-map-pin-2-line text-primary me-1 align-bottom"></i> Villa El Salvador
                                                 </p>
                                         
-                                                <a href="#!" class="btn btn-primary w-100">Ver detalles</a>
+                                                <a href="#!"  data-bs-toggle="modal" data-bs-target="#ronal2" class="btn btn-primary w-100">Vista</a>
                                             </div>
                                         </div>
                                     </div>
@@ -1133,7 +1138,7 @@
 
 
 <!-- RONAL -->
-    <!-- Modal de vista en terapia fisica -->
+    <!-- Modal de vista 1 -->
     <div class="modal fade" id="ronal1" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
@@ -1147,7 +1152,43 @@
             </div>
         </div>
     </div>
-    <!-- Modal de vista en terapia Lenguaje -->
+    <!-- Modal de vista 1 -->   
+<!-- RONAL -->
+
+<!-- RONAL -->
+    <!-- Modal de vista 1 -->
+    <div class="modal fade" id="ronal2" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="crearModalLabel">Nancy Martines</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <h2>aca va tu codigo</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal de vista 1 -->   
+<!-- RONAL -->
+
+<!-- RONAL -->
+    <!-- Modal de vista 1 -->
+    <div class="modal fade" id="ronal3" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="crearModalLabel">Nancy Martines</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <h2>aca va tu codigo</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal de vista 1 -->   
 <!-- RONAL -->
 
 <!-- Modal para Crear Nuevo Tema -->
