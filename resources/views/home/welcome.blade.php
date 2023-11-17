@@ -1392,13 +1392,13 @@
                     <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active" data-bs-interval="10000">
-                                <img src="assets/images/prueba/pepe.png" alt="First slide" width="50%"/>
+                                <img src="assets/images/tinfantil/img1.png" alt="First slide" width="100%"/>
                             </div>
                             <div class="carousel-item" data-bs-interval="2000">
-                                <img src="assets/images/small/img-11.jpg" class="d-block w-100" alt="two slide" />
+                                <img src="assets/images/tinfantil/img1}2.png" class="d-block w-100" alt="two slide" width="100%" />
                             </div>
                             <div class="carousel-item">
-                                <img src="assets/images/small/img-10.jpg" class="d-block w-100" alt="There slide" />
+                                <img src="assets/images/tinfantil/img3.png" class="d-block w-100" alt="There slide" width="100%"/>
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
@@ -1458,7 +1458,7 @@
     <div class="modal-dialog modal-xl">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="crearModalLabel">Terapia infantil</h5>
+                <h5 class="modal-title" id="crearModalLabel">Psicologia</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
             </div>
             <div class="modal-body">
@@ -1477,13 +1477,13 @@
                     <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active" data-bs-interval="10000">
-                                <img src="assets/images/prueba/pepe.png" alt="First slide" width="50%"/>
+                                <img src="assets/images/psicologia/img1.png" alt="First slide" width="100%"/>
                             </div>
                             <div class="carousel-item" data-bs-interval="2000">
-                                <img src="assets/images/small/img-11.jpg" class="d-block w-100" alt="two slide" />
+                                <img src="assets/images/psicologia/img2.png" class="d-block w-100" alt="two slide"width="100%" />
                             </div>
                             <div class="carousel-item">
-                                <img src="assets/images/small/img-10.jpg" class="d-block w-100" alt="There slide" />
+                                <img src="assets/images/psicologia/img3.png" class="d-block w-100" alt="There slide" width="100%"/>
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
@@ -1560,13 +1560,13 @@
                     <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active" data-bs-interval="10000">
-                                <img src="assets/images/prueba/pepe.png" alt="First slide" width="50%"/>
+                                <img src="assets/images/equipos/img1.png" alt="First slide" width="100%"/>
                             </div>
                             <div class="carousel-item" data-bs-interval="2000">
-                                <img src="assets/images/small/img-11.jpg" class="d-block w-100" alt="two slide" />
+                                <img src="assets/images/equipos/img1.png" class="d-block w-100" alt="two slide" width="100%" />
                             </div>
                             <div class="carousel-item">
-                                <img src="assets/images/small/img-10.jpg" class="d-block w-100" alt="There slide" />
+                                <img src="assets/images/equipos/img1.png" class="d-block w-100" alt="There slide" width="100%" />
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
