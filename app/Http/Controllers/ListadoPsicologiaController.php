@@ -64,15 +64,13 @@ class ListadoPsicologiaController extends Controller
             return redirect()->back()->with('suscess', 'psicologia actualizado correctamente');
         }
 
-public function actualizarEstado(Request $request) {
-    $estado = $request->input('estado');
+    public function actualizarEstado(Request $request) {
+        $psicologia = Psicologia::FindOrFail($id);
+        $psicologia->estado = $request->estado;
 
-    $psicologia = Psicologia::find($request->id);
-    $psicologia->estado = $estado;
-    $psicologia->save();
-
-    return response()->json(['message' => 'Estado actualizado correctamente']);
-}
+       $psicologia->save();
+    return redirect()->route('lstpsicologia.index');
+    }
 
 
     /**

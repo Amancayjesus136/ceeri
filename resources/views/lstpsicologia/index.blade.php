@@ -218,6 +218,14 @@
                                     <option value="Otro">Otro</option>
                                 </select>
                             </div>
+                            <div class="mb-3">
+                                <label for="estado" class="form-label">actualizar estado</label>
+                                <select id="estado" class="form-select" id="estado" name="estado" value="{{ $psicologia->estado }}" required style="font-size: 0.75rem; height: 1.775rem;">
+                                    <option value="" disabled selected>Seleccionar</option>
+                                    <option value="cumplido">Cumplido</option>
+                                    <option value="cancelado">Cancelado</option>
+                                </select>
+                            </div>             
                         <button type="submit" class="btn btn-primary">Actualizar</button>
                     </form>                
                 </div>
