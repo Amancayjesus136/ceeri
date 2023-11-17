@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Politicas de privacidad</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
     <style>
@@ -30,11 +31,19 @@
         h1 {
             font-size: 80px;
         }
+
+        a {
+            text-decoration: none;
+            color: white;
+            
+        }
+        
     </style>
 
     <div class="container">
         <img src="assets/images/logo-sinfondo.png" alt="">
         <h1>Politicas de privacidad</h1>
+        <button type="button" class="btn btn-primary btn-sm"><a href="{{ asset('Politicasdeprivacidad.pdf') }}" download="Politicasdeprivacidad.pdf" >Descargar en PDF</a></button>  
         <p><b>Protección de datos de carácter personal</b><br><br> según la LOPDDD (Ley Orgánica de Protección de Datos Personales y garantía de los derechos digitales),
             en aplicación de la normativa vigente en materia de protección de datos de carácter personal,
             informa que los datos personales que se recogen a través de los formularios del Sitio web: Ceeri.com.pe,

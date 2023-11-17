@@ -53,6 +53,9 @@ Route::get('/politicas-privacidad', [footerPagesController::class, 'politicas'])
 Route::get('/terminos-condiciones', [footerPagesController::class, 'condiciones'])->name('condiciones');   
 Route::get('/seguridad', [footerPagesController::class, 'seguridad'])->name('seguridad');   
 
+Route::get('/descargar-pdf', function () {
+    return response()->download('Politicasdeprivacidad', 'Politicasdeprivacidad');
+});
 
 //ruta para el formulario de registro de la pagina principal
 Route::post('registroPrincipal', [ReservaPrincipalController::class, 'create'])->name('registroPrincipal');
