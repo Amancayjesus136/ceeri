@@ -176,7 +176,7 @@
                                     <option value="cumplido">Cumplido</option>
                                     <option value="cancelado">Cancelado</option>
                                 </select>
-                            <div>   
+                            </div>             
                             <div class="mb-3">
                                 <label for="tipo_documento" class="form-label">Tipo de Documento</label>
                                 <select class="form-select" id="tipo_documento" name="tipo_documento" value="{{ $infantil->tipo_documento }}" required>
@@ -209,9 +209,9 @@
                                     <option value="Femenino">Femenino</option>
                                     <option value="Otro">Otro</option>
                                 </select>
-                            </div>
-                        <button type="submit" class="btn btn-primary">Registrar</button>
-                    </form>
+                            </div>                          
+                        <button type="submit" class="btn btn-primary">Actualizar</button>
+                    </form>                
                 </div>
             </div>
         </div>
