@@ -911,15 +911,15 @@
                         <div class="modal-header">
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="modal-body d-flex flex-column align-items-center">
-                            <div class="circle-icon mb-2">
-                                <a href="#"><i class="ri-mail-send-line"></i></a>
+                        <div class="modal-body d-flex align-items-center">
+                            <div class="mb-2" style="margin-left: 40px;">
+                                <a href="#"><i class="ri-mail-send-line" style="font-size: 54px; color: red;"></i></a>
                             </div>
                             <div class="circle-text mb-2">
                                 <a href="#">Correo Electrónico</a>
                             </div>
-                            <div class="circle-icon mb-2">
-                                <a href="#"><i class="ri-whatsapp-line"></i></a>
+                            <div class="mb-2">
+                                <a href="#"><i class="ri-whatsapp-line" style="font-size: 54px; color: green;"></i></a>
                             </div>
                             <div class="circle-text">
                                 <a href="#">WhatsApp</a>

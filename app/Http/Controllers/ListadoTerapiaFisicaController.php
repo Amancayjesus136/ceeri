@@ -100,6 +100,8 @@ class ListadoTerapiaFisicaController extends Controller
     $fisica->especialidad = $request->especialidad;
     $fisica->genero = $request->genero;
     $fisica->fecha_hora = now(); 
+    $fisica->estado = $request->estado;
+
     $fisica->save();
     return redirect()->route('lsttfisica.index');
     }

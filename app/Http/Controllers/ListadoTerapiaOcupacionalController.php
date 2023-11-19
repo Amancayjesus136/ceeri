@@ -99,7 +99,9 @@ class ListadoTerapiaOcupacionalController extends Controller
         $ocupacional->telefono = $request->telefono;
         $ocupacional->especialidad = $request->especialidad;
         $ocupacional->genero = $request->genero;
-        $ocupacional->fecha_hora = now(); 
+        $ocupacional->fecha_hora = now();
+        $ocupacional->estado = $request->estado;
+
         $ocupacional->save();
         return redirect()->route('lsttocupacional.index');
     }

@@ -100,7 +100,8 @@ class ListadoTerapiaInfantilController extends Controller
     $infantil->telefono = $request->telefono;
     $infantil->especialidad = $request->especialidad;
     $infantil->genero = $request->genero;
-    $infantil->fecha_hora = now(); 
+    $infantil->fecha_hora = now();
+    $infantil->estado = $request->estado;
     $infantil->save();
     return redirect()->route('lsttinfantil.index');
     }

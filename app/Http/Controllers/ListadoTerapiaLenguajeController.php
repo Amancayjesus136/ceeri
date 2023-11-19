@@ -101,6 +101,7 @@ class ListadoTerapiaLenguajeController extends Controller
         $lenguaje->especialidad = $request->especialidad;
         $lenguaje->genero = $request->genero;
         $lenguaje->fecha_hora = now(); 
+        $lenguaje->estado = $request->estado;
         $lenguaje->save();
         return redirect()->route('lsttlenguaje.index');
     }

@@ -82,11 +82,6 @@
                                                     data-bs-target="#eliminarModal{{ $lenguaje->id }}">
                                                     <i class="fas fa-trash-alt"></i>
                                                 </a>
-                                                <select class="form-select btn btn-success btn-sm form-select-sm w-auto" style="font-size: 0.75rem; height: 1.775rem;">
-                                                    <option value="" disabled selected>Seleccionar</option>
-                                                    <option value="modal">Cumplido</option>
-                                                    <option value="link">Cancelado</option>
-                                                </select>
                                         </td>
                                     </tr>
                                     @php 
@@ -173,6 +168,14 @@
                     <form method="POST" action="{{ route('lsttlenguaje.update', $lenguaje->id) }}">
                         @csrf
                         @method('PUT')
+                            <div class="mb-3">
+                                <label for="estado" class="form-label">actualizar estado</label>
+                                <select id="estado" class="form-select" id="estado" name="estado" value="{{ $lenguaje->estado }}">
+                                    <option value="" disabled selected>Seleccionar</option>
+                                    <option value="cumplido">Cumplido</option>
+                                    <option value="cancelado">Cancelado</option>
+                                </select>
+                            </div>
                             <div class="mb-3">
                                 <label for="tipo_documento" class="form-label">Tipo de Documento</label>
                                 <select class="form-select" id="tipo_documento" name="tipo_documento" value="{{ $lenguaje->tipo_documento }}" required>
