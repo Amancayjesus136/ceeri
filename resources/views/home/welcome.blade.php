@@ -616,7 +616,7 @@
                                     <a href="javascript:void(0);">
                                         <h5>Terapia de lenguaje</h5>
                                     </a>
-                                    <p class="text-muted fs-14">Tratamiento que se enfoca en mejorar la función física, la movilidad y la calidad de vida de las personas.</p>
+                                    <p class="text-muted fs-14">Ayuda a personas con problemas y trastornos del habla, del lenguaje y la comunicación, así como afecciones para la deglución y la respiración.</p>
                         
                                     <div>
                                         <a href="#!"  data-bs-toggle="modal" data-bs-target="#tlenguaje" class="link-success">Vista <i class="ri-arrow-right-line align-bottom ms-1"></i></a>
@@ -633,7 +633,7 @@
                                     <a href="javascript:void(0);">
                                         <h5>Terapia Ocupacional</h5>
                                     </a>
-                                    <p class="text-muted fs-14">Tratamiento que se enfoca en mejorar la función física, la movilidad y la calidad de vida de las personas.</p>
+                                    <p class="text-muted fs-14">es una rama del cuidado de la salud que ayuda a personas de todas las edades con problemas físicos, sensoriales o cognitivos. Las ayudan a ser lo más independientes posible en todos los aspectos de su vida.</p>
                                     <div>
                                         <a href="#!"  data-bs-toggle="modal" data-bs-target="#tocupacional" class="link-success" data-bs-toggle="modal" data-bs-target="#tocupacional">Vista <i class="ri-arrow-right-line align-bottom ms-1"></i></a>
                                     </div>
@@ -651,7 +651,7 @@
                                     <a href="javascript:void(0);">
                                         <h5>Terapia infantil</h5>
                                     </a>
-                                    <p class="text-muted fs-14">Tratamiento que se enfoca en mejorar la función física, la movilidad y la calidad de vida de las personas.</p>
+                                    <p class="text-muted fs-14">Se basa de diversas técnicas y métodos para ayudar a los pequeños que tienen problemas con sus emociones o conductas.</p>
                                     <div>
                                         <a href="#!" data-bs-toggle="modal" data-bs-target="#tinfantil" class="link-success">Vista <i class="ri-arrow-right-line align-bottom ms-1"></i></a>
                                     </div>
@@ -668,7 +668,7 @@
                                     <a href="javascript:void(0);">
                                         <h5>Psicología</h5>
                                     </a>
-                                    <p class="text-muted fs-14">Tratamiento que se enfoca en mejorar la función física, la movilidad y la calidad de vida de las personas.</p>
+                                    <p class="text-muted fs-14">La psicología social es el estudio de las relaciones sociales y cómo estas influyen y modifican la conducta, los pensamientos y sentimientos de las personas.</p>
                                     <div>
                                         <a href="#!"  data-bs-toggle="modal" data-bs-target="#psicologia"  class="link-success">Vista <i class="ri-arrow-right-line align-bottom ms-1"></i></a>
                                     </div>
@@ -684,7 +684,7 @@
                                     <a href="javascript:void(0);">
                                         <h5>Los mejores equipos en Terapias</h5>
                                     </a>
-                                    <p class="text-muted fs-14">Tratamiento que se enfoca en mejorar la función física, la movilidad y la calidad de vida de las personas.</p>
+                                    <p class="text-muted fs-14">el equipamiento tecnologico con el que cuenta CEERI para lidiar con los tratamientos en los pacientes</p>
                                     <div>
                                         <a href="#!"  data-bs-toggle="modal" data-bs-target="#equipos" class="link-success">Vista <i class="ri-arrow-right-line align-bottom ms-1"></i></a>
                                     </div>
@@ -1059,7 +1059,7 @@
     <div class="modal-dialog modal-xl">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="crearModalLabel">Terapia Fisica y Rehabilitación</h5>
+                <h2 class="modal-title" id="crearModalLabel">Terapia Fisica y Rehabilitación</h2>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
             </div>
             <div class="modal-body">
@@ -1115,13 +1115,16 @@
                                 </div>
                             </div>
                             <div class="card-body">
-                                <li>terapia</li>
-                                <li>terapia</li>
-                                <li>terapia</li>
-                                <li>terapia</li>
-                                <li>terapia</li>
-                                <li>terapia</li>
-                                <li>terapia</li>
+                                <div class="text-muted">
+                                    La Terapia Física y Rehabilitación es una especialidad que tiene como objetivo recuperar y mejorar la 
+                                    capacidad funcional y calidad de vida de aquellas personas que sufren de discapacidad por una enfermedad
+                                    o lesión. A diferencia de otras áreas  médicas, la Terapia Física no se enfoca únicamente en curar,
+                                    sino en ayudarle al paciente a mejorar su calidad de vida facilitando una mayor movilidad e 
+                                    independencia, disminuyendo el dolor y ayudándole a recuperar diferentes capacidades de la vida 
+                                    diaria y reintegración a las actividades deportivas.
+                                </div>
+                                <br>                          
+                                <h2>profesional a cargo: Juanito Alcachofa</h2>
 
                             </div>
                         </div>
@@ -1196,7 +1199,7 @@
     <div class="modal-dialog modal-xl">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="crearModalLabel">Terapia Lenguaje</h5>
+                <h2 class="modal-title" id="crearModalLabel">Terapia Lenguaje</h2>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
             </div>
             <div class="modal-body">
@@ -1252,17 +1255,25 @@
                 </div>
             </div>
             <div class="card-body">
-                <li>terapia</li>
-                <li>terapia</li>
-                <li>terapia</li>
-                <li>terapia</li>
-                <li>terapia</li>
-                <li>terapia</li>
-                <li>terapia</li>
-                <li>terapia</li>
-                <li>terapia</li>
-                <li>terapia</li>
-                <li>terapia</li>
+                <div class="text-muted">
+                    La terapia del lenguaje consiste en la evaluación, diagnóstico y tratamiento de los trastornos que atañen a
+                    la comunicación. Éstos se manifiestan mediante alteraciones en la voz, la capacidad de habla, el lenguaje, 
+                    la audición y la deglución. El profesional encargado de trabajar estas dificultades es el logopeda infantil.
+                    Va dirigido A todo niño que tenga dificultades asociadas al área del lenguaje.
+                    <b>Las problemáticas más comunes a tratar con la terapia del lenguaje son:</b> 
+                    <li>Trastornos de articulación y reproducción de sonidos: dislalia, disglosia, disartria.</li>
+                    <li>Trastornos en la fluidez del habla: tartamudez.</li>
+                    <li>Trastornos de la voz: disfonías.</li>
+                    <li>Trastornos de la alimentación: alteraciones de la deglución, disfagia.</li>
+                    <li>Alteraciones en la lectura y la escritura: dislexia, disgrafía, disortografía.</li>
+                    <li>
+                        Alteraciones en la comprensión y/o expresión del lenguaje: Retraso del lenguaje,
+                        trastorno del lenguaje, trastornos neurodegenerativos, demencias….
+                    </li>
+                    <li>Problemas del lenguaje pragmático: dificultad para elegir el lenguaje socialmente adecuado.</li>   
+                </div>
+                <br>                          
+                <h2>profesional a cargo: Elsa Pito</h2>                
             </div>
         </div>
     </div>
@@ -1283,7 +1294,7 @@
     <div class="modal-dialog modal-xl">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="crearModalLabel">Terapia ocupacional</h5>
+                <h2 class="modal-title" id="crearModalLabel">Terapia ocupacional</h2>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
             </div>
             
@@ -1340,19 +1351,18 @@
                 </div>
             </div>
             <div class="card-body">
-                <li>terapia</li>
-                <li>terapia</li>
-                <li>terapia</li>
-                <li>terapia</li>
-                <li>terapia</li>
-                <li>terapia</li>
-                <li>terapia</li>
-                <li>terapia</li>
-                <li>terapia</li>
-                <li>terapia</li>
-                <li>terapia</li>
-                <li>terapia</li>
-
+                <div class="text-muted">
+                    La terapia ocupacional es el uso terapéutico de las actividades de cuidado, trabajo y juego para incrementar 
+                    la independencia funcional, aumentar el desarrollo y prevenir la incapacidad; puede incluir la adaptación de 
+                    tareas o del entorno para alcanzar la máxima independencia y para aumentar la calidad de vida.
+                    Se valora el grado de independencia, se potencian habilidades para las situaciones cotidianas y para mejorar 
+                    la función general, dando importancia a las capacidades residuales.
+                    El terapeuta ocupacional utiliza actividades terapéuticas, de cuidado personal, de cuidado del hogar y recreativas 
+                    para facilitar o aumentar al máximo el nivel de función del paciente. Se evalúan tanto los aspectos psicosociales
+                    como los aspectos físicos del estado del paciente en función del contexto total del tratamiento.   
+                </div>
+                <br>                          
+                <h2>profesional a cargo: Dolores Delano</h2>
             </div>
         </div>
     </div>
@@ -1373,7 +1383,7 @@
     <div class="modal-dialog modal-xl">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="crearModalLabel">Terapia infantil</h5>
+                <h2 class="modal-title" id="crearModalLabel">Terapia infantil</h2>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
             </div>
             <div class="modal-body">
@@ -1389,7 +1399,7 @@
             </div>
             <div class="card-body">
                 <div class="live-preview">
-                    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                    <div id="carouselExampleInterval4" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active" data-bs-interval="10000">
                                 <img src="assets/images/tinfantil/img1.png" alt="First slide" width="100%"/>
@@ -1401,11 +1411,11 @@
                                 <img src="assets/images/tinfantil/img3.png" class="d-block w-100" alt="There slide" width="100%"/>
                             </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval4" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Previous</span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval4" data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
                         </button>
@@ -1429,16 +1439,24 @@
                 </div>
             </div>
             <div class="card-body">
-                <li>terapia</li>
-                <li>terapia</li>
-                <li>terapia</li>
-                <li>terapia</li>
-                <li>terapia</li>
-                <li>terapia</li>
-                <li>terapia</li>
-                <li>terapia</li>
-                <li>terapia</li>
-
+                <div class="text-muted">
+                    La terapia o psicoterapia infantil es una forma de intervención terapéutica que busca mejorar el bienestar 
+                    emocional y social del niño y de la niña. Se basa de diversas técnicas y métodos para ayudar a los pequeños 
+                    que tienen problemas con sus emociones o conductas. Una de sus características es que usa el juego como punto 
+                    clave. Además, hace que la familia, escuela y personas cercanas se involucren en el proceso de tratamiento 
+                    del niño o de la niña. La terapia para niños y niñas se desarrolla a partir de muchas experiencias y actividades. 
+                    Además, en ella se usa mucho el lenguaje y la comunicación verbal para interactuar con el menor, pero debe 
+                    adaptarse a la etapa y compresión de cada pequeño. Así como a las características cognitivas y de pensamiento 
+                    de cada niño o niña.
+                    <b>Beneficios de la terapia infantil:</b>
+                    <br>
+                    <li>Trata diversos problemas</li>
+                    <li>Facilita el desarrollo de habilidades</li>
+                    <li>Controla las emociones</li>
+                    <li>Da mejores herramientas de enseñanza a padres y madres</li>
+                </div>
+                <br>                          
+                <h2>profesional a cargo: Aquiles Bailo</h2>
             </div>
         </div>
     </div>
@@ -1474,7 +1492,7 @@
             </div>
             <div class="card-body">
                 <div class="live-preview">
-                    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                    <div id="carouselExampleInterval5" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active" data-bs-interval="10000">
                                 <img src="assets/images/psicologia/img1.png" alt="First slide" width="100%"/>
@@ -1486,11 +1504,11 @@
                                 <img src="assets/images/psicologia/img3.png" class="d-block w-100" alt="There slide" width="100%"/>
                             </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval5" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Previous</span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval5" data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
                         </button>
@@ -1514,15 +1532,28 @@
                 </div>
             </div>
             <div class="card-body">
-                <li>terapia</li>
-                <li>terapia</li>
-                <li>terapia</li>
-                <li>terapia</li>
-                <li>terapia</li>
-                <li>terapia</li>
-                <li>terapia</li>
-                <li>terapia</li>
-
+            <div class="text-muted">
+            La psicología es la ciencia que estudia la conducta humana y los procesos mentales. Al ser bastante amplia, 
+            para su estudio y aplicación se divide en dos vertientes: la psicología básica y la psicología aplicada.
+            Quizá te has dado cuenta que tu comportamiento cambia según la compañía o el contexto en el que te encuentres.
+            No es lo mismo cuando estás entre maestros o jefes a que cuando estás entre amigos y familiares. Estos cambios 
+            son precisamente lo que estudia la psicología social. Entender estas diferencias tiene un impacto interesante 
+            en el mundo laboral, educativo, cultural y político, ya que una vez que se conocen los factores que llevan a 
+            estas conductas, estas pueden ser modificadas, eliminadas o intensificadas para mejorar la relación entre grupos 
+            de personas. La psicología social también analiza las normas y principios que moldean la convivencia entre humanos.
+            <b>Gracias a este enfoque hoy conocemos más sobre temas como:</b>
+            <li>Patrones de conducta</li>
+            <li>Roles sociales</li>
+            <li>Conciencia colectiva</li>
+            <li>Relaciones sociales</li>
+            <li>Identidad social</li>
+            <li>Estereotipos</li>
+            <li>Valores</li>
+            <li>Trabajo en equipo</li>
+            <li>Liderazgo</li>
+            </div>
+                <br>                          
+                <h2>profesional a cargo: Ruben Ferrando</h2>
             </div>
         </div>
     </div>
@@ -1557,23 +1588,32 @@
             </div>
             <div class="card-body">
                 <div class="live-preview">
-                    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                    <div id="carouselExampleInterval6" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active" data-bs-interval="10000">
-                                <img src="assets/images/equipos/img1.png" alt="First slide" width="100%"/>
+                                <img src="assets/images/equipoTec/electroterapia.jpg" alt="First slide" width="100%"/>
                             </div>
                             <div class="carousel-item" data-bs-interval="2000">
-                                <img src="assets/images/equipos/img1.png" class="d-block w-100" alt="two slide" width="100%" />
+                                <img src="assets/images/equipoTec/laserterapia.jpg" class="d-block w-100" alt="two slide" width="100%" />
                             </div>
                             <div class="carousel-item">
-                                <img src="assets/images/equipos/img1.png" class="d-block w-100" alt="There slide" width="100%" />
+                                <img src="assets/images/equipoTec/magnetoterapia.jpg" class="d-block w-100" alt="There slide" width="100%" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/images/equipoTec/magnetoterapia360.jpg" class="d-block w-100" alt="There slide" width="100%" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/images/equipoTec/ondasChoque.jpg" class="d-block w-100" alt="There slide" width="100%" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/images/equipoTec/ultrasonido.jpg" class="d-block w-100" alt="There slide" width="100%" height="550px;" />
                             </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval6" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Previous</span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval6" data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
                         </button>
@@ -1596,17 +1636,19 @@
                                 
                             </div>
                         </div>
-                        <div class="card-body">
-                            <li>terapia</li>
-                            <li>terapia</li>
-                            <li>terapia</li>
-                            <li>terapia</li>
-                            <li>terapia</li>
-                            <li>terapia</li>
-                            <li>terapia</li>
-                            <li>terapia</li>
-                            <li>terapia</li>
-
+                        <div class="card-body" style="font-size: 20px;">
+                            <div class="text-muted">
+                                Ceeri cuenta con numerosos equipos tecnologicos de vanguardia para cumplir adecuadamente
+                                con todas los tipos de terapia que ofrecemos asi como profesionales capacitados en su manejo.                                              
+                                <b>entre los cuales incluimos:</b>
+                                <li>Laserterapia</li>
+                                <li>Magnetoterapia</li>
+                                <li>Ultrasonido</li>
+                                <li>Punsion seca</li>
+                                <li>Ondas de choque</li>
+                                <li>Magnetoterapia de 360º</li>
+                                <li>Electroterapia</li>
+                            </div> 
                         </div>
                     </div>
                 </div>
