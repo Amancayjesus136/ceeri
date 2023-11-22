@@ -722,7 +722,7 @@
                                                     <i class="ri-map-pin-2-line text-primary me-1 align-bottom"></i> Villa El Salvador
                                                 </p>
 
-                                                <a href="#!"  data-bs-toggle="modal" data-bs-target="#ronal1" class="btn btn-primary w-100">Vista</a>
+                                                <a href="#!"  data-bs-toggle="modal" data-bs-target="#ronal1" class="btn btn-primary w-100">Ver detalles</a>
 
                                             </div>
                                         </div>
@@ -738,7 +738,7 @@
                                                     <i class="ri-map-pin-2-line text-primary me-1 align-bottom"></i> Villa El Salvador
                                                 </p>
                                         
-                                                <a href="#!"  data-bs-toggle="modal" data-bs-target="#ronal2" class="btn btn-primary w-100">Vista</a>
+                                                <a href="#!"  data-bs-toggle="modal" data-bs-target="#ronal2" class="btn btn-primary w-100">Ver detalles</a>
                                             </div>
                                         </div>
                                     </div>
@@ -753,7 +753,7 @@
                                                     <i class="ri-map-pin-2-line text-primary me-1 align-bottom"></i> Villa El Salvador
                                                 </p>
                                         
-                                                <a href="#!" class="btn btn-primary w-100">Ver detalles</a>
+                                                <a href="#!"  data-bs-toggle="modal" data-bs-target="#ronal3" class="btn btn-primary w-100">Ver detalles</a>
                                             </div>
                                         </div>
                                     </div>
@@ -768,7 +768,7 @@
                                                     <i class="ri-map-pin-2-line text-primary me-1 align-bottom"></i> Villa El Salvador
                                                 </p>
                                         
-                                                <a href="#!" class="btn btn-primary w-100">Ver detalles</a>
+                                                <a href="#!"  data-bs-toggle="modal" data-bs-target="#ronal4" class="btn btn-primary w-100">Ver detalles</a>
                                             </div>
                                         </div>
                                     </div>
@@ -783,7 +783,7 @@
                                                     <i class="ri-map-pin-2-line text-primary me-1 align-bottom"></i> Villa El Salvador
                                                 </p>
                                         
-                                                <a href="#!" class="btn btn-primary w-100">Ver detalles</a>
+                                                <a href="#!"  data-bs-toggle="modal" data-bs-target="#ronal5" class="btn btn-primary w-100">Ver detalles</a>
                                             </div>
                                         </div>
                                     </div>
@@ -798,7 +798,7 @@
                                                     <i class="ri-map-pin-2-line text-primary me-1 align-bottom"></i> Villa El Salvador
                                                 </p>
                                         
-                                                <a href="#!" class="btn btn-primary w-100">Ver detalles</a>
+                                                <a href="#!"  data-bs-toggle="modal" data-bs-target="#ronal6" class="btn btn-primary w-100">Ver detalles</a>
                                             </div>
                                         </div>
                                     </div>
@@ -813,7 +813,7 @@
                                                     <i class="ri-map-pin-2-line text-primary me-1 align-bottom"></i> Villa El Salvador
                                                 </p>
                                         
-                                                <a href="#!" class="btn btn-primary w-100">Ver detalles</a>
+                                                <a href="#!"  data-bs-toggle="modal" data-bs-target="#ronal7" class="btn btn-primary w-100">Ver detalles</a>
                                             </div>
                                         </div>
                                     </div>
@@ -828,7 +828,7 @@
                                                     <i class="ri-map-pin-2-line text-primary me-1 align-bottom"></i> Villa El Salvador
                                                 </p>
                                         
-                                                <a href="#!" class="btn btn-primary w-100">Ver detalles</a>
+                                                <a href="#!"  data-bs-toggle="modal" data-bs-target="#ronal8" class="btn btn-primary w-100">Ver detalles</a>
                                             </div>
                                         </div>
                                     </div>
@@ -843,7 +843,7 @@
                                                     <i class="ri-map-pin-2-line text-primary me-1 align-bottom"></i> Villa El Salvador
                                                 </p>
                                         
-                                                <a href="#!" class="btn btn-primary w-100">Ver detalles</a>
+                                                <a href="#!"  data-bs-toggle="modal" data-bs-target="#ronal9" class="btn btn-primary w-100">Ver detalles</a>
                                             </div>
                                         </div>
                                     </div>
@@ -858,7 +858,7 @@
                                                     <i class="ri-map-pin-2-line text-primary me-1 align-bottom"></i> Villa El Salvador
                                                 </p>
                                         
-                                                <a href="#!" class="btn btn-primary w-100">Ver detalles</a>
+                                                <a href="#!"  data-bs-toggle="modal" data-bs-target="#ronal10" class="btn btn-primary w-100">Ver detalles</a>
                                             </div>
                                         </div>
                                     </div>
@@ -873,7 +873,7 @@
                                                     <i class="ri-map-pin-2-line text-primary me-1 align-bottom"></i> Villa El Salvador
                                                 </p>
                                         
-                                                <a href="#!" class="btn btn-primary w-100">Ver detalles</a>
+                                                <a href="#!"  data-bs-toggle="modal" data-bs-target="#ronal11" class="btn btn-primary w-100">Ver detalles</a>
                                             </div>
                                         </div>
                                     </div>
@@ -913,13 +913,13 @@
                         </div>
                         <div class="modal-body d-flex align-items-center">
                             <div class="mb-2" style="margin-left: 40px;">
-                                <a href="#"><i class="ri-mail-send-line" style="font-size: 54px; color: red;"></i></a>
+                                <a href="#" id="copiarCorreo"><i class="ri-mail-send-line" style="font-size: 54px; color: red;"></i></a>
                             </div>
                             <div class="circle-text mb-2">
                                 <a href="#">Correo Electrónico</a>
                             </div>
                             <div class="mb-2">
-                                <a href="#"><i class="ri-whatsapp-line" style="font-size: 54px; color: green;"></i></a>
+                                <a href="https://wa.me/910558971"><i class="ri-whatsapp-line" style="font-size: 54px; color: green;"></i></a>
                             </div>
                             <div class="circle-text">
                                 <a href="#">WhatsApp</a>
@@ -928,6 +928,30 @@
                     </div>
                 </div>
             </div>
+
+             <!-- script para copia de gmail al darle click -->
+
+            <script>
+                document.getElementById('copiarCorreo').addEventListener('click', function() {
+                    // Dirección de correo electrónico que deseas copiar
+                    var direccionCorreo = 'ceerirehabilitacion14@gmail.com';
+
+                    // Crear un elemento de entrada de texto temporal
+                    var inputTemp = document.createElement('input');
+                    inputTemp.setAttribute('value', direccionCorreo);
+                    document.body.appendChild(inputTemp);
+
+                    // Seleccionar y copiar el contenido del campo de texto temporal
+                    inputTemp.select();
+                    document.execCommand('copy');
+
+                    // Eliminar el campo de texto temporal
+                    document.body.removeChild(inputTemp);
+
+                    // Puedes mostrar un mensaje de éxito
+                    alert('Dirección de correo electrónico copiada: ' + direccionCorreo);
+                });
+            </script>
             <!-- Modal para Crear Nuevo reserva -->
 
             <!-- Start footer -->
@@ -941,43 +965,7 @@
                                 </div>
                                 <div class="mt-4 fs-13">
                                     <p>Pagina web de confianza</p>
-                                    <p>Nuestra calidad te brindara la mejor experiencia, ayuda y sobr todo la tranquila al solicitar nuestros servicios.</p>
-                                    <ul class="list-inline mb-0 footer-social-link">
-                                        <li class="list-inline-item">
-                                            <a href="javascript: void(0);" class="avatar-xs d-block">
-                                                <div class="avatar-title rounded-circle">
-                                                    <i class="ri-facebook-fill"></i>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a href="javascript: void(0);" class="avatar-xs d-block">
-                                                <div class="avatar-title rounded-circle">
-                                                    <i class="ri-github-fill"></i>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a href="javascript: void(0);" class="avatar-xs d-block">
-                                                <div class="avatar-title rounded-circle">
-                                                    <i class="ri-linkedin-fill"></i>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a href="javascript: void(0);" class="avatar-xs d-block">
-                                                <div class="avatar-title rounded-circle">
-                                                    <i class="ri-google-fill"></i>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li class="list-inline-item">
-                                            <a href="javascript: void(0);" class="avatar-xs d-block">
-                                                <div class="avatar-title rounded-circle">
-                                                    <i class="ri-dribbble-line"></i>
-                                                </div>
-                                            </a>
-                                        </li>
+                                    <p>Nuestra calidad te brindara la mejor experiencia, ayuda y sobr todo la tranquila al solicitar nuestros servicios.</p>                                
                                     </ul>
                                 </div>
                             </div>
@@ -1037,9 +1025,6 @@
                                     </li>
                                     <li class="list-inline-item">
                                         <a href="{{ route('condiciones') }}">Terminos y condiciones</a>
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <a href="{{ route('seguridad') }}">Seguridad</a>
                                     </li>
                                 </ul>
                             </div>
@@ -1146,11 +1131,74 @@
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="crearModalLabel">Nancy Martines</h5>
+                    <h2 class="modal-title" id="crearModalLabel">Juanito Alcachofa</h2>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                 </div>
-                <div class="modal-body">
-                    <h2>aca va tu codigo</h2>
+                <div class="modal-body align-items d-flex">
+                <img src="assets/images/tfisica/img3.png" alt="" style="width: 320px; height: 420px; margin-right: 40px;">
+                    <div class="text-muted">
+                        <b>Fatima Asad</b>
+                        <br><br>
+                        Calle San José Calasanz, 12
+                        Calpe, Alicante 03710
+                        698019052
+                        fatima.asad@outlook.com
+                        <br><br>
+                        <b>Perfil profesional</b>
+                        <br><br>
+                        Terapeuta ocupacional con amplios conocimientos sobre programación, tratamientos y modalidades para la recuperación
+                        y mitigación de problemas físicos y psíquicos para mejorar el estado de los pacientes.
+                        <br><br>
+                        <b>Experiencia laboral</b>
+                        <br><br>
+                        Diciembre 2019 – Actual
+                        Sentits – Alicante
+                        Terapeuta ocupacional
+                        <br><br>
+                        Evaluación de cada usuario conforme al proceso de rehabilitación y apoyo comunitario acordado. <br>
+                        Participación en programas de atención a familias. <br>
+                        Estímulo y motivación de los pacientes en la realización de actividades físicas y lúdicas. <br><br>
+                        Agosto 2013 – Agosto 2019
+                        Saner – Alicante
+                        Terapeuta ocupacional
+                        <br><br>
+                        Experiencia en programas de intervención en deterioro cognitivo. <br>
+                        Apoyo en la habilitación y rehabilitación física de las personas usuarias del servicio. <br>
+                        Coordinación, planificación y organización de intervenciones individuales. <br>
+                        Octubre 2011 – Enero 2013
+                        Centro IDEAT – Alicante
+                        Terapeuta ocupacional
+                        <br><br>
+                        Planificación y puesta en marcha de talleres y actividades de apoyo social. <br>
+                        Diseño y desarrollo de los programas de mejora de autonomía personal y social. <br>
+                        Interactuó con pacientes, familiares y médicos para coordinarlos e informarles sobre el cuidado a los pacientes. <br><br>
+                        <b>Formación académica</b>
+                        <br><br>
+                        Septiembre 2010
+                        Universidad Miguel Hernández – Elche
+                        Grado en Terapia Ocupacional
+                        <br><br>
+                        <b>Aptitudes</b>
+                        <br><br>
+                        Empatía en el trato al paciente
+                        Formación en metodología didáctica
+                        Resolución de conflictos
+                        Vocación por los colectivos vulnerables
+                        Grandes dosis de iniciativa y dedicación
+                        Persona proactiva y dinámica. <br><br>
+                        <b>Idiomas</b>
+                        
+                        Árabe, 
+                        Idioma nativo. <br>
+
+                        Español
+                        C2 – Experto. <br>
+                        <br><br>
+                        <b>Formación adicional</b>
+                        <br><br>
+                        Curso de Estimulación Multisensorial – IPFAP Formación, 2014
+                        Curso de Auxiliar de Rehabilitación – ELBS, 2012
+                    </div>
                 </div>
             </div>
         </div>
@@ -1167,8 +1215,71 @@
                     <h5 class="modal-title" id="crearModalLabel">Nancy Martines</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                 </div>
-                <div class="modal-body">
-                    <h2>aca va tu codigo</h2>
+                <div class="modal-body align-items d-flex">
+                    <img src="assets/images/tfisica/img3.png" alt="" style="width: 320px; height: 420px; margin-right: 40px;">
+                    <div class="text-muted">
+                        <b>Fatima Asad</b>
+                        <br><br>
+                        Calle San José Calasanz, 12
+                        Calpe, Alicante 03710
+                        698019052
+                        fatima.asad@outlook.com
+                        <br><br>
+                        <b>Perfil profesional</b>
+                        <br><br>
+                        Terapeuta ocupacional con amplios conocimientos sobre programación, tratamientos y modalidades para la recuperación
+                        y mitigación de problemas físicos y psíquicos para mejorar el estado de los pacientes.
+                        <br><br>
+                        <b>Experiencia laboral</b>
+                        <br><br>
+                        Diciembre 2019 – Actual
+                        Sentits – Alicante
+                        Terapeuta ocupacional
+                        <br><br>
+                        Evaluación de cada usuario conforme al proceso de rehabilitación y apoyo comunitario acordado. <br>
+                        Participación en programas de atención a familias. <br>
+                        Estímulo y motivación de los pacientes en la realización de actividades físicas y lúdicas. <br><br>
+                        Agosto 2013 – Agosto 2019
+                        Saner – Alicante
+                        Terapeuta ocupacional
+                        <br><br>
+                        Experiencia en programas de intervención en deterioro cognitivo. <br>
+                        Apoyo en la habilitación y rehabilitación física de las personas usuarias del servicio. <br>
+                        Coordinación, planificación y organización de intervenciones individuales. <br>
+                        Octubre 2011 – Enero 2013
+                        Centro IDEAT – Alicante
+                        Terapeuta ocupacional
+                        <br><br>
+                        Planificación y puesta en marcha de talleres y actividades de apoyo social. <br>
+                        Diseño y desarrollo de los programas de mejora de autonomía personal y social. <br>
+                        Interactuó con pacientes, familiares y médicos para coordinarlos e informarles sobre el cuidado a los pacientes. <br><br>
+                        <b>Formación académica</b>
+                        <br><br>
+                        Septiembre 2010
+                        Universidad Miguel Hernández – Elche
+                        Grado en Terapia Ocupacional
+                        <br><br>
+                        <b>Aptitudes</b>
+                        <br><br>
+                        Empatía en el trato al paciente
+                        Formación en metodología didáctica
+                        Resolución de conflictos
+                        Vocación por los colectivos vulnerables
+                        Grandes dosis de iniciativa y dedicación
+                        Persona proactiva y dinámica. <br><br>
+                        <b>Idiomas</b>
+                        
+                        Árabe, 
+                        Idioma nativo. <br>
+
+                        Español
+                        C2 – Experto. <br>
+                        <br><br>
+                        <b>Formación adicional</b>
+                        <br><br>
+                        Curso de Estimulación Multisensorial – IPFAP Formación, 2014
+                        Curso de Auxiliar de Rehabilitación – ELBS, 2012
+                    </div>
                 </div>
             </div>
         </div>
@@ -1185,14 +1296,726 @@
                     <h5 class="modal-title" id="crearModalLabel">Nancy Martines</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                 </div>
-                <div class="modal-body">
-                    <h2>aca va tu codigo</h2>
+                <div class="modal-body align-items d-flex">
+                    <img src="assets/images/tfisica/img3.png" alt="" style="width: 320px; height: 420px; margin-right: 40px;">
+                    <div class="text-muted">
+                        <b>Fatima Asad</b>
+                        <br><br>
+                        Calle San José Calasanz, 12
+                        Calpe, Alicante 03710
+                        698019052
+                        fatima.asad@outlook.com
+                        <br><br>
+                        <b>Perfil profesional</b>
+                        <br><br>
+                        Terapeuta ocupacional con amplios conocimientos sobre programación, tratamientos y modalidades para la recuperación
+                        y mitigación de problemas físicos y psíquicos para mejorar el estado de los pacientes.
+                        <br><br>
+                        <b>Experiencia laboral</b>
+                        <br><br>
+                        Diciembre 2019 – Actual
+                        Sentits – Alicante
+                        Terapeuta ocupacional
+                        <br><br>
+                        Evaluación de cada usuario conforme al proceso de rehabilitación y apoyo comunitario acordado. <br>
+                        Participación en programas de atención a familias. <br>
+                        Estímulo y motivación de los pacientes en la realización de actividades físicas y lúdicas. <br><br>
+                        Agosto 2013 – Agosto 2019
+                        Saner – Alicante
+                        Terapeuta ocupacional
+                        <br><br>
+                        Experiencia en programas de intervención en deterioro cognitivo. <br>
+                        Apoyo en la habilitación y rehabilitación física de las personas usuarias del servicio. <br>
+                        Coordinación, planificación y organización de intervenciones individuales. <br>
+                        Octubre 2011 – Enero 2013
+                        Centro IDEAT – Alicante
+                        Terapeuta ocupacional
+                        <br><br>
+                        Planificación y puesta en marcha de talleres y actividades de apoyo social. <br>
+                        Diseño y desarrollo de los programas de mejora de autonomía personal y social. <br>
+                        Interactuó con pacientes, familiares y médicos para coordinarlos e informarles sobre el cuidado a los pacientes. <br><br>
+                        <b>Formación académica</b>
+                        <br><br>
+                        Septiembre 2010
+                        Universidad Miguel Hernández – Elche
+                        Grado en Terapia Ocupacional
+                        <br><br>
+                        <b>Aptitudes</b>
+                        <br><br>
+                        Empatía en el trato al paciente
+                        Formación en metodología didáctica
+                        Resolución de conflictos
+                        Vocación por los colectivos vulnerables
+                        Grandes dosis de iniciativa y dedicación
+                        Persona proactiva y dinámica. <br><br>
+                        <b>Idiomas</b>
+                        
+                        Árabe, 
+                        Idioma nativo. <br>
+
+                        Español
+                        C2 – Experto. <br>
+                        <br><br>
+                        <b>Formación adicional</b>
+                        <br><br>
+                        Curso de Estimulación Multisensorial – IPFAP Formación, 2014
+                        Curso de Auxiliar de Rehabilitación – ELBS, 2012
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- Modal de vista 1 -->   
 <!-- RONAL -->
+
+<!-- RONAL -->
+    <!-- Modal de vista 1 -->
+    <div class="modal fade" id="ronal4" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="crearModalLabel">Nancy Martines</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body align-items d-flex">
+                    <img src="assets/images/tfisica/img3.png" alt="" style="width: 320px; height: 420px; margin-right: 40px;">
+                    <div class="text-muted">
+                        <b>Fatima Asad</b>
+                        <br><br>
+                        Calle San José Calasanz, 12
+                        Calpe, Alicante 03710
+                        698019052
+                        fatima.asad@outlook.com
+                        <br><br>
+                        <b>Perfil profesional</b>
+                        <br><br>
+                        Terapeuta ocupacional con amplios conocimientos sobre programación, tratamientos y modalidades para la recuperación
+                        y mitigación de problemas físicos y psíquicos para mejorar el estado de los pacientes.
+                        <br><br>
+                        <b>Experiencia laboral</b>
+                        <br><br>
+                        Diciembre 2019 – Actual
+                        Sentits – Alicante
+                        Terapeuta ocupacional
+                        <br><br>
+                        Evaluación de cada usuario conforme al proceso de rehabilitación y apoyo comunitario acordado. <br>
+                        Participación en programas de atención a familias. <br>
+                        Estímulo y motivación de los pacientes en la realización de actividades físicas y lúdicas. <br><br>
+                        Agosto 2013 – Agosto 2019
+                        Saner – Alicante
+                        Terapeuta ocupacional
+                        <br><br>
+                        Experiencia en programas de intervención en deterioro cognitivo. <br>
+                        Apoyo en la habilitación y rehabilitación física de las personas usuarias del servicio. <br>
+                        Coordinación, planificación y organización de intervenciones individuales. <br>
+                        Octubre 2011 – Enero 2013
+                        Centro IDEAT – Alicante
+                        Terapeuta ocupacional
+                        <br><br>
+                        Planificación y puesta en marcha de talleres y actividades de apoyo social. <br>
+                        Diseño y desarrollo de los programas de mejora de autonomía personal y social. <br>
+                        Interactuó con pacientes, familiares y médicos para coordinarlos e informarles sobre el cuidado a los pacientes. <br><br>
+                        <b>Formación académica</b>
+                        <br><br>
+                        Septiembre 2010
+                        Universidad Miguel Hernández – Elche
+                        Grado en Terapia Ocupacional
+                        <br><br>
+                        <b>Aptitudes</b>
+                        <br><br>
+                        Empatía en el trato al paciente
+                        Formación en metodología didáctica
+                        Resolución de conflictos
+                        Vocación por los colectivos vulnerables
+                        Grandes dosis de iniciativa y dedicación
+                        Persona proactiva y dinámica. <br><br>
+                        <b>Idiomas</b>
+                        
+                        Árabe, 
+                        Idioma nativo. <br>
+
+                        Español
+                        C2 – Experto. <br>
+                        <br><br>
+                        <b>Formación adicional</b>
+                        <br><br>
+                        Curso de Estimulación Multisensorial – IPFAP Formación, 2014
+                        Curso de Auxiliar de Rehabilitación – ELBS, 2012
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal de vista 1 -->   
+<!-- RONAL -->
+
+<!-- RONAL -->
+    <!-- Modal de vista 1 -->
+    <div class="modal fade" id="ronal5" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="crearModalLabel">Nancy Martines</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body align-items d-flex">
+                    <img src="assets/images/tfisica/img3.png" alt="" style="width: 320px; height: 420px; margin-right: 40px;">
+                    <div class="text-muted">
+                        <b>Fatima Asad</b>
+                        <br><br>
+                        Calle San José Calasanz, 12
+                        Calpe, Alicante 03710
+                        698019052
+                        fatima.asad@outlook.com
+                        <br><br>
+                        <b>Perfil profesional</b>
+                        <br><br>
+                        Terapeuta ocupacional con amplios conocimientos sobre programación, tratamientos y modalidades para la recuperación
+                        y mitigación de problemas físicos y psíquicos para mejorar el estado de los pacientes.
+                        <br><br>
+                        <b>Experiencia laboral</b>
+                        <br><br>
+                        Diciembre 2019 – Actual
+                        Sentits – Alicante
+                        Terapeuta ocupacional
+                        <br><br>
+                        Evaluación de cada usuario conforme al proceso de rehabilitación y apoyo comunitario acordado. <br>
+                        Participación en programas de atención a familias. <br>
+                        Estímulo y motivación de los pacientes en la realización de actividades físicas y lúdicas. <br><br>
+                        Agosto 2013 – Agosto 2019
+                        Saner – Alicante
+                        Terapeuta ocupacional
+                        <br><br>
+                        Experiencia en programas de intervención en deterioro cognitivo. <br>
+                        Apoyo en la habilitación y rehabilitación física de las personas usuarias del servicio. <br>
+                        Coordinación, planificación y organización de intervenciones individuales. <br>
+                        Octubre 2011 – Enero 2013
+                        Centro IDEAT – Alicante
+                        Terapeuta ocupacional
+                        <br><br>
+                        Planificación y puesta en marcha de talleres y actividades de apoyo social. <br>
+                        Diseño y desarrollo de los programas de mejora de autonomía personal y social. <br>
+                        Interactuó con pacientes, familiares y médicos para coordinarlos e informarles sobre el cuidado a los pacientes. <br><br>
+                        <b>Formación académica</b>
+                        <br><br>
+                        Septiembre 2010
+                        Universidad Miguel Hernández – Elche
+                        Grado en Terapia Ocupacional
+                        <br><br>
+                        <b>Aptitudes</b>
+                        <br><br>
+                        Empatía en el trato al paciente
+                        Formación en metodología didáctica
+                        Resolución de conflictos
+                        Vocación por los colectivos vulnerables
+                        Grandes dosis de iniciativa y dedicación
+                        Persona proactiva y dinámica. <br><br>
+                        <b>Idiomas</b>
+                        
+                        Árabe, 
+                        Idioma nativo. <br>
+
+                        Español
+                        C2 – Experto. <br>
+                        <br><br>
+                        <b>Formación adicional</b>
+                        <br><br>
+                        Curso de Estimulación Multisensorial – IPFAP Formación, 2014
+                        Curso de Auxiliar de Rehabilitación – ELBS, 2012
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal de vista 1 -->   
+<!-- RONAL -->
+
+<!-- RONAL -->
+    <!-- Modal de vista 1 -->
+    <div class="modal fade" id="ronal6" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="crearModalLabel">Nancy Martines</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body align-items d-flex">
+                    <img src="assets/images/tfisica/img3.png" alt="" style="width: 320px; height: 420px; margin-right: 40px;">
+                    <div class="text-muted">
+                        <b>Fatima Asad</b>
+                        <br><br>
+                        Calle San José Calasanz, 12
+                        Calpe, Alicante 03710
+                        698019052
+                        fatima.asad@outlook.com
+                        <br><br>
+                        <b>Perfil profesional</b>
+                        <br><br>
+                        Terapeuta ocupacional con amplios conocimientos sobre programación, tratamientos y modalidades para la recuperación
+                        y mitigación de problemas físicos y psíquicos para mejorar el estado de los pacientes.
+                        <br><br>
+                        <b>Experiencia laboral</b>
+                        <br><br>
+                        Diciembre 2019 – Actual
+                        Sentits – Alicante
+                        Terapeuta ocupacional
+                        <br><br>
+                        Evaluación de cada usuario conforme al proceso de rehabilitación y apoyo comunitario acordado. <br>
+                        Participación en programas de atención a familias. <br>
+                        Estímulo y motivación de los pacientes en la realización de actividades físicas y lúdicas. <br><br>
+                        Agosto 2013 – Agosto 2019
+                        Saner – Alicante
+                        Terapeuta ocupacional
+                        <br><br>
+                        Experiencia en programas de intervención en deterioro cognitivo. <br>
+                        Apoyo en la habilitación y rehabilitación física de las personas usuarias del servicio. <br>
+                        Coordinación, planificación y organización de intervenciones individuales. <br>
+                        Octubre 2011 – Enero 2013
+                        Centro IDEAT – Alicante
+                        Terapeuta ocupacional
+                        <br><br>
+                        Planificación y puesta en marcha de talleres y actividades de apoyo social. <br>
+                        Diseño y desarrollo de los programas de mejora de autonomía personal y social. <br>
+                        Interactuó con pacientes, familiares y médicos para coordinarlos e informarles sobre el cuidado a los pacientes. <br><br>
+                        <b>Formación académica</b>
+                        <br><br>
+                        Septiembre 2010
+                        Universidad Miguel Hernández – Elche
+                        Grado en Terapia Ocupacional
+                        <br><br>
+                        <b>Aptitudes</b>
+                        <br><br>
+                        Empatía en el trato al paciente
+                        Formación en metodología didáctica
+                        Resolución de conflictos
+                        Vocación por los colectivos vulnerables
+                        Grandes dosis de iniciativa y dedicación
+                        Persona proactiva y dinámica. <br><br>
+                        <b>Idiomas</b>
+                        
+                        Árabe, 
+                        Idioma nativo. <br>
+
+                        Español
+                        C2 – Experto. <br>
+                        <br><br>
+                        <b>Formación adicional</b>
+                        <br><br>
+                        Curso de Estimulación Multisensorial – IPFAP Formación, 2014
+                        Curso de Auxiliar de Rehabilitación – ELBS, 2012
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal de vista 1 -->   
+<!-- RONAL -->
+
+<!-- RONAL -->
+    <!-- Modal de vista 1 -->
+    <div class="modal fade" id="ronal7" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="crearModalLabel">Nancy Martines</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body align-items d-flex">
+                    <img src="assets/images/tfisica/img3.png" alt="" style="width: 320px; height: 420px; margin-right: 40px;">
+                    <div class="text-muted">
+                        <b>Fatima Asad</b>
+                        <br><br>
+                        Calle San José Calasanz, 12
+                        Calpe, Alicante 03710
+                        698019052
+                        fatima.asad@outlook.com
+                        <br><br>
+                        <b>Perfil profesional</b>
+                        <br><br>
+                        Terapeuta ocupacional con amplios conocimientos sobre programación, tratamientos y modalidades para la recuperación
+                        y mitigación de problemas físicos y psíquicos para mejorar el estado de los pacientes.
+                        <br><br>
+                        <b>Experiencia laboral</b>
+                        <br><br>
+                        Diciembre 2019 – Actual
+                        Sentits – Alicante
+                        Terapeuta ocupacional
+                        <br><br>
+                        Evaluación de cada usuario conforme al proceso de rehabilitación y apoyo comunitario acordado. <br>
+                        Participación en programas de atención a familias. <br>
+                        Estímulo y motivación de los pacientes en la realización de actividades físicas y lúdicas. <br><br>
+                        Agosto 2013 – Agosto 2019
+                        Saner – Alicante
+                        Terapeuta ocupacional
+                        <br><br>
+                        Experiencia en programas de intervención en deterioro cognitivo. <br>
+                        Apoyo en la habilitación y rehabilitación física de las personas usuarias del servicio. <br>
+                        Coordinación, planificación y organización de intervenciones individuales. <br>
+                        Octubre 2011 – Enero 2013
+                        Centro IDEAT – Alicante
+                        Terapeuta ocupacional
+                        <br><br>
+                        Planificación y puesta en marcha de talleres y actividades de apoyo social. <br>
+                        Diseño y desarrollo de los programas de mejora de autonomía personal y social. <br>
+                        Interactuó con pacientes, familiares y médicos para coordinarlos e informarles sobre el cuidado a los pacientes. <br><br>
+                        <b>Formación académica</b>
+                        <br><br>
+                        Septiembre 2010
+                        Universidad Miguel Hernández – Elche
+                        Grado en Terapia Ocupacional
+                        <br><br>
+                        <b>Aptitudes</b>
+                        <br><br>
+                        Empatía en el trato al paciente
+                        Formación en metodología didáctica
+                        Resolución de conflictos
+                        Vocación por los colectivos vulnerables
+                        Grandes dosis de iniciativa y dedicación
+                        Persona proactiva y dinámica. <br><br>
+                        <b>Idiomas</b>
+                        
+                        Árabe, 
+                        Idioma nativo. <br>
+
+                        Español
+                        C2 – Experto. <br>
+                        <br><br>
+                        <b>Formación adicional</b>
+                        <br><br>
+                        Curso de Estimulación Multisensorial – IPFAP Formación, 2014
+                        Curso de Auxiliar de Rehabilitación – ELBS, 2012
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal de vista 1 -->   
+<!-- RONAL -->
+
+<!-- RONAL -->
+    <!-- Modal de vista 1 -->
+    <div class="modal fade" id="ronal8" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="crearModalLabel">Nancy Martines</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body align-items d-flex">
+                    <img src="assets/images/tfisica/img3.png" alt="" style="width: 320px; height: 420px; margin-right: 40px;">
+                    <div class="text-muted">
+                        <b>Fatima Asad</b>
+                        <br><br>
+                        Calle San José Calasanz, 12
+                        Calpe, Alicante 03710
+                        698019052
+                        fatima.asad@outlook.com
+                        <br><br>
+                        <b>Perfil profesional</b>
+                        <br><br>
+                        Terapeuta ocupacional con amplios conocimientos sobre programación, tratamientos y modalidades para la recuperación
+                        y mitigación de problemas físicos y psíquicos para mejorar el estado de los pacientes.
+                        <br><br>
+                        <b>Experiencia laboral</b>
+                        <br><br>
+                        Diciembre 2019 – Actual
+                        Sentits – Alicante
+                        Terapeuta ocupacional
+                        <br><br>
+                        Evaluación de cada usuario conforme al proceso de rehabilitación y apoyo comunitario acordado. <br>
+                        Participación en programas de atención a familias. <br>
+                        Estímulo y motivación de los pacientes en la realización de actividades físicas y lúdicas. <br><br>
+                        Agosto 2013 – Agosto 2019
+                        Saner – Alicante
+                        Terapeuta ocupacional
+                        <br><br>
+                        Experiencia en programas de intervención en deterioro cognitivo. <br>
+                        Apoyo en la habilitación y rehabilitación física de las personas usuarias del servicio. <br>
+                        Coordinación, planificación y organización de intervenciones individuales. <br>
+                        Octubre 2011 – Enero 2013
+                        Centro IDEAT – Alicante
+                        Terapeuta ocupacional
+                        <br><br>
+                        Planificación y puesta en marcha de talleres y actividades de apoyo social. <br>
+                        Diseño y desarrollo de los programas de mejora de autonomía personal y social. <br>
+                        Interactuó con pacientes, familiares y médicos para coordinarlos e informarles sobre el cuidado a los pacientes. <br><br>
+                        <b>Formación académica</b>
+                        <br><br>
+                        Septiembre 2010
+                        Universidad Miguel Hernández – Elche
+                        Grado en Terapia Ocupacional
+                        <br><br>
+                        <b>Aptitudes</b>
+                        <br><br>
+                        Empatía en el trato al paciente
+                        Formación en metodología didáctica
+                        Resolución de conflictos
+                        Vocación por los colectivos vulnerables
+                        Grandes dosis de iniciativa y dedicación
+                        Persona proactiva y dinámica. <br><br>
+                        <b>Idiomas</b>
+                        
+                        Árabe, 
+                        Idioma nativo. <br>
+
+                        Español
+                        C2 – Experto. <br>
+                        <br><br>
+                        <b>Formación adicional</b>
+                        <br><br>
+                        Curso de Estimulación Multisensorial – IPFAP Formación, 2014
+                        Curso de Auxiliar de Rehabilitación – ELBS, 2012
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal de vista 1 -->   
+<!-- RONAL -->
+
+<!-- RONAL -->
+    <!-- Modal de vista 1 -->
+    <div class="modal fade" id="ronal9" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="crearModalLabel">Nancy Martines</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body align-items d-flex">
+                    <img src="assets/images/tfisica/img3.png" alt="" style="width: 320px; height: 420px; margin-right: 40px;">
+                    <div class="text-muted">
+                        <b>Fatima Asad</b>
+                        <br><br>
+                        Calle San José Calasanz, 12
+                        Calpe, Alicante 03710
+                        698019052
+                        fatima.asad@outlook.com
+                        <br><br>
+                        <b>Perfil profesional</b>
+                        <br><br>
+                        Terapeuta ocupacional con amplios conocimientos sobre programación, tratamientos y modalidades para la recuperación
+                        y mitigación de problemas físicos y psíquicos para mejorar el estado de los pacientes.
+                        <br><br>
+                        <b>Experiencia laboral</b>
+                        <br><br>
+                        Diciembre 2019 – Actual
+                        Sentits – Alicante
+                        Terapeuta ocupacional
+                        <br><br>
+                        Evaluación de cada usuario conforme al proceso de rehabilitación y apoyo comunitario acordado. <br>
+                        Participación en programas de atención a familias. <br>
+                        Estímulo y motivación de los pacientes en la realización de actividades físicas y lúdicas. <br><br>
+                        Agosto 2013 – Agosto 2019
+                        Saner – Alicante
+                        Terapeuta ocupacional
+                        <br><br>
+                        Experiencia en programas de intervención en deterioro cognitivo. <br>
+                        Apoyo en la habilitación y rehabilitación física de las personas usuarias del servicio. <br>
+                        Coordinación, planificación y organización de intervenciones individuales. <br>
+                        Octubre 2011 – Enero 2013
+                        Centro IDEAT – Alicante
+                        Terapeuta ocupacional
+                        <br><br>
+                        Planificación y puesta en marcha de talleres y actividades de apoyo social. <br>
+                        Diseño y desarrollo de los programas de mejora de autonomía personal y social. <br>
+                        Interactuó con pacientes, familiares y médicos para coordinarlos e informarles sobre el cuidado a los pacientes. <br><br>
+                        <b>Formación académica</b>
+                        <br><br>
+                        Septiembre 2010
+                        Universidad Miguel Hernández – Elche
+                        Grado en Terapia Ocupacional
+                        <br><br>
+                        <b>Aptitudes</b>
+                        <br><br>
+                        Empatía en el trato al paciente
+                        Formación en metodología didáctica
+                        Resolución de conflictos
+                        Vocación por los colectivos vulnerables
+                        Grandes dosis de iniciativa y dedicación
+                        Persona proactiva y dinámica. <br><br>
+                        <b>Idiomas</b>
+                        
+                        Árabe, 
+                        Idioma nativo. <br>
+
+                        Español
+                        C2 – Experto. <br>
+                        <br><br>
+                        <b>Formación adicional</b>
+                        <br><br>
+                        Curso de Estimulación Multisensorial – IPFAP Formación, 2014
+                        Curso de Auxiliar de Rehabilitación – ELBS, 2012
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal de vista 1 -->   
+<!-- RONAL -->
+
+<!-- RONAL -->
+    <!-- Modal de vista 1 -->
+    <div class="modal fade" id="ronal10" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="crearModalLabel">Nancy Martines</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body align-items d-flex">
+                    <img src="assets/images/tfisica/img3.png" alt="" style="width: 320px; height: 420px; margin-right: 40px;">
+                    <div class="text-muted">
+                        <b>Fatima Asad</b>
+                        <br><br>
+                        Calle San José Calasanz, 12
+                        Calpe, Alicante 03710
+                        698019052
+                        fatima.asad@outlook.com
+                        <br><br>
+                        <b>Perfil profesional</b>
+                        <br><br>
+                        Terapeuta ocupacional con amplios conocimientos sobre programación, tratamientos y modalidades para la recuperación
+                        y mitigación de problemas físicos y psíquicos para mejorar el estado de los pacientes.
+                        <br><br>
+                        <b>Experiencia laboral</b>
+                        <br><br>
+                        Diciembre 2019 – Actual
+                        Sentits – Alicante
+                        Terapeuta ocupacional
+                        <br><br>
+                        Evaluación de cada usuario conforme al proceso de rehabilitación y apoyo comunitario acordado. <br>
+                        Participación en programas de atención a familias. <br>
+                        Estímulo y motivación de los pacientes en la realización de actividades físicas y lúdicas. <br><br>
+                        Agosto 2013 – Agosto 2019
+                        Saner – Alicante
+                        Terapeuta ocupacional
+                        <br><br>
+                        Experiencia en programas de intervención en deterioro cognitivo. <br>
+                        Apoyo en la habilitación y rehabilitación física de las personas usuarias del servicio. <br>
+                        Coordinación, planificación y organización de intervenciones individuales. <br>
+                        Octubre 2011 – Enero 2013
+                        Centro IDEAT – Alicante
+                        Terapeuta ocupacional
+                        <br><br>
+                        Planificación y puesta en marcha de talleres y actividades de apoyo social. <br>
+                        Diseño y desarrollo de los programas de mejora de autonomía personal y social. <br>
+                        Interactuó con pacientes, familiares y médicos para coordinarlos e informarles sobre el cuidado a los pacientes. <br><br>
+                        <b>Formación académica</b>
+                        <br><br>
+                        Septiembre 2010
+                        Universidad Miguel Hernández – Elche
+                        Grado en Terapia Ocupacional
+                        <br><br>
+                        <b>Aptitudes</b>
+                        <br><br>
+                        Empatía en el trato al paciente
+                        Formación en metodología didáctica
+                        Resolución de conflictos
+                        Vocación por los colectivos vulnerables
+                        Grandes dosis de iniciativa y dedicación
+                        Persona proactiva y dinámica. <br><br>
+                        <b>Idiomas</b>
+                        
+                        Árabe, 
+                        Idioma nativo. <br>
+
+                        Español
+                        C2 – Experto. <br>
+                        <br><br>
+                        <b>Formación adicional</b>
+                        <br><br>
+                        Curso de Estimulación Multisensorial – IPFAP Formación, 2014
+                        Curso de Auxiliar de Rehabilitación – ELBS, 2012
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal de vista 1 -->   
+<!-- RONAL -->
+
+<!-- RONAL -->
+    <!-- Modal de vista 1 -->
+    <div class="modal fade" id="ronal11" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="crearModalLabel">Nancy Martines</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body align-items d-flex">
+                    <img src="assets/images/tfisica/img3.png" alt="" style="width: 320px; height: 420px; margin-right: 40px;">
+                    <div class="text-muted">
+                        <b>Fatima Asad</b>
+                        <br><br>
+                        Calle San José Calasanz, 12
+                        Calpe, Alicante 03710
+                        698019052
+                        fatima.asad@outlook.com
+                        <br><br>
+                        <b>Perfil profesional</b>
+                        <br><br>
+                        Terapeuta ocupacional con amplios conocimientos sobre programación, tratamientos y modalidades para la recuperación
+                        y mitigación de problemas físicos y psíquicos para mejorar el estado de los pacientes.
+                        <br><br>
+                        <b>Experiencia laboral</b>
+                        <br><br>
+                        Diciembre 2019 – Actual
+                        Sentits – Alicante
+                        Terapeuta ocupacional
+                        <br><br>
+                        Evaluación de cada usuario conforme al proceso de rehabilitación y apoyo comunitario acordado. <br>
+                        Participación en programas de atención a familias. <br>
+                        Estímulo y motivación de los pacientes en la realización de actividades físicas y lúdicas. <br><br>
+                        Agosto 2013 – Agosto 2019
+                        Saner – Alicante
+                        Terapeuta ocupacional
+                        <br><br>
+                        Experiencia en programas de intervención en deterioro cognitivo. <br>
+                        Apoyo en la habilitación y rehabilitación física de las personas usuarias del servicio. <br>
+                        Coordinación, planificación y organización de intervenciones individuales. <br>
+                        Octubre 2011 – Enero 2013
+                        Centro IDEAT – Alicante
+                        Terapeuta ocupacional
+                        <br><br>
+                        Planificación y puesta en marcha de talleres y actividades de apoyo social. <br>
+                        Diseño y desarrollo de los programas de mejora de autonomía personal y social. <br>
+                        Interactuó con pacientes, familiares y médicos para coordinarlos e informarles sobre el cuidado a los pacientes. <br><br>
+                        <b>Formación académica</b>
+                        <br><br>
+                        Septiembre 2010
+                        Universidad Miguel Hernández – Elche
+                        Grado en Terapia Ocupacional
+                        <br><br>
+                        <b>Aptitudes</b>
+                        <br><br>
+                        Empatía en el trato al paciente
+                        Formación en metodología didáctica
+                        Resolución de conflictos
+                        Vocación por los colectivos vulnerables
+                        Grandes dosis de iniciativa y dedicación
+                        Persona proactiva y dinámica. <br><br>
+                        <b>Idiomas</b>
+                        
+                        Árabe, 
+                        Idioma nativo. <br>
+
+                        Español
+                        C2 – Experto. <br>
+                        <br><br>
+                        <b>Formación adicional</b>
+                        <br><br>
+                        Curso de Estimulación Multisensorial – IPFAP Formación, 2014
+                        Curso de Auxiliar de Rehabilitación – ELBS, 2012
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal de vista 1 -->   
+<!-- RONAL -->
+
 
 <!-- Modal para Crear Nuevo Tema -->
 <div class="modal fade" id="tlenguaje" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
