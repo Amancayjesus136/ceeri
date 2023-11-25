@@ -27,45 +27,46 @@ class WelcomeController extends Controller
         $psicologia = DB::table('psicologia')
             ->select('tipo_documento', 'numero_documento', 'nombres', 'apellidos', 'fecha_hora')
             ->where('numero_documento', $numeroDocumento)
-            ->first();
+            ->get();
 
         $terapiaFisica = DB::table('terapia_fisica')
             ->select('tipo_documento', 'numero_documento', 'nombres', 'apellidos', 'fecha_hora')
             ->where('numero_documento', $numeroDocumento)
-            ->first();
+            ->get();
 
         $terapiaInfantil = DB::table('terapia_infantil')
             ->select('tipo_documento', 'numero_documento', 'nombres', 'apellidos', 'fecha_hora')
             ->where('numero_documento', $numeroDocumento)
-            ->first();
+            ->get();
 
         $terapiaLenguaje = DB::table('terapia_lenguaje')
             ->select('tipo_documento', 'numero_documento', 'nombres', 'apellidos', 'fecha_hora')
             ->where('numero_documento', $numeroDocumento)
-            ->first();
+            ->get();
 
         $terapiaOcupacional = DB::table('terapia_ocupacional')
             ->select('tipo_documento', 'numero_documento', 'nombres', 'apellidos', 'fecha_hora')
             ->where('numero_documento', $numeroDocumento)
-            ->first();
+            ->get();
 
-        if ($psicologia) {
+        if (!$psicologia->isEmpty()) {
             $resultados['psicologia'] = $psicologia;
         }
-        if ($terapiaFisica) {
+        if (!$terapiaFisica->isEmpty()) {
             $resultados['terapia_fisica'] = $terapiaFisica;
         }
-        if ($terapiaInfantil) {
+        if (!$terapiaInfantil->isEmpty()) {
             $resultados['terapia_infantil'] = $terapiaInfantil;
         }
-        if ($terapiaLenguaje) {
+        if (!$terapiaLenguaje->isEmpty()) {
             $resultados['terapia_lenguaje'] = $terapiaLenguaje;
         }
-        if ($terapiaOcupacional) {
+        if (!$terapiaOcupacional->isEmpty()) {
             $resultados['terapia_ocupacional'] = $terapiaOcupacional;
         }
 
         return response()->json($resultados);
     }
+
 
 }
