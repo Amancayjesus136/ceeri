@@ -256,7 +256,7 @@
         <!-- Button trigger modal -->
 
 
-        <div class="modal fade" id="eliminarModal{{ $psicologia->id }}" tabindex="-1" aria-labelledby="eliminarModal" aria-hidden="true">
+    <div class="modal fade" id="eliminarModal{{ $psicologia->id }}" tabindex="-1" aria-labelledby="eliminarModal" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">

@@ -272,6 +272,8 @@
                             <div>
                             <h1 class="display-6 fw-semibold text-capitalize mb-3 lh-base texto-azul">Consulta tu cita en menos de lo que esperas</h1>
                                 <p  style="color: white;">Brindamos a nuestros usuarios la facilidad de consultar sus citas por si se les olvidaron.</p>
+                                
+                            <!-- CODIGO PARA QUE FUNCIONE LA CONSULTA DE RESERVA  -->
                                 <form action="{{ route('consultadni') }}" class="job-panel-filter" method="post">
                                     @csrf
                                     <div class="row g-md-0 g-2">
@@ -299,6 +301,22 @@
                                     </div>
                                 </form>
 
+                                <div class="modal fade" id="resultadoModal" tabindex="-1" aria-labelledby="resultadoModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="resultadoModalLabel">Resultados de Consulta</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <script>
                                     document.addEventListener('DOMContentLoaded', function () {
                                         document.querySelector('.job-panel-filter').addEventListener('submit', function (event) {
@@ -312,29 +330,62 @@
                                             })
                                             .then(response => response.json())
                                             .then(data => {
-                                                if (data.psicologia) {
-                                                    alert('Resultados de Psicologia:\n' + JSON.stringify(data.psicologia));
-                                                }
-                                                if (data.terapia_fisica) {
-                                                    alert('Resultados de Terapia Fisica:\n' + JSON.stringify(data.terapia_fisica));
-                                                }
-                                                if (data.terapia_infantil) {
-                                                    alert('Resultados de Terapia Infantil:\n' + JSON.stringify(data.terapia_infantil));
-                                                }
-                                                if (data.terapia_lenguaje) {
-                                                    alert('Resultados de Terapia de Lenguaje:\n' + JSON.stringify(data.terapia_lenguaje));
-                                                }
-                                                if (data.terapia_ocupacional) {
-                                                    alert('Resultados de Terapia Ocupacional:\n' + JSON.stringify(data.terapia_ocupacional));
-                                                }
+                                                displayResultsInModal(data);
                                             })
                                             .catch(error => {
                                                 console.error('Error en la solicitud Ajax:', error);
                                             });
                                         });
+
+                                        function displayResultsInModal(results) {
+                                            var modalId = '#resultadoModal';
+                                            var modalBody = document.querySelector(modalId + ' .modal-body');
+
+                                            modalBody.innerHTML = '';
+
+                                            for (var category in results) {
+                                                if (results.hasOwnProperty(category)) {
+                                                    var categoryResults = results[category];
+                                                    if (categoryResults.length > 0) {
+                                                        var categoryContainer = document.createElement('div');
+                                                        categoryContainer.className = 'mb-4';
+
+                                                        categoryResults.forEach(result => {
+                                                            var resultCard = document.createElement('div');
+                                                            resultCard.className = 'card text-center';
+                                                            
+                                                            var formattedDate = new Date(result.fecha_hora).toLocaleString();
+
+                                                            resultCard.innerHTML = '<div class="card-header">' + category.replace('_', ' ').toUpperCase() + '</div>' +
+                                                                                    '<div class="card-body">' +
+                                                                                        '<p class="card-text">' +
+                                                                                            '<strong>Tipo de Documento:</strong> ' + result.tipo_documento + '<br>' +
+                                                                                            '<strong>Número de Documento:</strong> ' + result.numero_documento + '<br>' +
+                                                                                            '<strong>Nombres:</strong> ' + result.nombres + '<br>' +
+                                                                                            '<strong>Apellidos:</strong> ' + result.apellidos + '<br>' +
+                                                                                            '<strong>Fecha y Hora:</strong> ' + formattedDate + '<br>' +
+                                                                                        '</p>' +
+                                                                                    '</div>';
+
+                                                            categoryContainer.appendChild(resultCard);
+                                                        });
+
+                                                        modalBody.appendChild(categoryContainer);
+                                                    }
+                                                }
+                                            }
+
+                                            $(modalId).modal('show');
+                                        }
+
+                                        function guardarResultados() {
+
+                                            alert('Implementa la lógica para guardar los resultados aquí.');
+                                            $(modalId).modal('hide');
+                                        }
                                     });
                                 </script>
-
+                            <!-- CODIGO PARA QUE FUNCIONE LA CONSULTA DE RESERVA  -->
 
                                 <!-- Contenido del modal -->
                                 <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
