@@ -26,8 +26,9 @@ class ListadoTerapiaOcupacionalController extends Controller
                                 ->orWhere('fecha_hora', 'LIKE', '%'.$_GET['s'].'%');
             }
     
-            $ocupacionales = $ocupacionales->get();
-        return view('lsttocupacional.index', compact('ocupacionales'));
+            $porPagina = 7; // Número de registros por página
+            $ocupacionales = $ocupacionales->paginate($porPagina);        
+            return view('lsttocupacional.index', compact('ocupacionales'));
     }
 
     /**

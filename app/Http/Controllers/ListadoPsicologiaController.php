@@ -14,21 +14,25 @@ class ListadoPsicologiaController extends Controller
     public function index()
     {
         $psicologias = Psicologia::query();
+    
         if (!empty($_GET['s'])) {
             $psicologias = $psicologias->where('id', 'LIKE', '%'.$_GET['s'].'%')
-                                ->orWhere('tipo_documento', 'LIKE', '%'.$_GET['s'].'%')
-                                ->orWhere('numero_documento', 'LIKE', '%'.$_GET['s'].'%')
-                                ->orWhere('nombres', 'LIKE', '%'.$_GET['s'].'%')
-                                ->orWhere('apellidos', 'LIKE', '%'.$_GET['s'].'%')
-                                ->orWhere('telefono', 'LIKE', '%'.$_GET['s'].'%')
-                                ->orWhere('especialidad', 'LIKE', '%'.$_GET['s'].'%')
-                                ->orWhere('genero', 'LIKE', '%'.$_GET['s'].'%')
-                                ->orWhere('fecha_hora', 'LIKE', '%'.$_GET['s'].'%');
-            }
-            $psicologias = $psicologias->get();
+                ->orWhere('tipo_documento', 'LIKE', '%'.$_GET['s'].'%')
+                ->orWhere('numero_documento', 'LIKE', '%'.$_GET['s'].'%')
+                ->orWhere('nombres', 'LIKE', '%'.$_GET['s'].'%')
+                ->orWhere('apellidos', 'LIKE', '%'.$_GET['s'].'%')
+                ->orWhere('telefono', 'LIKE', '%'.$_GET['s'].'%')
+                ->orWhere('especialidad', 'LIKE', '%'.$_GET['s'].'%')
+                ->orWhere('genero', 'LIKE', '%'.$_GET['s'].'%')
+                ->orWhere('fecha_hora', 'LIKE', '%'.$_GET['s'].'%');
+        }
+    
+        $porPagina = 7; // Número de registros por página
+        $psicologias = $psicologias->paginate($porPagina);
+    
         return view('lstpsicologia.index', compact('psicologias'));
     }
-
+    
     /**
      * Show the form for creating a new resource.
      */

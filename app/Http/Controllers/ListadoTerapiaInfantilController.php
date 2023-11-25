@@ -26,8 +26,9 @@ class ListadoTerapiaInfantilController extends Controller
                                 ->orWhere('fecha_hora', 'LIKE', '%'.$_GET['s'].'%');
             }
     
-            $infantils = $infantils->get();
-        return view('lsttinfantil.index', compact('infantils'));
+            $porPagina = 7; // Número de registros por página
+            $infantils = $infantils->paginate($porPagina);        
+            return view('lsttinfantil.index', compact('infantils'));
     }
 
     /**

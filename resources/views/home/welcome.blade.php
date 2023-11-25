@@ -88,13 +88,16 @@
 
 
     <style>
-
+        .logo {
+            width: 200px;
+            height: 80px;
+        }
     </style>
 
     <body data-bs-spy="scroll" data-bs-target="#navbar-example">
-
         <div class="layout-wrapper landing">
             <nav class="navbar navbar-expand-lg navbar-landing fixed-top job-navbar" id="navbar">
+            <img src="assets/images/logo-sinfondo.png" class="logo">
                 <div class="container-fluid custom-container">
                     <a class="navbar-brand" href="index.html">
                         <!-- <img src="assets/images/logo-dark.png" class="card-logo card-logo-dark" alt="logo dark" height="50"> -->

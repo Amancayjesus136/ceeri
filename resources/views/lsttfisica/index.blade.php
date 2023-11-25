@@ -98,6 +98,35 @@
 </div>
 <!-- listado -->
 
+<!-- paginado -->
+
+<div style="margin-top: 20px; margin-bottom: 20px," class="d-flex justify-content-between ">
+                <p style="margin-left: 50px" class="text-start">Mostrando {{ $fisicas->firstItem() }} a {{ $fisicas->lastItem() }} de {{ $fisicas->total() }} resultados</p>
+
+                <div style="margin-right: 150px" class="pagination-container">
+                    <ul class="pagination d-flex">
+                        @if ($fisicas->onFirstPage())
+                            <li class="page-item disabled"><span class="page-link">Anterior</span></li>
+                        @else
+                            <li class="page-item"><a class="page-link" href="{{ $fisicas->previousPageUrl() }}">Anterior</a></li>
+                        @endif
+
+                        @for ($i = 1; $i <= $fisicas->lastPage(); $i++)
+                            <li class="page-item {{ $i == $fisicas->currentPage() ? 'active' : '' }}">
+                                <a class="page-link" href="{{ $fisicas->url($i) }}">{{ $i }}</a>
+                            </li>
+                        @endfor
+
+                        @if ($fisicas->hasMorePages())
+                            <li class="page-item"><a class="page-link" href="{{ $fisicas->nextPageUrl() }}">Siguiente</a></li>
+                        @else
+                            <li class="page-item disabled"><span class="page-link">Siguiente</span></li>
+                        @endif
+                    </ul>
+                </div>
+</div>
+<!--paginado -->
+
 
 <!-- Modal para Crear Nuevo Tema -->
 <div class="modal fade" id="agregarModal" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">

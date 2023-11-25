@@ -26,8 +26,9 @@ class ListadoTerapiaLenguajeController extends Controller
                                 ->orWhere('fecha_hora', 'LIKE', '%'.$_GET['s'].'%');
             }
     
-            $lenguajes = $lenguajes->get();
-        return view('lsttlenguaje.index', compact('lenguajes'));
+            $porPagina = 7; // Número de registros por página
+            $lenguajes = $lenguajes->paginate($porPagina);        
+            return view('lsttlenguaje.index', compact('lenguajes'));
     }
 
     /**

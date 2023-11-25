@@ -25,8 +25,9 @@ class ListadoTerapiaFisicaController extends Controller
                                 ->orWhere('genero', 'LIKE', '%'.$_GET['s'].'%')
                                 ->orWhere('fecha_hora', 'LIKE', '%'.$_GET['s'].'%');
             }
-            $fisicas = $fisicas->get();
-        return view('lsttfisica.index', compact('fisicas'));
+            $porPagina = 7; // Número de registros por página
+            $fisicas = $fisicas->paginate($porPagina);
+            return view('lsttfisica.index', compact('fisicas'));
     }
 
     /**

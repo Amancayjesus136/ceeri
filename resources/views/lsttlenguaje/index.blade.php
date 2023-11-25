@@ -98,6 +98,34 @@
 </div>
 <!-- listado -->
 
+<!-- paginado -->
+
+<div style="margin-top: 20px; margin-bottom: 20px," class="d-flex justify-content-between ">
+                <p style="margin-left: 50px" class="text-start">Mostrando {{ $lenguajes->firstItem() }} a {{ $lenguajes->lastItem() }} de {{ $lenguajes->total() }} resultados</p>
+
+                <div style="margin-right: 150px" class="pagination-container">
+                    <ul class="pagination d-flex">
+                        @if ($lenguajes->onFirstPage())
+                            <li class="page-item disabled"><span class="page-link">Anterior</span></li>
+                        @else
+                            <li class="page-item"><a class="page-link" href="{{ $lenguajes->previousPageUrl() }}">Anterior</a></li>
+                        @endif
+
+                        @for ($i = 1; $i <= $lenguajes->lastPage(); $i++)
+                            <li class="page-item {{ $i == $lenguajes->currentPage() ? 'active' : '' }}">
+                                <a class="page-link" href="{{ $lenguajes->url($i) }}">{{ $i }}</a>
+                            </li>
+                        @endfor
+
+                        @if ($lenguajes->hasMorePages())
+                            <li class="page-item"><a class="page-link" href="{{ $lenguajes->nextPageUrl() }}">Siguiente</a></li>
+                        @else
+                            <li class="page-item disabled"><span class="page-link">Siguiente</span></li>
+                        @endif
+                    </ul>
+                </div>
+</div>
+<!--paginado -->
 
 <!-- Modal para Crear Nuevo Tema -->
 <div class="modal fade" id="agregarModal" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
