@@ -299,6 +299,43 @@
                                     </div>
                                 </form>
 
+                                <script>
+                                    document.addEventListener('DOMContentLoaded', function () {
+                                        document.querySelector('.job-panel-filter').addEventListener('submit', function (event) {
+                                            event.preventDefault();
+
+                                            var formData = new FormData(this);
+
+                                            fetch('{{ route("consultadni") }}', {
+                                                method: 'POST',
+                                                body: formData,
+                                            })
+                                            .then(response => response.json())
+                                            .then(data => {
+                                                if (data.psicologia) {
+                                                    alert('Resultados de Psicologia:\n' + JSON.stringify(data.psicologia));
+                                                }
+                                                if (data.terapia_fisica) {
+                                                    alert('Resultados de Terapia Fisica:\n' + JSON.stringify(data.terapia_fisica));
+                                                }
+                                                if (data.terapia_infantil) {
+                                                    alert('Resultados de Terapia Infantil:\n' + JSON.stringify(data.terapia_infantil));
+                                                }
+                                                if (data.terapia_lenguaje) {
+                                                    alert('Resultados de Terapia de Lenguaje:\n' + JSON.stringify(data.terapia_lenguaje));
+                                                }
+                                                if (data.terapia_ocupacional) {
+                                                    alert('Resultados de Terapia Ocupacional:\n' + JSON.stringify(data.terapia_ocupacional));
+                                                }
+                                            })
+                                            .catch(error => {
+                                                console.error('Error en la solicitud Ajax:', error);
+                                            });
+                                        });
+                                    });
+                                </script>
+
+
                                 <!-- Contenido del modal -->
                                 <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">
