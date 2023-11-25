@@ -727,6 +727,8 @@
                                             </div>
                                         </div>
                                     </div>
+
+
                                     <div class="swiper-slide">
                                         <div class="card text-center">
                                             <div class="card-body p-4">
@@ -738,7 +740,8 @@
                                                     <i class="ri-map-pin-2-line text-primary me-1 align-bottom"></i> Villa El Salvador
                                                 </p>
                                         
-                                                <a href="#!"  data-bs-toggle="modal" data-bs-target="#ronal2" class="btn btn-primary w-100">Ver detalles</a>
+                                                <a href="#!"  data-bs-toggle="modal" data-bs-target="#Ronal2" class="btn btn-primary w-100">Ver detalles</a>
+
                                             </div>
                                         </div>
                                     </div>
@@ -1128,162 +1131,75 @@
 <!-- RONAL -->
     <!-- Modal de vista 1 -->
     <div class="modal fade" id="ronal1" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2 class="modal-title" id="crearModalLabel">Juanito Alcachofa</h2>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                </div>
-                <div class="modal-body align-items d-flex">
-                <img src="assets/images/tfisica/img3.png" alt="" style="width: 320px; height: 420px; margin-right: 40px;">
-                    <div class="text-muted">
-                        <b>Fatima Asad</b>
-                        <br><br>
-                        Calle San José Calasanz, 12
-                        Calpe, Alicante 03710
-                        698019052
-                        fatima.asad@outlook.com
-                        <br><br>
-                        <b>Perfil profesional</b>
-                        <br><br>
-                        Terapeuta ocupacional con amplios conocimientos sobre programación, tratamientos y modalidades para la recuperación
-                        y mitigación de problemas físicos y psíquicos para mejorar el estado de los pacientes.
-                        <br><br>
-                        <b>Experiencia laboral</b>
-                        <br><br>
-                        Diciembre 2019 – Actual
-                        Sentits – Alicante
-                        Terapeuta ocupacional
-                        <br><br>
-                        Evaluación de cada usuario conforme al proceso de rehabilitación y apoyo comunitario acordado. <br>
-                        Participación en programas de atención a familias. <br>
-                        Estímulo y motivación de los pacientes en la realización de actividades físicas y lúdicas. <br><br>
-                        Agosto 2013 – Agosto 2019
-                        Saner – Alicante
-                        Terapeuta ocupacional
-                        <br><br>
-                        Experiencia en programas de intervención en deterioro cognitivo. <br>
-                        Apoyo en la habilitación y rehabilitación física de las personas usuarias del servicio. <br>
-                        Coordinación, planificación y organización de intervenciones individuales. <br>
-                        Octubre 2011 – Enero 2013
-                        Centro IDEAT – Alicante
-                        Terapeuta ocupacional
-                        <br><br>
-                        Planificación y puesta en marcha de talleres y actividades de apoyo social. <br>
-                        Diseño y desarrollo de los programas de mejora de autonomía personal y social. <br>
-                        Interactuó con pacientes, familiares y médicos para coordinarlos e informarles sobre el cuidado a los pacientes. <br><br>
-                        <b>Formación académica</b>
-                        <br><br>
-                        Septiembre 2010
-                        Universidad Miguel Hernández – Elche
-                        Grado en Terapia Ocupacional
-                        <br><br>
-                        <b>Aptitudes</b>
-                        <br><br>
-                        Empatía en el trato al paciente
-                        Formación en metodología didáctica
-                        Resolución de conflictos
-                        Vocación por los colectivos vulnerables
-                        Grandes dosis de iniciativa y dedicación
-                        Persona proactiva y dinámica. <br><br>
-                        <b>Idiomas</b>
-                        
-                        Árabe, 
-                        Idioma nativo. <br>
-
-                        Español
-                        C2 – Experto. <br>
-                        <br><br>
-                        <b>Formación adicional</b>
-                        <br><br>
-                        Curso de Estimulación Multisensorial – IPFAP Formación, 2014
-                        Curso de Auxiliar de Rehabilitación – ELBS, 2012
-                    </div>
-                </div>
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="crearModalLabel">Juanito Alcachofa</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
             </div>
-        </div>
-    </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <img src="assets/images/tfisica/img3.png" alt="two slide" width="100%">
+                        </div>
+                        <div class="col-md-6 text-muted">
+                            <b>Fatima Asad</b><br><br>
+                            Calle San José Calasanz, 12<br>
+                            Calpe, Alicante 03710<br>
+                            987456321<br>
+                            fatima.asad@outlook.com<br><br>
+                            <b>Perfil profesional</b><br><br>
+                           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, perferendis quae? Mollitia 
+                           tempore obcaecati ipsam quod aut, dolore consequuntur veritatis amet accusamus vel doloremque
+                            id deserunt nihil inventore ipsa neque!
+                            <br><br>
+                            <!-- Resto del contenido -->
+                        </div>
+                    </div>
+      
+
     <!-- Modal de vista 1 -->   
 <!-- RONAL -->
 
-<!-- RONAL -->
-    <!-- Modal de vista 1 -->
-    <div class="modal fade" id="ronal2" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="crearModalLabel">Nancy Martines</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                </div>
-                <div class="modal-body align-items d-flex">
-                    <img src="assets/images/tfisica/img3.png" alt="" style="width: 320px; height: 420px; margin-right: 40px;">
-                    <div class="text-muted">
-                        <b>Fatima Asad</b>
-                        <br><br>
-                        Calle San José Calasanz, 12
-                        Calpe, Alicante 03710
-                        698019052
-                        fatima.asad@outlook.com
-                        <br><br>
-                        <b>Perfil profesional</b>
-                        <br><br>
-                        Terapeuta ocupacional con amplios conocimientos sobre programación, tratamientos y modalidades para la recuperación
-                        y mitigación de problemas físicos y psíquicos para mejorar el estado de los pacientes.
-                        <br><br>
-                        <b>Experiencia laboral</b>
-                        <br><br>
-                        Diciembre 2019 – Actual
-                        Sentits – Alicante
-                        Terapeuta ocupacional
-                        <br><br>
-                        Evaluación de cada usuario conforme al proceso de rehabilitación y apoyo comunitario acordado. <br>
-                        Participación en programas de atención a familias. <br>
-                        Estímulo y motivación de los pacientes en la realización de actividades físicas y lúdicas. <br><br>
-                        Agosto 2013 – Agosto 2019
-                        Saner – Alicante
-                        Terapeuta ocupacional
-                        <br><br>
-                        Experiencia en programas de intervención en deterioro cognitivo. <br>
-                        Apoyo en la habilitación y rehabilitación física de las personas usuarias del servicio. <br>
-                        Coordinación, planificación y organización de intervenciones individuales. <br>
-                        Octubre 2011 – Enero 2013
-                        Centro IDEAT – Alicante
-                        Terapeuta ocupacional
-                        <br><br>
-                        Planificación y puesta en marcha de talleres y actividades de apoyo social. <br>
-                        Diseño y desarrollo de los programas de mejora de autonomía personal y social. <br>
-                        Interactuó con pacientes, familiares y médicos para coordinarlos e informarles sobre el cuidado a los pacientes. <br><br>
-                        <b>Formación académica</b>
-                        <br><br>
-                        Septiembre 2010
-                        Universidad Miguel Hernández – Elche
-                        Grado en Terapia Ocupacional
-                        <br><br>
-                        <b>Aptitudes</b>
-                        <br><br>
-                        Empatía en el trato al paciente
-                        Formación en metodología didáctica
-                        Resolución de conflictos
-                        Vocación por los colectivos vulnerables
-                        Grandes dosis de iniciativa y dedicación
-                        Persona proactiva y dinámica. <br><br>
-                        <b>Idiomas</b>
-                        
-                        Árabe, 
-                        Idioma nativo. <br>
+<!-- POR CORREGIR -->
 
-                        Español
-                        C2 – Experto. <br>
-                        <br><br>
-                        <b>Formación adicional</b>
-                        <br><br>
-                        Curso de Estimulación Multisensorial – IPFAP Formación, 2014
-                        Curso de Auxiliar de Rehabilitación – ELBS, 2012
+<div class="modal fade" id="Ronal2" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="crearModalLabel">Juanito Alcachofa</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <img src="assets/images/tfisica/img3.png" alt="two slide" width="100%">
+                        </div>
+                        <div class="col-md-6 text-muted">
+                            <b>Fatima Asad</b><br><br>
+                            Calle San José Calasanz, 12<br>
+                            Calpe, Alicante 03710<br>
+                            987456321<br>
+                            fatima.asad@outlook.com<br><br>
+                            <b>Perfil profesional</b><br><br>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, perferendis quae? Mollitia 
+                            tempore obcaecati ipsam quod aut, dolore consequuntur veritatis amet accusamus vel doloremque
+                            id deserunt nihil inventore ipsa neque!
+                            <br><br>
+                            <
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
+
+
+
+
     <!-- Modal de vista 1 -->   
 <!-- RONAL -->
 
@@ -1293,7 +1209,7 @@
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="crearModalLabel">Nancy Martines</h5>
+                    <h5 class="modal-title" id="crearModalLabel">BENAVIDES</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                 </div>
                 <div class="modal-body align-items d-flex">
@@ -1301,65 +1217,7 @@
                     <div class="text-muted">
                         <b>Fatima Asad</b>
                         <br><br>
-                        Calle San José Calasanz, 12
-                        Calpe, Alicante 03710
-                        698019052
-                        fatima.asad@outlook.com
-                        <br><br>
-                        <b>Perfil profesional</b>
-                        <br><br>
-                        Terapeuta ocupacional con amplios conocimientos sobre programación, tratamientos y modalidades para la recuperación
-                        y mitigación de problemas físicos y psíquicos para mejorar el estado de los pacientes.
-                        <br><br>
-                        <b>Experiencia laboral</b>
-                        <br><br>
-                        Diciembre 2019 – Actual
-                        Sentits – Alicante
-                        Terapeuta ocupacional
-                        <br><br>
-                        Evaluación de cada usuario conforme al proceso de rehabilitación y apoyo comunitario acordado. <br>
-                        Participación en programas de atención a familias. <br>
-                        Estímulo y motivación de los pacientes en la realización de actividades físicas y lúdicas. <br><br>
-                        Agosto 2013 – Agosto 2019
-                        Saner – Alicante
-                        Terapeuta ocupacional
-                        <br><br>
-                        Experiencia en programas de intervención en deterioro cognitivo. <br>
-                        Apoyo en la habilitación y rehabilitación física de las personas usuarias del servicio. <br>
-                        Coordinación, planificación y organización de intervenciones individuales. <br>
-                        Octubre 2011 – Enero 2013
-                        Centro IDEAT – Alicante
-                        Terapeuta ocupacional
-                        <br><br>
-                        Planificación y puesta en marcha de talleres y actividades de apoyo social. <br>
-                        Diseño y desarrollo de los programas de mejora de autonomía personal y social. <br>
-                        Interactuó con pacientes, familiares y médicos para coordinarlos e informarles sobre el cuidado a los pacientes. <br><br>
-                        <b>Formación académica</b>
-                        <br><br>
-                        Septiembre 2010
-                        Universidad Miguel Hernández – Elche
-                        Grado en Terapia Ocupacional
-                        <br><br>
-                        <b>Aptitudes</b>
-                        <br><br>
-                        Empatía en el trato al paciente
-                        Formación en metodología didáctica
-                        Resolución de conflictos
-                        Vocación por los colectivos vulnerables
-                        Grandes dosis de iniciativa y dedicación
-                        Persona proactiva y dinámica. <br><br>
-                        <b>Idiomas</b>
-                        
-                        Árabe, 
-                        Idioma nativo. <br>
-
-                        Español
-                        C2 – Experto. <br>
-                        <br><br>
-                        <b>Formación adicional</b>
-                        <br><br>
-                        Curso de Estimulación Multisensorial – IPFAP Formación, 2014
-                        Curso de Auxiliar de Rehabilitación – ELBS, 2012
+                       //aqui va el contido
                     </div>
                 </div>
             </div>
