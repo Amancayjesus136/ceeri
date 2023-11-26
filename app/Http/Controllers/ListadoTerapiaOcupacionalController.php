@@ -67,7 +67,7 @@ class ListadoTerapiaOcupacionalController extends Controller
             $ocupacional->estado = 'pendiente';
         }
         $ocupacional->save();
-            return response()->json(['success' => true]);
+        return redirect()->back()->with('suscess', 'terapia ocupacional actualizado correctamente');
     }
 
     /**

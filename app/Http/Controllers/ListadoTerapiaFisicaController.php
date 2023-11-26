@@ -66,7 +66,7 @@ class ListadoTerapiaFisicaController extends Controller
             $fisica->estado = 'pendiente';
         }
         $fisica->save();
-            return response()->json(['success' => true]);
+        return redirect()->back()->with('suscess', 'terapia fisica actualizado correctamente');
 
     }
 

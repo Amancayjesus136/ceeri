@@ -68,7 +68,7 @@ class ListadoTerapiaLenguajeController extends Controller
             $lenguaje->estado = 'pendiente';
         }
         $lenguaje->save();
-            return response()->json(['success' => true]);
+        return redirect()->back()->with('suscess', 'terapia de lenguaje actualizado correctamente');
     }
 
     /**

@@ -68,8 +68,8 @@ class ListadoTerapiaInfantilController extends Controller
             $infantil->estado = 'pendiente';
         }
             $infantil->save();
-            return response()->json(['success' => true]);
-    }
+            return redirect()->back()->with('suscess', 'terapia infantil actualizado correctamente');
+        }
 
     /**
      * Display the specified resource.
