@@ -1145,8 +1145,8 @@
                     <h2 class="modal-title" id="crearModalLabel">Juanito Alcachofa</h2>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                 </div>
-                <div class="modal-body align-items d-flex">
-                <img src="assets/images/tfisica/img3.png" alt="" style="width: 320px; height: 420px; margin-right: 40px;">
+                <div class="modal-body d-flex align-items">
+                    <img src="assets/images/tfisica/img3.png" alt="" style="width: 320px; height: 420px; margin-right: 40px;">
                     <div class="text-muted">
                         <b>Fatima Asad</b>
                         <br><br>
@@ -2055,11 +2055,9 @@
                                 <img src="assets/images/tlenguaje/lenguaje.png" alt="First slide" width="100%"/>
                             </div>
                             <div class="carousel-item" data-bs-interval="1000">
-                                <img src="assets/images/tlenguaje/img1.png" class="d-block w-100" alt="two slide" width="100%"/>
-                            </div>
-                            <div class="carousel-item" data-bs-interval="1000">
                                 <img src="assets/images/tlenguaje/lenguaje2.png" class="d-block w-100" alt="There slide"width="100%" />
                             </div>
+                            
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval2" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
