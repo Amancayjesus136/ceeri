@@ -20,8 +20,8 @@
                                 <div class="bg-soft-warning position-relative">
                                     <div class="card-body p-5">
                                         <div class="text-center">
-                                            <h3>Term & Conditions</h3>
-                                            <p class="mb-0 text-muted">Last update: 16 Sept, 2022</p>
+                                        <h3>Terminos & Condiciones</h3>
+                                        <p class="mb-0 text-muted">ultima actualizacion: 03 Diciembre, 2023</p>
                                         </div>
                                     </div>
                                     <div class="shape">
@@ -39,71 +39,65 @@
                                 </div>
                                 <div class="card-body p-4">
                                     <div>
-                                        <h5>Welcome to Velzon!</h5>
-                                        <p class="text-muted">These terms and conditions outline the rules and regulations for the use of Company Name's Website, located at Website.com.</p>
-                                        <p class="text-muted">By accessing this website we assume you accept these terms and conditions. Do not continue to use Website Name if you do not agree to take all of the terms and conditions stated on this page.</p>
-                                        <p class="text-muted">Most interactive websites use cookies to let us retrieve the user's details for each visit. Cookies are used by our website to enable the functionality of certain areas to make it easier for people visiting our website. Some of our affiliate/advertising partners may also use cookies.</p>
+                                        <h5>Bienvenido a CEERI!</h5>
+                                        <p class="text-muted">Estos términos y condiciones describen las reglas y regulaciones para el uso del sitio web de Company Name, ubicado en Website.com.</p>
+                                        <p class="text-muted">Al acceder a este sitio web asumimos que acepta estos términos y condiciones. No continúe utilizando el nombre del sitio web si no acepta todos los términos y condiciones establecidos en esta página.</p>
+                                        <p class="text-muted">La mayoría de los sitios web interactivos utilizan cookies para permitirnos recuperar los detalles del usuario en cada visita. Nuestro sitio web utiliza cookies para habilitar la funcionalidad de ciertas áreas para que sea más fácil para las personas que visitan nuestro sitio web. Algunos de nuestros socios afiliados/publicitarios también pueden utilizar cookies.</p>
                                     </div>
                                     
                                     <div>
-                                        <h5>License</h5>
-                                        <p class="text-muted">Unless otherwise stated, Company Name and/or its licensors own the intellectual property rights for all material on Website Name. All intellectual property rights are reserved. You may access this from Website Name for your own personal use subjected to restrictions set in these terms and conditions.</p>
-                                        <p class="text-muted">You must not:</p>
+                                        <h5>Licencia</h5>
+                                        <p class="text-muted">A menos que se indique lo contrario, Nombre de la empresa y/o sus licenciantes poseen los derechos de propiedad intelectual de todo el material en Nombre del sitio web. Todos los derechos de propiedad intelectual están reservados. Puede acceder a esto desde Nombre del sitio web para su uso personal sujeto a las restricciones establecidas en estos términos y condiciones.</p>
+                                        <p class="text-muted">No debes:</p>
                                         <ul class="text-muted vstack gap-2">
                                             <li>
-                                                Republish material from Website Name
-                                            </li>
+                                            Volver a publicar material desde el nombre del sitio web                                            </li>
                                             <li>
-                                                Sell, rent or sub-license material from Website Name
-                                            </li>
+                                            Vender, alquilar o sublicenciar material del nombre del sitio web                                            </li>
                                             <li>
-                                                Reproduce, duplicate or copy material from Website Name
-                                            </li>
+                                            Reproducir, duplicar o copiar material del nombre del sitio web                                            </li>
                                             <li>
-                                                Redistribute content from Website Name
-                                            </li>
+                                            Redistribuir contenido desde el nombre del sitio web                                            </li>
                                         </ul>
-                                        <p class="text-muted">This Agreement shall begin on the date hereof.</p>
-                                        <p class="text-muted">Parts of this website offer an opportunity for users to post and exchange opinions and information in certain areas of the website. Company Name does not filter, edit, publish or review Comments prior to their presence on the website. Comments do not reflect the views and opinions of Company Name,its agents and/or affiliates.</p>
+                                        <p class="text-muted">Este Acuerdo comenzará en la fecha del presente.</p>
+                                        <p class="text-muted">Partes de este sitio web ofrecen a los usuarios la oportunidad de publicar e intercambiar opiniones e información en determinadas áreas del sitio web. Nombre de la empresa no filtra, edita, publica ni revisa los comentarios antes de su presencia en el sitio web. Los comentarios no reflejan los puntos de vista y opiniones de Nombre de la empresa, sus agentes y/o afiliados.</p>
                                     </div>
 
                                     <div>
-                                        <p class="text-muted">Company Name reserves the right to monitor all Comments and to remove any Comments which can be considered inappropriate, offensive or causes breach of these Terms and Conditions.</p>
-                                        <p class="text-muted">You warrant and represent that:</p>
+                                        <p class="text-muted">Nombre de la empresa se reserva el derecho de monitorear todos los Comentarios y eliminar cualquier Comentario que pueda considerarse inapropiado, ofensivo o que infrinja estos Términos y condiciones.</p>
+                                        <p class="text-muted">Usted garantiza y declara que:</p>
                                         <ul class="text-muted vstack gap-2">
                                             <li>
-                                                You are entitled to post the Comments on our website and have all necessary licenses and consents to do so;
+                                            Tiene derecho a publicar Comentarios en nuestro sitio web y tiene todas las licencias y consentimientos necesarios para hacerlo;
                                             </li>
                                             <li>
-                                                The Comments do not invade any intellectual property right, including without limitation copyright, patent or trademark of any third party;
+                                            Los Comentarios no invaden ningún derecho de propiedad intelectual, incluidos, entre otros, derechos de autor, patentes o marcas comerciales de terceros;
                                             </li>
                                             <li>
-                                                The Comments do not contain any defamatory, libelous, offensive, indecent or otherwise unlawful material which is an invasion of privacy
+                                            Los Comentarios no contienen ningún material difamatorio, calumnioso, ofensivo, indecente o ilegal que sea una invasión de la privacidad.
                                             </li>
                                             <li>
-                                                The Comments will not be used to solicit or promote business or custom or present commercial activities or unlawful activity.
+                                            Los Comentarios no se utilizarán para solicitar o promover negocios o costumbres o presentar actividades comerciales o actividades ilegales.
                                             </li>
                                         </ul>
-                                        <p class="text-muted">You hereby grant Company Name a non-exclusive license to use, reproduce, edit and authorize others to use, reproduce and edit any of your Comments in any and all forms, formats or media.</p>
-                                        <p class="text-muted">Approved organizations may hyperlink to our Website as follows:</p>
+                                        <p class="text-muted">Por la presente, otorga a Nombre de la empresa una licencia no exclusiva para usar, reproducir, editar y autorizar a otros a usar, reproducir y editar cualquiera de sus Comentarios en todas y cada una de las formas, formatos o medios.</p>
+                                        <p class="text-muted">Las organizaciones aprobadas pueden hacer hipervínculos a nuestro sitio web de la siguiente manera:</p>
                                         <ul class="text-muted vstack gap-2">
                                             <li>
-                                                By use of our corporate name; or
+                                            Por el uso de nuestro nombre corporativo; o
                                             </li>
                                             <li>
-                                                By use of the uniform resource locator being linked to; or
-                                            </li>
+                                            Mediante el uso del localizador uniforme de recursos al que se vincula; o</li>
                                             <li>
-                                                By use of any other description of our Website being linked to that makes sense within the context and format of content on the linking party's site.
-                                            </li>
+                                            Mediante el uso de cualquier otra descripción de nuestro sitio web al que se vincula que tenga sentido dentro del contexto y formato del contenido del sitio de la parte vinculadora.</li>
                                         </ul>
-                                        <p class="text-muted fw-semibold">No use of Company Name's logo or other artwork will be allowed for linking absent a trademark license agreement.</p>
+                                        <p class="text-muted fw-semibold">No se permitirá el uso del logotipo del nombre de la empresa ni de otras ilustraciones para vincular sin un acuerdo de licencia de marca registrada.</p>
                                     </div>
 
 
                                     <div class="text-end">
-                                        <a href="#!" class="btn btn-success">Accept</a>
-                                        <a href="#!" class="btn btn-outline-danger"><i class="ri-close-line align-bottom me-1"></i> Decline</a>
+                                        <a href="/" class="btn btn-success">Aceptar</a>
+                                        <a href="/" class="btn btn-outline-danger"><i class="ri-close-line align-bottom me-1"></i> Declinar</a>
                                     </div>
                                 </div>
                             </div>
