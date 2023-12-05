@@ -54,12 +54,12 @@
                             <thead class="table-light">
                                 <tr>
                                     <th scope="col">ID</th>
+                                    <th scope="col">Especialidad</th>
                                     <th scope="col">Tipo</th>
-                                    <th scope="col">Número</th>
+                                    <th scope="col">N° Documento</th>
                                     <th scope="col">Nombres</th>
                                     <th scope="col">Apellidos</th>
                                     <th scope="col">Telefono</th>
-                                    <th scope="col">Genero</th>
                                     <th scope="col">Fecha y hora</th>
                                     <th scope="col">Estado</th>
                                     <th scope="col" style="width: 150px;">Acciones</th>
@@ -71,12 +71,12 @@
                                 @foreach($psicologias as $psicologia)
                                     <tr>
                                         <td>{{ $contador }}</td>
+                                        <td>{{ $psicologia->especialidad }}</td>
                                         <td>{{ $psicologia->tipo_documento }}</td>
                                         <td>{{ $psicologia->numero_documento }}</td>
                                         <td>{{ $psicologia->nombres }}</td>
                                         <td>{{ $psicologia->apellidos }}</td>
                                         <td>{{ $psicologia->telefono }}</td>
-                                        <td>{{ $psicologia->genero }}</td>
                                         <td>{{ $psicologia->fecha_hora }}</td>
                                         <td><span class="badge bg-success">{{ $psicologia->estado }}</span>
                                     </td>
@@ -103,11 +103,9 @@
                     </div>
                 </div>
             </div>
+            
         </div>
-    </div>
-</div>
-
-<div style="margin-top: 20px; margin-bottom: 20px," class="d-flex justify-content-between ">
+        <div style="margin-top: 10px; margin-bottom: 20px," class="d-flex justify-content-between ">
                 <p style="margin-left: 50px" class="text-start">Mostrando {{ $psicologias->firstItem() }} a {{ $psicologias->lastItem() }} de {{ $psicologias->total() }} resultados</p>
 
                 <div style="margin-right: 150px" class="pagination-container">
@@ -133,6 +131,11 @@
                 </div>
 </div>
 <!-- listado -->
+    </div>
+    
+</div>
+
+
 
 
 <!-- Modal para Crear Nuevo Tema -->

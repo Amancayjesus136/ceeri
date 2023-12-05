@@ -170,43 +170,15 @@
                     <i class="far fa-calendar-alt"></i> <span data-key="t-Usuarios">Reserva</span>
                 </a>
             </li>
+
 <!-- ============================================================== -->
-<!-- Listado -->     
+<!-- Clientes -->     
 <!-- ============================================================== --> 
-            <li class="nav-item">
-                <a class="nav-link menu-link" href="#sidebarListado" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarPlanCurricular">
-                    <i class="fas fa-clipboard-list"></i> <span data-key="t-Configuración">Listado de Reservas</span>
-                </a>
-                <div class="collapse menu-dropdown" id="sidebarListado">
-                    <ul class="nav nav-sm flex-column">
-                        <li class="nav-item">
-                            <a href="{{ route('lstpsicologia.index') }}" class="nav-link">
-                                <i class="fas fa-brain"></i>Psicologia
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('lsttfisica.index') }}" class="nav-link">
-                                <i class="fas fa-heartbeat"></i>Terapia Fisica y Rehabilitacion
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('lsttinfantil.index') }}" class="nav-link">
-                                <i class="fas fa-baby"></i>Terapia Infantil
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('lsttlenguaje.index') }}" class="nav-link">
-                                <i class="fas fa-comment"></i>Terapia de Lenguaje
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('lsttocupacional.index') }}" class="nav-link">
-                                <i class="fas fa-user-md"></i>Terapia Ocupacional
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-             </li>
+<li class="nav-item">
+    <a class="nav-link menu-link" href="{{ route('lstpsicologia.index') }}">
+        <i class="far fa-calendar-alt"></i> <span data-key="t-Usuarios">Clientes</span>
+    </a>
+</li>
 
 <!-- ============================================================== -->
 <!-- Reservas para hoy -->     

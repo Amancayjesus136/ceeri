@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Psicologia;
+use App\Models\Cliente;
 
 
 class ListadoPsicologiaController extends Controller
@@ -13,7 +13,7 @@ class ListadoPsicologiaController extends Controller
      */
     public function index()
     {
-        $psicologias = Psicologia::query();
+        $psicologias = Cliente::query();
     
         if (!empty($_GET['s'])) {
             $psicologias = $psicologias->where('id', 'LIKE', '%'.$_GET['s'].'%')
@@ -27,7 +27,7 @@ class ListadoPsicologiaController extends Controller
                 ->orWhere('fecha_hora', 'LIKE', '%'.$_GET['s'].'%');
         }
     
-        $porPagina = 7; // Número de registros por página
+        $porPagina = 7;
         $psicologias = $psicologias->paginate($porPagina);
     
         return view('lstpsicologia.index', compact('psicologias'));
@@ -53,26 +53,26 @@ class ListadoPsicologiaController extends Controller
      */
     public function store(Request $request)
     {
-            $psicologia = new Psicologia;
+            $psicologia = new Cliente;
             $psicologia->tipo_documento = $request->tipo_documento;
+            $psicologia->especialidad = $request->especialidad;
             $psicologia->numero_documento = $request->numero_documento;
             $psicologia->nombres = $request->nombres;
             $psicologia->apellidos = $request->apellidos;
             $psicologia->telefono = $request->telefono;
-            $psicologia->especialidad = $request->especialidad;
             $psicologia->genero = $request->genero;
             $psicologia->fecha_hora = now(); 
             $psicologia->estado = 'pendiente'; 
             
             $psicologia->save();
-            return redirect()->back()->with('suscess', 'psicologia actualizado correctamente');
+            return redirect()->back()->with('success', 'Registro almacenado correctamente');
         }
 
     public function actualizarEstado(Request $request) {
-        $psicologia = Psicologia::FindOrFail($id);
+        $psicologia = Cliente::FindOrFail($id);
         $psicologia->estado = $request->estado;
 
-       $psicologia->save();
+        $psicologia->save();
     return redirect()->route('lstpsicologia.index');
     }
 
@@ -90,7 +90,7 @@ class ListadoPsicologiaController extends Controller
      */
     public function edit(string $id)
     {
-        $psicologia = Psicologia::findOrFail($id);
+        $psicologia = Cliente::findOrFail($id);
         return view ('lstpsicologia.edit', compact('psicologia'));
     }
 
@@ -99,7 +99,7 @@ class ListadoPsicologiaController extends Controller
      */
     public function update(Request $request, string $id)
     {
-    $psicologia = Psicologia::FindOrFail($id);
+    $psicologia = Cliente::FindOrFail($id);
     $psicologia->tipo_documento = $request->tipo_documento;
     $psicologia->numero_documento = $request->numero_documento;
     $psicologia->nombres = $request->nombres;
@@ -119,7 +119,7 @@ class ListadoPsicologiaController extends Controller
      */
     public function destroy(string $id)
     {
-        $psicologia = Psicologia::findOrFail($id);
+        $psicologia = Cliente::findOrFail($id);
         $psicologia-> delete();
         return redirect()->route('lstpsicologia.index');
     }

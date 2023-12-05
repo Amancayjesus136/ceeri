@@ -38,12 +38,19 @@
     }
   </style>
 
+
+
   <div class="contenedor">
   <h4 class="page-title-box d-sm-flex align-items-center justify-content-between">Reservacion de citas en todas las especialidades disponibles</h4>
+@if(session('success'))
+    <div id="successAlert" class="alert alert-success alert-dismissible bg-success text-white alert-label-icon fade show" role="alert">
+        <i class="ri-notification-off-line label-icon"></i><strong>Éxito</strong> - Reserva registrado correctamente
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+@endif
   </div>
- 
             <div class="container">
-                <form action="{{route('registroInterno')}}" method="POST">
+                <form action="{{route('lstpsicologia.index')}}" method="POST">
                     @csrf
                     <div class="row mb-1">
                         <div class="col-md-6">
@@ -105,79 +112,18 @@
                 </form>
             </div>
 
-  <!-- Modal para Crear Nuevo reserva 
-  <div class="modal fade" id="agregarModal" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="crearModalLabel">Reservar Cita</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <form action="{{route('registroPrincipal')}}" method="POST">
-                    @csrf
-                    <div class="row mb-1">
-                        <div class="col-md-6">
-                            <label for="tipo_documento" class="form-label">Tipo de Documento</label>
-                            <select class="form-select" id="tipo_documento" name="tipo_documento">
-                                <option value="" disabled selected>Seleccionar tipo de documento...</option>
-                                <option value="DNI">DNI</option>
-                                <option value="Pasaporte">Pasaporte</option>
-                            </select>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="numero_documento" class="form-label">Número de Documento</label>
-                            <input type="number" class="form-control" id="numero_documento" name="numero_documento">
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-6">
-                            <label for="nombres" class="form-label">Nombres</label>
-                            <input type="text" class="form-control" id="nombres" name="nombres">
-                        </div>
-                        <div class="col-md-6">
-                            <label for="apellidos" class="form-label">Apellidos</label>
-                            <input type="text" class="form-control" id="apellidos" name="apellidos">
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-6">
-                            <label for="fecha_hora" class="form-label">Fecha y Hora</label>
-                            <input type="datetime-local" class="form-control" id="fecha_hora" name="fecha_hora" required>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="especialidad" class="form-label">Especialidad</label>
-                            <select class="form-select" id="especialidad" name="especialidad">
-                                <option value="" disabled selected>Seleccionar género...</option>
-                                <option value="Psicologia">Psicologia</option>
-                                <option value="Terapia fisica">Terapia fisica</option>
-                                <option value="Terapia infantil">Terapia infantil</option>
-                                <option value="Terapia ocupacional">Terapia ocupacional</option>
-                                <option value="Terapia lenguaje">Terapia lenguaje</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="row mb-3">
-                        <div class="col-md-6">
-                            <label for="genero" class="form-label">Género</label>
-                            <select class="form-select" id="genero" name="genero">
-                                <option value="" disabled selected>Seleccionar género...</option>
-                                <option value="Masculino">Masculino</option>
-                                <option value="Femenino">Femenino</option>
-                                <option value="Otro">otro</option>
-                            </select>
-                        </div>
-                        <div class="col-md-6">
-                          <button type="submit" class="btn btn-primary" style="margin-top: 25px;">Reservar cita</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div> -->
-
-<!-- Modal para Crear Nuevo reserva -->
+<script>
+    var successAlert = document.getElementById('successAlert');
+    
+    if (successAlert) {
+        setTimeout(function () {
+            successAlert.classList.remove('show');
+            setTimeout(function () {
+                window.location.reload();
+            }, 1000);
+        }, 2000);
+    }
+</script>
 
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 

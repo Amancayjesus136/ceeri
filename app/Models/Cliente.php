@@ -5,10 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class TerapiaFisica extends Model
+class Cliente extends Model
 {
     use HasFactory;
-    protected $table = 'terapia_fisica'; // Nombre de la tabla en la base de datos
+
+    protected $table = 'cliente';
 
     protected $fillable = [
         'tipo_documento',
@@ -18,8 +19,7 @@ class TerapiaFisica extends Model
         'telefono',
         'especialidad',
         'genero',
-        'fecha_hora'
-                    ] ;
-
-    }
-    
+        'fecha_hora',
+        'estado',
+    ];
+}
