@@ -26,7 +26,6 @@
                                         <div class="text-center">
                                             <h3>Politicas de privacidad</h3>
                                             <p class="mb-0 text-muted">ultima actualizacion: 03 Diciembre, 2023</p>
-                                            <button type="button" class="btn btn-primary btn-sm"><a href="{{ asset('Politicasdeprivacidad.pdf') }}" download="Politicasdeprivacidad.pdf" style="color: white;">Descargar en PDF</a></button>  
                                         </div>
                                     </div>
                                     <div class="shape">
@@ -272,11 +271,12 @@
                                             través de los canales de Atención al Cliente.
                                          </p>                              
                                     </div>
-
+                                    
                                     <div class="text-end">
+                                        <button type="button" class="btn btn-success"><a href="{{ asset('CEERIpoliticasdeprivacidad.pdf') }}" download="CEERIpoliticasdeprivacidad.pdf" style="color: white;">Descargar en PDF</a></button>  
                                         <a href="/" class="btn btn-success">Aceptar</a>
                                         <a href="/" class="btn btn-outline-danger"><i class="ri-close-line align-bottom me-1"></i> Declinar</a>
-                                    </div>
+                                    </div> 
                                 </div>
                             </div>
                         </div><!--end col-->

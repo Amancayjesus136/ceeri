@@ -924,16 +924,16 @@
                         </div>
                         <div class="modal-body d-flex align-items-center">
                             <div class="mb-2" style="margin-left: 40px;">
-                                <a href="#" id="copiarCorreo"><i class="ri-mail-send-line" style="font-size: 54px; color: red;"></i></a>
+                                <a href="#"><i class="ri-mail-send-line" style="font-size: 54px; color: red;"></i></a>
                             </div>
                             <div class="circle-text mb-2">
-                                <a href="#">Correo Electrónico</a>
+                                <a href="#" id="copiarCorreo">Correo Electrónico</a>
                             </div>
                             <div class="mb-2">
                                 <a href="https://wa.me/910558971"><i class="ri-whatsapp-line" style="font-size: 54px; color: green;"></i></a>
                             </div>
                             <div class="circle-text">
-                                <a href="#">WhatsApp</a>
+                                <a href="https://wa.me/910558971">WhatsApp</a>
                             </div>
                         </div>
                     </div>
