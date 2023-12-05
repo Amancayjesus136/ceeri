@@ -11,44 +11,30 @@ use App\Models\TerapiaFisica;
 use App\Models\TerapiaInfantil;
 use App\Models\TerapiaOcupacional;
 use App\Models\TerapiaLenguaje;
+use App\Models\Cliente;
+
 
 class ReservaPrincipalController extends Controller
 {
 
     public function create(Request $request)
     {
-        $datos = $request->all();
-        $numeros = ReservarNumero::all();
-        $cita = ReservarCita::first();
-        $conoceno = ConocemeMas::first();
-        
-        // Determina la especialidad seleccionada
-        $especialidad = $request->input('especialidad');
-        
-        // En función de la especialidad, guarda los datos en la tabla correspondiente
-        switch ($especialidad) {
-            case 'Psicologia':
-                Psicologia::create($datos);
-                break;
-            case 'Terapia fisica':
-                TerapiaFisica::create($datos);
-                break;
-            case 'Terapia infantil':
-                TerapiaInfantil::create($datos);
-                break;
-            case 'Terapia ocupacional':
-                TerapiaOcupacional::create($datos);
-                break;
-            case 'Terapia lenguaje':
-                TerapiaLenguaje::create($datos);
-                break;
-            default:
-                // Manejar un caso no válido si es necesario
-                break;
-        }
+        $cliente = new Cliente;
+            $cliente->tipo_documento = $request->tipo_documento;
+            $cliente->especialidad = $request->especialidad;
+            $cliente->numero_documento = $request->numero_documento;
+            $cliente->nombres = $request->nombres;
+            $cliente->apellidos = $request->apellidos;
+            $cliente->telefono = $request->telefono;
+            $cliente->genero = $request->genero;
+            $cliente->fecha_hora = now(); 
+            $cliente->estado = 'pendiente'; 
+            
+            $cliente->save();
+            return redirect()->back()->with('success', 'Registro almacenado correctamente');
         
         // Redirige o realiza alguna acción adicional después de guardar los datos
-        return view('home.welcome', compact('numeros', 'cita', 'conoceno'));
+
     }
 }
 

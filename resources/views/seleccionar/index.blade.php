@@ -55,11 +55,11 @@
                     <div class="row mb-1">
                         <div class="col-md-6">
                             <label for="nombres" class="form-label">Nombres</label>
-                            <input type="text" class="form-control" id="nombres" name="nombres">                           
+                            <input type="text" class="form-control" id="nombres" name="nombres" oninput="limitarCaracteres(this, 45)">                           
                         </div>
                         <div class="col-md-6">
                             <label for="apellidos" class="form-label">Apellidos</label>
-                            <input type="text" class="form-control" id="apellidos" name="apellidos">
+                            <input type="text" class="form-control" id="apellidos" name="apellidos" oninput="limitarCaracteres(this, 45)">
                         </div>
                     </div>
                     <div class="row mb-3">
@@ -73,29 +73,20 @@
                         </div>
                         <div class="col-md-6">
                             <label for="numero_documento" class="form-label">Número de Documento</label>
-                            <input type="number" class="form-control" id="numero_documento" name="numero_documento">
+                            <input type="number" class="form-control" id="numero_documento" name="numero_documento" oninput="limitarCaracteres(this, 40)">
                         </div>
                     </div>
                     <div class="row mb-3">
-                        <div class="col-md-6">
-                            <label for="genero" class="form-label">Género</label>
-                            <select class="form-select" id="genero" name="genero">
-                                <option value="" disabled selected>Seleccionar género...</option>
-                                <option value="Masculino">Masculino</option>
-                                <option value="Femenino">Femenino</option>
-                                <option value="Otro">otro</option>
-                            </select>   
-                        </div>
                         <div class="col-md-6">
                             <label for="telefono" class="form-label">Teléfono</label>
-                            <input type="number" class="form-control" id="telefono" name="telefono">    
+                            <input type="number" class="form-control" id="telefono" name="telefono" oninput="limitarCaracteres(this, 15)">    
                         </div>
-                    </div>
-                    <div class="row mb-3">
                         <div class="col-md-6">
                             <label for="fecha_hora" class="form-label">Fecha y Hora</label>
                             <input type="datetime-local" class="form-control" id="fecha_hora" name="fecha_hora" required>
                         </div>
+                    </div>
+                    <div class="row mb-3">    
                         <div class="col-md-6">
                             <label for="especialidad" class="form-label">Especialidad</label>
                             <select class="form-select" id="especialidad" name="especialidad">
@@ -111,6 +102,17 @@
                     <button type="submit" class="btn btn-primary" style="margin-top: 25px; font-weight: bold; background-color: skyblue;">Reservar cita</button>
                 </form>
             </div>
+            
+<!--scripts para los numeros de caracteres -->
+<script>
+    function limitarCaracteres(input, maxLength) {
+      if (input.value.length > maxLength) {
+        input.value = input.value.slice(0, maxLength);
+      }
+    }
+  </script>
+
+<!--scripts para los numeros de caracteres -->
 
 <script>
     var successAlert = document.getElementById('successAlert');
@@ -123,7 +125,10 @@
             }, 1000);
         }, 2000);
     }
+    
 </script>
+
+
 
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 

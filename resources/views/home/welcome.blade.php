@@ -4,7 +4,7 @@
     <head>
 
         <meta charset="utf-8" />
-        <title>Job Landing | Velzon - Admin & Dashboard Template</title>
+        <title>CEERI</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
         <meta content="Themesbrand" name="author" />
@@ -97,8 +97,10 @@
     <body data-bs-spy="scroll" data-bs-target="#navbar-example">
         <div class="layout-wrapper landing">
             <nav class="navbar navbar-expand-lg navbar-landing fixed-top job-navbar" id="navbar">
-            <img src="assets/images/logo-sinfondo.png" class="logo">
+                <img src="assets/images/logo-sinfondo.png" class="logo">
+                 
                 <div class="container-fluid custom-container">
+                    
                     <a class="navbar-brand" href="index.html">
                         <!-- <img src="assets/images/logo-dark.png" class="card-logo card-logo-dark" alt="logo dark" height="50"> -->
                         <!-- <img src="assets/images/logo-light.png" class="card-logo card-logo-light" alt="logo light" height="50"> -->
@@ -110,7 +112,7 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mx-auto mt-2 mt-lg-0" id="navbar-example">
                             <li class="nav-item">
-                                <a class="nav-link active" href="#hero">Inicio</a>
+                                <a class="nav-link" href="#hero">Inicio</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -142,6 +144,10 @@
                 </div>
             </nav>
             
+        </div>
+        
+
+
 
 <!-- Modal para Crear Nuevo reserva -->
 <div class="modal fade" id="agregarModal" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
@@ -157,11 +163,11 @@
                     <div class="row mb-1">
                         <div class="col-md-6">
                             <label for="nombres" class="form-label">Nombres</label>
-                            <input type="text" class="form-control" id="nombres" name="nombres">                       
+                            <input type="text" class="form-control" id="nombres" name="nombres" oninput="limitarCaracteres(this, 45)">                       
                         </div>
                         <div class="col-md-6">
                             <label for="apellidos" class="form-label">Apellidos</label>
-                            <input type="text" class="form-control" id="apellidos" name="apellidos">            
+                            <input type="text" class="form-control" id="apellidos" name="apellidos" oninput="limitarCaracteres(this, 45)">            
                         </div>
                     </div>
                     <div class="row mb-3">
@@ -175,33 +181,24 @@
                         </div>
                         <div class="col-md-6">
                             <label for="numero_documento" class="form-label">Número de Documento</label>
-                            <input type="number" class="form-control" id="numero_documento" name="numero_documento">  
+                            <input type="number" class="form-control" id="numero_documento" name="numero_documento" oninput="limitarCaracteres(this, 40)">  
                         </div>
                     </div>
                     <div class="row mb-3">
-                        <div class="col-md-6">
-                            <label for="genero" class="form-label">Género</label>
-                            <select class="form-select" id="genero" name="genero">
-                                <option value="" disabled selected>Seleccionar género...</option>
-                                <option value="Masculino">Masculino</option>
-                                <option value="Femenino">Femenino</option>
-                                <option value="Otro">otro</option>
-                            </select>
-                        </div>
                         <div class="col-md-6">
                             <label for="telefono" class="form-label">Teléfono</label>
-                            <input type="number" class="form-control" id="telefono" name="telefono">   
+                            <input type="number" class="form-control" id="telefono" name="telefono" oninput="limitarCaracteres(this, 15)">   
                         </div>
-                    </div>
-                    <div class="row mb-3">
                         <div class="col-md-6">
                             <label for="fecha_hora" class="form-label">Fecha y Hora</label>
                             <input type="datetime-local" class="form-control" id="fecha_hora" name="fecha_hora" required>
                         </div>
+                    </div>
+                    <div class="row mb-3">                 
                         <div class="col-md-6">
                             <label for="especialidad" class="form-label">Especialidad</label>
                             <select class="form-select" id="especialidad" name="especialidad">
-                                <option value="" disabled selected>Seleccionar género...</option>
+                                <option value="" disabled selected>Seleccionar especialidad...</option>
                                 <option value="Psicologia">Psicologia</option>
                                 <option value="Terapia fisica">Terapia fisica</option>
                                 <option value="Terapia infantil">Terapia infantil</option>
@@ -219,6 +216,17 @@
     </div>
 </div>
 <!-- Modal para Crear Nuevo reserva -->
+
+<!--scripts para los numeros de caracteres -->
+<script>
+    function limitarCaracteres(input, maxLength) {
+      if (input.value.length > maxLength) {
+        input.value = input.value.slice(0, maxLength);
+      }
+    }
+  </script>
+
+<!--scripts para los numeros de caracteres -->
             <style>
                 .bg-verde {
                     background-color: #BEDA13; 
@@ -267,6 +275,12 @@
             <!-- start hero section -->
             <section class="section job-hero-section bg-crema pb-0" id="hero">
                 <div class="container">
+                    @if(session('success'))
+                        <div id="successAlert" class="alert alert-success alert-dismissible bg-success text-white alert-label-icon fade show" role="alert">
+                            <i class="ri-notification-off-line label-icon"></i><strong>Éxito</strong> - Reserva registrado correctamente
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    @endif  
                     <div class="row justify-content-between align-items-center">
                         <div class="col-lg-6">
                             <div>
@@ -316,6 +330,19 @@
                                         </div>
                                     </div>
                                 </div>
+                            
+                                <script>
+                                    var successAlert = document.getElementById('successAlert');
+    
+                                    if (successAlert) {
+                                        setTimeout(function () {
+                                            successAlert.classList.remove('show');
+                                            setTimeout(function () {
+                                                window.location.reload();
+                                            }, 1000);
+                                        }, 2000);
+                                    }
+                                </script>
 
                                 <script>
                                     document.addEventListener('DOMContentLoaded', function () {

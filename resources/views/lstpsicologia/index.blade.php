@@ -24,7 +24,18 @@
     <div class="col-12">
         <div class="page-title-box d-sm-flex align-items-center justify-content-between">
             <h4 class="mb-sm-0">Listado</h4>
-
+            @if(session('success'))
+                <div id="successAlert" class="alert alert-success alert-dismissible bg-success text-white alert-label-icon fade show" role="alert">
+                    <i class="ri-notification-off-line label-icon"></i><strong>Éxito</strong> - Reserva registrada correctamente
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            @endif
+            @if(session('successEdit'))
+                <div id="successAlertEdit" class="alert alert-success alert-dismissible bg-success text-white alert-label-icon fade show" role="alert">
+                    <i class="ri-notification-off-line label-icon"></i><strong>Éxito</strong> - Reserva editada correctamente
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            @endif
             <div class="page-title-right">
             <div class="card-header align-items-center d-flex">
                 <h4 class="card-title mb-0 flex-grow-1"></h4>
@@ -44,6 +55,31 @@
 </div>
 
 <!-- cabecera -->
+
+<script>
+    var successAlert = document.getElementById('successAlert');
+    
+    if (successAlert) {
+        setTimeout(function () {
+            successAlert.classList.remove('show');
+            setTimeout(function () {
+                window.location.reload();
+            }, 1000);
+        }, 2000);
+    }
+
+    var successAlertEdit = document.getElementById('successAlertEdit');
+    
+    if (successAlertEdit) {
+        setTimeout(function () {
+            successAlertEdit.classList.remove('show');
+            setTimeout(function () {
+                window.location.reload();
+            }, 1000);
+        }, 2000);
+    }
+    
+</script>
 
 <!-- listado -->
         <div class="card">
@@ -68,28 +104,28 @@
                             <tbody>
                                 <!-- FILAS DE LA TABLA -->
                                 @php $contador = 1; @endphp
-                                @foreach($psicologias as $psicologia)
+                                @foreach($clientes as $cliente)
                                     <tr>
                                         <td>{{ $contador }}</td>
-                                        <td>{{ $psicologia->especialidad }}</td>
-                                        <td>{{ $psicologia->tipo_documento }}</td>
-                                        <td>{{ $psicologia->numero_documento }}</td>
-                                        <td>{{ $psicologia->nombres }}</td>
-                                        <td>{{ $psicologia->apellidos }}</td>
-                                        <td>{{ $psicologia->telefono }}</td>
-                                        <td>{{ $psicologia->fecha_hora }}</td>
-                                        <td><span class="badge bg-success">{{ $psicologia->estado }}</span>
+                                        <td>{{ $cliente->especialidad }}</td>
+                                        <td>{{ $cliente->tipo_documento }}</td>
+                                        <td>{{ $cliente->numero_documento }}</td>
+                                        <td>{{ $cliente->nombres }}</td>
+                                        <td>{{ $cliente->apellidos }}</td>
+                                        <td>{{ $cliente->telefono }}</td>
+                                        <td>{{ $cliente->fecha_hora }}</td>
+                                        <td><span class="badge bg-success">{{ $cliente->estado }}</span>
                                     </td>
                                         <td>
                                             <a href="#" class="btn btn-primary btn-sm"
                                                 data-bs-toggle="modal"
-                                                data-bs-target="#editarModal{{ $psicologia->id }}">
+                                                data-bs-target="#editarModal{{ $cliente->id }}">
                                                 <i class="fas fa-pencil-alt"></i>
                                             </a>
 
                                             <a href="#" class="btn btn-sm btn-danger"
                                                 data-bs-toggle="modal"
-                                                data-bs-target="#eliminarModal{{ $psicologia->id }}">
+                                                data-bs-target="#eliminarModal{{ $cliente->id }}">
                                                 <i class="fas fa-trash-alt"></i>
                                             </a>
                                         </td>
@@ -106,24 +142,24 @@
             
         </div>
         <div style="margin-top: 10px; margin-bottom: 20px," class="d-flex justify-content-between ">
-                <p style="margin-left: 50px" class="text-start">Mostrando {{ $psicologias->firstItem() }} a {{ $psicologias->lastItem() }} de {{ $psicologias->total() }} resultados</p>
+                <p style="margin-left: 50px" class="text-start">Mostrando {{ $clientes->firstItem() }} a {{ $clientes->lastItem() }} de {{ $clientes->total() }} resultados</p>
 
                 <div style="margin-right: 150px" class="pagination-container">
                     <ul class="pagination d-flex">
-                        @if ($psicologias->onFirstPage())
+                        @if ($clientes->onFirstPage())
                             <li class="page-item disabled"><span class="page-link">Anterior</span></li>
                         @else
-                            <li class="page-item"><a class="page-link" href="{{ $psicologias->previousPageUrl() }}">Anterior</a></li>
+                            <li class="page-item"><a class="page-link" href="{{ $clientes->previousPageUrl() }}">Anterior</a></li>
                         @endif
 
-                        @for ($i = 1; $i <= $psicologias->lastPage(); $i++)
-                            <li class="page-item {{ $i == $psicologias->currentPage() ? 'active' : '' }}">
-                                <a class="page-link" href="{{ $psicologias->url($i) }}">{{ $i }}</a>
+                        @for ($i = 1; $i <= $clientes->lastPage(); $i++)
+                            <li class="page-item {{ $i == $clientes->currentPage() ? 'active' : '' }}">
+                                <a class="page-link" href="{{ $clientes->url($i) }}">{{ $i }}</a>
                             </li>
                         @endfor
 
-                        @if ($psicologias->hasMorePages())
-                            <li class="page-item"><a class="page-link" href="{{ $psicologias->nextPageUrl() }}">Siguiente</a></li>
+                        @if ($clientes->hasMorePages())
+                            <li class="page-item"><a class="page-link" href="{{ $clientes->nextPageUrl() }}">Siguiente</a></li>
                         @else
                             <li class="page-item disabled"><span class="page-link">Siguiente</span></li>
                         @endif
@@ -150,6 +186,17 @@
                     <form action="{{ route('lstpsicologia.store') }}" method="POST">
                         @csrf
                         <div class="mb-3">
+                        <label for="especialidad" class="form-label">Especialidad</label>
+                            <select class="form-select" id="especialidad" name="especialidad">
+                                <option value="" disabled selected>Seleccionar especialidad...</option>
+                                <option value="Psicologia">Psicologia</option>
+                                <option value="Terapia fisica">Terapia fisica</option>
+                                <option value="Terapia infantil">Terapia infantil</option>
+                                <option value="Terapia ocupacional">Terapia ocupacional</option>
+                                <option value="Terapia lenguaje">Terapia lenguaje</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
                             <label for="tipo_documento" class="form-label">Tipo de Documento</label>
                             <select class="form-select" id="tipo_documento" name="tipo_documento">
                                 <option value="" disabled selected>Seleccionar tipo de documento...</option>
@@ -159,33 +206,25 @@
                         </div>
                         <div class="mb-3">
                             <label for="numero_documento" class="form-label">Número de Documento</label>
-                            <input type="number" class="form-control" id="numero_documento" name="numero_documento">
+                            <input type="number" class="form-control" id="numero_documento" name="numero_documento" oninput="limitarCaracteres(this, 40)">
                         </div>
                         <div class="mb-3">
                             <label for="nombres" class="form-label">Nombres</label>
-                            <input type="text" class="form-control" id="nombres" name="nombres">
+                            <input type="text" class="form-control" id="nombres" name="nombres" oninput="limitarCaracteres(this, 45)">
                         </div>
                         <div class="mb-3">
                             <label for="apellidos" class="form-label">Apellidos</label>
-                            <input type="text" class="form-control" id="apellidos" name="apellidos">
+                            <input type="text" class="form-control" id="apellidos" name="apellidos" oninput="limitarCaracteres(this, 45)">
                         </div>
                         <div class="mb-3">
                             <label for="telefono" class="form-label">Teléfono</label>
-                            <input type="number" class="form-control" id="telefono" name="telefono">
+                            <input type="number"  class="form-control" id="telefono" name="telefono" oninput="limitarCaracteres(this, 15)">
                         </div>
                         <div class="mb-3">
                             <label for="fecha_hora" class="form-label">Fecha y Hora</label>
                             <input type="datetime-local" class="form-control" id="fecha_hora" name="fecha_hora" required>
                         </div>
-                        <div class="mb-3">
-                            <label for="genero" class="form-label">Género</label>
-                            <select class="form-select" id="genero" name="genero">
-                                <option value="" disabled selected>Seleccionar género...</option>
-                                <option value="Masculino">Masculino</option>
-                                <option value="Femenino">Femenino</option>
-                                <option value="Otro">Otro</option>
-                            </select>
-                        </div>
+                        
                         <button type="submit" class="btn btn-primary">Registrar</button>
                     
                     </form>
@@ -193,11 +232,23 @@
             </div>
         </div>
     </div>
+
+<!--scripts para los numeros de caracteres -->
+<script>
+    function limitarCaracteres(input, maxLength) {
+      if (input.value.length > maxLength) {
+        input.value = input.value.slice(0, maxLength);
+      }
+    }
+  </script>
+
+<!--scripts para los numeros de caracteres -->
+
 <!-- Modal para Crear Nuevo Tema -->
 
 <!-- Modal para Editar -->
-    @foreach($psicologias as $psicologia)
-    <div class="modal fade" id="editarModal{{ $psicologia->id }}" tabindex="-1" aria-labelledby="editarModal" aria-hidden="true">
+    @foreach($clientes as $cliente)
+    <div class="modal fade" id="editarModal{{ $cliente->id }}" tabindex="-1" aria-labelledby="editarModal" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -205,50 +256,51 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form method="POST" action="{{ route('lstpsicologia.update', $psicologia->id) }}">
+                    <form method="POST" action="{{ route('lstpsicologia.update', $cliente->id) }}">
                         @csrf
                         @method('PUT')
                             <div class="mb-3">
-                                <label for="estado" class="form-label">actualizar estado</label>
-                                <select id="estado" class="form-select" id="estado" name="estado" value="{{ $psicologia->estado }}">
-                                    <option value="" disabled selected>Seleccionar</option>
-                                    <option value="cumplido">Cumplido</option>
-                                    <option value="cancelado">Cancelado</option>
+                                <label for="estado" class="form-label">Actualizar estado</label>
+                                <select id="estado" class="form-select" name="estado" required>
+                                    <option value="" disabled {{ $cliente->estado == '' ? 'selected' : '' }}>Seleccionar</option>
+                                    <option value="pendiente" {{ $cliente->estado == 'pendiente' ? 'selected' : '' }}>Pendiente</option>
+                                    <option value="cumplido" {{ $cliente->estado == 'cumplido' ? 'selected' : '' }}>Cumplido</option>
+                                    <option value="cancelado" {{ $cliente->estado == 'cancelado' ? 'selected' : '' }}>Cancelado</option>
                                 </select>
-                            </div>             
+                            </div>
+                            <div class="mb-3">
+                                <label for="especialidad" class="form-label">Especialidad</label>
+                                <select class="form-select" id="especialidad" name="especialidad" required>
+                                    <option value="" disabled {{ $cliente->especialidad == '' ? 'selected' : '' }}>Seleccionar especialidad...</option>
+                                    <option value="Psicologia" {{ $cliente->especialidad == 'Psicologia' ? 'selected' : '' }}>Psicologia</option>
+                                    <option value="Terapia fisica" {{ $cliente->especialidad == 'Terapia fisica' ? 'selected' : '' }}>Terapia fisica</option>
+                                </select>
+                            </div>       
                             <div class="mb-3">
                                 <label for="tipo_documento" class="form-label">Tipo de Documento</label>
-                                <select class="form-select" id="tipo_documento" name="tipo_documento" value="{{ $psicologia->tipo_documento }}" required>
-                                    <option value="" disabled selected>Seleccionar tipo de documento...</option>
-                                    <option value="DNI">DNI</option>
-                                    <option value="Pasaporte">Pasaporte</option>
+                                <select class="form-select" id="tipo_documento" name="tipo_documento" required>
+                                    <option value="" disabled {{ $cliente->tipo_documento == '' ? 'selected' : '' }}>Seleccionar tipo de documento...</option>
+                                    <option value="DNI" {{ $cliente->tipo_documento == 'DNI' ? 'selected' : '' }}>DNI</option>
+                                    <option value="Pasaporte" {{ $cliente->tipo_documento == 'Pasaporte' ? 'selected' : '' }}>Pasaporte</option>
                                 </select>
                             </div>
                             <div class="mb-3">
                                 <label for="numero_documento" class="form-label">Número de Documento</label>
-                                <input type="text" class="form-control" id="numero_documento" name="numero_documento" value="{{ $psicologia->numero_documento }}">
+                                <input type="text" class="form-control" id="numero_documento" name="numero_documento" value="{{ $cliente->numero_documento }}" oninput="limitarCaracteres(this, 45)">
                             </div>
                             <div class="mb-3">
                                 <label for="nombres" class="form-label">Nombres</label>
-                                <input type="text" class="form-control" id="nombres" name="nombres" value="{{ $psicologia->nombres }}">
+                                <input type="text" class="form-control" id="nombres" name="nombres" value="{{ $cliente->nombres }}" oninput="limitarCaracteres(this, 45)">
                             </div>
                             <div class="mb-3">
                                 <label for="apellidos" class="form-label">Apellidos</label>
-                                <input type="text" class="form-control" id="apellidos" name="apellidos" value="{{ $psicologia->apellidos }}">
+                                <input type="text" class="form-control" id="apellidos" name="apellidos" value="{{ $cliente->apellidos }}" oninput="limitarCaracteres(this, 45)">
                             </div>
                             <div class="mb-3">
                                 <label for="telefono" class="form-label">Teléfono</label>
-                                <input type="text" class="form-control" id="telefono" name="telefono" value="{{ $psicologia->telefono }}">
+                                <input type="text" class="form-control" id="telefono" name="telefono" value="{{ $cliente->telefono }}" oninput="limitarCaracteres(this, 15)">
                             </div>
-                            <div class="mb-3">
-                                <label for="genero" class="form-label">Género</label>
-                                <select class="form-select" id="genero" name="genero" value="{{ $psicologia->genero }}" required>
-                                    <option value="" disabled selected>Seleccionar género...</option>
-                                    <option value="Masculino">Masculino</option>
-                                    <option value="Femenino">Femenino</option>
-                                    <option value="Otro">Otro</option>
-                                </select>
-                            </div>                          
+                                                    
                         <button type="submit" class="btn btn-primary">Actualizar</button>
                     </form>                
                 </div>
@@ -259,7 +311,7 @@
         <!-- Button trigger modal -->
 
 
-    <div class="modal fade" id="eliminarModal{{ $psicologia->id }}" tabindex="-1" aria-labelledby="eliminarModal" aria-hidden="true">
+    <div class="modal fade" id="eliminarModal{{ $cliente->id }}" tabindex="-1" aria-labelledby="eliminarModal" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -267,7 +319,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form method="POST" action="{{ route('lstpsicologia.destroy', $psicologia->id) }}">
+                    <form method="POST" action="{{ route('lstpsicologia.destroy', $cliente->id) }}">
                         @csrf
                         @method('DELETE')
                         <label for="aviso" class="form-label">Esta seguro de eliminar este registro de forma permanente?</label>
