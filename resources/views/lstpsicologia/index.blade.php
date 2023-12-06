@@ -244,6 +244,32 @@
 
 <!--scripts para los numeros de caracteres -->
 
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+<!-- Tu script de validación de fecha -->
+<script>
+     $(document).ready(function () {
+        $('form').submit(function (e) {
+            var selectedDateTime = new Date($('#fecha_hora').val()); // Obtiene la fecha y hora seleccionadas
+
+            // Define el rango de horas no permitido (de 22:00 a 7:00)
+            var horaInicio = 22;
+            var horaFin = 7;
+
+            // Obtiene la hora de la fecha y hora seleccionadas
+            var horaSeleccionada = selectedDateTime.getHours();
+
+            // Comprueba si la hora seleccionada está dentro del rango no permitido
+            if (horaSeleccionada >= horaInicio || horaSeleccionada < horaFin) {
+                // Muestra un mensaje de alerta
+                alert('Horario no válido. Son horas de cierre.');
+                e.preventDefault(); // Evita que se envíe el formulario
+            }
+        });
+    });
+</script>
+
+
 <!-- Modal para Crear Nuevo Tema -->
 
 <!-- Modal para Editar -->

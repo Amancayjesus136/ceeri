@@ -5,6 +5,26 @@
 <header id="page-topbar">
 <div class="layout-width">
 <div class="navbar-header">
+<style>
+
+:root {
+    --fondo-claro: #ffffff;
+    --texto-claro: #000000;
+    --fondo-oscuro: #333333;
+    --texto-oscuro: #ffffff;
+}
+
+body {
+    background-color: var(--fondo-claro);
+    color: var(--texto-claro);
+}
+
+body.modo-oscuro {
+    background-color: var(--fondo-oscuro);
+}
+
+
+</style>
     <div class="d-flex">
         <!-- LOGO -->
         <div class="navbar-brand-box horizontal-logo">
@@ -62,11 +82,28 @@
         </div>
 
         <div class="ms-1 header-item d-none d-sm-flex">
-            <button type="button" class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle light-dark-mode">
+            <button type="button" class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle light-dark-mode" id="modoOscuroBtn">
                 <i class='bx bx-moon fs-22'></i>
             </button>
         </div>
+<script>
+// script.js
+document.addEventListener('DOMContentLoaded', function () {
+    const modoOscuroBtn = document.getElementById('modoOscuroBtn');
+    const body = document.body;
 
+    modoOscuroBtn.addEventListener('click', function () {
+        body.classList.toggle('modo-oscuro');
+        actualizarEstilos();
+    });
+
+    function actualizarEstilos() {
+        const modoOscuro = body.classList.contains('modo-oscuro');
+        document.documentElement.style.setProperty('--fondo', modoOscuro ? '#333333' : '#ffffff');
+        document.documentElement.style.setProperty('--texto', modoOscuro ? '#ffffff' : '#000000');
+    }
+});
+</script>
 
         <div class="dropdown ms-sm-3 header-item topbar-user">
             <button type="button" class="btn" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -81,7 +118,7 @@
             <div class="dropdown-menu dropdown-menu-end">
                 <!-- item-->
                 <h6 class="dropdown-header">Welcome {{ Auth::user()->name }}!</h6>
-                <a class="dropdown-item" href="{{ route('profile.edit') }}"><i class="mdi mdi-account-circle text-muted fs-16 align-middle me-1"></i> <span class="align-middle">Profile</span></a>
+                <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#profile" class="btn btn-primary w-100""><i class="mdi mdi-account-circle text-muted fs-16 align-middle me-1"></i> <span class="align-middle">Profile</span></a>
                 <form method="POST" action="{{ route('logout') }}">
                   @csrf
                   <a href="#" onclick="event.preventDefault(); this.closest('form').submit();">
@@ -94,6 +131,31 @@
 </div>
 </div>
 </header>
+
+<div class="modal fade" id="profile" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="crearModalLabel">TU PERFIL</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body d-flex align-items">
+                <img src="" alt=""> en el img va la foto de perfil del usar
+                <div class="text-muted">
+                    <ul>
+                        <li>aqui van el nombre completo</li>
+                        <li>aqui van el correo</li>
+                        <li>aqui va una descripcion del usuario es decir , el papel que desempeña en ceeri</li>
+                        <li>aqui va edad</li>
+                        <li>aqui va su telefono</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 
 <!-- removeNotificationModal -->
 <div id="removeNotificationModal" class="modal fade zoomIn" tabindex="-1" aria-hidden="true">

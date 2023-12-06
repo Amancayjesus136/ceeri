@@ -63,7 +63,7 @@ $porcentajeTerapiaLenguaje = ($totalFilas != 0) ? ($numFilasTerapiaLenguaje / $t
                     <!-- Earnings (Monthly) Card Example -->
                     <div class="col-xl-3 col-md-6 mb-4">
                         <div class="card border-left-primary shadow h-100 py-2">
-                            <div class="card-body">
+                            <div class="card-body" style="border: 2px; border-style: solid; border-radius: 5px;">
                                 <div class="row no-gutters align-items-center">
                                     <div class="col mr-2">
                                         <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Numero de citas totales</div>
@@ -81,7 +81,7 @@ $porcentajeTerapiaLenguaje = ($totalFilas != 0) ? ($numFilasTerapiaLenguaje / $t
                     <!-- Earnings (Monthly) Card Example -->
                     <div class="col-xl-3 col-md-6 mb-4">
                         <div class="card border-left-success shadow h-100 py-2">
-                            <div class="card-body">
+                            <div class="card-body" style="border: 2px; border-style: solid; border-radius: 5px;">
                                 <div class="row no-gutters align-items-center">
                                     <div class="col mr-2">
                                         <div class="text-xs font-weight-bold text-success text-uppercase mb-1">cuentas en el sistema</div>
@@ -98,7 +98,7 @@ $porcentajeTerapiaLenguaje = ($totalFilas != 0) ? ($numFilasTerapiaLenguaje / $t
                     <!-- Earnings (Monthly) Card Example -->
                     <div class="col-xl-3 col-md-6 mb-4">
                         <div class="card border-left-success shadow h-100 py-2">
-                            <div class="card-body">
+                            <div class="card-body" style="border: 2px; border-style: solid; border-radius: 5px;">
                                 <div class="row no-gutters align-items-center">
                                     <div class="col mr-2">
                                         <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Cantidad de citas cumplidas</div>
@@ -115,7 +115,7 @@ $porcentajeTerapiaLenguaje = ($totalFilas != 0) ? ($numFilasTerapiaLenguaje / $t
                     <!-- Pending Requests Card Example -->
                     <div class="col-xl-3 col-md-6 mb-4">
                         <div class="card border-left-warning shadow h-100 py-2">
-                            <div class="card-body">
+                            <div class="card-body" style="border: 2px; border-style: solid; border-radius: 5px;">
                                 <div class="row no-gutters align-items-center">
                                     <div class="col mr-2">
                                         <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Cantidad de citas pendientes</div>
@@ -172,42 +172,42 @@ $porcentajeTerapiaLenguaje = ($totalFilas != 0) ? ($numFilasTerapiaLenguaje / $t
                             <!-- Color System -->
                             <div class="row">
                                 <div class="col-lg-6 mb-4">
-                                    <div class="card bg-primary text-white shadow">
+                                    <div class="card bg-primary text-black shadow">
                                         <div class="card-body">
                                             Citas con Psicologia
-                                            <div class="text-white-50 small"><?php echo number_format($numFilasPsicologia, 0, '.', ','); ?></div>
+                                            <div class="text-black-50 small"><?php echo number_format($numFilasPsicologia, 0, '.', ','); ?></div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 mb-4">
-                                    <div class="card bg-success text-white shadow">
+                                    <div class="card bg-success text-black shadow">
                                         <div class="card-body">
                                         Citas con Terapia fisica
-                                            <div class="text-white-50 small"><?php echo number_format($numFilasTerapiaFisica, 0, '.', ','); ?></div>
+                                            <div class="text-black-50 small"><?php echo number_format($numFilasTerapiaFisica, 0, '.', ','); ?></div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 mb-4">
-                                    <div class="card bg-info text-white shadow">
+                                    <div class="card bg-info text-black shadow">
                                         <div class="card-body">
                                         Citas con Terapia infantil
-                                            <div class="text-white-50 small"><?php echo number_format($numFilasTerapiaInfantil, 0, '.', ','); ?></div>
+                                            <div class="text-black-50 small"><?php echo number_format($numFilasTerapiaInfantil, 0, '.', ','); ?></div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 mb-4">
-                                    <div class="card bg-warning text-white shadow">
+                                    <div class="card bg-warning text-black shadow">
                                         <div class="card-body">
                                         Citas con Terapia ocupacional
-                                            <div class="text-white-50 small"><?php echo number_format($numFilasTerapiaOcupacional, 0, '.', ','); ?></div>
+                                            <div class="text-black-50 small"><?php echo number_format($numFilasTerapiaOcupacional, 0, '.', ','); ?></div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 mb-4">
-                                    <div class="card bg-danger text-white shadow">
+                                    <div class="card bg-danger text-black shadow">
                                         <div class="card-body">
                                         Citas con Terapia de lenguaje
-                                            <div class="text-white-50 small"><?php echo number_format($numFilasTerapiaLenguaje, 0, '.', ','); ?></div>
+                                            <div class="text-black-50 small"><?php echo number_format($numFilasTerapiaLenguaje, 0, '.', ','); ?></div>
                                         </div>
                                     </div>
                                 </div>
