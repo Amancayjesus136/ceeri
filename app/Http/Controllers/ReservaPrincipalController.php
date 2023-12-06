@@ -27,7 +27,7 @@ class ReservaPrincipalController extends Controller
             $cliente->apellidos = $request->apellidos;
             $cliente->telefono = $request->telefono;
             $cliente->genero = $request->genero;
-            $cliente->fecha_hora = now(); 
+            $cliente->fecha_hora = $request->fecha_hora; 
             $cliente->estado = 'pendiente'; 
             
             $cliente->save();

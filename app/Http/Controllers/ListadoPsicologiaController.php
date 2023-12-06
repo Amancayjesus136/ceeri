@@ -60,7 +60,7 @@ class ListadoPsicologiaController extends Controller
             $cliente->nombres = $request->nombres;
             $cliente->apellidos = $request->apellidos;
             $cliente->telefono = $request->telefono;
-            $cliente->fecha_hora = now(); 
+            $cliente->fecha_hora = $request->fecha_hora; 
             $cliente->estado = 'pendiente'; 
             
             $cliente->save();
@@ -106,7 +106,7 @@ class ListadoPsicologiaController extends Controller
     $cliente->telefono = $request->telefono;
     $cliente->especialidad = $request->especialidad;
     $cliente->genero = $request->genero;
-    $cliente->fecha_hora = now(); 
+    $cliente->fecha_hora = $request->fecha_hora; 
     $cliente->estado = $request->estado;
 
     $cliente->save();

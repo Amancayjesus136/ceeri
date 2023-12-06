@@ -163,17 +163,17 @@
                     <div class="row mb-1">
                         <div class="col-md-6">
                             <label for="nombres" class="form-label">Nombres</label>
-                            <input type="text" class="form-control" id="nombres" name="nombres" oninput="limitarCaracteres(this, 45)">                       
+                            <input type="text" class="form-control" id="nombres" name="nombres" oninput="limitarCaracteres(this, 45)"required>                       
                         </div>
                         <div class="col-md-6">
                             <label for="apellidos" class="form-label">Apellidos</label>
-                            <input type="text" class="form-control" id="apellidos" name="apellidos" oninput="limitarCaracteres(this, 45)">            
+                            <input type="text" class="form-control" id="apellidos" name="apellidos" oninput="limitarCaracteres(this, 45)"required>            
                         </div>
                     </div>
                     <div class="row mb-3">
                         <div class="col-md-6">
                             <label for="tipo_documento" class="form-label">Tipo de Documento</label>
-                            <select class="form-select" id="tipo_documento" name="tipo_documento">
+                            <select class="form-select" id="tipo_documento" name="tipo_documento"required>
                                 <option value="" disabled selected>Seleccionar tipo de documento...</option>
                                 <option value="DNI">DNI</option>
                                 <option value="Pasaporte">Pasaporte</option>
@@ -181,13 +181,13 @@
                         </div>
                         <div class="col-md-6">
                             <label for="numero_documento" class="form-label">Número de Documento</label>
-                            <input type="number" class="form-control" id="numero_documento" name="numero_documento" oninput="limitarCaracteres(this, 40)">  
+                            <input type="number" class="form-control" id="numero_documento" name="numero_documento" oninput="limitarCaracteres(this, 40)"required>  
                         </div>
                     </div>
                     <div class="row mb-3">
                         <div class="col-md-6">
                             <label for="telefono" class="form-label">Teléfono</label>
-                            <input type="number" class="form-control" id="telefono" name="telefono" oninput="limitarCaracteres(this, 15)">   
+                            <input type="number" class="form-control" id="telefono" name="telefono" oninput="limitarCaracteres(this, 15)"required>   
                         </div>
                         <div class="col-md-6">
                             <label for="fecha_hora" class="form-label">Fecha y Hora</label>
@@ -197,7 +197,7 @@
                     <div class="row mb-3">                 
                         <div class="col-md-6">
                             <label for="especialidad" class="form-label">Especialidad</label>
-                            <select class="form-select" id="especialidad" name="especialidad">
+                            <select class="form-select" id="especialidad" name="especialidad" required>
                                 <option value="" disabled selected>Seleccionar especialidad...</option>
                                 <option value="Psicologia">Psicologia</option>
                                 <option value="Terapia fisica">Terapia fisica</option>
@@ -224,9 +224,9 @@
         $('form').submit(function (e) {
             var selectedDateTime = new Date($('#fecha_hora').val()); // Obtiene la fecha y hora seleccionadas
 
-            // Define el rango de horas no permitido (de 22:00 a 7:00)
-            var horaInicio = 22;
-            var horaFin = 7;
+            // Define el rango de horas no permitido (de 8:00 a 18:00)
+            var horaInicio = 18;
+            var horaFin = 8;
 
             // Obtiene la hora de la fecha y hora seleccionadas
             var horaSeleccionada = selectedDateTime.getHours();
@@ -234,7 +234,7 @@
             // Comprueba si la hora seleccionada está dentro del rango no permitido
             if (horaSeleccionada >= horaInicio || horaSeleccionada < horaFin) {
                 // Muestra un mensaje de alerta
-                alert('Horario no válido. Son horas de cierre.');
+                alert('Horario no válido. Son horas de cierre, estamos abiertos de 7:00AM a 18:00PM.');
                 e.preventDefault(); // Evita que se envíe el formulario
             }
         });
@@ -415,6 +415,7 @@
                                                                                             '<strong>Número de Documento:</strong> ' + result.numero_documento + '<br>' +
                                                                                             '<strong>Nombres:</strong> ' + result.nombres + '<br>' +
                                                                                             '<strong>Apellidos:</strong> ' + result.apellidos + '<br>' +
+                                                                                            '<strong>Especialidad:</strong> ' + result.especialidad + '<br>' +
                                                                                             '<strong>Fecha y Hora:</strong> ' + formattedDate + '<br>' +
                                                                                         '</p>' +
                                                                                     '</div>';
