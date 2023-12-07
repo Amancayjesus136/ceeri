@@ -10,7 +10,13 @@
     <meta content="Themesbrand" name="author" />
     <!-- Agrega la referencia a Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    </head>
+
+     <!--link scripts del fullcalendar -->   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/locales-all.js"></script>
+     <!--link scripts del fullcalendar -->       
+</head>
     <!-- App favicon -->
     <link rel="shortcut icon" href="{{ asset('assets/images/favicon.ico') }}">
     <script type='text/javascript' src='assets/libs/flatpickr/flatpickr.min.js'></script>
@@ -331,6 +337,7 @@ const nacionalidadSelect = document.getElementById('nacionalidadSelect');
 
 
 
+
 </script>
 
     <!-- JAVASCRIPT -->
@@ -355,6 +362,7 @@ const nacionalidadSelect = document.getElementById('nacionalidadSelect');
     <!--app js-->
     <script src="{{ ('assets/js/app.js') }}"></script>
 
+    @stack('scripts')
 </body>
 
 </html>

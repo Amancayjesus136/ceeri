@@ -84,6 +84,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
     //reserva interna de la citas
     Route::post('/', [ReservaInternaController::class, 'create'])->name('registroInterno');
 
+    
+
 
 
     //rutas para listado de los formularios
