@@ -34,52 +34,6 @@ $porcentajeTerapiaLenguaje = ($totalFilas != 0) ? ($numFilasTerapiaLenguaje / $t
 
 
 @section('content')
-<div class="row">
-    <div class="col-12">
-        <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-            <h4 class="mb-sm-0">Inicio</h4>
-
-            <div class="page-title-right">
-                
-            </div>
-
-        </div>
-    </div>
-</div>
-<!-- end page title -->
-
-<!-- COLUMNAS -->
-<div class="row">
-    <div class="col-xl-12">
-        <div class="card">
-            <div class="card-body">
-                <p class="text-muted mb-4">
-                    {{ __("Bienvenido a CEERI!") }}
-                </p>
-                <div id='calendar'></div>
-            </div><!-- end card-body -->
-        </div><!-- end card -->
-    </div><!-- end col -->
-</div><!-- end row -->
-
-
-@push('scripts')
- 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const calendarEl = document.getElementById('calendar');
-
-        const calendar = new FullCalendar.Calendar(calendarEl, {
-          initialView: 'dayGridMonth',
-          
-        });
-        locale: "es",
-        calendar.render();
-      });
-
-
-</script>
-@endpush
 
                 <div class="row">              
                     <!-- Earnings (Monthly) Card Example -->
@@ -237,6 +191,7 @@ $porcentajeTerapiaLenguaje = ($totalFilas != 0) ? ($numFilasTerapiaLenguaje / $t
                         </div>          
                     </div>
                 </div>  
+
 @endsection
 
 

@@ -1,160 +1,313 @@
 @extends('layouts.admin')
 @section('content')
-  <style>
- 
-    .container {
-        border: 2px;
-        border-radius: 10px;
-        border-color: #405189;
-        border-style: solid;
-        padding: 15px 15px 15px 15px;
-        background-color: #405189;
-    }
 
-    label {
-        font-weight: bold;
-        color: white;
-    }
-        
-    h4  {
-        font-weight: bold;
-    }
-    .contenedor button {
-      margin-top: 20px; /* Ajusta el margen superior según sea necesario */
-      color: white;
-      border-radius: 7px;
-      font-size: 30px;
+<div class="container-fluid">
 
-    } 
-
-    .cuadro {
-      width: 100%;
-      height: 100%;
-      border: 1px solid black;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 24px;
-    }
-  </style>
-
-
-
-  <div class="contenedor">
-  <h4 class="page-title-box d-sm-flex align-items-center justify-content-between">Reservacion de citas en todas las especialidades disponibles</h4>
-@if(session('success'))
-    <div id="successAlert" class="alert alert-success alert-dismissible bg-success text-white alert-label-icon fade show" role="alert">
-        <i class="ri-notification-off-line label-icon"></i><strong>Éxito</strong> - Reserva registrado correctamente
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
+<!-- start page title -->
+<div class="row">
+    <div class="col-12">
+        <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+            <h4 class="mb-sm-0">Reservar Cita</h4>
+        </div>
     </div>
-@endif
-  </div>
-            <div class="container">
-                <form action="{{route('lstpsicologia.index')}}" method="POST">
-                    @csrf
-                    <div class="row mb-1">
-                        <div class="col-md-6">
-                            <label for="nombres" class="form-label">Nombres</label>
-                            <input type="text" class="form-control" id="nombres" name="nombres" oninput="limitarCaracteres(this, 45)" required>                           
+</div>
+<!-- end page title -->
+
+<div class="row">
+    <div class="col-12">
+        <div class="row">
+            <div class="col-xl-3">
+                <div class="card card-h-100">
+                    <div class="card-body">
+                        <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#agregarModal"><i class="mdi mdi-plus"></i> Nueva reserva</button>
+
+                        <div id="external-events">
+                            <br>
+                            <p class="text-muted">Drag and drop your event or click in the calendar</p>
+                            <div class="external-event fc-event bg-soft-success text-success" data-class="bg-soft-success">
+                                <i class="mdi mdi-checkbox-blank-circle font-size-11 me-2"></i>New Event Planning
+                            </div>
+                            <div class="external-event fc-event bg-soft-info text-info" data-class="bg-soft-info">
+                                <i class="mdi mdi-checkbox-blank-circle font-size-11 me-2"></i>Meeting
+                            </div>
+                            <div class="external-event fc-event bg-soft-warning text-warning" data-class="bg-soft-warning">
+                                <i class="mdi mdi-checkbox-blank-circle font-size-11 me-2"></i>Generating Reports
+                            </div>
+                            <div class="external-event fc-event bg-soft-danger text-danger" data-class="bg-soft-danger">
+                                <i class="mdi mdi-checkbox-blank-circle font-size-11 me-2"></i>Create New theme
+                            </div>
                         </div>
-                        <div class="col-md-6">
-                            <label for="apellidos" class="form-label">Apellidos</label>
-                            <input type="text" class="form-control" id="apellidos" name="apellidos" oninput="limitarCaracteres(this, 45)" required>
+
+                    </div>
+                </div>
+                <div>
+                    <h5 class="mb-1">Upcoming Events</h5>
+                    <p class="text-muted">Don't miss scheduled events</p>
+                    <div class="pe-2 me-n1 mb-3" data-simplebar style="height: 400px">
+                        <div id="upcoming-event-list"></div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body bg-soft-info">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0">
+                                <i data-feather="calendar" class="text-info icon-dual-info"></i>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <h6 class="fs-15">Welcome to your Calendar!</h6>
+                                <p class="text-muted mb-0">Event that applications book will appear here. Click on an event to see the details and manage applicants event.</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="row mb-3">
-                        <div class="col-md-6">
-                            <label for="tipo_documento" class="form-label">Tipo de Documento</label>
-                            <select class="form-select" id="tipo_documento" name="tipo_documento" required>
-                                <option value="" disabled selected>Seleccionar tipo de documento...</option>
-                                <option value="DNI">DNI</option>
-                                <option value="Pasaporte">Pasaporte</option>
-                            </select>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="numero_documento" class="form-label">Número de Documento</label>
-                            <input type="number" class="form-control" id="numero_documento" name="numero_documento" oninput="limitarCaracteres(this, 40)"required>
-                        </div>
+                </div>
+                <!--end card-->
+            </div> <!-- end col-->
+
+            <div class="col-xl-9">
+                <div class="card card-h-100">
+                    <div class="card-body">
+                        <div id="calendar"></div>
                     </div>
-                    <div class="row mb-3">
-                        <div class="col-md-6">
-                            <label for="telefono" class="form-label">Teléfono</label>
-                            <input type="number" class="form-control" id="telefono" name="telefono" oninput="limitarCaracteres(this, 15)"required>    
+                </div>
+            </div><!-- end col -->
+        </div>
+        <!--end row-->
+
+        <!-- modal -->
+        <div class="modal fade" id="agregarModal" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header p-3 bg-soft-info">
+                    <h5 class="modal-title" id="crearModalLabel">Nuevo registro</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="{{ route('lstpsicologia.store') }}" method="POST">
+                        @csrf
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="mb-3">
+                                    <label for="numero_documento" class="form-label">Número de Documento</label>
+                                    <input type="number" class="form-control" id="numero_documento" name="numero_documento" oninput="limitarCaracteres(this, 40)"required>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="mb-3">
+                                    <label for="tipo_documento" class="form-label">Documento</label>
+                                    <select class="form-select" id="tipo_documento" name="tipo_documento"required>
+                                        <option value="" disabled selected>Tipo de documento...</option>
+                                        <option value="DNI">DNI</option>
+                                        <option value="Pasaporte">Pasaporte</option>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-md-6">
-                            <label for="fecha_hora" class="form-label">Fecha y Hora</label>
-                            <input type="datetime-local" class="form-control" id="fecha_hora" name="fecha_hora" required>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="mb-3">
+                                    <label for="nombres" class="form-label">Nombres</label>
+                                    <input type="text" class="form-control" id="nombres" name="nombres" oninput="limitarCaracteres(this, 45)"required>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row mb-3">    
-                        <div class="col-md-6">
-                            <label for="especialidad" class="form-label">Especialidad</label>
-                            <select class="form-select" id="especialidad" name="especialidad" required>
-                                <option value="" disabled selected>Seleccionar especialidad...</option>
-                                <option value="Psicologia">Psicologia</option>
-                                <option value="Terapia fisica">Terapia fisica</option>
-                                <option value="Terapia infantil">Terapia infantil</option>
-                                <option value="Terapia ocupacional">Terapia ocupacional</option>
-                                <option value="Terapia lenguaje">Terapia lenguaje</option>
-                            </select>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="mb-3">
+                                    <label for="apellidos" class="form-label">Apellidos</label>
+                                    <input type="text" class="form-control" id="apellidos" name="apellidos" oninput="limitarCaracteres(this, 45)"required>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <button type="submit" class="btn btn-primary" style="margin-top: 25px; font-weight: bold; background-color: skyblue;">Reservar cita</button>
-                </form>
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="mb-3">
+                                    <label for="fecha_hora" class="form-label">Fecha y Hora</label>
+                                    <input type="datetime-local" class="form-control" id="fecha_hora" name="fecha_hora" required>
+                                </div>
+                            </div>
+                            
+                            <div class="col-6">
+                                <div class="mb-3">
+                                    <label for="especialidad" class="form-label">Especialidad</label>
+                                        <select class="form-select" id="especialidad" name="especialidad"required>
+                                            <option value="" disabled selected>Seleccionar especialidad...</option>
+                                            <option value="Psicologia">Psicologia</option>
+                                            <option value="Terapia fisica">Terapia fisica</option>
+                                            <option value="Terapia infantil">Terapia infantil</option>
+                                            <option value="Terapia ocupacional">Terapia ocupacional</option>
+                                            <option value="Terapia lenguaje">Terapia lenguaje</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="mb-3">
+                                    <label for="telefono" class="form-label">Teléfono</label>
+                                    <input type="number"  class="form-control" id="telefono" name="telefono" oninput="limitarCaracteres(this, 15)"required>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Registrar</button>
+                    </form>
+                </div>
             </div>
-            
-<!--scripts para los numeros de caracteres -->
-<script>
-    function limitarCaracteres(input, maxLength) {
-      if (input.value.length > maxLength) {
-        input.value = input.value.slice(0, maxLength);
-      }
-    }
-  </script>
+        </div>
+    </div>
+        <!-- modal -->
 
-<!--scripts para los numeros de caracteres -->
+        <div style='clear:both'></div>
 
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <!-- Add New Event MODAL -->
+        <div class="modal fade" id="event-modal" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content border-0">
+                    <div class="modal-header p-3 bg-soft-info">
+                        <h5 class="modal-title" id="modal-title">Event</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true"></button>
+                    </div>
+                    <div class="modal-body p-4">
+                        <form class="needs-validation" name="event-form" id="form-event" novalidate>
+                            <div class="text-end">
+                                <a href="#" class="btn btn-sm btn-soft-primary" id="edit-event-btn" data-id="edit-event" onclick="editEvent(this)" role="button">Edit</a>
+                            </div>
+                            <div class="event-details">
+                                <div class="d-flex mb-2">
+                                    <div class="flex-grow-1 d-flex align-items-center">
+                                        <div class="flex-shrink-0 me-3">
+                                            <i class="ri-calendar-event-line text-muted fs-16"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h6 class="d-block fw-semibold mb-0" id="event-start-date-tag"></h6>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center mb-2">
+                                    <div class="flex-shrink-0 me-3">
+                                        <i class="ri-time-line text-muted fs-16"></i>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h6 class="d-block fw-semibold mb-0"><span id="event-timepicker1-tag"></span> - <span id="event-timepicker2-tag"></span></h6>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center mb-2">
+                                    <div class="flex-shrink-0 me-3">
+                                        <i class="ri-map-pin-line text-muted fs-16"></i>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h6 class="d-block fw-semibold mb-0"> <span id="event-location-tag"></span></h6>
+                                    </div>
+                                </div>
+                                <div class="d-flex mb-3">
+                                    <div class="flex-shrink-0 me-3">
+                                        <i class="ri-discuss-line text-muted fs-16"></i>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <p class="d-block text-muted mb-0" id="event-description-tag"></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row event-form">
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label class="form-label">Type</label>
+                                        <select class="form-select d-none" name="category" id="event-category" required>
+                                            <option value="bg-soft-danger">Danger</option>
+                                            <option value="bg-soft-success">Success</option>
+                                            <option value="bg-soft-primary">Primary</option>
+                                            <option value="bg-soft-info">Info</option>
+                                            <option value="bg-soft-dark">Dark</option>
+                                            <option value="bg-soft-warning">Warning</option>
+                                        </select>
+                                        <div class="invalid-feedback">Please select a valid event category</div>
+                                    </div>
+                                </div>
+                                <!--end col-->
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label class="form-label">Event Name</label>
+                                        <input class="form-control d-none" placeholder="Enter event name" type="text" name="title" id="event-title" required value="" />
+                                        <div class="invalid-feedback">Please provide a valid event name</div>
+                                    </div>
+                                </div>
+                                <!--end col-->
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label>Event Date</label>
+                                        <div class="input-group d-none">
+                                            <input type="text" id="event-start-date" class="form-control flatpickr flatpickr-input" placeholder="Select date" readonly required>
+                                            <span class="input-group-text"><i class="ri-calendar-event-line"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end col-->
+                                <div class="col-12" id="event-time">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="mb-3">
+                                                <label class="form-label">Start Time</label>
+                                                <div class="input-group d-none">
+                                                    <input id="timepicker1" type="text" class="form-control flatpickr flatpickr-input" placeholder="Select start time" readonly>
+                                                    <span class="input-group-text"><i class="ri-time-line"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="mb-3">
+                                                <label class="form-label">End Time</label>
+                                                <div class="input-group d-none">
+                                                    <input id="timepicker2" type="text" class="form-control flatpickr flatpickr-input" placeholder="Select end time" readonly>
+                                                    <span class="input-group-text"><i class="ri-time-line"></i></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label for="event-location">Location</label>
+                                        <div>
+                                            <input type="text" class="form-control d-none" name="event-location" id="event-location" placeholder="Event location">
+                                        </div>
+                                    </div>
+                                </div>
+                                <input type="hidden" id="eventid" name="eventid" value="" />
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label class="form-label">Description</label>
+                                        <textarea class="form-control d-none" id="event-description" placeholder="Enter a description" rows="3" spellcheck="false"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hstack gap-2 justify-content-end">
+                                <button type="button" class="btn btn-soft-danger" id="btn-delete-event"><i class="ri-close-line align-bottom"></i> Delete</button>
+                                <button type="submit" class="btn btn-success" id="btn-save-event">Add Event</button>
+                            </div>
+                        </form>
+                    </div>
+                </div> 
+            </div> 
+        </div> 
+        
+    </div>
+</div> 
 
-<!-- Tu script de validación de fecha -->
-<script>
-     $(document).ready(function () {
-        $('form').submit(function (e) {
-            var selectedDateTime = new Date($('#fecha_hora').val()); // Obtiene la fecha y hora seleccionadas
+</div>
 
-            // Define el rango de horas no permitido (de 07:00 a 18:00)
-            var horaInicio = 8;
-            var horaFin = 18;
+<script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="assets/libs/node-waves/waves.min.js"></script>
+    <script src="assets/libs/feather-icons/feather.min.js"></script>
+    <script src="assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
+    <script src="assets/js/plugins.js"></script>
 
-            // Obtiene la hora de la fecha y hora seleccionadas
-            var horaSeleccionada = selectedDateTime.getHours();
+    <script src="assets/libs/fullcalendar/main.min.js"></script>
 
-            // Comprueba si la hora seleccionada está dentro del rango no permitido
-            if (horaSeleccionada >= horaInicio || horaSeleccionada < horaFin) {
-                // Muestra un mensaje de alerta
-                alert('Horario no válido. Son horas de cierre,estamos abiertos de 7:00AM a 18:00PM.');
-                e.preventDefault(); // Evita que se envíe el formulario
-            }
-        });
-    });
-</script>
+    <script src="assets/js/pages/calendar.init.js"></script>
 
-<script>
-    var successAlert = document.getElementById('successAlert');
-    
-    if (successAlert) {
-        setTimeout(function () {
-            successAlert.classList.remove('show');
-            setTimeout(function () {
-                window.location.reload();
-            }, 1000);
-        }, 2000);
-    }
-    
-</script>
-
-
-
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="assets/js/app.js"></script>
 
 @endsection
