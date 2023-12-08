@@ -118,12 +118,12 @@ document.addEventListener('DOMContentLoaded', function () {
             <div class="dropdown-menu dropdown-menu-end">
                 <!-- item-->
                 <h6 class="dropdown-header">Welcome {{ Auth::user()->name }}!</h6>
-                <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#profile" class="btn btn-primary w-100""><i class="mdi mdi-account-circle text-muted fs-16 align-middle me-1"></i> <span class="align-middle">Profile</span></a>
+                <a class="dropdown-item" href="{{ route('perfil.index') }}"><i class="mdi mdi-account-circle text-muted fs-16 align-middle me-1"></i> <span class="align-middle">Perfil</span></a>
                 <form method="POST" action="{{ route('logout') }}">
-                  @csrf
-                  <a href="#" onclick="event.preventDefault(); this.closest('form').submit();">
-                    <i class="mdi mdi-logout text-muted fs-16 align-middle me-1"></i> <span class="align-middle" data-key="t-logout">Logout</span>
-                  </a>
+                @csrf
+                    <a href="#" onclick="event.preventDefault(); this.closest('form').submit();">
+                        <i class="mdi mdi-logout text-muted fs-16 align-middle me-1"></i> <span class="align-middle" data-key="t-logout">Cerrar Sección</span>
+                    </a>
                 </form>
             </div>
         </div>
@@ -131,31 +131,6 @@ document.addEventListener('DOMContentLoaded', function () {
 </div>
 </div>
 </header>
-
-<div class="modal fade" id="profile" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 class="modal-title" id="crearModalLabel">TU PERFIL</h2>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-            </div>
-            <div class="modal-body d-flex align-items">
-                <img src="" alt=""> en el img va la foto de perfil del usar
-                <div class="text-muted">
-                    <ul>
-                        <li>aqui van el nombre completo</li>
-                        <li>aqui van el correo</li>
-                        <li>aqui va una descripcion del usuario es decir , el papel que desempeña en ceeri</li>
-                        <li>aqui va edad</li>
-                        <li>aqui va su telefono</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
 
 <!-- removeNotificationModal -->
 <div id="removeNotificationModal" class="modal fade zoomIn" tabindex="-1" aria-hidden="true">

@@ -38,7 +38,7 @@ class ListadoUsuarioController extends Controller
     $reserva->telefono = $request->telefono;
     $reserva->especialidad = $request->especialidad;
     $reserva->genero = $request->genero;
-    $reserva->fecha_hora = now(); 
+    $reserva->fecha_hora = $request->fecha_hora; 
 
     $reserva->save();
     return redirect()->route('listado.index');

@@ -21,7 +21,7 @@ use App\Http\Controllers\ReservaInternaController;
 use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\MenuUsuarioController;
 use App\Http\Controllers\NumerosController;
-use App\Http\Controllers\ImagenCeeriController;
+use App\Http\Controllers\PerfilController;
 
 
 use Illuminate\Support\Facades\Route;
@@ -112,15 +112,11 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
 
 
-    
-
-
-   
-
+    // rutas de perfil 
+    Route::resource('perfil', PerfilController::class);
 
 
 
-    
 
 
 

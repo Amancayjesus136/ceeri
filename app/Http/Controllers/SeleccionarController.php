@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Cliente;
 
 class SeleccionarController extends Controller
 {
@@ -12,7 +13,20 @@ class SeleccionarController extends Controller
      */
     public function index()
     {
-        return view('seleccionar.index');
+        $clientes = Cliente::query();
+        if (!empty($_GET['s'])) {
+            $clientes = $clientes->where('id', 'LIKE', '%'.$_GET['s'].'%')
+                ->orWhere('especialidad', 'LIKE', '%'.$_GET['s'].'%')
+                ->orWhere('tipo_documento', 'LIKE', '%'.$_GET['s'].'%')
+                ->orWhere('numero_documento', 'LIKE', '%'.$_GET['s'].'%')
+                ->orWhere('nombres', 'LIKE', '%'.$_GET['s'].'%')
+                ->orWhere('apellidos', 'LIKE', '%'.$_GET['s'].'%')
+                ->orWhere('telefono', 'LIKE', '%'.$_GET['s'].'%')
+                ->orWhere('especialidad', 'LIKE', '%'.$_GET['s'].'%')
+                ->orWhere('fecha_hora', 'LIKE', '%'.$_GET['s'].'%');
+        }
+        $clientes = $clientes->get();
+        return view('seleccionar.index', compact('clientes',));
     }
 
     /**
@@ -34,9 +48,14 @@ class SeleccionarController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show($id)
     {
-        //
+        $cliente = Cliente::find($id);
+
+        if (!$cliente) {
+            abort(404); 
+        }
+        return view('clientes.show', compact('cliente'));
     }
 
     /**

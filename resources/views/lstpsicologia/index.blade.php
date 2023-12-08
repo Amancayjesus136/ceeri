@@ -44,9 +44,6 @@
                         value="<?php if (!empty($_GET['s'])) echo $_GET['s']; ?>" />
                     <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
                 </form>
-                <a href="#" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#agregarModal">
-                    <i class="fas fa-plus-circle"></i> Nuevo Registro
-                </a>
             </div>
             </div>
 

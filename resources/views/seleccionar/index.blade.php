@@ -1,8 +1,18 @@
 @extends('layouts.admin')
 @section('content')
 
-<div class="container-fluid">
+<style>
+    .listado-busqueda {
+  width: 240px;
+  float: right;
+}
+.listado-busqueda input {
+  width: calc(100% - 70px);
+  display: inline-block;
+}
+</style>
 
+<div class="container-fluid">
 <!-- start page title -->
 <div class="row">
     <div class="col-12">
@@ -23,28 +33,65 @@
 
                         <div id="external-events">
                             <br>
-                            <p class="text-muted">Drag and drop your event or click in the calendar</p>
                             <div class="external-event fc-event bg-soft-success text-success" data-class="bg-soft-success">
-                                <i class="mdi mdi-checkbox-blank-circle font-size-11 me-2"></i>New Event Planning
+                                <i class="mdi mdi-checkbox-blank-circle font-size-11 me-2"></i>Pendiente
                             </div>
                             <div class="external-event fc-event bg-soft-info text-info" data-class="bg-soft-info">
-                                <i class="mdi mdi-checkbox-blank-circle font-size-11 me-2"></i>Meeting
+                                <i class="mdi mdi-checkbox-blank-circle font-size-11 me-2"></i>Proceso
                             </div>
                             <div class="external-event fc-event bg-soft-warning text-warning" data-class="bg-soft-warning">
-                                <i class="mdi mdi-checkbox-blank-circle font-size-11 me-2"></i>Generating Reports
+                                <i class="mdi mdi-checkbox-blank-circle font-size-11 me-2"></i>Tardanza
                             </div>
                             <div class="external-event fc-event bg-soft-danger text-danger" data-class="bg-soft-danger">
-                                <i class="mdi mdi-checkbox-blank-circle font-size-11 me-2"></i>Create New theme
+                                <i class="mdi mdi-checkbox-blank-circle font-size-11 me-2"></i>Cancelado
                             </div>
                         </div>
 
                     </div>
                 </div>
-                <div>
-                    <h5 class="mb-1">Upcoming Events</h5>
-                    <p class="text-muted">Don't miss scheduled events</p>
-                    <div class="pe-2 me-n1 mb-3" data-simplebar style="height: 400px">
-                        <div id="upcoming-event-list"></div>
+                
+                <div class="card">
+                    <div class="card-header align-items-center d-flex border-bottom-dashed">
+                        <h4 class="card-title mb-0 flex-grow-1">Consultas</h4>
+                        <div class="flex-shrink-0">
+                        <form method="GET" class="listado-busqueda">
+                            <input type="text" placeholder="Ingrese DNI" name="s" class="form-control input-sm"
+                                value="<?php if (!empty($_GET['s'])) echo $_GET['s']; ?>" />
+                            <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
+                        </form>
+                        </div>
+                    </div>
+
+                    <div class="card-body">
+                        <div data-simplebar style="height: 235px;" class="mx-n3 px-3">
+                            <div class="vstack gap-3">
+                                @foreach ($clientes as $cliente)
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-grow-1">
+                                    <h5 class="fs-13 mb-0">
+                                            {{
+                                                \Illuminate\Support\Str::limit(
+                                                    $cliente->nombres . ' ' . $cliente->apellidos,
+                                                    15,
+                                                    $end='...'
+                                                )
+                                            }}
+                                    </h5>
+
+                                        <p class="fs-13 text-muted mb-0">{{ $cliente->especialidad }}</p>
+                                    </div>
+                                    <div class="flex-shrink-0">
+                                        <small class="badge bg-primary-subtle text-primary ms-auto">
+                                            {{ \Carbon\Carbon::parse($cliente->fecha_hora)->format('m/d/Y - h:i A') }}
+                                        </small>
+                                    </div>
+                                    <a href="#" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#editarModal{{ $cliente->id }}" style="padding: 0.15rem 0.3rem; font-size: 0.6rem; margin-left:30px">
+                                        <i class="fas fa-eye"></i> 
+                                    </a>
+                                </div>
+                                @endforeach
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -143,10 +190,21 @@
                             </div>
                             
                         <div class="row">
-                            <div class="col-12">
+                            <div class="col-8">
                                 <div class="mb-3">
                                     <label for="telefono" class="form-label">Teléfono</label>
                                     <input type="number"  class="form-control" id="telefono" name="telefono" oninput="limitarCaracteres(this, 15)"required>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="mb-3">
+                                    <label for="genero" class="form-label">Genero</label>
+                                    <select class="form-select" id="genero" name="genero"required>
+                                        <option value="" disabled selected>Seleccionar genero...</option>
+                                        <option value="Masculino">Masculino</option>
+                                        <option value="Femenino">Femenino</option>
+                                        <option value="Otro">Otro</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
@@ -157,7 +215,48 @@
             </div>
         </div>
     </div>
-        <!-- modal -->
+<!-- modal -->
+
+<!-- Modal para ver -->
+@foreach ($clientes as $cliente)
+    <div class="modal fade" id="editarModal{{ $cliente->id }}" tabindex="-1" aria-labelledby="editarModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header p-3 bg-soft-info">
+                    <h5 class="modal-title" id="editarModalLabel">Ver Cliente</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex align-items-center">
+                        <div class="flex-grow-1">
+                            <h5 class="fs-13 mb-2">
+                                <i class="fas fa-user"></i> {{ $cliente->nombres }} {{ $cliente->apellidos }}
+                            </h5>
+                            <h5 class="fs-13 mb-2">
+                                <i class="fas fa-id-card"></i> {{ $cliente->numero_documento }}
+                            </h5>
+                            <h5 class="fs-13 mb-2">
+                                <i class="far fa-calendar"></i> {{ \Carbon\Carbon::parse($cliente->fecha_hora)->format('m/d/Y') }}
+                            </h5>
+                            <h5 class="fs-13 mb-2">
+                                <i class="far fa-clock"></i> {{ \Carbon\Carbon::parse($cliente->fecha_hora)->format('h:i A') }}
+                            </h5>
+                            <h5 class="fs-13 mb-2">
+                                <i class="fas fa-briefcase"></i> {{ $cliente->especialidad }}
+                            </h5>
+                            <h5 class="fs-13 mb-2">
+                                <i class="fas fa-phone"></i> {{ $cliente->telefono }}
+                            </h5>
+                            <h5 class="fs-13 mb-2">
+                                <i class="fas fa-venus-mars"></i> {{ $cliente->genero }}
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+@endforeach
 
         <div style='clear:both'></div>
 

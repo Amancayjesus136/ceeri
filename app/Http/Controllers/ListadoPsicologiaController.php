@@ -27,7 +27,7 @@ class ListadoPsicologiaController extends Controller
                 ->orWhere('fecha_hora', 'LIKE', '%'.$_GET['s'].'%');
         }
     
-        $porPagina = 7;
+        $porPagina = 50;
         $clientes = $clientes->paginate($porPagina);
     
         return view('lstpsicologia.index', compact('clientes'));
@@ -61,6 +61,7 @@ class ListadoPsicologiaController extends Controller
             $cliente->apellidos = $request->apellidos;
             $cliente->telefono = $request->telefono;
             $cliente->fecha_hora = $request->fecha_hora; 
+            $cliente->genero = $request->genero; 
             $cliente->estado = 'pendiente'; 
             
             $cliente->save();
