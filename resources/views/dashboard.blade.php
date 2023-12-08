@@ -5,28 +5,28 @@ use App\Models\Cliente;
 use App\Models\User;
 
 // Consulta para obtener el número de filas en la tabla cliente
-$numFilas = Cliente::count();
-$numFilas = User::count();
+$clienteFilas = Cliente::count();
+$userFilas = User::count();
 $totalFilas = Cliente::count();
 
 
 // Consulta para obtener el número de filas en la tabla cliente con estado "cumplido" y pendiente
-$numFilasCumplido = Cliente::where('estado', 'cumplido')->count();
-$numFilasPendiente = Cliente::where('estado', 'pendiente')->count();
+$clienteFilasCumplido = Cliente::where('estado', 'cumplido')->count();
+$clienteFilasPendiente = Cliente::where('estado', 'pendiente')->count();
 
 // Obtener el número de filas para cada especialidad
-$numFilasPsicologia = Cliente::where('especialidad', 'Psicologia')->count();
-$numFilasTerapiaFisica = Cliente::where('especialidad', 'Terapia fisica')->count();
-$numFilasTerapiaInfantil = Cliente::where('especialidad', 'Terapia infantil')->count();
-$numFilasTerapiaOcupacional = Cliente::where('especialidad', 'Terapia ocupacional')->count();
-$numFilasTerapiaLenguaje = Cliente::where('especialidad', 'Terapia de lenguaje')->count();
+$clienteFilasPsicologia = Cliente::where('especialidad', 'Psicologia')->count();
+$clienteFilasTerapiaFisica = Cliente::where('especialidad', 'Terapia fisica')->count();
+$clienteFilasTerapiaInfantil = Cliente::where('especialidad', 'Terapia infantil')->count();
+$clienteFilasTerapiaOcupacional = Cliente::where('especialidad', 'Terapia ocupacional')->count();
+$clienteFilasTerapiaLenguaje = Cliente::where('especialidad', 'Terapia lenguaje')->count();
 
 // Calcular el porcentaje para cada especialidad
-$porcentajePsicologia = ($totalFilas != 0) ? ($numFilasPsicologia / $totalFilas) * 100 : 0;
-$porcentajeTerapiaFisica = ($totalFilas != 0) ? ($numFilasTerapiaFisica / $totalFilas) * 100 : 0;
-$porcentajeTerapiaInfantil = ($totalFilas != 0) ? ($numFilasTerapiaInfantil / $totalFilas) * 100 : 0;
-$porcentajeTerapiaOcupacional = ($totalFilas != 0) ? ($numFilasTerapiaOcupacional / $totalFilas) * 100 : 0;
-$porcentajeTerapiaLenguaje = ($totalFilas != 0) ? ($numFilasTerapiaLenguaje / $totalFilas) * 100 : 0;
+$porcentajePsicologia = ($totalFilas != 0) ? ($clienteFilasPsicologia / $totalFilas) * 100 : 0;
+$porcentajeTerapiaFisica = ($totalFilas != 0) ? ($clienteFilasTerapiaFisica / $totalFilas) * 100 : 0;
+$porcentajeTerapiaInfantil = ($totalFilas != 0) ? ($clienteFilasTerapiaInfantil / $totalFilas) * 100 : 0;
+$porcentajeTerapiaOcupacional = ($totalFilas != 0) ? ($clienteFilasTerapiaOcupacional / $totalFilas) * 100 : 0;
+$porcentajeTerapiaLenguaje = ($totalFilas != 0) ? ($clienteFilasTerapiaLenguaje / $totalFilas) * 100 : 0;
 
 ?>
 
@@ -43,7 +43,7 @@ $porcentajeTerapiaLenguaje = ($totalFilas != 0) ? ($numFilasTerapiaLenguaje / $t
                                 <div class="row no-gutters align-items-center">
                                     <div class="col mr-2">
                                         <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Numero de citas totales</div>
-                                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo number_format($numFilas, 0, '.', ','); ?></div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo number_format($clienteFilas, 0, '.', ','); ?></div>
                                     </div>
                                     <div class="col-auto">
                                         <i class="fas fa-book fa-2x text-gray-300"></i>
@@ -61,7 +61,7 @@ $porcentajeTerapiaLenguaje = ($totalFilas != 0) ? ($numFilasTerapiaLenguaje / $t
                                 <div class="row no-gutters align-items-center">
                                     <div class="col mr-2">
                                         <div class="text-xs font-weight-bold text-success text-uppercase mb-1">cuentas en el sistema</div>
-                                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo number_format($numFilas, 0, '.', ','); ?></div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo number_format($userFilas, 0, '.', ','); ?></div>
                                     </div>
                                     <div class="col-auto">
                                         <i class="fas fa-address-book fa-2x text-gray-300"></i>
@@ -78,7 +78,7 @@ $porcentajeTerapiaLenguaje = ($totalFilas != 0) ? ($numFilasTerapiaLenguaje / $t
                                 <div class="row no-gutters align-items-center">
                                     <div class="col mr-2">
                                         <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Cantidad de citas cumplidas</div>
-                                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo number_format($numFilasCumplido, 0, '.', ','); ?></div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo number_format($clienteFilasCumplido, 0, '.', ','); ?></div>
                                     </div>
                                     <div class="col-auto">
                                         <i class="fas fa-check-square fa-2x text-gray-300"></i>
@@ -95,7 +95,7 @@ $porcentajeTerapiaLenguaje = ($totalFilas != 0) ? ($numFilasTerapiaLenguaje / $t
                                 <div class="row no-gutters align-items-center">
                                     <div class="col mr-2">
                                         <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Cantidad de citas pendientes</div>
-                                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo number_format($numFilasPendiente, 0, '.', ','); ?></div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo number_format($clienteFilasPendiente, 0, '.', ','); ?></div>
                                     </div>
                                     <div class="col-auto">
                                     <i class="fas fa-question-circle fa-2x text-gray-300"></i>
@@ -151,7 +151,7 @@ $porcentajeTerapiaLenguaje = ($totalFilas != 0) ? ($numFilasTerapiaLenguaje / $t
                                     <div class="card bg-primary text-black shadow">
                                         <div class="card-body">
                                             Citas con Psicologia
-                                            <div class="text-black-50 small"><?php echo number_format($numFilasPsicologia, 0, '.', ','); ?></div>
+                                            <div class="text-black-50 small"><?php echo number_format($clienteFilasPsicologia, 0, '.', ','); ?></div>
                                         </div>
                                     </div>
                                 </div>
@@ -159,7 +159,7 @@ $porcentajeTerapiaLenguaje = ($totalFilas != 0) ? ($numFilasTerapiaLenguaje / $t
                                     <div class="card bg-success text-black shadow">
                                         <div class="card-body">
                                         Citas con Terapia fisica
-                                            <div class="text-black-50 small"><?php echo number_format($numFilasTerapiaFisica, 0, '.', ','); ?></div>
+                                            <div class="text-black-50 small"><?php echo number_format($clienteFilasTerapiaFisica, 0, '.', ','); ?></div>
                                         </div>
                                     </div>
                                 </div>
@@ -167,7 +167,7 @@ $porcentajeTerapiaLenguaje = ($totalFilas != 0) ? ($numFilasTerapiaLenguaje / $t
                                     <div class="card bg-info text-black shadow">
                                         <div class="card-body">
                                         Citas con Terapia infantil
-                                            <div class="text-black-50 small"><?php echo number_format($numFilasTerapiaInfantil, 0, '.', ','); ?></div>
+                                            <div class="text-black-50 small"><?php echo number_format($clienteFilasTerapiaInfantil, 0, '.', ','); ?></div>
                                         </div>
                                     </div>
                                 </div>
@@ -175,7 +175,7 @@ $porcentajeTerapiaLenguaje = ($totalFilas != 0) ? ($numFilasTerapiaLenguaje / $t
                                     <div class="card bg-warning text-black shadow">
                                         <div class="card-body">
                                         Citas con Terapia ocupacional
-                                            <div class="text-black-50 small"><?php echo number_format($numFilasTerapiaOcupacional, 0, '.', ','); ?></div>
+                                            <div class="text-black-50 small"><?php echo number_format($clienteFilasTerapiaOcupacional, 0, '.', ','); ?></div>
                                         </div>
                                     </div>
                                 </div>
@@ -183,7 +183,7 @@ $porcentajeTerapiaLenguaje = ($totalFilas != 0) ? ($numFilasTerapiaLenguaje / $t
                                     <div class="card bg-danger text-black shadow">
                                         <div class="card-body">
                                         Citas con Terapia de lenguaje
-                                            <div class="text-black-50 small"><?php echo number_format($numFilasTerapiaLenguaje, 0, '.', ','); ?></div>
+                                            <div class="text-black-50 small"><?php echo number_format($clienteFilasTerapiaLenguaje, 0, '.', ','); ?></div>
                                         </div>
                                     </div>
                                 </div>

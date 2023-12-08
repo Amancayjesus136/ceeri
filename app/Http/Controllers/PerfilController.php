@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\profile;
+
 
 
 class PerfilController extends Controller
@@ -14,8 +16,9 @@ class PerfilController extends Controller
      */
     public function index()
     {
-        $perfiles = User::all();
-        return view('perfil.index', compact('perfiles',));
+        $user = auth()->user();
+
+        return view('perfil.index', compact('user'));
     }
 
     /**
@@ -55,7 +58,15 @@ class PerfilController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $user = User::FindOrFail($id);
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->descripcion = $request->descripcion;
+        $user->telefono = $request->telefono;
+
+
+        $user->save();
+        return redirect()->back()->with('successEdit', 'Su perfil se ha editado correctamente');
     }
 
     /**

@@ -226,7 +226,7 @@
 
             // Define el rango de horas no permitido (de 8:00 a 18:00)
             var horaInicio = 18;
-            var horaFin = 8;
+            var horaFin = 7;
 
             // Obtiene la hora de la fecha y hora seleccionadas
             var horaSeleccionada = selectedDateTime.getHours();

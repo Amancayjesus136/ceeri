@@ -19,11 +19,7 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $fillable = [
-        'name',
-        'email',
-        'password',
-    ];
+    
 
     /**
      * The attributes that should be hidden for serialization.
@@ -50,34 +46,22 @@ class UserData extends Model
 {
     use HasFactory;
 
-    protected $table = 'datos_usuarios';
+    protected $table = 'users';
 
     protected $fillable = [
-        'dni',
-        'codigo_trabajador',
-        'nombres',
-        'apellido_paterno',
-        'apellido_materno',
-        'sexo',
-        'fecha_nacimiento',
-        'edad',
-        'estado_civil',
-        'nacionalidad',
-        'otra_nacionalidad',
-        'procedencia',
-        'condicion_laboral',
-        'region_laboral',
-        'cargo',
-        'unidad',
-        'oficina',
-        'correo_corporativo',
-        'correo_personal',
-        'profesiones',
-        'fecha_ingreso',
-        'fecha_cese',
+        'name',
+        'email',
+        'password',
+        'descripcion',
+        'telefono'
     ];
+    public function profile()
+    {
+        return $this->hasOne(profile::class);
+    }
 }
 
+    
 // class Evento extends Model
 // {
 //     use HasFactory;
