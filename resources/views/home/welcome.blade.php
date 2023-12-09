@@ -1160,7 +1160,7 @@
                         <div class="card">
                             <div class="card-header align-items-center d-flex">
                                 <div class="flex-shrink-0">
-                                    
+
                                 </div>
                             </div>
                             <div class="card-body">
@@ -1173,7 +1173,7 @@
                                     diaria y reintegración a las actividades deportivas.
                                 </div>
                                 <br>                          
-                                <h2>profesional a cargo: Juanito Alcachofa</h2>
+                                
 
                             </div>
                         </div>
@@ -2232,7 +2232,7 @@
         <div class="card">
             <div class="card-header align-items-center d-flex">
                 <div class="flex-shrink-0">
-                    
+                <h2>profesional a cargo: Dolores Delano</h2>
                 </div>
             </div>
             <div class="card-body">
@@ -2247,7 +2247,7 @@
                     como los aspectos físicos del estado del paciente en función del contexto total del tratamiento.   
                 </div>
                 <br>                          
-                <h2>profesional a cargo: Dolores Delano</h2>
+                
             </div>
         </div>
     </div>
@@ -2287,13 +2287,13 @@
                     <div id="carouselExampleInterval4" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active" data-bs-interval="10000">
-                                <img src="assets/images/tinfantil/img1.png" alt="First slide" width="100%"/>
+                                <img src="assets/images/tinfantil/inf2.png" alt="First slide" width="100%"/>
                             </div>
                             <div class="carousel-item" data-bs-interval="2000">
-                                <img src="assets/images/tinfantil/img1}2.png" class="d-block w-100" alt="two slide" width="100%" />
+                                <img src="assets/images/tinfantil/img1.png" class="d-block w-100" alt="two slide" width="100%" />
                             </div>
                             <div class="carousel-item">
-                                <img src="assets/images/tinfantil/img3.png" class="d-block w-100" alt="There slide" width="100%"/>
+                                <img src="assets/images/tinfantil/infan.png" class="d-block w-100" alt="There slide" width="100%"/>
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval4" data-bs-slide="prev">
@@ -2319,8 +2319,7 @@
     <div class="col-xl-6">
         <div class="card">
             <div class="card-header align-items-center d-flex">
-                <div class="flex-shrink-0">
-                    
+                <div class="flex-shrink-0">            
                 </div>
             </div>
             <div class="card-body">
@@ -2341,7 +2340,7 @@
                     <li>Da mejores herramientas de enseñanza a padres y madres</li>
                 </div>
                 <br>                          
-                <h2>profesional a cargo: Aquiles Bailo</h2>
+               
             </div>
         </div>
     </div>
