@@ -64,7 +64,6 @@ class PerfilController extends Controller
     {
         $user = User::FindOrFail($id);
         $user->name = $request->name;
-        $user->email = $request->email;
         $user->descripcion = $request->descripcion;
         $user->telefono = $request->telefono;
         $user->save();

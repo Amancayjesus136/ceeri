@@ -67,9 +67,9 @@ $rutaImagen = "assets/images/fotoPerfilSmall/{$primeraLetra}.png";
                         <input type="text" class="form-control" id="name" name="name" value="{{ $user->name }}" oninput="limitarCaracteres(this, 255)">
                     </div>
                     <div class="col-md-6">
-                        <label for="email" class="form-label">Correo</label>
-                        <input type="text" class="form-control" id="email" name="email" value="{{ $user->email }}" oninput="limitarCaracteres(this, 255)">
-                    </div>
+                        <label for="telefono" class="form-label">Teléfono</label>
+                        <input type="text" class="form-control" id="telefono" name="telefono" value="{{ $user->telefono }}" oninput="limitarCaracteres(this, 30)">
+                    </div> 
                 </div>
                 
                 <div class="row mb-4">
@@ -77,10 +77,6 @@ $rutaImagen = "assets/images/fotoPerfilSmall/{$primeraLetra}.png";
                         <label for="descripcion" class="form-label">Descripcion</label>
                         <textarea class="form-control" id="descripcion" name="descripcion" rows="4" oninput="limitarCaracteres(this, 500)">{{ $user->descripcion }}</textarea>
                     </div>
-                    <div class="col-md-6">
-                        <label for="telefono" class="form-label">Teléfono</label>
-                        <input type="text" class="form-control" id="telefono" name="telefono" value="{{ $user->telefono }}" oninput="limitarCaracteres(this, 30)">
-                    </div>   
                 </div>                                                        
                 <div class="row mb-3">
                     <div class="col-md-6">
