@@ -83,6 +83,10 @@ $rutaImagen = "assets/images/fotoPerfilSmall/{$primeraLetra}.png";
                         <button type="submit" class="btn btn-primary">Actualizar</button>
                         <a href="{{ route('perfil.index') }}" class="btn btn-success"><i class="ri-edit-box-line align-bottom"></i> Volver</a>    
                     </div>
+                    <div class="col-md-6">
+                        <label for="foto" class="form-label">foto</label>
+                        <input type="file" class="form-control" id="foto" name="foto" value="{{ $user->foto }}">
+                    </div>
                 </div>
             </form>
         </div>

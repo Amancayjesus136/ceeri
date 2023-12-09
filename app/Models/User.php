@@ -54,6 +54,7 @@ class UserData extends Model
         'password',
         'descripcion',
         'telefono',
+        'foto',
         'created_at'
 
     ];

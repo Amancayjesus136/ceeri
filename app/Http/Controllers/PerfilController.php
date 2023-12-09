@@ -66,6 +66,7 @@ class PerfilController extends Controller
         $user->name = $request->name;
         $user->descripcion = $request->descripcion;
         $user->telefono = $request->telefono;
+        $user->foto = $request->foto;
         $user->save();
         return redirect()->route('perfil.index')->with('successEdit', 'Su perfil se ha editado correctamente');
     }

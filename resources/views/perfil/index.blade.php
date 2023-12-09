@@ -79,6 +79,7 @@ $rutaImagen = "assets/images/fotoPerfilSmall/{$primeraLetra}.png";
                     <h5>Email: {{ $user->email }}</h3> <br><br>
                     <h5>telefono: {{ $user->telefono }}</h5> <br><br>
                     <h5>se unio el: {{ $user->created_at }}</h5>
+                    <h5>foto: {{ $user->foto }}</h5>
                 </div>
             </div>
         </div>
