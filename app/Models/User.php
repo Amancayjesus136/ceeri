@@ -53,7 +53,9 @@ class UserData extends Model
         'email',
         'password',
         'descripcion',
-        'telefono'
+        'telefono',
+        'created_at'
+
     ];
     public function profile()
     {

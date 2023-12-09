@@ -1,4 +1,6 @@
 @extends('layouts.admin')
+@extends('layouts.footer')
+
 @section('content')
 
 <style>

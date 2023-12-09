@@ -20,6 +20,7 @@ class PerfilController extends Controller
 
         return view('perfil.index', compact('user'));
     }
+    
 
     /**
      * Show the form for creating a new resource.
@@ -50,7 +51,10 @@ class PerfilController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $user = auth()->user();
+
+        return view('perfil.edit', compact('user'));
+
     }
 
     /**
@@ -63,10 +67,8 @@ class PerfilController extends Controller
         $user->email = $request->email;
         $user->descripcion = $request->descripcion;
         $user->telefono = $request->telefono;
-
-
         $user->save();
-        return redirect()->back()->with('successEdit', 'Su perfil se ha editado correctamente');
+        return redirect()->route('perfil.index')->with('successEdit', 'Su perfil se ha editado correctamente');
     }
 
     /**

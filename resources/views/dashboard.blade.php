@@ -31,6 +31,7 @@ $porcentajeTerapiaLenguaje = ($totalFilas != 0) ? ($clienteFilasTerapiaLenguaje 
 ?>
 
 @extends('layouts.admin')
+@extends('layouts.footer')
 
 
 @section('content')

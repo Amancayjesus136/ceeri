@@ -114,7 +114,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
     // rutas de perfil 
     Route::resource('perfil', PerfilController::class);
-
+    
 
 
 

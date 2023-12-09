@@ -1,4 +1,6 @@
 @extends('layouts.admin')
+@extends('layouts.footer')
+
 @section('content')
 <div class="card">
             <div class="card-body">
