@@ -196,3 +196,4 @@ $porcentajeTerapiaLenguaje = ($totalFilas != 0) ? ($clienteFilasTerapiaLenguaje 
 @endsection
 
 
+

@@ -7,8 +7,6 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\profile;
 
-
-
 class PerfilController extends Controller
 {
     /**
