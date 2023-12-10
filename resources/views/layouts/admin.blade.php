@@ -425,6 +425,8 @@ const nacionalidadSelect = document.getElementById('nacionalidadSelect');
 
     <!-- App js -->
     <script src="assets/js/app.js"></script>
+
+    
 </body>
 
 

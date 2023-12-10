@@ -303,3 +303,4 @@ document.addEventListener('DOMContentLoaded', function () {
 <!-- Left Sidebar End -->
 <!-- Vertical Overlay-->
 <div class="vertical-overlay"></div>
+<script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
