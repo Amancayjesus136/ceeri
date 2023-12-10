@@ -48,13 +48,13 @@ $rutaImagen = "assets/images/fotoPerfilSmall/{$primeraLetra}.png";
 
     @if ($user)
         <div class="row">
-            <div class="col-6">
+            <div class="col-4">
                 <img src="{{ asset($rutaImagen) }}" alt="Foto de perfil" style="width: 140px; height: 140px; border-radius: 50%;">
             </div>
 
-            <div class="col-4">
+            <div class="col-md-6">
         <!-- Información del usuario -->
-        <div class="card">
+        <div class="card mt-3">
             <div class="card-body d-flex flex-row">
                 <div>
                     <h1 class="card-title">{{ $user->name }}</h1>
@@ -73,9 +73,9 @@ $rutaImagen = "assets/images/fotoPerfilSmall/{$primeraLetra}.png";
 </div>
             <div>
                 <!-- Información adicional -->
+                <h3>INFORMACION</h3>
                 <div class="card">
                     <div class="card-body">
-                        <h3>Información</h3>
                         <h5>Nombre completo: {{ $user->name }}</h5>
                         <h5>Email: {{ $user->email }}</h5>
                         <h5>Teléfono: {{ $user->telefono }}</h5>
