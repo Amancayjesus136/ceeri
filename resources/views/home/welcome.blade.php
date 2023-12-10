@@ -2318,7 +2318,7 @@
                     <div id="carouselExampleInterval5" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active" data-bs-interval="10000">
-                                <img src="assets/images/psicologia/psi1.png" alt="First slide" width="100%"/>
+                                <img src="assets/images/psicologia/psi1.jpeg" alt="First slide" width="100%"/>
                             </div>
                             <div class="carousel-item" data-bs-interval="2000">
                                 <img src="assets/images/psicologia/psi2.png" class="d-block w-100" alt="two slide"width="100%" />
@@ -2340,37 +2340,43 @@
 
                 <div class="d-none code-view">
                     <pre class="language-markup" style="height: 375px;">
-
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Contenido -->
-    <div class="col-xl-6">
+    <div class="col-xl-6" >
         <div class="card">
-            <div class="card-header align-items-center d-flex">
-                <div class="flex-shrink-0">
-                    
+            <div>
+                <h2 class="text-center">Lista de Tareas</h2>
+            </div><hr>
+
+            <span class="text-justify-center" style="font-size: 20px;">
+                En el Centro de Especialidad en Psicología, te extendemos una cálida bienvenida a un santuario dedicado a la exploración de la mente y el cultivo del bienestar emocional. En este espacio, nuestra misión va más allá de la educación convencional; aquí, nos sumergimos en un mar de aprendizaje enriquecedor donde los fundamentos de la psicología se entrelazan con una comprensión profunda y una atención dedicada a cada individuo.
+            </span><br>
+
+            <ul>
+                <div style="margin-left: 10px; margin-top: 10px;">
+                    <span class="checkmark" style="font-size: 15px;">&#x2713; ESTRATEGIAS DE APRENDIZAJE</span>
                 </div>
-            </div>
-            <div class="card-body">
-            <div class="text-muted">
-            </b>
-            
-            <h2>Lista de Tareas</h2>
-            
-            <ul class="listado-tareas">
-            <span  class="checkmark">&#x2713;</span> ESTRATEGIAS DE APRENDIZAJE
-            <span class="checkmark">&#x2713;HABILIDADES SOCIALES BASADAS EN RESPETO Y EMPATIA</span>
-            <li><label class="checkmark">&#x2713;</label> Tarea 3</li>
+                <div style="margin-left: 10px; margin-top: 10px;">
+                    <span class="checkmark" style="font-size: 15px;">&#x2713; ESTRATEGIAS DE APRENDIZAJE</span>
+                </div>
+                <div style="margin-left: 10px; margin-top: 10px;">
+                    <span class="checkmark" style="font-size: 15px;">&#x2713; ESTRATEGIAS DE APRENDIZAJE</span>
+                </div>
+                <div style="margin-left: 10px; margin-top: 10px;">
+                    <span class="checkmark" style="font-size: 15px;">&#x2713; ESTRATEGIAS DE APRENDIZAJE</span>
+                </div>
+                <div style="margin-left: 10px; margin-top: 10px;">
+                    <span class="checkmark" style="font-size: 15px;">&#x2713; ESTRATEGIAS DE APRENDIZAJE</span>
+                </div>
             </ul>
-
         </div>
-    </div>
-    <!-- Contenido -->
-
+    </div>    
 </div>
+
+
 <!-- codigo de contenido para todos -->
 </div>
         </div>
