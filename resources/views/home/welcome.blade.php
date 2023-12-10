@@ -649,7 +649,7 @@
                         <div class="col-lg-8">
                             <div class="text-center mb-5">
                                 <h1 class="mb-3 ff-secondary fw-semibold text-capitalize lh-base">LO QUE OFRECEMOS</h1>
-                                <p class="text-muted mb-4">Ofrecemos nuestra experiencia, seguridad y sobre todo transmitir confianza mostrando nuestros trabajo de día a día.</p>
+                                <p class="text-muted mb-4">Experiencia, Confianza y Resultados: Transmitimos confianza con nuestra experiencia probada. Cada día, entregamos resultados tangibles que respaldan nuestra dedicación a tu bienestar.</p>
                             </div>
                         </div>
                     </div>
@@ -658,13 +658,13 @@
                         <div class="col-lg-4 col-md-6">
                             <div class="card">
                                 <div class="card-body">
-                                    <img src="assets/images/N1.jpg" alt="" class="img-fluid rounded" />
+                                    <img src="assets/images/portadafsi.png" alt="" class="img-fluid rounded" />
                                 </div>
                                 <div class="card-body">
                                     <a href="javascript:void(0);">
                                         <h5>Terapia Física y Rehabilitación</h5>
                                     </a>
-                                    <p class="text-muted fs-14">Tratamiento que se enfoca en mejorar la función física, la movilidad y la calidad de vida de las personas.</p>
+                                    <p class="text-muted fs-14"> Enfocada en mejorar la función física y movilidad, este tratamiento dedicado potencia la calidad de vida, abordando de manera personalizada las necesidades individuales para lograr una recuperación.</p>
                                     <div>
                                         <a href="#!"  data-bs-toggle="modal" data-bs-target="#tfisica" class="link-success">Vista <i class="ri-arrow-right-line align-bottom ms-1"></i></a>
                                     </div>
@@ -674,13 +674,13 @@
                         <div class="col-lg-4 col-md-6">
                             <div class="card">
                                 <div class="card-body">
-                                    <img src="assets/images/N2.jpg" alt="" class="img-fluid rounded" />
+                                    <img src="assets/images/portadalgj.png" alt="" class="img-fluid rounded" />
                                 </div>
                                 <div class="card-body">
                                     <a href="javascript:void(0);">
                                         <h5>Terapia de lenguaje</h5>
                                     </a>
-                                    <p class="text-muted fs-14">Ayuda a personas con problemas y trastornos del habla, del lenguaje y la comunicación, así como afecciones para la deglución y la respiración.</p>
+                                    <p class="text-muted fs-14">Apoyamos a personas con trastornos del habla, lenguaje y comunicación, además de dificultades en la deglución y respiración, mejorando la calidad de vida con estrategias personalizadas y efectivas.</p>
                         
                                     <div>
                                         <a href="#!"  data-bs-toggle="modal" data-bs-target="#tlenguaje" class="link-success">Vista <i class="ri-arrow-right-line align-bottom ms-1"></i></a>
@@ -709,13 +709,13 @@
                         <div class="col-lg-4 col-md-6">
                             <div class="card">
                                 <div class="card-body">
-                                    <img src="assets/images/N4.jpg" alt="" class="img-fluid rounded" />
+                                    <img src="assets/images/portadainf.png" alt="" class="img-fluid rounded" />
                                 </div>
                                 <div class="card-body">
                                     <a href="javascript:void(0);">
                                         <h5>Terapia infantil</h5>
                                     </a>
-                                    <p class="text-muted fs-14">Se basa de diversas técnicas y métodos para ayudar a los pequeños que tienen problemas con sus emociones o conductas.</p>
+                                    <p class="text-muted fs-14">Forjamos un desarrollo saludable en los más pequeños mediante métodos especializados que cultivan habilidades emocionales y conductuales esenciales. Nuestra misión es lograr resultados impactantes que perduren en su viaje hacia el bienestar.</p>
                                     <div>
                                         <a href="#!" data-bs-toggle="modal" data-bs-target="#tinfantil" class="link-success">Vista <i class="ri-arrow-right-line align-bottom ms-1"></i></a>
                                     </div>
@@ -725,14 +725,15 @@
                         <div class="col-lg-4 col-md-6">
                             <div class="card">
                                 <div class="card-body">
-                                <img src="assets/images/N5.jpg" alt="" class="img-fluid rounded" />
+                                <img src="assets/images/portadapsi.jpg" alt="" class="img-fluid rounded" />
 
                                 </div>
                                 <div class="card-body">
                                     <a href="javascript:void(0);">
                                         <h5>Psicología</h5>
                                     </a>
-                                    <p class="text-muted fs-14">La psicología social es el estudio de las relaciones sociales y cómo estas influyen y modifican la conducta, los pensamientos y sentimientos de las personas.</p>
+                                    <p class="text-muted fs-14">
+                                    La psicología social investiga cómo las relaciones sociales influyen en la conducta, pensamientos y emociones. Explora dinámicas grupales, normas sociales y percepciones colectivas, proporcionando insights valiosos para mejorar las interacciones humanas y cultivar relaciones.</p>
                                     <div>
                                         <a href="#!"  data-bs-toggle="modal" data-bs-target="#psicologia"  class="link-success">Vista <i class="ri-arrow-right-line align-bottom ms-1"></i></a>
                                     </div>
@@ -1108,7 +1109,7 @@
     <div class="modal-dialog modal-xl">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 class="modal-title" id="crearModalLabel">Terapia Fisica y Rehabilitación</h2>
+                <h2 class="modal-title" id="crearModalLabel"></h2>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
             </div>
             <div class="modal-body">
@@ -1127,10 +1128,10 @@
                                     <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
                                         <div class="carousel-inner">
                                             <div class="carousel-item active" data-bs-interval="10000">
-                                                <img src="assets/images/tfisica/fisica.png" class="d-block w-100" alt="First slide"/>
+                                                <img src="assets/images/tfisica/img1.png" class="d-block w-100" alt="First slide"/>
                                             </div>
                                             <div class="carousel-item active" data-bs-interval="2000">
-                                                <img src="assets/images/tfisica/activo.png" class="d-block w-100" alt="two slide" width="100%" />
+                                                <img src="assets/images/tfisica/img2.png" class="d-block w-100" alt="two slide" width="100%" />
                                             </div>
                                             <div class="carousel-item active">
                                                 <img src="assets/images/tfisica/img3.png" class="d-block w-100" alt="There slide" width="100%"/>
@@ -1156,28 +1157,48 @@
                     </div>
 
                     <!-- Contenido -->
-                    <div class="col-xl-6">
-                        <div class="card">
-                            <div class="card-header align-items-center d-flex">
-                                <div class="flex-shrink-0">
+                    <div class="col-xl-6" >
+        <div class="card">
+            <div>
+                <h2 class="text-center">Terapia Fisica y Rehabilitación</h2>
+            </div><hr>
 
-                                </div>
-                            </div>
-                            <div class="card-body">
-                                <div class="text-muted">
-                                    La Terapia Física y Rehabilitación es una especialidad que tiene como objetivo recuperar y mejorar la 
-                                    capacidad funcional y calidad de vida de aquellas personas que sufren de discapacidad por una enfermedad
-                                    o lesión. A diferencia de otras áreas  médicas, la Terapia Física no se enfoca únicamente en curar,
-                                    sino en ayudarle al paciente a mejorar su calidad de vida facilitando una mayor movilidad e 
-                                    independencia, disminuyendo el dolor y ayudándole a recuperar diferentes capacidades de la vida 
-                                    diaria y reintegración a las actividades deportivas.
-                                </div>
-                                <br>                          
-                                
+            <span class="text-justify-center" style="font-size: 15px;">
+            En nuestro Centro de Especialidad en Salud Física, te damos la bienvenida a un espacio dedicado a potenciar tu recuperación y bienestar físico. Aquí, nuestra misión se enfoca en ir más allá de la terapia convencional; nos sumergimos en un ambiente de aprendizaje enriquecedor donde la terapia física y la rehabilitación se entrelazan para ofrecer un cuidado integral. En este santuario de salud, no solo buscamos entender tus desafíos físicos, sino también guiarte hacia una recuperación completa y duradera.
+            </span><br>
 
-                            </div>
-                        </div>
-                    </div>
+            <ul>
+                <div style="margin-left: 10px; margin-top: 10px;">
+                    <span class="checkmark" style="font-size: 15px;">&#x2713; MAGNETOTERAPIA DE 360°</span>
+                </div>
+                <div style="margin-left: 10px; margin-top: 10px;">
+                    <span class="checkmark" style="font-size: 15px;">&#x2713; LASERTERAPIA DE ALTA INTENSIDAD</span>
+                </div>
+                <div style="margin-left: 10px; margin-top: 10px;">
+                    <span class="checkmark" style="font-size: 15px;">&#x2713; TERAPIA COMBINADA</span>
+                </div>
+                <div style="margin-left: 10px; margin-top: 10px;">
+                    <span class="checkmark" style="font-size: 15px;">&#x2713; ULTRASONIDO</span>
+                </div>
+                <div style="margin-left: 10px; margin-top: 10px;">
+                    <span class="checkmark" style="font-size: 15px;">&#x2713; ELECTROTERAPIA</span>
+                </div>
+
+                <div style="margin-left: 10px; margin-top: 10px;">
+                    <span class="checkmark" style="font-size: 15px;">&#x2713; ONDAS DE CHOQUE</span>
+                </div>
+
+                <div style="margin-left: 10px; margin-top: 10px;">
+                    <span class="checkmark" style="font-size: 15px;">&#x2713; PRESOTERAPIA</span>
+                </div>
+
+                <div style="margin-left: 10px; margin-top: 10px;">
+                    <span class="checkmark" style="font-size: 15px;">&#x2713; TERAPIA MANUAL</span>
+                </div>
+
+            </ul>
+        </div>
+    </div> 
                     <!-- Contenido -->
 
                 </div>
@@ -2020,7 +2041,8 @@
 <!-- RONAL -->
 
 
-<!-- Modal para Crear Nuevo Tema -->
+
+<!-- Modal para terapia lenguaje detalles -->
 <div class="modal fade" id="tlenguaje" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl">
         <div class="modal-content">
@@ -2207,7 +2229,7 @@
     <div class="modal-dialog modal-xl">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 class="modal-title" id="crearModalLabel">Terapia infantil</h2>
+                <h2 class="modal-title" id="crearModalLabel"></h2>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
             </div>
             <div class="modal-body">
@@ -2226,13 +2248,13 @@
                     <div id="carouselExampleInterval4" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active" data-bs-interval="10000">
-                                <img src="assets/images/tinfantil/inf2.png" alt="First slide" width="100%"/>
+                                <img src="assets/images/tinfantil/inf1.png" alt="First slide" width="100%"/>
                             </div>
                             <div class="carousel-item" data-bs-interval="2000">
-                                <img src="assets/images/tinfantil/img1.png" class="d-block w-100" alt="two slide" width="100%" />
+                                <img src="assets/images/tinfantil/inf2.png" class="d-block w-100" alt="two slide" width="100%" />
                             </div>
                             <div class="carousel-item">
-                                <img src="assets/images/tinfantil/infan.png" class="d-block w-100" alt="There slide" width="100%"/>
+                                <img src="assets/images/tinfantil/inf3.png" class="d-block w-100" alt="There slide" width="100%"/>
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval4" data-bs-slide="prev">
@@ -2255,34 +2277,56 @@
     </div>
 
     <!-- Contenido -->
-    <div class="col-xl-6">
+    <div class="col-xl-6" >
         <div class="card">
-            <div class="card-header align-items-center d-flex">
-                <div class="flex-shrink-0">            
+            <div>
+                <h2 class="text-center">Terapia Infantil</h2>
+            </div><hr>
+
+            <span class="text-justify-center" style="font-size: 15px;">
+            Te damos la bienvenida a un espacio dedicado al florecimiento emocional de los más pequeños a través de terapias neurológicas y traumatológicas. Aquí, rompemos con lo convencional, sumergiéndonos en un océano de descubrimiento donde la psicología infantil se fusiona con atención personalizada y comprensión profunda. Guiamos a cada niño en su viaje único hacia el bienestar, abordando terapias neurológicas y traumatológicas para un desarrollo integral.
+            </span><br>
+
+            <ul>
+                <div style="margin-left: 10px; margin-top: 10px;">
+                    <span class="checkmark" style="font-size: 15px;">&#x2713; ESTIMULACION TEMPRANA</span>
                 </div>
-            </div>
-            <div class="card-body">
-                <div class="text-muted">
-                    La terapia o psicoterapia infantil es una forma de intervención terapéutica que busca mejorar el bienestar 
-                    emocional y social del niño y de la niña. Se basa de diversas técnicas y métodos para ayudar a los pequeños 
-                    que tienen problemas con sus emociones o conductas. Una de sus características es que usa el juego como punto 
-                    clave. Además, hace que la familia, escuela y personas cercanas se involucren en el proceso de tratamiento 
-                    del niño o de la niña. La terapia para niños y niñas se desarrolla a partir de muchas experiencias y actividades. 
-                    Además, en ella se usa mucho el lenguaje y la comunicación verbal para interactuar con el menor, pero debe 
-                    adaptarse a la etapa y compresión de cada pequeño. Así como a las características cognitivas y de pensamiento 
-                    de cada niño o niña.
-                    <b>Beneficios de la terapia infantil:</b>
-                    <br>
-                    <li>Trata diversos problemas</li>
-                    <li>Facilita el desarrollo de habilidades</li>
-                    <li>Controla las emociones</li>
-                    <li>Da mejores herramientas de enseñanza a padres y madres</li>
+                <div style="margin-left: 10px; margin-top: 10px;">
+                    <span class="checkmark" style="font-size: 15px;">&#x2713; PARALISIS CEREBRAL</span>
                 </div>
-                <br>                          
-               
-            </div>
+                <div style="margin-left: 10px; margin-top: 10px;">
+                    <span class="checkmark" style="font-size: 15px;">&#x2713; TORSIONES DE MMII</span>
+                </div>
+                <div style="margin-left: 10px; margin-top: 10px;">
+                    <span class="checkmark" style="font-size: 15px;">&#x2713; HABILIDADES SOCIALES</span>
+                </div>
+                <div style="margin-left: 10px; margin-top: 10px;">
+                    <span class="checkmark" style="font-size: 15px;">&#x2713; MODIFICACION DE CONDUCTA</span>
+                </div>
+
+                <div style="margin-left: 10px; margin-top: 10px;">
+                    <span class="checkmark" style="font-size: 15px;">&#x2713; TERAPIA DE APRENDISAJE</span>
+                </div>
+
+                <div style="margin-left: 10px; margin-top: 10px;">
+                    <span class="checkmark" style="font-size: 15px;">&#x2713; PSICOMOTRICIDAD </span>
+                </div>
+
+                <div style="margin-left: 10px; margin-top: 10px;">
+                    <span class="checkmark" style="font-size: 15px;">&#x2713; DISTROFIAS MUSCULARES </span>
+                </div>
+
+                <div style="margin-left: 10px; margin-top: 10px;">
+                    <span class="checkmark" style="font-size: 15px;">&#x2713; POST OPERADOS </span>
+                </div>
+
+                <div style="margin-left: 10px; margin-top: 10px;">
+                    <span class="checkmark" style="font-size: 15px;">&#x2713; PIE PLANO </span>
+                </div>
+                
+            </ul>
         </div>
-    </div>
+    </div> 
     <!-- Contenido -->
 
 </div>
@@ -2299,7 +2343,7 @@
     <div class="modal-dialog modal-xl">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="crearModalLabel">Psicologia</h5>
+                <h5 class="modal-title" id="crearModalLabel"></h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
             </div>
             <div class="modal-body">
@@ -2348,10 +2392,10 @@
     <div class="col-xl-6" >
         <div class="card">
             <div>
-                <h2 class="text-center">Lista de Tareas</h2>
+                <h2 class="text-center">Bienvenidos a la especialidad de Psicologia</h2>
             </div><hr>
 
-            <span class="text-justify-center" style="font-size: 20px;">
+            <span class="text-justify-center" style="font-size: 15px;">
                 En el Centro de Especialidad en Psicología, te extendemos una cálida bienvenida a un santuario dedicado a la exploración de la mente y el cultivo del bienestar emocional. En este espacio, nuestra misión va más allá de la educación convencional; aquí, nos sumergimos en un mar de aprendizaje enriquecedor donde los fundamentos de la psicología se entrelazan con una comprensión profunda y una atención dedicada a cada individuo.
             </span><br>
 
@@ -2360,16 +2404,36 @@
                     <span class="checkmark" style="font-size: 15px;">&#x2713; ESTRATEGIAS DE APRENDIZAJE</span>
                 </div>
                 <div style="margin-left: 10px; margin-top: 10px;">
-                    <span class="checkmark" style="font-size: 15px;">&#x2713; ESTRATEGIAS DE APRENDIZAJE</span>
+                    <span class="checkmark" style="font-size: 15px;">&#x2713; HABILIDADES SOCIALES BASADAS EN RESPETO Y EMPATIA</span>
                 </div>
                 <div style="margin-left: 10px; margin-top: 10px;">
-                    <span class="checkmark" style="font-size: 15px;">&#x2713; ESTRATEGIAS DE APRENDIZAJE</span>
+                    <span class="checkmark" style="font-size: 15px;">&#x2713; RESOLUCIÓN DE PROBLEMAS</span>
                 </div>
                 <div style="margin-left: 10px; margin-top: 10px;">
-                    <span class="checkmark" style="font-size: 15px;">&#x2713; ESTRATEGIAS DE APRENDIZAJE</span>
+                    <span class="checkmark" style="font-size: 15px;">&#x2713; CAMBIOS DE RUTINA Y ADAPTACIÓN</span>
                 </div>
                 <div style="margin-left: 10px; margin-top: 10px;">
-                    <span class="checkmark" style="font-size: 15px;">&#x2713; ESTRATEGIAS DE APRENDIZAJE</span>
+                    <span class="checkmark" style="font-size: 15px;">&#x2713; METODOS PARA ATENCIÓN Y CONCENTRACIÓN</span>
+                </div>
+
+                <div style="margin-left: 10px; margin-top: 10px;">
+                    <span class="checkmark" style="font-size: 15px;">&#x2713; MÉTODOS DE RELAJACIÓN</span>
+                </div>
+
+                <div style="margin-left: 10px; margin-top: 10px;">
+                    <span class="checkmark" style="font-size: 15px;">&#x2713; POTENCIAR LA MEMORIA</span>
+                </div>
+
+                <div style="margin-left: 10px; margin-top: 10px;">
+                    <span class="checkmark" style="font-size: 15px;">&#x2713; ESTIMULACIÓN COGNITIVA</span>
+                </div>
+
+                <div style="margin-left: 10px; margin-top: 10px;">
+                    <span class="checkmark" style="font-size: 15px;">&#x2713; AUTOESTIMA</span>
+                </div>
+
+                <div style="margin-left: 10px; margin-top: 10px;">
+                    <span class="checkmark" style="font-size: 15px;">&#x2713; AUTOESTIMA</span>
                 </div>
             </ul>
         </div>
