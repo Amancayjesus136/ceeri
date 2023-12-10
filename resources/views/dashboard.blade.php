@@ -105,10 +105,7 @@ $porcentajeTerapiaLenguaje = ($totalFilas != 0) ? ($clienteFilasTerapiaLenguaje 
                             </div>
                         </div>
                     </div>
-
-
-                    <!-- Content Row -->
-                    <div class="row">
+                <div class="row">
 
                         <!-- Content Column -->
                         <div class="col-lg-6 mb-4">
@@ -147,49 +144,55 @@ $porcentajeTerapiaLenguaje = ($totalFilas != 0) ? ($clienteFilasTerapiaLenguaje 
                             </div>
 
                             <!-- Color System -->
-                            <div class="row">
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-primary text-black shadow">
-                                        <div class="card-body">
-                                            Citas con Psicologia
-                                            <div class="text-black-50 small"><?php echo number_format($clienteFilasPsicologia, 0, '.', ','); ?></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-success text-black shadow">
-                                        <div class="card-body">
-                                        Citas con Terapia fisica
-                                            <div class="text-black-50 small"><?php echo number_format($clienteFilasTerapiaFisica, 0, '.', ','); ?></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-info text-black shadow">
-                                        <div class="card-body">
-                                        Citas con Terapia infantil
-                                            <div class="text-black-50 small"><?php echo number_format($clienteFilasTerapiaInfantil, 0, '.', ','); ?></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-warning text-black shadow">
-                                        <div class="card-body">
-                                        Citas con Terapia ocupacional
-                                            <div class="text-black-50 small"><?php echo number_format($clienteFilasTerapiaOcupacional, 0, '.', ','); ?></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-danger text-black shadow">
-                                        <div class="card-body">
-                                        Citas con Terapia de lenguaje
-                                            <div class="text-black-50 small"><?php echo number_format($clienteFilasTerapiaLenguaje, 0, '.', ','); ?></div>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>          
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="card bg-primary text-black shadow">
+                                <div class="card-body">
+                                    Citas con Psicologia
+                                    <div class="text-black-50 small"><?php echo number_format($clienteFilasPsicologia, 0, '.', ','); ?></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-6">
+                            <div class="card bg-success text-black shadow">
+                                <div class="card-body">
+                                Citas con Terapia fisica
+                                    <div class="text-black-50 small"><?php echo number_format($clienteFilasTerapiaFisica, 0, '.', ','); ?></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="card bg-info text-black shadow">
+                                <div class="card-body">
+                                Citas con Terapia infantil
+                                    <div class="text-black-50 small"><?php echo number_format($clienteFilasTerapiaInfantil, 0, '.', ','); ?></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="card bg-warning text-black shadow">
+                                <div class="card-body">
+                                Citas con Terapia ocupacional
+                                    <div class="text-black-50 small"><?php echo number_format($clienteFilasTerapiaOcupacional, 0, '.', ','); ?></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="card bg-danger text-black shadow">
+                                <div class="card-body">
+                                Citas con Terapia de lenguaje
+                                    <div class="text-black-50 small"><?php echo number_format($clienteFilasTerapiaLenguaje, 0, '.', ','); ?></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>  
 
