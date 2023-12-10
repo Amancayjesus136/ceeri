@@ -59,6 +59,42 @@
     }
 </style>
 
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  // Obtener la fecha y hora actual en el formato deseado en español
+  var today = new Date();
+  var formattedDate = today.getDate() + ' ' + monthToString(today.getMonth()) + ', ' + today.getFullYear() +
+    ' - ' + formatHour(today.getHours()) + ':' + padZeroes(today.getMinutes()) + ' ' + getAMPM(today.getHours());
+
+  // Establecer la fecha y hora actual como valor predeterminado en el input
+  document.getElementById("fechaInput").value = formattedDate;
+
+  // Función para convertir el número del mes a su nombre en español
+  function monthToString(month) {
+    var months = [
+      'Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun',
+      'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'
+    ];
+    return months[month];
+  }
+
+  // Función para agregar ceros a la izquierda si es necesario
+  function padZeroes(number) {
+    return number < 10 ? '0' + number : number;
+  }
+
+  // Función para dar formato a la hora en formato 12 horas
+  function formatHour(hour) {
+    return hour % 12 || 12; // Devuelve 12 en lugar de 0 cuando la hora es 0
+  }
+
+  // Función para obtener AM o PM
+  function getAMPM(hour) {
+    return hour >= 12 ? 'PM' : 'AM';
+  }
+});
+</script>
+
 <!-- JQUERY -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <!-- DATATABLES -->

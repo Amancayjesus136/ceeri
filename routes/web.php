@@ -22,6 +22,7 @@ use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\MenuUsuarioController;
 use App\Http\Controllers\NumerosController;
 use App\Http\Controllers\PerfilController;
+use App\Http\Controllers\DashboardController;
 
 
 use Illuminate\Support\Facades\Route;
@@ -63,9 +64,9 @@ Route::post('registroPrincipal', [ReservaPrincipalController::class, 'create'])-
 // Rutas protegidas por el middleware de autenticación y verificación
 Route::middleware(['auth', 'verified'])->group(function () {
     // Ruta para el dashboard
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
+
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
 
     // Rutas para Modulo de alumno 'Certificados'
     Route::get('/listado-eventos', function () {
