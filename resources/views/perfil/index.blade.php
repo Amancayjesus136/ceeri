@@ -1,104 +1,107 @@
-<!--php -->
-
-<?php   
+<!-- PHP -->
+<?php
 $primeraLetra = strtoupper(substr($user->name, 0, 1));
-
 $rutaImagen = "assets/images/fotoPerfilSmall/{$primeraLetra}.png";
-
 ?>
 
-<!--php -->
-
+<!-- Estilos CSS -->
 <style>
-    .card-body h1 {
-        color: white; 
-    }
-    .card-body h5 {
-        color: white;
+    body {
+        background-color: #f8f9fa; /* Color de fondo */
     }
 
-    .card-body p {
-        color: white;
-    }
-
-    .card-body h3 {
-        color: white;
+    .card-body h1, .card-body h5, .card-body p, .card-body h3 {
+        color: #343a40; /* Color de texto */
     }
 
     .card-body {
-        border-radius: 4px;
-        border: 2px;
-        border-style: solid;
+        border-radius: 10px;
+        border: 2px solid #ced4da; /* Color del borde */
+        background-color: #fff; /* Color de fondo de la tarjeta */
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .card {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra de la tarjeta */
+    }
+
+    .row {
+        margin: 20px 0;
+    }
+
+    #successAlertEdit {
+        margin-top: 20px;
     }
 </style>
-@extends('layouts.admin')
-{{-- resources/views/perfil/index.blade.php --}}
 
+@extends('layouts.admin')
 @extends('layouts.footer')
 
 @section('content')
-    
     @if(session('successEdit'))
         <div id="successAlertEdit" class="alert alert-success alert-dismissible bg-success text-white alert-label-icon fade show" role="alert">
             <i class="ri-notification-off-line label-icon"></i><strong>Éxito</strong> - Su perfil ha sido editado correctamente
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
     @endif
+
     @if ($user)
         <div class="row">
-            <div class="col-xl-1">
-                <img src="{{ asset($rutaImagen) }}" alt="" style="width: 140px; height: 140px; border-radius: 340px;">
+            <div class="col-6">
+                <img src="{{ asset($rutaImagen) }}" alt="Foto de perfil" style="width: 140px; height: 140px; border-radius: 50%;">
             </div>
-            <div class="col-xl-10" style="margin-left: 42px;">
-            <!-- Información del usuario -->
-            <div class="card" style="background-color: #405189;">
-                <div class="card-body d-flex flex-row">
-                    <!-- Contenedor para los elementos en línea -->
-                    <div>
-                        <!-- Nombre del usuario -->
-                        <h1>{{ $user->name }}</h1>
-                        <!-- Descripción -->
-                        <p>Empleado y administrador medio del sistema</p>
-                        <!-- Cede -->
-                        <h5>Cede: Villa el Salvador</h5>
-                    </div>
-                    <!-- Botón de edición -->
-                    <div class="ms-auto">
-                        <a href="{{ route('perfil.edit', ['perfil' => $user->id]) }}" class="btn btn-success">
-                            <i class="ri-edit-box-line align-bottom"></i> Editar
-                        </a>
-                    </div>
+
+            <div class="col-4">
+        <!-- Información del usuario -->
+        <div class="card">
+            <div class="card-body d-flex flex-row">
+                <div>
+                    <h1 class="card-title">{{ $user->name }}</h1>
+                    <p class="card-text">Empleado y administrador medio del sistema</p>
+                    <h5 class="card-text">Cede: Villa el Salvador</h5>
+                </div>
+
+                <div class="ms-auto">
+                    <a href="{{ route('perfil.edit', ['perfil' => $user->id]) }}" class="btn btn-success">
+                        <i class="ri-edit-box-line align-bottom"></i> Editar
+                    </a>
                 </div>
             </div>
         </div>
-        <div class="col-xl-3">
-            <div class="card">
-                <div class="card-body" style="background-color: #405189;">
-                    <h3>informacion</h3> <br>
-                    <h5>nombre completo: {{ $user->name }}</h1> <br><br>
-                    <h5>Email: {{ $user->email }}</h3> <br><br>
-                    <h5>telefono: {{ $user->telefono }}</h5> <br><br>
-                    <h5>se unio el: {{ $user->created_at }}</h5>
-                    <h5>foto: {{ $user->foto }}</h5>
+    </div>
+</div>
+            <div>
+                <!-- Información adicional -->
+                <div class="card">
+                    <div class="card-body">
+                        <h3>Información</h3>
+                        <h5>Nombre completo: {{ $user->name }}</h5>
+                        <h5>Email: {{ $user->email }}</h5>
+                        <h5>Teléfono: {{ $user->telefono }}</h5>
+                        <h5>Se unió el: {{ $user->created_at }}</h5>
+                        <h5>Foto: {{ $user->foto }}</h5>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-xl-8">
-            <div class="card">
-                <div class="card-body">
-                    <h3 style="color: black">sobre:</h3> <br>
-                    <p style="color: black">
-                        {{ $user->descripcion }}
-                    </p>
+
+            <div >
+                <!-- Sobre el usuario -->
+                <div class="card">
+                    <div class="card-body">
+                        <h3>Sobre:</h3>
+                        <p>{{ $user->descripcion }}</p>
+                    </div>
                 </div>
             </div>
         </div>
     @else
         <p>No se encontró perfil para este usuario.</p>
     @endif
+
     <script>
         var successAlertEdit = document.getElementById('successAlertEdit');
-        
+
         if (successAlertEdit) {
             setTimeout(function () {
                 successAlertEdit.classList.remove('show');
@@ -109,17 +112,14 @@ $rutaImagen = "assets/images/fotoPerfilSmall/{$primeraLetra}.png";
         }
     </script>
 
-    <!--scripts para los numeros de caracteres -->
+    <!-- Scripts para limitar caracteres -->
     <script>
         function limitarCaracteres(input, maxLength) {
-        if (input.value.length > maxLength) {
-            input.value = input.value.slice(0, maxLength);
-        }
+            if (input.value.length > maxLength) {
+                input.value = input.value.slice(0, maxLength);
+            }
         }
     </script>
 
-    <!--scripts para los numeros de caracteres -->
-
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-
 @endsection

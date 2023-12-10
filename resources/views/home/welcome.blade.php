@@ -594,6 +594,7 @@
                                             <p class="mb-0">{{ $conoceno->sub1 }}</p>
                                         </div>
                                     </div>
+
                                     <div class="d-flex align-items-center">
                                         <div class="flex-shrink-0 me-2">
                                             <div class="avatar-xs icon-effect">
@@ -606,6 +607,7 @@
                                             <p class="mb-0">{{ $conoceno->sub2 }}</p>
                                         </div>
                                     </div>
+
                                     <div class="d-flex align-items-center">
                                         <div class="flex-shrink-0 me-2">
                                             <div class="avatar-xs icon-effect">
@@ -617,6 +619,7 @@
                                         <div class="flex-grow-1">
                                             <p class="mb-0">{{ $conoceno->sub3 }}</p>
                                         </div>
+                                
                                     </div>
                                     <div class="d-flex align-items-center">
                                         <div class="flex-shrink-0 me-2">
@@ -691,13 +694,13 @@
                         <div class="col-lg-4 col-md-6">
                             <div class="card">
                                 <div class="card-body">
-                                    <img src="assets/images/N3.jpg" alt="" class="img-fluid rounded" />
+                                    <img src="assets/images/portadaocu.png" alt="" class="img-fluid rounded" />
                                 </div>
                                 <div class="card-body">
                                     <a href="javascript:void(0);">
                                         <h5>Terapia Ocupacional</h5>
                                     </a>
-                                    <p class="text-muted fs-14">es una rama del cuidado de la salud que ayuda a personas de todas las edades con problemas físicos, sensoriales o cognitivos. Las ayudan a ser lo más independientes posible en todos los aspectos de su vida.</p>
+                                    <p class="text-muted fs-14">La terapia ocupacional es una disciplina de atención médica que ayuda a personas de todas las edades con dificultades físicas, sensoriales o cognitivas, promoviendo su independencia en la vida diaria.</p>
                                     <div>
                                         <a href="#!"  data-bs-toggle="modal" data-bs-target="#tocupacional" class="link-success" data-bs-toggle="modal" data-bs-target="#tocupacional">Vista <i class="ri-arrow-right-line align-bottom ms-1"></i></a>
                                     </div>
@@ -732,8 +735,7 @@
                                     <a href="javascript:void(0);">
                                         <h5>Psicología</h5>
                                     </a>
-                                    <p class="text-muted fs-14">
-                                    La psicología social investiga cómo las relaciones sociales influyen en la conducta, pensamientos y emociones. Explora dinámicas grupales, normas sociales y percepciones colectivas, proporcionando insights valiosos para mejorar las interacciones humanas y cultivar relaciones.</p>
+                                    <p class="text-muted fs-14">La psicología social investiga cómo las relaciones sociales influyen en la conducta, pensamientos y emociones. Explora dinámicas grupales, normas sociales y percepciones colectivas, proporcionando insights valiosos para mejorar las interacciones humanas y cultivar relaciones.</p>
                                     <div>
                                         <a href="#!"  data-bs-toggle="modal" data-bs-target="#psicologia"  class="link-success">Vista <i class="ri-arrow-right-line align-bottom ms-1"></i></a>
                                     </div>
@@ -780,8 +782,8 @@
                                         <div class="card text-center">
                                             <div class="card-body p-4">
                                                 <img src="assets/images/G1.jpg" alt="" class="rounded-circle avatar-md mx-auto d-block">
-                                                <h5 class="fs-17 mt-3 mb-2">Nancy Martino</h5>
-                                                <p class="text-muted fs-13 mb-3">Terapia Física y Rehabilitación</p>
+                                                <h5 class="fs-17 mt-3 mb-2">Nancy </h5>
+                                                <p class="text-muted fs-13 mb-3">Psicología</p>
 
                                                 <p class="text-muted mb-4 fs-14">
                                                     <i class="ri-map-pin-2-line text-primary me-1 align-bottom"></i> Villa El Salvador
@@ -792,11 +794,13 @@
                                             </div>
                                         </div>
                                     </div>
+
+
                                     <div class="swiper-slide">
                                         <div class="card text-center">
                                             <div class="card-body p-4">
                                                 <img src="assets/images/G1.jpg" alt="" class="rounded-circle avatar-md mx-auto d-block">
-                                                <h5 class="fs-17 mt-3 mb-2">Glen Matney</h5>
+                                                <h5 class="fs-17 mt-3 mb-2">Maria</h5>
                                                 <p class="text-muted fs-13 mb-3">Terapia de lenguaje</p>
                                         
                                                 <p class="text-muted mb-4 fs-14">
@@ -807,138 +811,37 @@
                                             </div>
                                         </div>
                                     </div>
+
                                     <div class="swiper-slide">
                                         <div class="card text-center">
                                             <div class="card-body p-4">
-                                                <img src="assets/images/G2.jpg" alt="" class="rounded-circle avatar-md mx-auto d-block">
-                                                <h5 class="fs-17 mt-3 mb-2">Alexis Clarke</h5>
-                                                <p class="text-muted fs-13 mb-3">Terapia Ocupacional</p>
+                                                <img src="assets/images/G1.jpg" alt="" class="rounded-circle avatar-md mx-auto d-block">
+                                                <h5 class="fs-17 mt-3 mb-2">Rosa</h5>
+                                                <p class="text-muted fs-13 mb-3">Terapia de lenguaje</p>
                                         
                                                 <p class="text-muted mb-4 fs-14">
                                                     <i class="ri-map-pin-2-line text-primary me-1 align-bottom"></i> Villa El Salvador
                                                 </p>
                                         
-                                                <a href="#!"  data-bs-toggle="modal" data-bs-target="#ronal3" class="btn btn-primary w-100">Ver detalles</a>
+                                                <a href="#!"  data-bs-toggle="modal" data-bs-target="#ronal13" class="btn btn-primary w-100">Ver detalles</a>
                                             </div>
                                         </div>
                                     </div>
+
+
+
                                     <div class="swiper-slide">
                                         <div class="card text-center">
                                             <div class="card-body p-4">
                                                 <img src="assets/images/G3.jpg" alt="" class="rounded-circle avatar-md mx-auto d-block" />
-                                                <h5 class="fs-17 mt-3 mb-2">James Price</h5>
-                                                <p class="text-muted fs-13 mb-3">Terapia infantil</p>
+                                                <h5 class="fs-17 mt-3 mb-2">Angelica</h5>
+                                                <p class="text-muted fs-13 mb-3">Psicologia</p>
                                         
                                                 <p class="text-muted mb-4 fs-14">
                                                     <i class="ri-map-pin-2-line text-primary me-1 align-bottom"></i> Villa El Salvador
                                                 </p>
                                         
-                                                <a href="#!"  data-bs-toggle="modal" data-bs-target="#ronal4" class="btn btn-primary w-100">Ver detalles</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="card text-center">
-                                            <div class="card-body p-4">
-                                                <img src="assets/images/G4.jpg" alt="" class="rounded-circle avatar-md mx-auto d-block" />
-                                                <h5 class="fs-17 mt-3 mb-2">Michael Morris</h5>
-                                                <p class="text-muted fs-13 mb-3">Psicología</p>
-                                        
-                                                <p class="text-muted mb-4 fs-14">
-                                                    <i class="ri-map-pin-2-line text-primary me-1 align-bottom"></i> Villa El Salvador
-                                                </p>
-                                        
-                                                <a href="#!"  data-bs-toggle="modal" data-bs-target="#ronal5" class="btn btn-primary w-100">Ver detalles</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="card text-center">
-                                            <div class="card-body p-4">
-                                                <img src="assets/images/G5.jpg" alt="" class="rounded-circle avatar-md mx-auto d-block" />
-                                                <h5 class="fs-17 mt-3 mb-2">Michael Morris</h5>
-                                                <p class="text-muted fs-13 mb-3">Terapia Física y Rehabilitación</p>
-                                        
-                                                <p class="text-muted mb-4 fs-14">
-                                                    <i class="ri-map-pin-2-line text-primary me-1 align-bottom"></i> Villa El Salvador
-                                                </p>
-                                        
-                                                <a href="#!"  data-bs-toggle="modal" data-bs-target="#ronal6" class="btn btn-primary w-100">Ver detalles</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="card text-center">
-                                            <div class="card-body p-4">
-                                                <img src="assets/images/G6.jpg" alt="" class="rounded-circle avatar-md mx-auto d-block" />
-                                                <h5 class="fs-17 mt-3 mb-2">Michael Morris</h5>
-                                                <p class="text-muted fs-13 mb-3">Terapia de lenguaje</p>
-                                        
-                                                <p class="text-muted mb-4 fs-14">
-                                                    <i class="ri-map-pin-2-line text-primary me-1 align-bottom"></i> Villa El Salvador
-                                                </p>
-                                        
-                                                <a href="#!"  data-bs-toggle="modal" data-bs-target="#ronal7" class="btn btn-primary w-100">Ver detalles</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="card text-center">
-                                            <div class="card-body p-4">
-                                                <img src="assets/images/G7.jpg" alt="" class="rounded-circle avatar-md mx-auto d-block" />
-                                                <h5 class="fs-17 mt-3 mb-2">Michael Morris</h5>
-                                                <p class="text-muted fs-13 mb-3">Terapia de lenguaje</p>
-                                        
-                                                <p class="text-muted mb-4 fs-14">
-                                                    <i class="ri-map-pin-2-line text-primary me-1 align-bottom"></i> Villa El Salvador
-                                                </p>
-                                        
-                                                <a href="#!"  data-bs-toggle="modal" data-bs-target="#ronal8" class="btn btn-primary w-100">Ver detalles</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="card text-center">
-                                            <div class="card-body p-4">
-                                                <img src="assets/images/G8.jpg" alt="" class="rounded-circle avatar-md mx-auto d-block" />
-                                                <h5 class="fs-17 mt-3 mb-2">Michael Morris</h5>
-                                                <p class="text-muted fs-13 mb-3">Terapia infantil</p>
-                                        
-                                                <p class="text-muted mb-4 fs-14">
-                                                    <i class="ri-map-pin-2-line text-primary me-1 align-bottom"></i> Villa El Salvador
-                                                </p>
-                                        
-                                                <a href="#!"  data-bs-toggle="modal" data-bs-target="#ronal9" class="btn btn-primary w-100">Ver detalles</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="card text-center">
-                                            <div class="card-body p-4">
-                                                <img src="assets/images/G9.jpg" alt="" class="rounded-circle avatar-md mx-auto d-block" />
-                                                <h5 class="fs-17 mt-3 mb-2">Michael Morris</h5>
-                                                <p class="text-muted fs-13 mb-3">Psicología</p>
-                                        
-                                                <p class="text-muted mb-4 fs-14">
-                                                    <i class="ri-map-pin-2-line text-primary me-1 align-bottom"></i> Villa El Salvador
-                                                </p>
-                                        
-                                                <a href="#!"  data-bs-toggle="modal" data-bs-target="#ronal10" class="btn btn-primary w-100">Ver detalles</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="card text-center">
-                                            <div class="card-body p-4">
-                                                <img src="assets/images/G10.jpg" alt="" class="rounded-circle avatar-md mx-auto d-block" />
-                                                <h5 class="fs-17 mt-3 mb-2">Michael Morris</h5>
-                                                <p class="text-muted fs-13 mb-3">Terapia Ocupacional</p>
-                                        
-                                                <p class="text-muted mb-4 fs-14">
-                                                    <i class="ri-map-pin-2-line text-primary me-1 align-bottom"></i> Villa El Salvador
-                                                </p>
-                                        
-                                                <a href="#!"  data-bs-toggle="modal" data-bs-target="#ronal11" class="btn btn-primary w-100">Ver detalles</a>
+                                                <a href="#!"  data-bs-toggle="modal" data-bs-target="#ronal14" class="btn btn-primary w-100">Ver detalles</a>
                                             </div>
                                         </div>
                                     </div>
@@ -1211,834 +1114,134 @@
 
 
 <!-- RONAL -->
-    <!-- Modal de vista 1 -->
-    <div class="modal fade" id="ronal1" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2 class="modal-title" id="crearModalLabel"></h2>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                </div>
-                <div class="modal-body d-flex align-items">
-                    <img src="assets/images/espe-psicologia/psi1.png" alt="" style="width: 320px; height: 420px; margin-right: 40px;">
-                    <div class="text-muted">
-                        
+    <!-- Modal de NANCY -->
+<div class="modal fade" id="ronal1" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="crearModalLabel"></h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body d-flex align-items">
+                <img src="assets/images/espe-psicologia/psi1.png" alt="" style="width: 320px; height: 420px; margin-right: 40px;">
+                <div class="text-muted">
+                    <div class="col-xl-6">
+                        <div class="card">
+                            <div>
+                                <h2 class="text-center">Especialista en Psicología</h2>
+                            </div>
+                            <hr>
+                            <span class="text-justify-center" style="font-size: 15px;">
+                                Como psicóloga, mi fuerza radica en la capacidad de sumergirme genuinamente en las experiencias de mis clientes. Mi empatía profunda crea un espacio terapéutico de confianza, impulsando el crecimiento y la transformación personal.
+                            </span><br>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Modal de vista 1 -->   
-<!-- RONAL -->
+    </div>
+</div>
 
-<!-- RONAL -->
-    <!-- Modal de vista 1 -->
+
+
+    <!-- Modal de vista MARIA -->   
+
     <div class="modal fade" id="ronal2" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="crearModalLabel">Nancyyyyyyyy</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="crearModalLabel"></h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body d-flex align-items">
+                <img src="assets/images/espe-psicologia/es2.png" alt="" style="width: 320px; height: 420px; margin-right: 40px;">
+                <div class="text-muted">
+                    <div class="col-xl-6">
+                        <div class="card">
+                            <div>
+                                <h2 class="text-center">Especialista en Psicología</h2>
+                            </div>
+                            <hr>
+                            <span class="text-justify-center" style="font-size: 15px;">
+                            Como psicóloga, mi habilidad para fomentar la autenticidad y la expresión libre en mis sesiones promueve un ambiente de apertura, facilitando así el descubrimiento personal y la resolución de conflictos internos.
+                            </span><br>
+                        </div>
+                    </div>
                 </div>
-                <div class="modal-body align-items d-flex">
-                    <img src="assets/images/tfisica/img3.png" alt="" style="width: 320px; height: 420px; margin-right: 40px;">
-                    <div class="text-muted">
-                        <b>Fatima Asad</b>
-                        <br><br>
-                        Calle San José Calasanz, 12
-                        Calpe, Alicante 03710
-                        698019052
-                        fatima.asad@outlook.com
-                        <br><br>
-                        <b>Perfil profesional</b>
-                        <br><br>
-                        Terapeuta ocupacional con amplios conocimientos sobre programación, tratamientos y modalidades para la recuperación
-                        y mitigación de problemas físicos y psíquicos para mejorar el estado de los pacientes.
-                        <br><br>
-                        <b>Experiencia laboral</b>
-                        <br><br>
-                        Diciembre 2019 – Actual
-                        Sentits – Alicante
-                        Terapeuta ocupacional
-                        <br><br>
-                        Evaluación de cada usuario conforme al proceso de rehabilitación y apoyo comunitario acordado. <br>
-                        Participación en programas de atención a familias. <br>
-                        Estímulo y motivación de los pacientes en la realización de actividades físicas y lúdicas. <br><br>
-                        Agosto 2013 – Agosto 2019
-                        Saner – Alicante
-                        Terapeuta ocupacional
-                        <br><br>
-                        Experiencia en programas de intervención en deterioro cognitivo. <br>
-                        Apoyo en la habilitación y rehabilitación física de las personas usuarias del servicio. <br>
-                        Coordinación, planificación y organización de intervenciones individuales. <br>
-                        Octubre 2011 – Enero 2013
-                        Centro IDEAT – Alicante
-                        Terapeuta ocupacional
-                        <br><br>
-                        Planificación y puesta en marcha de talleres y actividades de apoyo social. <br>
-                        Diseño y desarrollo de los programas de mejora de autonomía personal y social. <br>
-                        Interactuó con pacientes, familiares y médicos para coordinarlos e informarles sobre el cuidado a los pacientes. <br><br>
-                        <b>Formación académica</b>
-                        <br><br>
-                        Septiembre 2010
-                        Universidad Miguel Hernández – Elche
-                        Grado en Terapia Ocupacional
-                        <br><br>
-                        <b>Aptitudes</b>
-                        <br><br>
-                        Empatía en el trato al paciente
-                        Formación en metodología didáctica
-                        Resolución de conflictos
-                        Vocación por los colectivos vulnerables
-                        Grandes dosis de iniciativa y dedicación
-                        Persona proactiva y dinámica. <br><br>
-                        <b>Idiomas</b>
-                        
-                        Árabe, 
-                        Idioma nativo. <br>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+    
+    
+     <!-- Modal de vista ROSA -->  
 
-                        Español
-                        C2 – Experto. <br>
-                        <br><br>
-                        <b>Formación adicional</b>
-                        <br><br>
-                        Curso de Estimulación Multisensorial – IPFAP Formación, 2014
-                        Curso de Auxiliar de Rehabilitación – ELBS, 2012
+     <div class="modal fade" id="ronal13" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="crearModalLabel"></h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body d-flex align-items">
+                <img src="assets/images/espe-psicologia/esocu.png" alt="" style="width: 320px; height: 420px; margin-right: 40px;">
+                <div class="text-muted">
+                    <div class="col-xl-6">
+                        <div class="card">
+                            <div>
+                                <h2 class="text-center">Especialista en Terapia Ocupacional</h2>
+                            </div>
+                            <hr>
+                            <span class="text-justify-center" style="font-size: 15px;">
+                            Como terapeuta ocupacional, sobresalgo al crear intervenciones personalizadas que no solo promueven la independencia, sino que también transforman la vida diaria de mis pacientes, generando un impacto positivo y duradero.
+                            </span><br>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Modal de vista 1 -->   
-<!-- RONAL -->
+    </div>
+</div>
 
-<!-- RONAL -->
-    <!-- Modal de vista 1 -->
-    <div class="modal fade" id="ronal3" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="crearModalLabel">Nancy Martines</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                </div>
-                <div class="modal-body align-items d-flex">
-                    <img src="assets/images/tfisica/img3.png" alt="" style="width: 320px; height: 420px; margin-right: 40px;">
-                    <div class="text-muted">
-                        <b>Fatima Asad</b>
-                        <br><br>
-                        Calle San José Calasanz, 12
-                        Calpe, Alicante 03710
-                        698019052
-                        fatima.asad@outlook.com
-                        <br><br>
-                        <b>Perfil profesional</b>
-                        <br><br>
-                        Terapeuta ocupacional con amplios conocimientos sobre programación, tratamientos y modalidades para la recuperación
-                        y mitigación de problemas físicos y psíquicos para mejorar el estado de los pacientes.
-                        <br><br>
-                        <b>Experiencia laboral</b>
-                        <br><br>
-                        Diciembre 2019 – Actual
-                        Sentits – Alicante
-                        Terapeuta ocupacional
-                        <br><br>
-                        Evaluación de cada usuario conforme al proceso de rehabilitación y apoyo comunitario acordado. <br>
-                        Participación en programas de atención a familias. <br>
-                        Estímulo y motivación de los pacientes en la realización de actividades físicas y lúdicas. <br><br>
-                        Agosto 2013 – Agosto 2019
-                        Saner – Alicante
-                        Terapeuta ocupacional
-                        <br><br>
-                        Experiencia en programas de intervención en deterioro cognitivo. <br>
-                        Apoyo en la habilitación y rehabilitación física de las personas usuarias del servicio. <br>
-                        Coordinación, planificación y organización de intervenciones individuales. <br>
-                        Octubre 2011 – Enero 2013
-                        Centro IDEAT – Alicante
-                        Terapeuta ocupacional
-                        <br><br>
-                        Planificación y puesta en marcha de talleres y actividades de apoyo social. <br>
-                        Diseño y desarrollo de los programas de mejora de autonomía personal y social. <br>
-                        Interactuó con pacientes, familiares y médicos para coordinarlos e informarles sobre el cuidado a los pacientes. <br><br>
-                        <b>Formación académica</b>
-                        <br><br>
-                        Septiembre 2010
-                        Universidad Miguel Hernández – Elche
-                        Grado en Terapia Ocupacional
-                        <br><br>
-                        <b>Aptitudes</b>
-                        <br><br>
-                        Empatía en el trato al paciente
-                        Formación en metodología didáctica
-                        Resolución de conflictos
-                        Vocación por los colectivos vulnerables
-                        Grandes dosis de iniciativa y dedicación
-                        Persona proactiva y dinámica. <br><br>
-                        <b>Idiomas</b>
-                        
-                        Árabe, 
-                        Idioma nativo. <br>
 
-                        Español
-                        C2 – Experto. <br>
-                        <br><br>
-                        <b>Formación adicional</b>
-                        <br><br>
-                        Curso de Estimulación Multisensorial – IPFAP Formación, 2014
-                        Curso de Auxiliar de Rehabilitación – ELBS, 2012
+<!-- Modal de vista ROSA -->  
+
+<div class="modal fade" id="ronal14" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="crearModalLabel"></h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body d-flex align-items">
+                <img src="assets/images/espe-psicologia/espe3.png" alt="" style="width: 320px; height: 420px; margin-right: 40px;">
+                <div class="text-muted">
+                    <div class="col-xl-6">
+                        <div class="card">
+                            <div>
+                                <h2 class="text-center">Especialista en Psicologia</h2>
+                            </div>
+                            <hr>
+                            <span class="text-justify-center" style="font-size: 15px;">
+                            Como psicóloga, destaco por mi capacidad para establecer conexiones profundas y genuinas con mis pacientes, cultivando un entorno de confianza que facilita la exploración emocional y el desarrollo personal.
+                            </span><br>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Modal de vista 1 -->   
-<!-- RONAL -->
-
-<!-- RONAL -->
-    <!-- Modal de vista 1 -->
-    <div class="modal fade" id="ronal4" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="crearModalLabel">Nancy Martines</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                </div>
-                <div class="modal-body align-items d-flex">
-                    <img src="assets/images/tfisica/img3.png" alt="" style="width: 320px; height: 420px; margin-right: 40px;">
-                    <div class="text-muted">
-                        <b>Fatima Asad</b>
-                        <br><br>
-                        Calle San José Calasanz, 12
-                        Calpe, Alicante 03710
-                        698019052
-                        fatima.asad@outlook.com
-                        <br><br>
-                        <b>Perfil profesional</b>
-                        <br><br>
-                        Terapeuta ocupacional con amplios conocimientos sobre programación, tratamientos y modalidades para la recuperación
-                        y mitigación de problemas físicos y psíquicos para mejorar el estado de los pacientes.
-                        <br><br>
-                        <b>Experiencia laboral</b>
-                        <br><br>
-                        Diciembre 2019 – Actual
-                        Sentits – Alicante
-                        Terapeuta ocupacional
-                        <br><br>
-                        Evaluación de cada usuario conforme al proceso de rehabilitación y apoyo comunitario acordado. <br>
-                        Participación en programas de atención a familias. <br>
-                        Estímulo y motivación de los pacientes en la realización de actividades físicas y lúdicas. <br><br>
-                        Agosto 2013 – Agosto 2019
-                        Saner – Alicante
-                        Terapeuta ocupacional
-                        <br><br>
-                        Experiencia en programas de intervención en deterioro cognitivo. <br>
-                        Apoyo en la habilitación y rehabilitación física de las personas usuarias del servicio. <br>
-                        Coordinación, planificación y organización de intervenciones individuales. <br>
-                        Octubre 2011 – Enero 2013
-                        Centro IDEAT – Alicante
-                        Terapeuta ocupacional
-                        <br><br>
-                        Planificación y puesta en marcha de talleres y actividades de apoyo social. <br>
-                        Diseño y desarrollo de los programas de mejora de autonomía personal y social. <br>
-                        Interactuó con pacientes, familiares y médicos para coordinarlos e informarles sobre el cuidado a los pacientes. <br><br>
-                        <b>Formación académica</b>
-                        <br><br>
-                        Septiembre 2010
-                        Universidad Miguel Hernández – Elche
-                        Grado en Terapia Ocupacional
-                        <br><br>
-                        <b>Aptitudes</b>
-                        <br><br>
-                        Empatía en el trato al paciente
-                        Formación en metodología didáctica
-                        Resolución de conflictos
-                        Vocación por los colectivos vulnerables
-                        Grandes dosis de iniciativa y dedicación
-                        Persona proactiva y dinámica. <br><br>
-                        <b>Idiomas</b>
-                        
-                        Árabe, 
-                        Idioma nativo. <br>
-
-                        Español
-                        C2 – Experto. <br>
-                        <br><br>
-                        <b>Formación adicional</b>
-                        <br><br>
-                        Curso de Estimulación Multisensorial – IPFAP Formación, 2014
-                        Curso de Auxiliar de Rehabilitación – ELBS, 2012
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
+</div>
+
     <!-- Modal de vista 1 -->   
 <!-- RONAL -->
 
-<!-- RONAL -->
-    <!-- Modal de vista 1 -->
-    <div class="modal fade" id="ronal5" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="crearModalLabel">Nancy Martines</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                </div>
-                <div class="modal-body align-items d-flex">
-                    <img src="assets/images/tfisica/img3.png" alt="" style="width: 320px; height: 420px; margin-right: 40px;">
-                    <div class="text-muted">
-                        <b>Fatima Asad</b>
-                        <br><br>
-                        Calle San José Calasanz, 12
-                        Calpe, Alicante 03710
-                        698019052
-                        fatima.asad@outlook.com
-                        <br><br>
-                        <b>Perfil profesional</b>
-                        <br><br>
-                        Terapeuta ocupacional con amplios conocimientos sobre programación, tratamientos y modalidades para la recuperación
-                        y mitigación de problemas físicos y psíquicos para mejorar el estado de los pacientes.
-                        <br><br>
-                        <b>Experiencia laboral</b>
-                        <br><br>
-                        Diciembre 2019 – Actual
-                        Sentits – Alicante
-                        Terapeuta ocupacional
-                        <br><br>
-                        Evaluación de cada usuario conforme al proceso de rehabilitación y apoyo comunitario acordado. <br>
-                        Participación en programas de atención a familias. <br>
-                        Estímulo y motivación de los pacientes en la realización de actividades físicas y lúdicas. <br><br>
-                        Agosto 2013 – Agosto 2019
-                        Saner – Alicante
-                        Terapeuta ocupacional
-                        <br><br>
-                        Experiencia en programas de intervención en deterioro cognitivo. <br>
-                        Apoyo en la habilitación y rehabilitación física de las personas usuarias del servicio. <br>
-                        Coordinación, planificación y organización de intervenciones individuales. <br>
-                        Octubre 2011 – Enero 2013
-                        Centro IDEAT – Alicante
-                        Terapeuta ocupacional
-                        <br><br>
-                        Planificación y puesta en marcha de talleres y actividades de apoyo social. <br>
-                        Diseño y desarrollo de los programas de mejora de autonomía personal y social. <br>
-                        Interactuó con pacientes, familiares y médicos para coordinarlos e informarles sobre el cuidado a los pacientes. <br><br>
-                        <b>Formación académica</b>
-                        <br><br>
-                        Septiembre 2010
-                        Universidad Miguel Hernández – Elche
-                        Grado en Terapia Ocupacional
-                        <br><br>
-                        <b>Aptitudes</b>
-                        <br><br>
-                        Empatía en el trato al paciente
-                        Formación en metodología didáctica
-                        Resolución de conflictos
-                        Vocación por los colectivos vulnerables
-                        Grandes dosis de iniciativa y dedicación
-                        Persona proactiva y dinámica. <br><br>
-                        <b>Idiomas</b>
-                        
-                        Árabe, 
-                        Idioma nativo. <br>
 
-                        Español
-                        C2 – Experto. <br>
-                        <br><br>
-                        <b>Formación adicional</b>
-                        <br><br>
-                        Curso de Estimulación Multisensorial – IPFAP Formación, 2014
-                        Curso de Auxiliar de Rehabilitación – ELBS, 2012
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal de vista 1 -->   
-<!-- RONAL -->
 
-<!-- RONAL -->
-    <!-- Modal de vista 1 -->
-    <div class="modal fade" id="ronal6" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="crearModalLabel">Nancy Martines</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                </div>
-                <div class="modal-body align-items d-flex">
-                    <img src="assets/images/tfisica/img3.png" alt="" style="width: 320px; height: 420px; margin-right: 40px;">
-                    <div class="text-muted">
-                        <b>Fatima Asad</b>
-                        <br><br>
-                        Calle San José Calasanz, 12
-                        Calpe, Alicante 03710
-                        698019052
-                        fatima.asad@outlook.com
-                        <br><br>
-                        <b>Perfil profesional</b>
-                        <br><br>
-                        Terapeuta ocupacional con amplios conocimientos sobre programación, tratamientos y modalidades para la recuperación
-                        y mitigación de problemas físicos y psíquicos para mejorar el estado de los pacientes.
-                        <br><br>
-                        <b>Experiencia laboral</b>
-                        <br><br>
-                        Diciembre 2019 – Actual
-                        Sentits – Alicante
-                        Terapeuta ocupacional
-                        <br><br>
-                        Evaluación de cada usuario conforme al proceso de rehabilitación y apoyo comunitario acordado. <br>
-                        Participación en programas de atención a familias. <br>
-                        Estímulo y motivación de los pacientes en la realización de actividades físicas y lúdicas. <br><br>
-                        Agosto 2013 – Agosto 2019
-                        Saner – Alicante
-                        Terapeuta ocupacional
-                        <br><br>
-                        Experiencia en programas de intervención en deterioro cognitivo. <br>
-                        Apoyo en la habilitación y rehabilitación física de las personas usuarias del servicio. <br>
-                        Coordinación, planificación y organización de intervenciones individuales. <br>
-                        Octubre 2011 – Enero 2013
-                        Centro IDEAT – Alicante
-                        Terapeuta ocupacional
-                        <br><br>
-                        Planificación y puesta en marcha de talleres y actividades de apoyo social. <br>
-                        Diseño y desarrollo de los programas de mejora de autonomía personal y social. <br>
-                        Interactuó con pacientes, familiares y médicos para coordinarlos e informarles sobre el cuidado a los pacientes. <br><br>
-                        <b>Formación académica</b>
-                        <br><br>
-                        Septiembre 2010
-                        Universidad Miguel Hernández – Elche
-                        Grado en Terapia Ocupacional
-                        <br><br>
-                        <b>Aptitudes</b>
-                        <br><br>
-                        Empatía en el trato al paciente
-                        Formación en metodología didáctica
-                        Resolución de conflictos
-                        Vocación por los colectivos vulnerables
-                        Grandes dosis de iniciativa y dedicación
-                        Persona proactiva y dinámica. <br><br>
-                        <b>Idiomas</b>
-                        
-                        Árabe, 
-                        Idioma nativo. <br>
-
-                        Español
-                        C2 – Experto. <br>
-                        <br><br>
-                        <b>Formación adicional</b>
-                        <br><br>
-                        Curso de Estimulación Multisensorial – IPFAP Formación, 2014
-                        Curso de Auxiliar de Rehabilitación – ELBS, 2012
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal de vista 1 -->   
-<!-- RONAL -->
-
-<!-- RONAL -->
-    <!-- Modal de vista 1 -->
-    <div class="modal fade" id="ronal7" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="crearModalLabel">Nancy Martines</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                </div>
-                <div class="modal-body align-items d-flex">
-                    <img src="assets/images/tfisica/img3.png" alt="" style="width: 320px; height: 420px; margin-right: 40px;">
-                    <div class="text-muted">
-                        <b>Fatima Asad</b>
-                        <br><br>
-                        Calle San José Calasanz, 12
-                        Calpe, Alicante 03710
-                        698019052
-                        fatima.asad@outlook.com
-                        <br><br>
-                        <b>Perfil profesional</b>
-                        <br><br>
-                        Terapeuta ocupacional con amplios conocimientos sobre programación, tratamientos y modalidades para la recuperación
-                        y mitigación de problemas físicos y psíquicos para mejorar el estado de los pacientes.
-                        <br><br>
-                        <b>Experiencia laboral</b>
-                        <br><br>
-                        Diciembre 2019 – Actual
-                        Sentits – Alicante
-                        Terapeuta ocupacional
-                        <br><br>
-                        Evaluación de cada usuario conforme al proceso de rehabilitación y apoyo comunitario acordado. <br>
-                        Participación en programas de atención a familias. <br>
-                        Estímulo y motivación de los pacientes en la realización de actividades físicas y lúdicas. <br><br>
-                        Agosto 2013 – Agosto 2019
-                        Saner – Alicante
-                        Terapeuta ocupacional
-                        <br><br>
-                        Experiencia en programas de intervención en deterioro cognitivo. <br>
-                        Apoyo en la habilitación y rehabilitación física de las personas usuarias del servicio. <br>
-                        Coordinación, planificación y organización de intervenciones individuales. <br>
-                        Octubre 2011 – Enero 2013
-                        Centro IDEAT – Alicante
-                        Terapeuta ocupacional
-                        <br><br>
-                        Planificación y puesta en marcha de talleres y actividades de apoyo social. <br>
-                        Diseño y desarrollo de los programas de mejora de autonomía personal y social. <br>
-                        Interactuó con pacientes, familiares y médicos para coordinarlos e informarles sobre el cuidado a los pacientes. <br><br>
-                        <b>Formación académica</b>
-                        <br><br>
-                        Septiembre 2010
-                        Universidad Miguel Hernández – Elche
-                        Grado en Terapia Ocupacional
-                        <br><br>
-                        <b>Aptitudes</b>
-                        <br><br>
-                        Empatía en el trato al paciente
-                        Formación en metodología didáctica
-                        Resolución de conflictos
-                        Vocación por los colectivos vulnerables
-                        Grandes dosis de iniciativa y dedicación
-                        Persona proactiva y dinámica. <br><br>
-                        <b>Idiomas</b>
-                        
-                        Árabe, 
-                        Idioma nativo. <br>
-
-                        Español
-                        C2 – Experto. <br>
-                        <br><br>
-                        <b>Formación adicional</b>
-                        <br><br>
-                        Curso de Estimulación Multisensorial – IPFAP Formación, 2014
-                        Curso de Auxiliar de Rehabilitación – ELBS, 2012
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal de vista 1 -->   
-<!-- RONAL -->
-
-<!-- RONAL -->
-    <!-- Modal de vista 1 -->
-    <div class="modal fade" id="ronal8" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="crearModalLabel">Nancy Martines</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                </div>
-                <div class="modal-body align-items d-flex">
-                    <img src="assets/images/tfisica/img3.png" alt="" style="width: 320px; height: 420px; margin-right: 40px;">
-                    <div class="text-muted">
-                        <b>Fatima Asad</b>
-                        <br><br>
-                        Calle San José Calasanz, 12
-                        Calpe, Alicante 03710
-                        698019052
-                        fatima.asad@outlook.com
-                        <br><br>
-                        <b>Perfil profesional</b>
-                        <br><br>
-                        Terapeuta ocupacional con amplios conocimientos sobre programación, tratamientos y modalidades para la recuperación
-                        y mitigación de problemas físicos y psíquicos para mejorar el estado de los pacientes.
-                        <br><br>
-                        <b>Experiencia laboral</b>
-                        <br><br>
-                        Diciembre 2019 – Actual
-                        Sentits – Alicante
-                        Terapeuta ocupacional
-                        <br><br>
-                        Evaluación de cada usuario conforme al proceso de rehabilitación y apoyo comunitario acordado. <br>
-                        Participación en programas de atención a familias. <br>
-                        Estímulo y motivación de los pacientes en la realización de actividades físicas y lúdicas. <br><br>
-                        Agosto 2013 – Agosto 2019
-                        Saner – Alicante
-                        Terapeuta ocupacional
-                        <br><br>
-                        Experiencia en programas de intervención en deterioro cognitivo. <br>
-                        Apoyo en la habilitación y rehabilitación física de las personas usuarias del servicio. <br>
-                        Coordinación, planificación y organización de intervenciones individuales. <br>
-                        Octubre 2011 – Enero 2013
-                        Centro IDEAT – Alicante
-                        Terapeuta ocupacional
-                        <br><br>
-                        Planificación y puesta en marcha de talleres y actividades de apoyo social. <br>
-                        Diseño y desarrollo de los programas de mejora de autonomía personal y social. <br>
-                        Interactuó con pacientes, familiares y médicos para coordinarlos e informarles sobre el cuidado a los pacientes. <br><br>
-                        <b>Formación académica</b>
-                        <br><br>
-                        Septiembre 2010
-                        Universidad Miguel Hernández – Elche
-                        Grado en Terapia Ocupacional
-                        <br><br>
-                        <b>Aptitudes</b>
-                        <br><br>
-                        Empatía en el trato al paciente
-                        Formación en metodología didáctica
-                        Resolución de conflictos
-                        Vocación por los colectivos vulnerables
-                        Grandes dosis de iniciativa y dedicación
-                        Persona proactiva y dinámica. <br><br>
-                        <b>Idiomas</b>
-                        
-                        Árabe, 
-                        Idioma nativo. <br>
-
-                        Español
-                        C2 – Experto. <br>
-                        <br><br>
-                        <b>Formación adicional</b>
-                        <br><br>
-                        Curso de Estimulación Multisensorial – IPFAP Formación, 2014
-                        Curso de Auxiliar de Rehabilitación – ELBS, 2012
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal de vista 1 -->   
-<!-- RONAL -->
-
-<!-- RONAL -->
-    <!-- Modal de vista 1 -->
-    <div class="modal fade" id="ronal9" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="crearModalLabel">Nancy Martines</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                </div>
-                <div class="modal-body align-items d-flex">
-                    <img src="assets/images/tfisica/img3.png" alt="" style="width: 320px; height: 420px; margin-right: 40px;">
-                    <div class="text-muted">
-                        <b>Fatima Asad</b>
-                        <br><br>
-                        Calle San José Calasanz, 12
-                        Calpe, Alicante 03710
-                        698019052
-                        fatima.asad@outlook.com
-                        <br><br>
-                        <b>Perfil profesional</b>
-                        <br><br>
-                        Terapeuta ocupacional con amplios conocimientos sobre programación, tratamientos y modalidades para la recuperación
-                        y mitigación de problemas físicos y psíquicos para mejorar el estado de los pacientes.
-                        <br><br>
-                        <b>Experiencia laboral</b>
-                        <br><br>
-                        Diciembre 2019 – Actual
-                        Sentits – Alicante
-                        Terapeuta ocupacional
-                        <br><br>
-                        Evaluación de cada usuario conforme al proceso de rehabilitación y apoyo comunitario acordado. <br>
-                        Participación en programas de atención a familias. <br>
-                        Estímulo y motivación de los pacientes en la realización de actividades físicas y lúdicas. <br><br>
-                        Agosto 2013 – Agosto 2019
-                        Saner – Alicante
-                        Terapeuta ocupacional
-                        <br><br>
-                        Experiencia en programas de intervención en deterioro cognitivo. <br>
-                        Apoyo en la habilitación y rehabilitación física de las personas usuarias del servicio. <br>
-                        Coordinación, planificación y organización de intervenciones individuales. <br>
-                        Octubre 2011 – Enero 2013
-                        Centro IDEAT – Alicante
-                        Terapeuta ocupacional
-                        <br><br>
-                        Planificación y puesta en marcha de talleres y actividades de apoyo social. <br>
-                        Diseño y desarrollo de los programas de mejora de autonomía personal y social. <br>
-                        Interactuó con pacientes, familiares y médicos para coordinarlos e informarles sobre el cuidado a los pacientes. <br><br>
-                        <b>Formación académica</b>
-                        <br><br>
-                        Septiembre 2010
-                        Universidad Miguel Hernández – Elche
-                        Grado en Terapia Ocupacional
-                        <br><br>
-                        <b>Aptitudes</b>
-                        <br><br>
-                        Empatía en el trato al paciente
-                        Formación en metodología didáctica
-                        Resolución de conflictos
-                        Vocación por los colectivos vulnerables
-                        Grandes dosis de iniciativa y dedicación
-                        Persona proactiva y dinámica. <br><br>
-                        <b>Idiomas</b>
-                        
-                        Árabe, 
-                        Idioma nativo. <br>
-
-                        Español
-                        C2 – Experto. <br>
-                        <br><br>
-                        <b>Formación adicional</b>
-                        <br><br>
-                        Curso de Estimulación Multisensorial – IPFAP Formación, 2014
-                        Curso de Auxiliar de Rehabilitación – ELBS, 2012
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal de vista 1 -->   
-<!-- RONAL -->
-
-<!-- RONAL -->
-    <!-- Modal de vista 1 -->
-    <div class="modal fade" id="ronal10" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="crearModalLabel">Nancy Martines</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                </div>
-                <div class="modal-body align-items d-flex">
-                    <img src="assets/images/tfisica/img3.png" alt="" style="width: 320px; height: 420px; margin-right: 40px;">
-                    <div class="text-muted">
-                        <b>Fatima Asad</b>
-                        <br><br>
-                        Calle San José Calasanz, 12
-                        Calpe, Alicante 03710
-                        698019052
-                        fatima.asad@outlook.com
-                        <br><br>
-                        <b>Perfil profesional</b>
-                        <br><br>
-                        Terapeuta ocupacional con amplios conocimientos sobre programación, tratamientos y modalidades para la recuperación
-                        y mitigación de problemas físicos y psíquicos para mejorar el estado de los pacientes.
-                        <br><br>
-                        <b>Experiencia laboral</b>
-                        <br><br>
-                        Diciembre 2019 – Actual
-                        Sentits – Alicante
-                        Terapeuta ocupacional
-                        <br><br>
-                        Evaluación de cada usuario conforme al proceso de rehabilitación y apoyo comunitario acordado. <br>
-                        Participación en programas de atención a familias. <br>
-                        Estímulo y motivación de los pacientes en la realización de actividades físicas y lúdicas. <br><br>
-                        Agosto 2013 – Agosto 2019
-                        Saner – Alicante
-                        Terapeuta ocupacional
-                        <br><br>
-                        Experiencia en programas de intervención en deterioro cognitivo. <br>
-                        Apoyo en la habilitación y rehabilitación física de las personas usuarias del servicio. <br>
-                        Coordinación, planificación y organización de intervenciones individuales. <br>
-                        Octubre 2011 – Enero 2013
-                        Centro IDEAT – Alicante
-                        Terapeuta ocupacional
-                        <br><br>
-                        Planificación y puesta en marcha de talleres y actividades de apoyo social. <br>
-                        Diseño y desarrollo de los programas de mejora de autonomía personal y social. <br>
-                        Interactuó con pacientes, familiares y médicos para coordinarlos e informarles sobre el cuidado a los pacientes. <br><br>
-                        <b>Formación académica</b>
-                        <br><br>
-                        Septiembre 2010
-                        Universidad Miguel Hernández – Elche
-                        Grado en Terapia Ocupacional
-                        <br><br>
-                        <b>Aptitudes</b>
-                        <br><br>
-                        Empatía en el trato al paciente
-                        Formación en metodología didáctica
-                        Resolución de conflictos
-                        Vocación por los colectivos vulnerables
-                        Grandes dosis de iniciativa y dedicación
-                        Persona proactiva y dinámica. <br><br>
-                        <b>Idiomas</b>
-                        
-                        Árabe, 
-                        Idioma nativo. <br>
-
-                        Español
-                        C2 – Experto. <br>
-                        <br><br>
-                        <b>Formación adicional</b>
-                        <br><br>
-                        Curso de Estimulación Multisensorial – IPFAP Formación, 2014
-                        Curso de Auxiliar de Rehabilitación – ELBS, 2012
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal de vista 1 -->   
-<!-- RONAL -->
-
-<!-- RONAL -->
-    <!-- Modal de vista 1 -->
-    <div class="modal fade" id="ronal11" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="crearModalLabel">Nancy Martines</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                </div>
-                <div class="modal-body align-items d-flex">
-                    <img src="assets/images/tfisica/img3.png" alt="" style="width: 320px; height: 420px; margin-right: 40px;">
-                    <div class="text-muted">
-                        <b>Fatima Asad</b>
-                        <br><br>
-                        Calle San José Calasanz, 12
-                        Calpe, Alicante 03710
-                        698019052
-                        fatima.asad@outlook.com
-                        <br><br>
-                        <b>Perfil profesional</b>
-                        <br><br>
-                        Terapeuta ocupacional con amplios conocimientos sobre programación, tratamientos y modalidades para la recuperación
-                        y mitigación de problemas físicos y psíquicos para mejorar el estado de los pacientes.
-                        <br><br>
-                        <b>Experiencia laboral</b>
-                        <br><br>
-                        Diciembre 2019 – Actual
-                        Sentits – Alicante
-                        Terapeuta ocupacional
-                        <br><br>
-                        Evaluación de cada usuario conforme al proceso de rehabilitación y apoyo comunitario acordado. <br>
-                        Participación en programas de atención a familias. <br>
-                        Estímulo y motivación de los pacientes en la realización de actividades físicas y lúdicas. <br><br>
-                        Agosto 2013 – Agosto 2019
-                        Saner – Alicante
-                        Terapeuta ocupacional
-                        <br><br>
-                        Experiencia en programas de intervención en deterioro cognitivo. <br>
-                        Apoyo en la habilitación y rehabilitación física de las personas usuarias del servicio. <br>
-                        Coordinación, planificación y organización de intervenciones individuales. <br>
-                        Octubre 2011 – Enero 2013
-                        Centro IDEAT – Alicante
-                        Terapeuta ocupacional
-                        <br><br>
-                        Planificación y puesta en marcha de talleres y actividades de apoyo social. <br>
-                        Diseño y desarrollo de los programas de mejora de autonomía personal y social. <br>
-                        Interactuó con pacientes, familiares y médicos para coordinarlos e informarles sobre el cuidado a los pacientes. <br><br>
-                        <b>Formación académica</b>
-                        <br><br>
-                        Septiembre 2010
-                        Universidad Miguel Hernández – Elche
-                        Grado en Terapia Ocupacional
-                        <br><br>
-                        <b>Aptitudes</b>
-                        <br><br>
-                        Empatía en el trato al paciente
-                        Formación en metodología didáctica
-                        Resolución de conflictos
-                        Vocación por los colectivos vulnerables
-                        Grandes dosis de iniciativa y dedicación
-                        Persona proactiva y dinámica. <br><br>
-                        <b>Idiomas</b>
-                        
-                        Árabe, 
-                        Idioma nativo. <br>
-
-                        Español
-                        C2 – Experto. <br>
-                        <br><br>
-                        <b>Formación adicional</b>
-                        <br><br>
-                        Curso de Estimulación Multisensorial – IPFAP Formación, 2014
-                        Curso de Auxiliar de Rehabilitación – ELBS, 2012
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal de vista 1 -->   
-<!-- RONAL -->
 
 
 
@@ -2047,7 +1250,7 @@
     <div class="modal-dialog modal-xl">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 class="modal-title" id="crearModalLabel">Terapia Lenguaje</h2>
+                <h2 class="modal-title" id="crearModalLabel"></h2>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
             </div>
             <div class="modal-body">
@@ -2066,12 +1269,16 @@
                     <div id="carouselExampleInterval2" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active" data-bs-interval="1000">
-                                <img src="assets/images/tlenguaje/lenguaje.png" alt="First slide" width="100%"/>
+                                <img src="assets/images/tlenguaje/lgj1.png" alt="First slide" width="100%"/>
                             </div>
                             <div class="carousel-item" data-bs-interval="1000">
-                                <img src="assets/images/tlenguaje/lenguaje2.png" class="d-block w-100" alt="There slide"width="100%" />
+                                <img src="assets/images/tlenguaje/lgj2.png" class="d-block w-100" alt="There slide"width="100%" />
                             </div>
                             
+                            <div class="carousel-item" data-bs-interval="1000">
+                                <img src="assets/images/tlenguaje/lgj3.png" class="d-block w-100" alt="There slide"width="100%" />
+                            </div>
+
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval2" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -2093,36 +1300,48 @@
     </div>
 
     <!-- Contenido -->
-    <div class="col-xl-6">
+    <div class="col-xl-6" >
         <div class="card">
-            <div class="card-header align-items-center d-flex">
-                <div class="flex-shrink-0">
-                    
+            <div>
+                <h2 class="text-center">Terapia de Lenguaje</h2>
+            </div><hr>
+
+            <span class="text-justify-center" style="font-size: 15px;">¡Bienvenidos al espacio dedicado al desarrollo lingüístico de los pequeños! Aquí, rompemos con lo convencional al sumergirnos en un océano de descubrimiento donde la terapia de lenguaje se entrelaza con atención personalizada y comprensión profunda. Guiamos a cada niño en su viaje único hacia una comunicación efectiva y un desarrollo lingüístico integral. ¡Exploramos nuevas fronteras para el florecimiento emocional y el crecimiento de cada pequeño!
+            </span><br>
+
+            <ul>
+                <div style="margin-left: 10px; margin-top: 10px;">
+                    <span class="checkmark" style="font-size: 15px;">&#x2713; MEJORA DE LA PRONUNCIACIÓN Y ARTICULACIÓN</span>
                 </div>
-            </div>
-            <div class="card-body">
-                <div class="text-muted">
-                    La terapia del lenguaje consiste en la evaluación, diagnóstico y tratamiento de los trastornos que atañen a
-                    la comunicación. Éstos se manifiestan mediante alteraciones en la voz, la capacidad de habla, el lenguaje, 
-                    la audición y la deglución. El profesional encargado de trabajar estas dificultades es el logopeda infantil.
-                    Va dirigido A todo niño que tenga dificultades asociadas al área del lenguaje.
-                    <b>Las problemáticas más comunes a tratar con la terapia del lenguaje son:</b> 
-                    <li>Trastornos de articulación y reproducción de sonidos: dislalia, disglosia, disartria.</li>
-                    <li>Trastornos en la fluidez del habla: tartamudez.</li>
-                    <li>Trastornos de la voz: disfonías.</li>
-                    <li>Trastornos de la alimentación: alteraciones de la deglución, disfagia.</li>
-                    <li>Alteraciones en la lectura y la escritura: dislexia, disgrafía, disortografía.</li>
-                    <li>
-                        Alteraciones en la comprensión y/o expresión del lenguaje: Retraso del lenguaje,
-                        trastorno del lenguaje, trastornos neurodegenerativos, demencias….
-                    </li>
-                    <li>Problemas del lenguaje pragmático: dificultad para elegir el lenguaje socialmente adecuado.</li>   
+                <div style="margin-left: 10px; margin-top: 10px;">
+                    <span class="checkmark" style="font-size: 15px;">&#x2713;MEJORA DE LA PRONUNCIACIÓN Y ARTICULACIÓN</span>
                 </div>
-                <br>                          
-                <h2>profesional a cargo: Elsa Pito</h2>                
-            </div>
+                <div style="margin-left: 10px; margin-top: 10px;">
+                    <span class="checkmark" style="font-size: 15px;">&#x2713; FOMENTO DE LA COMPETENCIA LECTORA Y ESCRITORA</span>
+                </div>
+                <div style="margin-left: 10px; margin-top: 10px;">
+                    <span class="checkmark" style="font-size: 15px;">&#x2713;ABORDAJE DE TRASTORNOS DEL LENGUAJE</span>
+                </div>
+                <div style="margin-left: 10px; margin-top: 10px;">
+                    <span class="checkmark" style="font-size: 15px;">&#x2713;DESARROLLO DE HABILIDADES SOCIALES Y PRAGMÁTICAS</span>
+                </div>
+
+                <div style="margin-left: 10px; margin-top: 10px;">
+                    <span class="checkmark" style="font-size: 15px;">&#x2713; EVALUACIÓN DETALLADA DEL LENGUAJE  </span>
+                </div>
+
+                <div style="margin-left: 10px; margin-top: 10px;">
+                    <span class="checkmark" style="font-size: 15px;">&#x2713;INTERVENCIÓN PERSONALIZADA </span>
+                </div>
+
+                <div style="margin-left: 10px; margin-top: 10px;">
+                    <span class="checkmark" style="font-size: 15px;">&#x2713; ESTRATEGIAS PARA SUPERAR TRASTORNOS DEL HABLA Y LA VOZ </span>
+                </div>
+
+                
+            </ul>
         </div>
-    </div>
+    </div> 
 <!-- Contenido -->
 
 </div>
@@ -2140,7 +1359,7 @@
     <div class="modal-dialog modal-xl">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 class="modal-title" id="crearModalLabel">Terapia ocupacional</h2>
+                <h2 class="modal-title" id="crearModalLabel"></h2>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
             </div>
             
@@ -2160,13 +1379,13 @@
                     <div id="carouselExampleInterval3" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active" data-bs-interval="10000">
-                                <img src="assets/images/tocupacional/img1.png" alt="First slide" width="100%"/>
+                                <img src="assets/images/tocupacional/ocu1.png" alt="First slide" width="100%"/>
                             </div>
                             <div class="carousel-item" data-bs-interval="2000">
-                                <img src="assets/images/tocupacional/img2.png" class="d-block w-100" alt="two slide" width="100%"/>
+                                <img src="assets/images/tocupacional/ocu2.png" class="d-block w-100" alt="two slide" width="100%"/>
                             </div>
                             <div class="carousel-item">
-                                <img src="assets/images/tocupacional/img3.png" class="d-block w-100" alt="There slide"width="100%" />
+                                <img src="assets/images/tocupacional/ocu3.png" class="d-block w-100" alt="There slide"width="100%" />
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval3" data-bs-slide="prev">
@@ -2189,29 +1408,56 @@
     </div>
 
     <!-- Contenido -->
-    <div class="col-xl-6">
+    <div class="col-xl-6" >
         <div class="card">
-            <div class="card-header align-items-center d-flex">
-                <div class="flex-shrink-0">
-                <h2>profesional a cargo: Dolores Delano</h2>
+            <div>
+                <h2 class="text-center">Terapia Ocupacional</h2>
+            </div><hr>
+
+            <span class="text-justify-center" style="font-size: 15px;">
+            Bienvenidos a la Terapia Ocupacional, donde el arte de vivir se encuentra con la ciencia de la rehabilitación. En nuestro espacio, nos dedicamos a empoderar a individuos de todas las edades para alcanzar su máxima independencia y participación en las actividades diarias. Nuestros terapeutas ocupacionales, apasionados y dedicados, trabajan mano a mano con cada persona para superar desafíos físicos, emocionales o de desarrollo. Desde la recuperación de habilidades básicas hasta la adaptación en el entorno laboral, estamos comprometidos con su bienestar integral. ¡Bienvenidos a una vida plena a través de la Terapia Ocupacional
+            </span><br>
+
+            <ul>
+                <div style="margin-left: 10px; margin-top: 10px;">
+                    <span class="checkmark" style="font-size: 15px;">&#x2713; EVALUACIÓN DETALLADA DE HABILIDADES Y DESAFÍOS</span>
                 </div>
-            </div>
-            <div class="card-body">
-                <div class="text-muted">
-                    La terapia ocupacional es el uso terapéutico de las actividades de cuidado, trabajo y juego para incrementar 
-                    la independencia funcional, aumentar el desarrollo y prevenir la incapacidad; puede incluir la adaptación de 
-                    tareas o del entorno para alcanzar la máxima independencia y para aumentar la calidad de vida.
-                    Se valora el grado de independencia, se potencian habilidades para las situaciones cotidianas y para mejorar 
-                    la función general, dando importancia a las capacidades residuales.
-                    El terapeuta ocupacional utiliza actividades terapéuticas, de cuidado personal, de cuidado del hogar y recreativas 
-                    para facilitar o aumentar al máximo el nivel de función del paciente. Se evalúan tanto los aspectos psicosociales
-                    como los aspectos físicos del estado del paciente en función del contexto total del tratamiento.   
+                <div style="margin-left: 10px; margin-top: 10px;">
+                    <span class="checkmark" style="font-size: 15px;">&#x2713; DESARROLLO DE COORDINACIÓN Y DESTREZA</span>
                 </div>
-                <br>                          
+                <div style="margin-left: 10px; margin-top: 10px;">
+                    <span class="checkmark" style="font-size: 15px;">&#x2713; ADAPTACIÓN DE ACTIVIDADES DE LA VIDA DIARIA</span>
+                </div>
+                <div style="margin-left: 10px; margin-top: 10px;">
+                    <span class="checkmark" style="font-size: 15px;">&#x2713; AJUSTE DE ENTORNOS PARA OPTIMIZAR LA INDEPENDENCIA</span>
+                </div>
+                <div style="margin-left: 10px; margin-top: 10px;">
+                    <span class="checkmark" style="font-size: 15px;">&#x2713; INTERVENCIÓN EN DIFICULTADES DE APRENDIZAJE Y DESARROLLO</span>
+                </div>
+
+                <div style="margin-left: 10px; margin-top: 10px;">
+                    <span class="checkmark" style="font-size: 15px;">&#x2713; REHABILITACIÓN POST-LESIÓN O CIRUGÍA</span>
+                </div>
+
+                <div style="margin-left: 10px; margin-top: 10px;">
+                    <span class="checkmark" style="font-size: 15px;">&#x2713;DESARROLLO DE HABILIDADES MOTORAS Y COORDINACIÓN</span>
+                </div>
+
+                <div style="margin-left: 10px; margin-top: 10px;">
+                    <span class="checkmark" style="font-size: 15px;">&#x2713;JUEGO TERAPÉUTICO PARA ESTIMULAR EL APRENDIZAJE </span>
+                </div>
+
+                <div style="margin-left: 10px; margin-top: 10px;">
+                    <span class="checkmark" style="font-size: 15px;">&#x2713; INTERVENCIÓN EN DIFICULTADES DE APRENDIZAJE Y CONCENTRACIÓN </span>
+                </div>
+
+                <div style="margin-left: 10px; margin-top: 10px;">
+                    <span class="checkmark" style="font-size: 15px;">&#x2713; ESTIMULACIÓN DE LA CREATIVIDAD Y LA EXPRESIÓN </span>
+                </div>
                 
-            </div>
+            </ul>
         </div>
-    </div>
+    </div> 
     <!-- Contenido -->
 
 </div>
@@ -2392,7 +1638,7 @@
     <div class="col-xl-6" >
         <div class="card">
             <div>
-                <h2 class="text-center">Bienvenidos a la especialidad de Psicologia</h2>
+                <h2 class="text-center">Psicologia</h2>
             </div><hr>
 
             <span class="text-justify-center" style="font-size: 15px;">
