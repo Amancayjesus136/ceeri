@@ -1195,74 +1195,13 @@
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h2 class="modal-title" id="crearModalLabel">Juanito Alcachofa</h2>
+                    <h2 class="modal-title" id="crearModalLabel"></h2>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                 </div>
                 <div class="modal-body d-flex align-items">
-                    <img src="assets/images/tfisica/img3.png" alt="" style="width: 320px; height: 420px; margin-right: 40px;">
+                    <img src="assets/images/espe-psicologia/psi1.png" alt="" style="width: 320px; height: 420px; margin-right: 40px;">
                     <div class="text-muted">
-                        <b>Fatima Asad</b>
-                        <br><br>
-                        Calle San José Calasanz, 12
-                        Calpe, Alicante 03710
-                        698019052
-                        fatima.asad@outlook.com
-                        <br><br>
-                        <b>Perfil profesional</b>
-                        <br><br>
-                        Terapeuta ocupacional con amplios conocimientos sobre programación, tratamientos y modalidades para la recuperación
-                        y mitigación de problemas físicos y psíquicos para mejorar el estado de los pacientes.
-                        <br><br>
-                        <b>Experiencia laboral</b>
-                        <br><br>
-                        Diciembre 2019 – Actual
-                        Sentits – Alicante
-                        Terapeuta ocupacional
-                        <br><br>
-                        Evaluación de cada usuario conforme al proceso de rehabilitación y apoyo comunitario acordado. <br>
-                        Participación en programas de atención a familias. <br>
-                        Estímulo y motivación de los pacientes en la realización de actividades físicas y lúdicas. <br><br>
-                        Agosto 2013 – Agosto 2019
-                        Saner – Alicante
-                        Terapeuta ocupacional
-                        <br><br>
-                        Experiencia en programas de intervención en deterioro cognitivo. <br>
-                        Apoyo en la habilitación y rehabilitación física de las personas usuarias del servicio. <br>
-                        Coordinación, planificación y organización de intervenciones individuales. <br>
-                        Octubre 2011 – Enero 2013
-                        Centro IDEAT – Alicante
-                        Terapeuta ocupacional
-                        <br><br>
-                        Planificación y puesta en marcha de talleres y actividades de apoyo social. <br>
-                        Diseño y desarrollo de los programas de mejora de autonomía personal y social. <br>
-                        Interactuó con pacientes, familiares y médicos para coordinarlos e informarles sobre el cuidado a los pacientes. <br><br>
-                        <b>Formación académica</b>
-                        <br><br>
-                        Septiembre 2010
-                        Universidad Miguel Hernández – Elche
-                        Grado en Terapia Ocupacional
-                        <br><br>
-                        <b>Aptitudes</b>
-                        <br><br>
-                        Empatía en el trato al paciente
-                        Formación en metodología didáctica
-                        Resolución de conflictos
-                        Vocación por los colectivos vulnerables
-                        Grandes dosis de iniciativa y dedicación
-                        Persona proactiva y dinámica. <br><br>
-                        <b>Idiomas</b>
                         
-                        Árabe, 
-                        Idioma nativo. <br>
-
-                        Español
-                        C2 – Experto. <br>
-                        <br><br>
-                        <b>Formación adicional</b>
-                        <br><br>
-                        Curso de Estimulación Multisensorial – IPFAP Formación, 2014
-                        Curso de Auxiliar de Rehabilitación – ELBS, 2012
-                    </div>
                 </div>
             </div>
         </div>
@@ -1276,7 +1215,7 @@
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="crearModalLabel">Nancy Martines</h5>
+                    <h5 class="modal-title" id="crearModalLabel">Nancyyyyyyyy</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                 </div>
                 <div class="modal-body align-items d-flex">
@@ -2379,13 +2318,13 @@
                     <div id="carouselExampleInterval5" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active" data-bs-interval="10000">
-                                <img src="assets/images/psicologia/img1.png" alt="First slide" width="100%"/>
+                                <img src="assets/images/psicologia/psi1.png" alt="First slide" width="100%"/>
                             </div>
                             <div class="carousel-item" data-bs-interval="2000">
-                                <img src="assets/images/psicologia/img2.png" class="d-block w-100" alt="two slide"width="100%" />
+                                <img src="assets/images/psicologia/psi2.png" class="d-block w-100" alt="two slide"width="100%" />
                             </div>
                             <div class="carousel-item">
-                                <img src="assets/images/psicologia/img3.png" class="d-block w-100" alt="There slide" width="100%"/>
+                                <img src="assets/images/psicologia/psi3.png" class="d-block w-100" alt="There slide" width="100%"/>
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval5" data-bs-slide="prev">
@@ -2417,28 +2356,16 @@
             </div>
             <div class="card-body">
             <div class="text-muted">
-            La psicología es la ciencia que estudia la conducta humana y los procesos mentales. Al ser bastante amplia, 
-            para su estudio y aplicación se divide en dos vertientes: la psicología básica y la psicología aplicada.
-            Quizá te has dado cuenta que tu comportamiento cambia según la compañía o el contexto en el que te encuentres.
-            No es lo mismo cuando estás entre maestros o jefes a que cuando estás entre amigos y familiares. Estos cambios 
-            son precisamente lo que estudia la psicología social. Entender estas diferencias tiene un impacto interesante 
-            en el mundo laboral, educativo, cultural y político, ya que una vez que se conocen los factores que llevan a 
-            estas conductas, estas pueden ser modificadas, eliminadas o intensificadas para mejorar la relación entre grupos 
-            de personas. La psicología social también analiza las normas y principios que moldean la convivencia entre humanos.
-            <b>Gracias a este enfoque hoy conocemos más sobre temas como:</b>
-            <li>Patrones de conducta</li>
-            <li>Roles sociales</li>
-            <li>Conciencia colectiva</li>
-            <li>Relaciones sociales</li>
-            <li>Identidad social</li>
-            <li>Estereotipos</li>
-            <li>Valores</li>
-            <li>Trabajo en equipo</li>
-            <li>Liderazgo</li>
-            </div>
-                <br>                          
-                <h2>profesional a cargo: Ruben Ferrando</h2>
-            </div>
+            </b>
+            
+            <h2>Lista de Tareas</h2>
+            
+            <ul class="listado-tareas">
+            <span  class="checkmark">&#x2713;</span> ESTRATEGIAS DE APRENDIZAJE
+            <span class="checkmark">&#x2713;HABILIDADES SOCIALES BASADAS EN RESPETO Y EMPATIA</span>
+            <li><label class="checkmark">&#x2713;</label> Tarea 3</li>
+            </ul>
+
         </div>
     </div>
     <!-- Contenido -->
