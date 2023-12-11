@@ -49,7 +49,7 @@ $rutaImagen = "assets/images/fotoPerfilSmall/{$primeraLetra}.png";
         <div class="col-xl-3">
             <div class="card">
                 <div class="card-body text-center" style="background-color: #405189; align-items: center;">
-                    <img src="{{ asset($rutaImagen) }}" alt="" style="width: 140px; height: 140px; border-radius: 340px;">
+                    <img src="{{ asset('storage/assets/images/'.$user->foto) }}" alt="Foto de perfil" style="width: 140px; height: 140px; border-radius: 50%;">
                     <h1>{{ $user->name }}</h1>
                     
                 </div>
