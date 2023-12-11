@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\profile;
+use Illuminate\Support\Facades\Storage;
 
 class PerfilController extends Controller
 {
@@ -64,7 +65,21 @@ class PerfilController extends Controller
         $user->name = $request->name;
         $user->descripcion = $request->descripcion;
         $user->telefono = $request->telefono;
-        $user->foto = $request->foto;
+        if ($request->hasFile('foto')) {
+            $imagen = $request->file('foto');
+            if ($user->foto) {
+                Storage::delete('public/assets/images/' . $user->foto);
+            }
+            // Guarda la imagen en la ruta específica
+            $nombre_imagen = time() . '_' . $imagen->getClientOriginalName();
+            $path = 'public/assets/images/' . $nombre_imagen;
+
+            Storage::put($path, file_get_contents($imagen));
+    
+            // Actualiza el campo 'foto' en la base de datos con el nombre de la imagen
+            $user->foto = $nombre_imagen;
+        }
+    
         $user->save();
         return redirect()->route('perfil.index')->with('successEdit', 'Su perfil se ha editado correctamente');
     }

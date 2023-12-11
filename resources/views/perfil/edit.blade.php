@@ -58,7 +58,7 @@ $rutaImagen = "assets/images/fotoPerfilSmall/{$primeraLetra}.png";
         <div class="col-xl-8">
     <div class="card">
         <div class="card-body">
-            <form method="POST" action="{{ route('perfil.update', $user->id) }}">
+            <form method="POST" action="{{ route('perfil.update', $user->id) }}" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
                 <div class="row mb-3">
@@ -85,7 +85,7 @@ $rutaImagen = "assets/images/fotoPerfilSmall/{$primeraLetra}.png";
                     </div>
                     <div class="col-md-6">
                         <label for="foto" class="form-label">foto</label>
-                        <input type="file" class="form-control" id="foto" name="foto" value="{{ $user->foto }}">
+                        <input type="file" class="form-control" id="foto" name="foto" accept=".jpg;.png" value="{{ $user->foto }}">
                     </div>
                 </div>
             </form>

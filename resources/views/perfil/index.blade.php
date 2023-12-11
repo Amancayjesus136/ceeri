@@ -48,52 +48,50 @@ $rutaImagen = "assets/images/fotoPerfilSmall/{$primeraLetra}.png";
 
     @if ($user)
         <div class="row">
-            <div class="col-4">
-                <img src="{{ asset($rutaImagen) }}" alt="Foto de perfil" style="width: 140px; height: 140px; border-radius: 50%;">
+            <div class="col-2">
+                <img src="{{ asset('storage/assets/images/'.$user->foto) }}" alt="Foto de perfil" style="width: 140px; height: 140px; border-radius: 50%;">
             </div>
-
             <div class="col-md-6">
-        <!-- Información del usuario -->
-        <div class="card mt-3">
-            <div class="card-body d-flex flex-row">
+            <!-- Información del usuario -->
+                <div class="card mt-3">
+                    <div class="card-body d-flex flex-row">
+                        <div>
+                            <h1 class="card-title">{{ $user->name }}</h1>
+                            <p class="card-text">Empleado y administrador medio del sistema</p>
+                            <h5 class="card-text">Cede: Villa el Salvador</h5>
+                        </div>
+
+                        <div class="ms-auto">
+                            <a href="{{ route('perfil.edit', ['perfil' => $user->id]) }}" class="btn btn-success">
+                                <i class="ri-edit-box-line align-bottom"></i> Editar
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 <div>
-                    <h1 class="card-title">{{ $user->name }}</h1>
-                    <p class="card-text">Empleado y administrador medio del sistema</p>
-                    <h5 class="card-text">Cede: Villa el Salvador</h5>
-                </div>
-
-                <div class="ms-auto">
-                    <a href="{{ route('perfil.edit', ['perfil' => $user->id]) }}" class="btn btn-success">
-                        <i class="ri-edit-box-line align-bottom"></i> Editar
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-            <div>
-                <!-- Información adicional -->
-                <h3>INFORMACION</h3>
-                <div class="card">
-                    <div class="card-body">
-                        <h5>Nombre completo: {{ $user->name }}</h5>
-                        <h5>Email: {{ $user->email }}</h5>
-                        <h5>Teléfono: {{ $user->telefono }}</h5>
-                        <h5>Se unió el: {{ $user->created_at }}</h5>
-                        <h5>Foto: {{ $user->foto }}</h5>
+                    <!-- Información adicional -->
+                    <h3>INFORMACION</h3>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5>Nombre completo: {{ $user->name }}</h5>
+                            <h5>Email: {{ $user->email }}</h5>
+                            <h5>Teléfono: {{ $user->telefono }}</h5>
+                            <h5>Se unió el: {{ $user->created_at }}</h5>
+                            <h5>Foto: {{ $user->foto }}</h5>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div >
-                <!-- Sobre el usuario -->
-                <div class="card">
-                    <div class="card-body">
-                        <h3>Sobre:</h3>
-                        <p>{{ $user->descripcion }}</p>
+                <div >
+                    <!-- Sobre el usuario -->
+                    <div class="card">
+                        <div class="card-body">
+                            <h3>Sobre:</h3>
+                            <p>{{ $user->descripcion }}</p>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </div>    
         </div>
     @else
         <p>No se encontró perfil para este usuario.</p>
