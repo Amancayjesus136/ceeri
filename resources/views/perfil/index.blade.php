@@ -1,8 +1,4 @@
 <!-- PHP -->
-<?php
-$primeraLetra = strtoupper(substr($user->name, 0, 1));
-$rutaImagen = "assets/images/fotoPerfilSmall/{$primeraLetra}.png";
-?>
 
 <!-- Estilos CSS -->
 <style>
@@ -49,7 +45,16 @@ $rutaImagen = "assets/images/fotoPerfilSmall/{$primeraLetra}.png";
     @if ($user)
         <div class="row">
             <div class="col-2">
+                @if (empty($user->foto))
+                {{-- Obtener la primera letra del nombre del usuario en mayúsculas --}}
+                <?php $primeraLetra = strtoupper(substr($user->name, 0, 1)); ?>
+            
+                {{-- Mostrar la imagen de la letra correspondiente --}}
+                <img src="{{ asset('assets/images/fotoPerfilSmall/'.$primeraLetra.'.png') }}" alt="Letra de perfil" style="width: 140px; height: 140px; border-radius: 50%;">
+                @else
+                {{-- Mostrar la foto de perfil --}}
                 <img src="{{ asset('storage/assets/images/'.$user->foto) }}" alt="Foto de perfil" style="width: 140px; height: 140px; border-radius: 50%;">
+                @endif
             </div>
             <div class="col-md-6">
             <!-- Información del usuario -->
@@ -67,6 +72,8 @@ $rutaImagen = "assets/images/fotoPerfilSmall/{$primeraLetra}.png";
                             </a>
                         </div>
                     </div>
+                   <!--  <img src="{{ asset('storage/assets/images/'.$user->foto) }}" alt="Foto de perfil" style="width: 140px; height: 140px; border-radius: 50%;">  -->
+                   
                 </div>
                 <div>
                     <!-- Información adicional -->

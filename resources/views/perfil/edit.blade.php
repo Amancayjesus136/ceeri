@@ -49,9 +49,22 @@ $rutaImagen = "assets/images/fotoPerfilSmall/{$primeraLetra}.png";
         <div class="col-xl-3">
             <div class="card">
                 <div class="card-body text-center" style="background-color: #405189; align-items: center;">
+                    @if (empty($user->foto))
+                    {{-- Obtener la primera letra del nombre del usuario en mayúsculas --}}
+                    <?php $primeraLetra = strtoupper(substr($user->name, 0, 1)); ?>
+                
+                    {{-- Mostrar la imagen de la letra correspondiente --}}
+                    <img src="{{ asset('assets/images/fotoPerfilSmall/'.$primeraLetra.'.png') }}" alt="Letra de perfil" style="width: 140px; height: 140px; border-radius: 50%;">
+                    @else
+                    {{-- Mostrar la foto de perfil --}}
                     <img src="{{ asset('storage/assets/images/'.$user->foto) }}" alt="Foto de perfil" style="width: 140px; height: 140px; border-radius: 50%;">
+                    @endif                    
                     <h1>{{ $user->name }}</h1>
-                    
+                    <form method="POST" action="{{ route('perfil.destroy', $user->id) }}">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-sm btn-danger"><i class="fa-solid fa-circle-xmark"></i></button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -81,7 +94,8 @@ $rutaImagen = "assets/images/fotoPerfilSmall/{$primeraLetra}.png";
                 <div class="row mb-3">
                     <div class="col-md-6">
                         <button type="submit" class="btn btn-primary">Actualizar</button>
-                        <a href="{{ route('perfil.index') }}" class="btn btn-success"><i class="ri-edit-box-line align-bottom"></i> Volver</a>    
+                        <a href="{{ route('perfil.index') }}" class="btn btn-success"><i class="ri-edit-box-line align-bottom"></i> Volver</a> 
+                        
                     </div>
                     <div class="col-md-6">
                         <label for="foto" class="form-label">foto</label>
@@ -120,39 +134,4 @@ $rutaImagen = "assets/images/fotoPerfilSmall/{$primeraLetra}.png";
 
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
-    <!--modal para editar perfil -->
-        <div class="modal fade" id="editarPerfil{{ $user->id }}" tabindex="-1" aria-labelledby="editarPerfil" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="editarPerfilLabel">Editar la informacion de tu perfil</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form method="POST" action="{{ route('perfil.update', $user->id) }}">
-                            @csrf
-                            @method('PUT')
-                                <div class="mb-3">
-                                    <label for="name" class="form-label">Nombre completo</label>
-                                    <input type="text" class="form-control" id="name" name="name" value="{{ $user->name }}" oninput="limitarCaracteres(this, 255)">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="email" class="form-label">Correo</label>
-                                    <input type="text" class="form-control" id="email" name="email" value="{{ $user->email }}" oninput="limitarCaracteres(this, 255)">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="descripcion" class="form-label">Descripcion</label>
-                                    <input type="text" class="form-control" id="descripcion" name="descripcion" value="{{ $user->descripcion }}" oninput="limitarCaracteres(this, 500)">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="telefono" class="form-label">Teléfono</label>
-                                    <input type="text" class="form-control" id="telefono" name="telefono" value="{{ $user->telefono }}" oninput="limitarCaracteres(this, 30)">
-                                </div>
-                                                        
-                            <button type="submit" class="btn btn-primary">Actualizar</button>
-                        </form>                
-                    </div>
-                </div>
-            </div>
-        </div>    
 @endsection

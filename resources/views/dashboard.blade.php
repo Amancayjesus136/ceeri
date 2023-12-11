@@ -170,86 +170,57 @@ $porcentajeTerapiaLenguaje = ($totalFilas != 0) ? ($clienteFilasTerapiaLenguaje 
         </div>
     </div> 
 
+    
+
     <div class="card shadow mb-4">
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary">Porcentaje de especialidades en las citas registradas</h6>
-        </div>
-        <div class="card-body">
-            <h4 class="small font-weight-bold">Psicología <span class="float-right"><?php echo number_format($porcentajePsicologia, 2) . '%'; ?></span></h4>
-            <div class="progress mb-4">
-                <div class="progress-bar bg-danger" role="progressbar" style="width: <?php echo $porcentajePsicologia; ?>%" aria-valuenow="<?php echo $porcentajePsicologia; ?>" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-            
-            <h4 class="small font-weight-bold">Terapia Física <span class="float-right"><?php echo number_format($porcentajeTerapiaFisica, 2) . '%'; ?></span></h4>
-            <div class="progress mb-4">
-                <div class="progress-bar bg-warning" role="progressbar" style="width: <?php echo $porcentajeTerapiaFisica; ?>%" aria-valuenow="<?php echo $porcentajeTerapiaFisica; ?>" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-
-            <h4 class="small font-weight-bold">Terapia Infantil <span class="float-right"><?php echo number_format($porcentajeTerapiaInfantil, 2) . '%'; ?></span></h4>
-            <div class="progress mb-4">
-                <div class="progress-bar" role="progressbar" style="width: <?php echo $porcentajeTerapiaInfantil; ?>%" aria-valuenow="<?php echo $porcentajeTerapiaInfantil; ?>" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-
-            <h4 class="small font-weight-bold">Terapia Ocupacional <span class="float-right"><?php echo number_format($porcentajeTerapiaOcupacional, 2) . '%'; ?></span></h4>
-            <div class="progress mb-4">
-                <div class="progress-bar bg-info" role="progressbar" style="width: <?php echo $porcentajeTerapiaOcupacional; ?>%" aria-valuenow="<?php echo $porcentajeTerapiaOcupacional; ?>" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-
-            <h4 class="small font-weight-bold">Terapia de Lenguaje <span class="float-right"><?php echo number_format($porcentajeTerapiaLenguaje, 2) . '%'; ?></span></h4>
-            <div class="progress">
-                <div class="progress-bar bg-success" role="progressbar" style="width: <?php echo $porcentajeTerapiaLenguaje; ?>%" aria-valuenow="<?php echo $porcentajeTerapiaLenguaje; ?>" aria-valuemin="0" aria-valuemax="100"></div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- <div class="row">
-    <div class="col-6">
-        <div class="card bg-primary text-black shadow">
-            <div class="card-body">
-                Citas con Psicologia
-                <div class="text-black-50 small"><?php echo number_format($clienteFilasPsicologia, 0, '.', ','); ?></div>
-            </div>
-        </div>
+        </div><br>
     </div>
     
-    <div class="col-6">
-        <div class="card bg-success text-black shadow">
-            <div class="card-body">
-            Citas con Terapia fisica
-                <div class="text-black-50 small"><?php echo number_format($clienteFilasTerapiaFisica, 0, '.', ','); ?></div>
+        <div class="row">
+            <div class="col-5">
+                <h4 class="small font-weight-bold">Psicología <span class="float-right"><?php echo number_format($porcentajePsicologia, 2) . '%'; ?></span></h4>
+                <div class="progress">
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: <?php echo $porcentajePsicologia; ?>%" aria-valuenow="<?php echo $porcentajePsicologia; ?>" aria-valuemin="0" aria-valuemax="100"></div>
+                </div> <br>
             </div>
-        </div>
-    </div>
-</div>
+        </div> 
+        <div class="row">
+            <div class="col-5">
+                <h4 class="small font-weight-bold">Terapia Física <span class="float-right"><?php echo number_format($porcentajeTerapiaFisica, 2) . '%'; ?></span></h4>
+                <div class="progress">
+                    <div class="progress-bar bg-warning" role="progressbar" style="width: <?php echo $porcentajeTerapiaFisica; ?>%" aria-valuenow="<?php echo $porcentajeTerapiaFisica; ?>" aria-valuemin="0" aria-valuemax="100"></div>
+                </div> <br>
+            </div>
+        </div>      
+            
 
-<div class="row">
-    <div class="col-4">
-        <div class="card bg-info text-black shadow">
-            <div class="card-body">
-            Citas con Terapia infantil
-                <div class="text-black-50 small"><?php echo number_format($clienteFilasTerapiaInfantil, 0, '.', ','); ?></div>
+        <div class="row">
+            <div class="col-5">
+                <h4 class="small font-weight-bold">Terapia Infantil <span class="float-right"><?php echo number_format($porcentajeTerapiaInfantil, 2) . '%'; ?></span></h4>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar " style="width: <?php echo $porcentajeTerapiaInfantil; ?>%" aria-valuenow="<?php echo $porcentajeTerapiaInfantil; ?>" aria-valuemin="0" aria-valuemax="100"></div>
+                </div> <br>
             </div>
         </div>
-    </div>
-    <div class="col-4">
-        <div class="card bg-warning text-black shadow">
-            <div class="card-body">
-            Citas con Terapia ocupacional
-                <div class="text-black-50 small"><?php echo number_format($clienteFilasTerapiaOcupacional, 0, '.', ','); ?></div>
+        <div class="row">
+            <div class="col-5">
+                <h4 class="small font-weight-bold">Terapia Ocupacional <span class="float-right"><?php echo number_format($porcentajeTerapiaOcupacional, 2) . '%'; ?></span></h4>
+                <div class="progress">
+                    <div class="progress-bar bg-info" role="progressbar" style="width: <?php echo $porcentajeTerapiaOcupacional; ?>%" aria-valuenow="<?php echo $porcentajeTerapiaOcupacional; ?>" aria-valuemin="0" aria-valuemax="100"></div>
+                </div> <br>
             </div>
         </div>
-    </div>
-    <div class="col-4">
-        <div class="card bg-danger text-black shadow">
-            <div class="card-body">
-            Citas con Terapia de lenguaje
-                <div class="text-black-50 small"><?php echo number_format($clienteFilasTerapiaLenguaje, 0, '.', ','); ?></div>
-            </div>
+        <div class="row">
+            <div class="col-5">
+                <h4 class="small font-weight-bold">Terapia de Lenguaje <span class="float-right"><?php echo number_format($porcentajeTerapiaLenguaje, 2) . '%'; ?></span></h4>
+                <div class="progress">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: <?php echo $porcentajeTerapiaLenguaje; ?>%" aria-valuenow="<?php echo $porcentajeTerapiaLenguaje; ?>" aria-valuemin="0" aria-valuemax="100"></div>
+                </div> <br>
+            </div>  
         </div>
-    </div>
 </div>
-</div>   -->
 
 
 @endsection

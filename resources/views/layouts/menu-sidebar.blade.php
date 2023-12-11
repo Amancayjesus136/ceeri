@@ -5,26 +5,7 @@
 <header id="page-topbar">
 <div class="layout-width">
 <div class="navbar-header">
-<style>
 
-:root {
-    --fondo-claro: #ffffff;
-    --texto-claro: #000000;
-    --fondo-oscuro: #333333;
-    --texto-oscuro: #ffffff;
-}
-
-body {
-    background-color: var(--fondo-claro);
-    color: var(--texto-claro);
-}
-
-body.modo-oscuro {
-    background-color: var(--fondo-oscuro);
-}
-
-
-</style>
     <div class="d-flex">
         <!-- LOGO -->
         <div class="navbar-brand-box horizontal-logo">
@@ -80,30 +61,6 @@ body.modo-oscuro {
                 <i class='bx bx-fullscreen fs-22'></i>
             </button>
         </div>
-
-        <div class="ms-1 header-item d-none d-sm-flex">
-            <button type="button" class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle light-dark-mode" id="modoOscuroBtn">
-                <i class='bx bx-moon fs-22'></i>
-            </button>
-        </div>
-<script>
-// script.js
-document.addEventListener('DOMContentLoaded', function () {
-    const modoOscuroBtn = document.getElementById('modoOscuroBtn');
-    const body = document.body;
-
-    modoOscuroBtn.addEventListener('click', function () {
-        body.classList.toggle('modo-oscuro');
-        actualizarEstilos();
-    });
-
-    function actualizarEstilos() {
-        const modoOscuro = body.classList.contains('modo-oscuro');
-        document.documentElement.style.setProperty('--fondo', modoOscuro ? '#333333' : '#ffffff');
-        document.documentElement.style.setProperty('--texto', modoOscuro ? '#ffffff' : '#000000');
-    }
-});
-</script>
 
         <div class="dropdown ms-sm-3 header-item topbar-user">
             <button type="button" class="btn" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

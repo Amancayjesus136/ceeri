@@ -18,6 +18,7 @@ class PerfilController extends Controller
         $user = auth()->user();
 
         return view('perfil.index', compact('user'));
+
     }
     
 
@@ -70,13 +71,11 @@ class PerfilController extends Controller
             if ($user->foto) {
                 Storage::delete('public/assets/images/' . $user->foto);
             }
-            // Guarda la imagen en la ruta específica
             $nombre_imagen = time() . '_' . $imagen->getClientOriginalName();
             $path = 'public/assets/images/' . $nombre_imagen;
 
             Storage::put($path, file_get_contents($imagen));
     
-            // Actualiza el campo 'foto' en la base de datos con el nombre de la imagen
             $user->foto = $nombre_imagen;
         }
     
@@ -87,8 +86,19 @@ class PerfilController extends Controller
     /**
      * Remove the specified resource from storage.
      */
+
     public function destroy(string $id)
     {
-        //
+        $user = User::findOrFail($id);
+
+        $rutaFoto = $user->foto;
+
+        $user->update(['foto' => null]);
+
+        if (!empty($rutaFoto)) {
+            Storage::delete($rutaFoto);
+        }
+
+        return redirect()->route('perfil.index');
     }
 }
