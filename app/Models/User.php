@@ -14,6 +14,22 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
+    protected $table = 'users';
+
+    protected $fillable = [
+        'name',
+        'email',
+        'password',
+        'descripcion',
+        'telefono',
+        'foto',
+        'created_at'
+
+    ];
+    public function profile()
+    {
+        return $this->hasOne(profile::class);
+    }
     /**
      * The attributes that are mass assignable.
      *
@@ -46,22 +62,7 @@ class UserData extends Model
 {
     use HasFactory;
 
-    protected $table = 'users';
-
-    protected $fillable = [
-        'name',
-        'email',
-        'password',
-        'descripcion',
-        'telefono',
-        'foto',
-        'created_at'
-
-    ];
-    public function profile()
-    {
-        return $this->hasOne(profile::class);
-    }
+    
 }
 
     
