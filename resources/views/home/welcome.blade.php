@@ -158,7 +158,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form action="{{route('registroPrincipal')}}" method="POST">
+                <form action="{{route('registroPrincipal')}}" method="POST" id="registrar-cita">
                     @csrf
                     <div class="row mb-1">
                         <div class="col-md-6">
@@ -216,30 +216,62 @@
     </div>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-
-<!-- Tu script de validación de fecha -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
-     $(document).ready(function () {
-        $('form').submit(function (e) {
-            var selectedDateTime = new Date($('#fecha_hora').val()); // Obtiene la fecha y hora seleccionadas
-
-            // Define el rango de horas no permitido (de 8:00 a 18:00)
-            var horaInicio = 18;
-            var horaFin = 7;
-
-            // Obtiene la hora de la fecha y hora seleccionadas
+    $(document).ready(function () {
+        $('#registrar-cita').submit(function (e) {
+            e.preventDefault();
+            var selectedDateTime = new Date($('#fecha_hora').val());
+            var horaInicio = 8;
+            var horaFin = 18;
             var horaSeleccionada = selectedDateTime.getHours();
 
-            // Comprueba si la hora seleccionada está dentro del rango no permitido
-            if (horaSeleccionada >= horaInicio || horaSeleccionada < horaFin) {
-                // Muestra un mensaje de alerta
-                alert('Horario no válido. Son horas de cierre, estamos abiertos de 7:00AM a 18:00PM.');
-                e.preventDefault(); // Evita que se envíe el formulario
+            // Obtener solo la hora de la fecha seleccionada
+            var minutosSeleccionados = selectedDateTime.getMinutes();
+
+            // Verificar si la hora está fuera del rango permitido
+            if (horaSeleccionada < horaInicio || horaSeleccionada >= horaFin || (horaSeleccionada === horaFin && minutosSeleccionados > 0)) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'No puede elegir horas fuera del horario de atención (08:00 a 18:00)',
+                });
+                return; // Detener la ejecución si la hora es inválida
             }
+
+            // Resto del código AJAX
+            $.ajax({
+                url: "{{ route('registroPrincipal') }}",
+                method: "POST",
+                data: $(this).serialize(),
+                dataType: "json",
+                success: function (data) {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Éxito',
+                        text: 'Su cita ha sido registrada correctamente',
+                    }).then(function () {
+                        setTimeout(function () {
+                            $('#agregarModal').modal('hide');
+                        }, 500);
+
+                        setTimeout(function () {
+                            location.reload();
+                        }, 500);
+                    });
+                },
+                error: function (error) {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Error',
+                        text: 'Hubo un problema al registrar la cita',
+                    });
+                }
+            });
         });
     });
 </script>
+
 <!-- Modal para Crear Nuevo reserva -->
 
 <!--scripts para los numeros de caracteres -->

@@ -13,20 +13,18 @@ class SeleccionarController extends Controller
      */
     public function index()
     {
-        $clientes = Cliente::query();
-        if (!empty($_GET['s'])) {
-            $clientes = $clientes->where('id', 'LIKE', '%'.$_GET['s'].'%')
-                ->orWhere('especialidad', 'LIKE', '%'.$_GET['s'].'%')
-                ->orWhere('tipo_documento', 'LIKE', '%'.$_GET['s'].'%')
-                ->orWhere('numero_documento', 'LIKE', '%'.$_GET['s'].'%')
-                ->orWhere('nombres', 'LIKE', '%'.$_GET['s'].'%')
-                ->orWhere('apellidos', 'LIKE', '%'.$_GET['s'].'%')
-                ->orWhere('telefono', 'LIKE', '%'.$_GET['s'].'%')
-                ->orWhere('especialidad', 'LIKE', '%'.$_GET['s'].'%')
-                ->orWhere('fecha_hora', 'LIKE', '%'.$_GET['s'].'%');
+        $clientes = Cliente::get();
+        $eventos = [];
+        foreach ($clientes as $cliente) {
+            array_push($eventos, [
+                'id' => $cliente->id,
+                'title' => $cliente->nombres.' '.$cliente->apellidos.' '.$cliente->especialidad,
+                'start' => $cliente->fecha_hora,
+                'end' => date('Y-m-d H.i:s', strtotime('+1 hour', strtotime($cliente->fecha_hora))),
+            ]);
         }
-        $clientes = $clientes->get();
-        return view('seleccionar.index', compact('clientes',));
+        //return dd($eventos);
+        return view('seleccionar.index', compact('clientes', 'eventos'));
     }
 
     /**

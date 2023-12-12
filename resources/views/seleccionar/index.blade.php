@@ -1,8 +1,8 @@
 @extends('layouts.admin')
-@extends('layouts.footer')
 
 @section('content')
 
+<link href='https://cdn.jsdelivr.net/npm/fullcalendar@3.10.5/dist/fullcalendar.min.css' rel='stylesheet' />
 <style>
     .listado-busqueda {
   width: 240px;
@@ -32,22 +32,6 @@
                 <div class="card card-h-100">
                     <div class="card-body">
                         <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#agregarModal"><i class="mdi mdi-plus"></i> Nueva reserva</button>
-
-                        <div id="external-events">
-                            <br>
-                            <div class="external-event fc-event bg-soft-success text-success" data-class="bg-soft-success">
-                                <i class="mdi mdi-checkbox-blank-circle font-size-11 me-2"></i>Pendiente
-                            </div>
-                            <div class="external-event fc-event bg-soft-info text-info" data-class="bg-soft-info">
-                                <i class="mdi mdi-checkbox-blank-circle font-size-11 me-2"></i>Proceso
-                            </div>
-                            <div class="external-event fc-event bg-soft-warning text-warning" data-class="bg-soft-warning">
-                                <i class="mdi mdi-checkbox-blank-circle font-size-11 me-2"></i>Tardanza
-                            </div>
-                            <div class="external-event fc-event bg-soft-danger text-danger" data-class="bg-soft-danger">
-                                <i class="mdi mdi-checkbox-blank-circle font-size-11 me-2"></i>Cancelado
-                            </div>
-                        </div>
 
                     </div>
                 </div>
@@ -97,19 +81,6 @@
                     </div>
                 </div>
 
-                <div class="card">
-                    <div class="card-body bg-soft-info">
-                        <div class="d-flex">
-                            <div class="flex-shrink-0">
-                                <i data-feather="calendar" class="text-info icon-dual-info"></i>
-                            </div>
-                            <div class="flex-grow-1 ms-3">
-                                <h6 class="fs-15">Welcome to your Calendar!</h6>
-                                <p class="text-muted mb-0">Event that applications book will appear here. Click on an event to see the details and manage applicants event.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <!--end card-->
             </div> <!-- end col-->
 
@@ -405,10 +376,26 @@
     <script src="assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
     <script src="assets/js/plugins.js"></script>
 
-    <script src="assets/libs/fullcalendar/main.min.js"></script>
+   
+<script src='https://cdn.jsdelivr.net/npm/moment@2/min/moment.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/fullcalendar@3.10.5/dist/fullcalendar.min.js'></script>
+<script src="assets/js/app.js"></script>
 
-    <script src="assets/js/pages/calendar.init.js"></script>
+<script>
 
-    <script src="assets/js/app.js"></script>
+    $(function() {
+        $('#calendar').fullCalendar({
+        defaultView: 'agendaWeek',
+        header: {
+            left: 'prev,next',
+            center: 'title',
+            right: 'basicDay,agendaWeek,month'
+        },
+        events: <?php echo json_encode($eventos); ?>
+        });
+    });
+    
+</script>
 
 @endsection

@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\CitasReservadas;
+use App\Models\Cliente;
+use Carbon\Carbon;
+
 
 
 class CitasReservadasController extends Controller
@@ -13,7 +16,27 @@ class CitasReservadasController extends Controller
      */
     public function index()
     {
-        return view('creservadas.index');
+        $clientes = Cliente::query();
+
+        // Filtro de búsqueda general
+        if (!empty($_GET['s'])) {
+        $clientes = $clientes->where('id', 'LIKE', '%'.$_GET['s'].'%')
+            ->orWhere('especialidad', 'LIKE', '%'.$_GET['s'].'%')
+            ->orWhere('tipo_documento', 'LIKE', '%'.$_GET['s'].'%')
+            ->orWhere('numero_documento', 'LIKE', '%'.$_GET['s'].'%')
+            ->orWhere('nombres', 'LIKE', '%'.$_GET['s'].'%')
+            ->orWhere('apellidos', 'LIKE', '%'.$_GET['s'].'%')
+            ->orWhere('telefono', 'LIKE', '%'.$_GET['s'].'%')
+            ->orWhere('especialidad', 'LIKE', '%'.$_GET['s'].'%')
+            ->orWhere('fecha_hora', 'LIKE', '%'.$_GET['s'].'%');
+    }
+
+        // Filtrar citas para el día de hoy
+        $clientes = $clientes->whereDate('fecha_hora', Carbon::now()->toDateString());
+
+        $porPagina = 50;
+        $clientes = $clientes->paginate($porPagina);
+        return view('creservadas.index',compact('clientes'));
         
     }
 

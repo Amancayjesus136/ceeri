@@ -9,6 +9,7 @@
                         <table class="table align-middle table-nowrap table-striped-columns mb-0">
                             <thead class="table-light">
                                 <tr>
+                                    
                                     <th scope="col">ID</th>
                                     <th scope="col">Tipo</th>
                                     <th scope="col">Número</th>
