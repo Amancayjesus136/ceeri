@@ -95,51 +95,54 @@ $rutaImagen = "assets/images/fotoPerfilSmall/{$primeraLetra}.png";
                 </div>
             </div>
         </div>
-        <div class="col-xl-8">
-    <div class="card">
-        <div class="card-body">
-            <form method="POST" action="{{ route('perfil.update', $user->id) }}" enctype="multipart/form-data" id="perfilForm">
-                @csrf
-                @method('PUT')
-                <div class="row mb-3">
-                    <div class="col-md-6 tracking-in-expand-forward-top">
-                        <label for="name" class="form-label">Nombre completo</label>
-                        <input type="text" class="form-control" id="name" name="name" value="{{ $user->name }}" oninput="limitarCaracteres(this, 255)">
+    <div class="col-xl-6">
+        <div class="card">
+            <div class="card-body">
+                <form method="POST" action="{{ route('perfil.update', $user->id) }}" enctype="multipart/form-data" id="perfilForm">
+                    @csrf
+                    @method('PUT')
+                    <div class="row mb-3">
+                        <div class="col-md-9 tracking-in-expand-forward-top">
+                            <label for="name" class="form-label">Nombre completo</label>
+                            <input type="text" class="form-control" id="name" name="name" value="{{ $user->name }}" oninput="limitarCaracteres(this, 255)">
+                            <br>
+                        </div>
+                        <div class="col-md-9 tracking-in-expand-forward-top">
+                            <label for="foto" class="form-label">foto</label>
+                            <input type="file" class="form-control" id="foto" name="foto" accept=".jpg;.png" value="{{ $user->foto }}">
+                        </div>
                     </div>
-                    <div class="col-md-6 tracking-in-expand-forward-top">
-                        <label for="foto" class="form-label">foto</label>
-                        <input type="file" class="form-control" id="foto" name="foto" accept=".jpg;.png" value="{{ $user->foto }}">
+                    <div class="row mb-3">
+                        <div class="col-md-8 tracking-in-expand-forward-top"> 
+                            <button type="button" class="btn btn-primary" id="mostrarTelefono">
+                                <i class="fas fa-plus"></i> agregar o editar telefono 
+                            </button>
+                            <br><br>
+                            <button type="button" class="btn btn-primary" id="mostrarDescripcion">
+                                <i class="fas fa-plus"></i> agregar o editar descripcion
+                            </button>
+                        </div>
+                    </div>                        
+                    
+                    
+                    <div class="row mb-4">
+                        <div class="col-md-8 tracking-in-expand-forward-top" id="campoTelefono" style="display: none;">
+                            <label for="telefono" class="form-label">Teléfono</label>
+                            <input type="text" class="form-control" id="telefono" name="telefono" value="{{ $user->telefono }}" oninput="limitarCaracteres(this, 30)">
+                        </div>
+                        <div class="col-md-8 tracking-in-expand-forward-top" id="campoDescripcion" style="display: none;">
+                            <label for="descripcion" class="form-label">Descripcion</label>
+                            <textarea class="form-control" id="descripcion" name="descripcion" rows="4" oninput="limitarCaracteres(this, 500)">{{ $user->descripcion }}</textarea>
+                        </div>
+                    </div>                                                        
+                    <div class="row mb-3">
+                        <div class="col-md-6 tracking-in-expand-forward-top">
+                            <button type="submit" class="btn btn-primary">Actualizar</button>
+                            <a href="{{ route('perfil.index') }}" class="btn btn-success"><i class="ri-edit-box-line align-bottom"></i> Volver</a>    
+                        </div>        
                     </div>
-                </div>
-                <div class="row mb-3">
-                    <div class="col-md-8 tracking-in-expand-forward-top"> 
-                        <button type="button" class="btn btn-primary" id="mostrarTelefono">
-                            <i class="fas fa-plus"></i> agregar o editar telefono
-                        </button>
-                        <button type="button" class="btn btn-primary" id="mostrarDescripcion">
-                            <i class="fas fa-plus"></i> agregar o editar descripcion
-                        </button>
-                    </div>
-                </div>                        
-                
-                
-                <div class="row mb-4">
-                    <div class="col-md-6 tracking-in-expand-forward-top" id="campoTelefono" style="display: none;">
-                        <label for="telefono" class="form-label">Teléfono</label>
-                        <input type="text" class="form-control" id="telefono" name="telefono" value="{{ $user->telefono }}" oninput="limitarCaracteres(this, 30)">
-                    </div>
-                    <div class="col-md-6 tracking-in-expand-forward-top" id="campoDescripcion" style="display: none;">
-                        <label for="descripcion" class="form-label">Descripcion</label>
-                        <textarea class="form-control" id="descripcion" name="descripcion" rows="4" oninput="limitarCaracteres(this, 500)">{{ $user->descripcion }}</textarea>
-                    </div>
-                </div>                                                        
-                <div class="row mb-3">
-                    <div class="col-md-6 tracking-in-expand-forward-top">
-                        <button type="submit" class="btn btn-primary">Actualizar</button>
-                        <a href="{{ route('perfil.index') }}" class="btn btn-success"><i class="ri-edit-box-line align-bottom"></i> Volver</a>    
-                    </div>        
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
     </div>
     @else

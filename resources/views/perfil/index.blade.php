@@ -112,7 +112,7 @@
                 </div>
                 @endif
             </div>
-            <div class="col-md-6 ">
+            <div class="col-9 ">
             <!-- Información del usuario -->
                 <div class="card mt-3 shadow-drop-center ">
                     <div class="card-body d-flex flex-row tracking-in-expand-forward-top">
@@ -128,12 +128,10 @@
                             </a>
                         </div>
                     </div>
-                   
                 </div>
-                <div>
+                <div class="row">
                     <!-- Información adicional -->
-                   
-                        <div class="card shadow-drop-center ">
+                        <div class="card shadow-drop-center col-4 ">
                             <div class="card-body tracking-in-expand-forward-top">
                                 <h3>INFORMACION</h3><br>
                                 <h5>Nombre completo: {{ $user->name }}</h5><br>
@@ -144,19 +142,17 @@
                                 <h5>Se unió el: {{ Illuminate\Support\Str::limit($user->created_at, $limit = 10, $end = '...') }}</h5><br>
                             </div>
                         </div>
-                    
-                </div>
-
-                <div >
-                    <!-- Sobre el usuario -->
-                    @if($user->descripcion)
-                        <div class="card shadow-drop-center ">
-                            <div class="card-body tracking-in-expand-forward-top">
-                                <h3>DESCRIPCION:</h3><br>
-                                <p>{{ $user->descripcion }}</p>
+                        
+                        @if($user->descripcion)
+                            <div class="card shadow-drop-center col-7 " style="margin-left: 10px;">
+                                <div class="card-body tracking-in-expand-forward-top">
+                                    <h3>DESCRIPCION:</h3><br>
+                                    <p>{{ $user->descripcion }}</p>
+                                </div>
                             </div>
-                        </div>
-                    @endif
+                        @else
+                            <p class="card shadow-drop-center col-7 text-center" style="margin-left: 10px; align-items: center">Sin descripción de usuario</p>
+                         @endif
                 </div>
             </div>    
         </div>
