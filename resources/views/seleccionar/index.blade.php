@@ -38,10 +38,9 @@
                 
                 <div class="card">
                     <div class="card-header align-items-center d-flex border-bottom-dashed">
-                        <h4 class="card-title mb-0 flex-grow-1">Consultas</h4>
                         <div class="flex-shrink-0">
                         <form method="GET" class="listado-busqueda">
-                            <input type="text" placeholder="Ingrese DNI" name="s" class="form-control input-sm"
+                            <input type="text" placeholder="Consulta con DNI" name="s" class="form-control input-sm"
                                 value="<?php if (!empty($_GET['s'])) echo $_GET['s']; ?>" />
                             <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
                         </form>

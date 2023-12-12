@@ -65,8 +65,17 @@
         <div class="dropdown ms-sm-3 header-item topbar-user">
             <button type="button" class="btn" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <span class="d-flex align-items-center">
-                    <img class="rounded-circle header-profile-user" src="{{ asset('storage/assets/images/'.Auth::user()->foto) }}" alt="Header Avatar">
-                    <span class="text-start ms-xl-2">
+                @if (empty(Auth::user()->foto))
+                {{-- Obtener la primera letra del nombre del usuario en mayúsculas --}}
+                <?php $primeraLetra = strtoupper(substr($user->name, 0, 1)); ?>
+            
+                {{-- Mostrar la imagen de la letra correspondiente --}}
+                <img src="{{ asset('assets/images/fotoPerfilSmall/'.$primeraLetra.'.png') }}" class="rounded-circle header-profile-user" alt="Letra de perfil">
+                @else
+                {{-- Mostrar la foto de perfil --}}
+                <img src="{{ asset('storage/assets/images/'.Auth::user()->foto) }}" class="rounded-circle header-profile-user" alt="Foto de perfil" >
+                @endif                    
+                <span class="text-start ms-xl-2">
                         <span class="d-none d-xl-inline-block ms-1 fw-medium user-name-text">{{ Auth::user()->name }}</span>
                         <!-- <span class="d-none d-xl-block ms-1 fs-12 text-muted user-name-sub-text">Admin-mid</span> -->
                     </span>
@@ -148,95 +157,40 @@
             <ul class="navbar-nav" id="navbar-nav">
                 <li class="menu-title"><span data-key="t-menu">Menu</span></li>
 
-<!-- ============================================================== -->
-<!-- INICIO -->     
-<!-- ============================================================== --> 
+            <!-- ============================================================== -->
+            <!-- INICIO -->     
+            <!-- ============================================================== --> 
             <li class="nav-item">
                 <a class="nav-link menu-link" href="{{ route('login') }}">
                     <i class="fas fa-home"></i> <span data-key="t-Usuarios">Inicio</span>
                 </a>
             </li>
-<!-- ============================================================== -->
-<!-- Seleccionar -->     
-<!-- ============================================================== --> 
+            <!-- ============================================================== -->
+            <!-- Seleccionar -->     
+            <!-- ============================================================== --> 
             <li class="nav-item">
                 <a class="nav-link menu-link" href="{{ route('seleccionar.index') }}">
                     <i class="far fa-calendar-alt"></i> <span data-key="t-Usuarios">Reserva</span>
                 </a>
             </li>
 
-<!-- ============================================================== -->
-<!-- Clientes -->     
-<!-- ============================================================== --> 
-<li class="nav-item">
-    <a class="nav-link menu-link" href="{{ route('lstpsicologia.index') }}">
-    <i class="fa-solid fa-person"></i> <span data-key="t-Usuarios">Clientes</span>
-    </a>
-</li>
-
-<!-- ============================================================== -->
-<!-- Reservas para hoy -->     
-<!-- ============================================================== --> 
-
-             <li class="nav-item">
-                <a class="nav-link menu-link" href="#reservashoy" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarPlanCurricular">
-                    <i class="fas fa-clipboard-list"></i> <span data-key="t-Configuración">Reservas para hoy</span>
+            <!-- ============================================================== -->
+            <!-- Clientes -->     
+            <!-- ============================================================== --> 
+            <li class="nav-item">
+                <a class="nav-link menu-link" href="{{ route('lstpsicologia.index') }}">
+                <i class="fa-solid fa-person"></i> <span data-key="t-Usuarios">Clientes</span>
                 </a>
-                <div class="collapse menu-dropdown" id="reservashoy">
-                    <ul class="nav nav-sm flex-column">
-                        <li class="nav-item">
-                            <a href="{{ route('creservadas.index') }}" class="nav-link">
-                                <i class="fas fa-clock"></i>Reservas para hoy
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('ccumplidas.index') }}" class="nav-link">
-                                <i class="fas fa-check"></i>Citas cumplidas
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{ route('ccanceladas.index') }}" class="nav-link">
-                                <i class="fas fa-times"></i>Citas candeladas
-                            </a>
-                        </li>
-                        
-                        
-                    </ul>
-                </div>
-             </li>
+            </li>
+
+            <!-- ============================================================== -->
+            <!-- Reservas para hoy -->     
+            <!-- ============================================================== --> 
 
                <!-- ============================================================== -->
                 <!-- CONFIGURACIÓN -->     
                 <!-- ============================================================== -->  
-            <li lcass="nav-item">
-                <a class="nav-link menu-link" href="#sidebarConfiguracion" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarPlanCurricular">
-                    <i class="fas fa-cogs"></i> <span data-key="t-Configuración">Configuracion de Inicio</span>
-                </a>
-                <div class="collapse menu-dropdown" id="sidebarConfiguracion">
-                    <ul class="nav nav-sm flex-column">
-                        <li class="nav-item">
-                            <a href="{{ route('inicio.reservarcita') }}" class="nav-link">
-                                <i class="fas fa-stethoscope"></i>Lo que ofrecemos
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{route('inicio.reservarnumero')}}" class="nav-link">
-                                <i class="fas fa-arrow-right"></i>Pasos a seguir
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{route('inicio.conocememas')}}" class="nav-link">
-                                <i class="fas fa-info-circle"></i> Conócenos
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{route('inicio.imagenceeri')}}" class="nav-link">
-                                <i class="ri-screenshot-2-line"></i> Imagen de Ceeri
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </li>
+            
         </div> 
         
     </div>
