@@ -23,6 +23,7 @@ use App\Http\Controllers\MenuUsuarioController;
 use App\Http\Controllers\NumerosController;
 use App\Http\Controllers\PerfilController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\PerfilesController;
 
 
 use Illuminate\Support\Facades\Route;
@@ -115,6 +116,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
     // rutas de perfil 
     Route::resource('perfil', PerfilController::class);
+    Route::resource('perfiles', PerfilesController::class);
     
 
 
