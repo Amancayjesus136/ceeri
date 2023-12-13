@@ -128,7 +128,7 @@
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#agregarModal">Reserva tu cita</a>
+                                <a class="nav-link" href="https://wa.me/910558971">Reserva tu cita</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#contactanos">Contactanos</a>
@@ -526,7 +526,7 @@
                                 </div>
 
                                 
-                                <img src="assets/images/prin.png" alt="" class="user-img">
+                                <img src="assets/images/prin.png" alt="" class="user-img" style="width: 420px; height:420px; margin-left: 60px;">
 
                                 <div class="circle-effect">
                                     <div class="circle"></div>
@@ -777,13 +777,13 @@
                         <div class="col-lg-4 col-md-6">
                             <div class="card">
                                 <div class="card-body">
-                                    <img src="assets/images/N4.jpg" alt=""/>
+                                    <img src="assets/images/N4.jpg" alt="" style="width: 325px; height: 310px;"/>
                                 </div>
                                 <div class="card-body">
                                     <a href="javascript:void(0);">
                                         <h5>Los mejores equipos en Terapias</h5>
                                     </a>
-                                    <p class="text-muted fs-14">el equipamiento tecnologico con el que cuenta CEERI para lidiar con los tratamientos en los pacientes</p>
+                                    <p class="text-muted fs-14">el equipamiento tecnologico con el que cuenta CEERI para lidiar con los tratamientos en los pacientes de una forma efectiva y segura</p>
                                     <div>
                                         <a href="#!"  data-bs-toggle="modal" data-bs-target="#equipos" class="link-success">Vista <i class="ri-arrow-right-line align-bottom ms-1"></i></a>
                                     </div>
@@ -833,7 +833,7 @@
                                             <div class="card-body p-4">
                                                 <img src="assets/images/G1.jpg" alt="" class="rounded-circle avatar-md mx-auto d-block">
                                                 <h5 class="fs-17 mt-3 mb-2">Maria</h5>
-                                                <p class="text-muted fs-13 mb-3">Terapia de lenguaje</p>
+                                                <p class="text-muted fs-13 mb-3">Psicología</p>
                                         
                                                 <p class="text-muted mb-4 fs-14">
                                                     <i class="ri-map-pin-2-line text-primary me-1 align-bottom"></i> Villa El Salvador
@@ -1155,9 +1155,9 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
             </div>
             <div class="modal-body d-flex align-items">
-                <img src="assets/images/espe-psicologia/psi1.png" alt="" style="width: 320px; height: 420px; margin-right: 40px;">
+                <img src="assets/images/espe-psicologia/psi1.png" alt="" style="width: 320px; height: 420px; margin-right: 100px;">
                 <div class="text-muted">
-                    <div class="col-xl-6">
+                    <div class="col-xl-8">
                         <div class="card">
                             <div>
                                 <h2 class="text-center">Especialista en Psicología</h2>
@@ -1187,9 +1187,9 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
             </div>
             <div class="modal-body d-flex align-items">
-                <img src="assets/images/espe-psicologia/es2.png" alt="" style="width: 320px; height: 420px; margin-right: 40px;">
+                <img src="assets/images/espe-psicologia/es2.png" alt="" style="width: 320px; height: 420px; margin-right: 100px;">
                 <div class="text-muted">
-                    <div class="col-xl-6">
+                    <div class="col-xl-8">
                         <div class="card">
                             <div>
                                 <h2 class="text-center">Especialista en Psicología</h2>
@@ -1218,9 +1218,9 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
             </div>
             <div class="modal-body d-flex align-items">
-                <img src="assets/images/espe-psicologia/esocu.png" alt="" style="width: 320px; height: 420px; margin-right: 40px;">
+                <img src="assets/images/espe-psicologia/esocu.png" alt="" style="width: 320px; height: 420px; margin-right: 100px;">
                 <div class="text-muted">
-                    <div class="col-xl-6">
+                    <div class="col-xl-8">
                         <div class="card">
                             <div>
                                 <h2 class="text-center">Especialista en Terapia Ocupacional</h2>
@@ -1249,9 +1249,9 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
             </div>
             <div class="modal-body d-flex align-items">
-                <img src="assets/images/espe-psicologia/espe3.png" alt="" style="width: 320px; height: 420px; margin-right: 40px;">
+                <img src="assets/images/espe-psicologia/espe3.png" alt="" style="width: 320px; height: 420px; margin-right: 100px;">
                 <div class="text-muted">
-                    <div class="col-xl-6">
+                    <div class="col-xl-8">
                         <div class="card">
                             <div>
                                 <h2 class="text-center">Especialista en Psicologia</h2>
@@ -1727,6 +1727,8 @@
 
 <!-- Modal de vista en Equipos -->
 
+
+
 <div class="modal fade" id="equipos" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl">
         <div class="modal-content">
@@ -1737,67 +1739,96 @@
             <div class="modal-body">
 
 <!-- codigo de contenido para todos -->
-<div class="row">
-    <div class="col-xl-6">
-        <div class="card">
-            <div class="card-header align-items-center d-flex">
-                <div class="flex-shrink-0">
-                    
-                </div>
-            </div>
-            <div class="card-body">
-                <div class="live-preview">
-                    <div id="carouselExampleInterval6" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active" data-bs-interval="10000">
-                                <img src="assets/images/equipoTec/electroterapia.jpg" alt="First slide" width="100%"/>
-                            </div>
-                            <div class="carousel-item" data-bs-interval="2000">
-                                <img src="assets/images/equipoTec/laserterapia.jpg" class="d-block w-100" alt="two slide" width="100%" />
-                            </div>
-                            <div class="carousel-item">
-                                <img src="assets/images/equipoTec/magnetoterapia.jpg" class="d-block w-100" alt="There slide" width="100%" />
-                            </div>
-                            <div class="carousel-item">
-                                <img src="assets/images/equipoTec/magnetoterapia360.jpg" class="d-block w-100" alt="There slide" width="100%" />
-                            </div>
-                            <div class="carousel-item">
-                                <img src="assets/images/equipoTec/ondasChoque.jpg" class="d-block w-100" alt="There slide" width="100%" />
-                            </div>
-                            <div class="carousel-item">
-                                <img src="assets/images/equipoTec/ultrasonido.jpg" class="d-block w-100" alt="There slide" width="100%" height="550px;" />
+
+        <div class="row">
+            <div class="col-xl-6">
+                <div class="card">
+                    <div class="card-header align-items-center d-flex">
+                        <div class="flex-shrink-0">
+                            
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="live-preview">
+                            <div id="carouselExampleInterval6" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active" data-bs-interval="10000">
+                                        <img src="assets/images/equipoTec/electroterapia.jpg" alt="First slide" width="100%"/>
+                                    </div>
+                                    <div class="carousel-item" data-bs-interval="2000">
+                                        <img src="assets/images/equipoTec/laserterapia.jpg" class="d-block w-100" alt="two slide" width="100%" />
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="assets/images/equipoTec/magnetoterapia.jpg" class="d-block w-100" alt="There slide" width="100%" />
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="assets/images/equipoTec/magnetoterapia360.jpg" class="d-block w-100" alt="There slide" width="100%" />
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="assets/images/equipoTec/ondasChoque.jpg" class="d-block w-100" alt="There slide" width="100%" />
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="assets/images/equipoTec/ultrasonido.jpg" class="d-block w-100" alt="There slide" width="100%" height="550px;" />
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval6" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval6" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
                             </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval6" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval6" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
+
+                        <div class="d-none code-view">
+                            <pre class="language-markup" style="height: 375px;">
+
+                        </div>
                     </div>
                 </div>
-
-                <div class="d-none code-view">
-                    <pre class="language-markup" style="height: 375px;">
-
-                </div>
             </div>
-        </div>
-    </div>
 
-                <!-- Contenido -->
-                <div class="col-xl-6">
-                    <div class="card">
-                        <div class="card-header align-items-center d-flex">
-                            <div class="flex-shrink-0">
-                                
-                            </div>
+            <div class="col-xl-6" >
+                <div class="card">
+                    <div>
+                        <h2 class="text-center">Psicologia</h2>
+                    </div><hr>
+
+                    <span class="text-justify-center" style="font-size: 15px;">
+                        En el Centro de Especialidad en Psicología, te extendemos una cálida bienvenida a un santuario dedicado a la exploración de la mente y el cultivo del bienestar emocional. En este espacio, nuestra misión va más allá de la educación convencional; aquí, nos sumergimos en un mar de aprendizaje enriquecedor donde los fundamentos de la psicología se entrelazan con una comprensión profunda y una atención dedicada a cada individuo.
+                    </span><br>
+
+                    <ul>
+                        <div style="margin-left: 10px; margin-top: 10px;">
+                            <span class="checkmark" style="font-size: 15px;">&#x2713; Laserterapia</span>
                         </div>
-                        <div class="card-body" style="font-size: 20px;">
-                            <div class="text-muted">
-                                Ceeri cuenta con numerosos equipos tecnologicos de vanguardia para cumplir adecuadamente
+                        <div style="margin-left: 10px; margin-top: 10px;">
+                            <span class="checkmark" style="font-size: 15px;">&#x2713; Magnetoterapia</span>
+                        </div>
+                        <div style="margin-left: 10px; margin-top: 10px;">
+                            <span class="checkmark" style="font-size: 15px;">&#x2713; Ultrasonido</span>
+                        </div>
+                        <div style="margin-left: 10px; margin-top: 10px;">
+                            <span class="checkmark" style="font-size: 15px;">&#x2713; Punsion seca</span>
+                        </div>
+                        <div style="margin-left: 10px; margin-top: 10px;">
+                            <span class="checkmark" style="font-size: 15px;">&#x2713; Ondas de choque</span>
+                        </div>
+
+                        <div style="margin-left: 10px; margin-top: 10px;">
+                            <span class="checkmark" style="font-size: 15px;">&#x2713; Magnetoterapia de 360º</span>
+                        </div>
+
+                        <div style="margin-left: 10px; margin-top: 10px;">
+                            <span class="checkmark" style="font-size: 15px;">&#x2713; Electroterapia</span>
+                        </div>
+                    </ul>
+                </div>
+            </div>  
+                <!-- Contenido
+            Ceeri cuenta con numerosos equipos tecnologicos de vanguardia para cumplir adecuadamente
                                 con todas los tipos de terapia que ofrecemos asi como profesionales capacitados en su manejo.                                              
                                 <b>entre los cuales incluimos:</b>
                                 <li>Laserterapia</li>
@@ -1807,16 +1838,12 @@
                                 <li>Ondas de choque</li>
                                 <li>Magnetoterapia de 360º</li>
                                 <li>Electroterapia</li>
-                            </div> 
-                        </div>
-                    </div>
-                </div>
-                <!-- Contenido -->
+            -->
 
                 </div>
                 <!-- codigo de contenido para todos -->
                 </div>
-            </div>
+            
         </div>
     </div>
 </div>
