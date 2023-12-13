@@ -12,7 +12,7 @@
         <div class="row g-4">
             <div class="col-auto">
                 <div class="avatar-lg">
-                    <img src="{{ asset('storage/assets/images/'.$user->foto) }}" alt="user-img" class="img-thumbnail rounded-circle" />
+                    <img src="{{ asset($user->foto ? 'storage/assets/images/' . $user->foto : 'assets/images/sin-foto.png') }}" alt="user-img" class="img-thumbnail rounded-circle" />
                 </div>
             </div>
             <div class="col">
@@ -41,7 +41,7 @@
                         </li>
                     </ul>
                     <div class="flex-shrink-0">
-                        <a href="pages-profile-settings.html" class="btn btn-success"><i class="ri-edit-box-line align-bottom"></i> Editar Pérfil</a>
+                        <a href="{{route('editar.edit')}}" class="btn btn-success"><i class="ri-edit-box-line align-bottom"></i> Editar Pérfil</a>
                     </div>
                 </div>
                 <div class="tab-content pt-4 text-muted">
@@ -55,27 +55,63 @@
                                             <table class="table table-borderless mb-0">
                                                 <tbody>
                                                     <tr>
-                                                        <th class="ps-0" scope="row">Nombres:</th>
+                                                        <th class="ps-0" scope="row"><i class="ri-user-2-fill"></i> Nombres:</th>
                                                         <td class="text-muted">{{ $user->name }}</td>
                                                     </tr>
                                                     <tr>
-                                                        <th class="ps-0" scope="row">Correo :</th>
+                                                        <th class="ps-0" scope="row"><i class="fas fa-envelope"></i> Correo :</th>
                                                         <td class="text-muted">{{ $user->email }}</td>
                                                     </tr>
                                                     @if($user->telefono)
                                                     <tr>
-                                                        <th class="ps-0" scope="row">Mobile :</th>
-                                                        <td class="text-muted">+(51) {{ $user->telefono }}</td>
+                                                        <th class="ps-0" scope="row"><i class="fas fa-phone"></i> Teléfono :</th>
+                                                        <td class="text-muted"> +(51) {{ $user->telefono }}</td>
                                                     </tr>
                                                     @endif
                                                     @if($user->cumpleanos)
                                                     <tr>
-                                                        <th class="ps-0" scope="row">Cumpleaños</th>
-                                                        <td class="text-muted">{{ $user->cumpleanos }}</td>
+                                                        <th class="ps-0" scope="row"><i class="fas fa-birthday-cake"></i> Cumpleaños</th>
+                                                        <td class="text-muted">{{ \Carbon\Carbon::parse($user->cumpleanos)->format('d/m/Y') }}</td>
                                                     </tr>
                                                     @endif
                                                 </tbody>
                                             </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title mb-4">Redes Sociales</h5>
+                                        <div class="d-flex flex-wrap gap-2">
+                                            <div>
+                                                <a href="javascript:void(0);" class="avatar-xs d-block">
+                                                    <span class="avatar-title rounded-circle fs-16 bg-primary text-light">
+                                                        <i class="ri-facebook-fill"></i>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="javascript:void(0);" class="avatar-xs d-block">
+                                                    <span class="avatar-title rounded-circle fs-16 bg-info">
+                                                        <i class="ri-twitter-fill"></i>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="javascript:void(0);" class="avatar-xs d-block">
+                                                    <span class="avatar-title rounded-circle fs-16 bg-success">
+                                                        <i class="ri-whatsapp-fill"></i>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                            <div>
+                                                <a href="javascript:void(0);" class="avatar-xs d-block">
+                                                    <span class="avatar-title rounded-circle fs-16 bg-danger">
+                                                        <i class="ri-instagram-fill"></i>
+                                                    </span>
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -114,7 +150,7 @@
                                                     </div>
                                                     <div class="flex-grow-1 overflow-hidden">
                                                         <p class="mb-1">Sitio web :</p>
-                                                        <a href="#" class="fw-semibold">www.ceeri.com.pe</a>
+                                                        <a href="http://localhost:8000/" class="fw-semibold">www.ceeri.com.pe</a>
                                                     </div>
                                                 </div>
                                             </div>

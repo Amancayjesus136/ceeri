@@ -20,9 +20,10 @@ class PerfilesController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function editar()
     {
-        //
+        $user = auth()->user();
+        return view('vista_perfil.edit', compact('user'));
     }
 
     /**

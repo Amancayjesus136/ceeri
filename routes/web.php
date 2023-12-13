@@ -116,7 +116,10 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
     // rutas de perfil 
     Route::resource('perfil', PerfilController::class);
+
     Route::resource('perfiles', PerfilesController::class);
+    Route::get('/editar', [PerfilesController::class, 'editar'])->name('editar.edit');
+
     
 
 
