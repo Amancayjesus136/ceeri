@@ -168,7 +168,7 @@
                             </div>
                         @else
                             <p class="card shadow-drop-center col-7 text-center" style="margin-left: 10px; padding-top: 100px;">Sin descripción de usuario</p>
-                         @endif
+                        @endif
                 </div>
             </div>    
         </div>

@@ -86,30 +86,30 @@
                                         <h5 class="card-title mb-4">Redes Sociales</h5>
                                         <div class="d-flex flex-wrap gap-2">
                                             <div>
-                                                <a href="javascript:void(0);" class="avatar-xs d-block">
+                                                <a href="{{ $user->facebook }}" class="avatar-xs d-block">
                                                     <span class="avatar-title rounded-circle fs-16 bg-primary text-light">
                                                         <i class="ri-facebook-fill"></i>
                                                     </span>
                                                 </a>
                                             </div>
                                             <div>
-                                                <a href="javascript:void(0);" class="avatar-xs d-block">
-                                                    <span class="avatar-title rounded-circle fs-16 bg-info">
-                                                        <i class="ri-twitter-fill"></i>
+                                                <a href="{{ $user->instagram }}" class="avatar-xs d-block">
+                                                    <span class="avatar-title rounded-circle fs-16 bg-danger">
+                                                        <i class="ri-instagram-fill"></i>
                                                     </span>
                                                 </a>
                                             </div>
                                             <div>
-                                                <a href="javascript:void(0);" class="avatar-xs d-block">
+                                                <a href="https://wa.me/{{ $user->wsp }}" class="avatar-xs d-block">
                                                     <span class="avatar-title rounded-circle fs-16 bg-success">
                                                         <i class="ri-whatsapp-fill"></i>
                                                     </span>
                                                 </a>
                                             </div>
                                             <div>
-                                                <a href="javascript:void(0);" class="avatar-xs d-block">
-                                                    <span class="avatar-title rounded-circle fs-16 bg-danger">
-                                                        <i class="ri-instagram-fill"></i>
+                                                <a href="{{ $user->twitter }}" class="avatar-xs d-block">
+                                                    <span class="avatar-title rounded-circle fs-16 bg-info">
+                                                        <i class="ri-twitter-fill"></i>
                                                     </span>
                                                 </a>
                                             </div>

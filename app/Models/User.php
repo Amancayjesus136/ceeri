@@ -24,6 +24,10 @@ class User extends Authenticatable
         'telefono',
         'foto',
         'cumpleanos',
+        'facebook',
+        'instagram',
+        'wsp',
+        'twitter',
         'created_at'
 
     ];

@@ -24,6 +24,9 @@
                 <div class="card-body p-4">
                     <div class="text-center">
                         <div class="profile-user position-relative d-inline-block mx-auto  mb-4">
+                        <form method="POST" action="{{ route('perfiles.update', $user->id) }}">
+                        @csrf
+                        @method('PUT')
                         <img src="{{ asset($user->foto ? 'storage/assets/images/' . $user->foto : 'assets/images/sin-foto.png') }}" class="rounded-circle avatar-xl img-thumbnail user-profile-image" alt="user-profile-image">
                             <div class="avatar-xs p-0 rounded-circle profile-photo-edit">
                                 <input id="profile-img-file-input" type="file" class="profile-img-file-input">
@@ -52,7 +55,7 @@
                                 <i class="ri-facebook-fill"></i>
                             </span>
                         </div>
-                        <input type="email" class="form-control" id="gitUsername" placeholder="Nombre de usuario" value="">
+                        <input type="any" class="form-control" name="facebook" id="gitUsername" placeholder="Nombre de usuario" value="{{ $user->facebook }}">
                     </div>
                     <div class="mb-3 d-flex">
                         <div class="avatar-xs d-block flex-shrink-0 me-3">
@@ -60,7 +63,7 @@
                                 <i class="ri-instagram-fill"></i>
                             </span>
                         </div>
-                        <input type="text" class="form-control" id="pinterestName" placeholder="Nombre de usario" value="">
+                        <input type="any" class="form-control" name="instagram" id="pinterestName" placeholder="Nombre de usario" value="{{ $user->instagram }}">
                     </div>
                     <div class="mb-3 d-flex">
                         <div class="avatar-xs d-block flex-shrink-0 me-3">
@@ -68,7 +71,7 @@
                                 <i class="ri-whatsapp-fill"></i>
                             </span>
                         </div>
-                        <input type="text" class="form-control" id="dribbleName" placeholder="Número de whatsapp" value="">
+                        <input type="any" class="form-control" name="wsp" id="dribbleName" placeholder="Número de whatsapp" value="{{ $user->wsp }}">
                     </div>
                     <div class="mb-3 d-flex">
                         <div class="avatar-xs d-block flex-shrink-0 me-3">
@@ -76,7 +79,7 @@
                                 <i class="ri-twitter-fill"></i>
                             </span>
                         </div>
-                        <input type="text" class="form-control" id="websiteInput" placeholder="Nombre de usuario" value="">
+                        <input type="any" class="form-control" name="twitter" id="websiteInput" placeholder="Nombre de usuario" value="{{ $user->twitter }}">
                     </div>
                 </div>
             </div>
@@ -106,19 +109,19 @@
                                     <div class="col-lg-12">
                                         <div class="mb-3">
                                             <label for="firstnameInput" class="form-label">Nombre Completo</label>
-                                            <input type="text" class="form-control" name="descripcion" id="firstnameInput" placeholder="Ponga su nombre completo" value="{{ $user->name }}">
+                                            <input type="text" class="form-control" name="name" id="firstnameInput" placeholder="Ponga su nombre completo" value="{{ $user->name }}">
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="mb-3">
                                             <label for="emailInput" class="form-label">Correo Electrónico</label>
-                                            <input type="email" class="form-control" name="descripcion" id="emailInput" placeholder="Introduce tu correo electrónico" value="{{ $user->email }}">
+                                            <input type="email" class="form-control" name="email" id="emailInput" placeholder="Introduce tu correo electrónico" value="{{ $user->email }}">
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="mb-3">
                                             <label for="phonenumberInput" class="form-label">Teléfono</label>
-                                            <input type="text" class="form-control" name="descripcion" id="phonenumberInput" placeholder="Ingrese su número telefónico" value="+(51) {{ $user->telefono }} ">
+                                            <input type="text" class="form-control" name="telefono" id="phonenumberInput" placeholder="Ingrese su número telefónico" value="{{ $user->telefono }} ">
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
