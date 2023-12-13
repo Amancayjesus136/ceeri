@@ -23,6 +23,7 @@ class User extends Authenticatable
         'descripcion',
         'telefono',
         'foto',
+        'cumpleanos',
         'created_at'
 
     ];

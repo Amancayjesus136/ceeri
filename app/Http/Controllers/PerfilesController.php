@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class PerfilesController extends Controller
 {
@@ -12,7 +13,8 @@ class PerfilesController extends Controller
      */
     public function index()
     {
-        return view ('vista_perfil.index');
+        $user = auth()->user();
+        return view('vista_perfil.index', compact('user'));
     }
 
     /**
