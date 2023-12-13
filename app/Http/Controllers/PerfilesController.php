@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\profile;
+use Illuminate\Support\Facades\Storage;
 
 class PerfilesController extends Controller
 {
@@ -78,7 +80,7 @@ class PerfilesController extends Controller
         }
     
         $user->save();
-        return redirect()->back()->with('successEdit', 'actualizado exitosamente');
+        return redirect()->route('perfiles.index')->with('successEdit', 'Su perfil se ha editado correctamente');
     }
 
     /**

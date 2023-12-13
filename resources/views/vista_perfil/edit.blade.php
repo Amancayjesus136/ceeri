@@ -9,9 +9,6 @@
                 <div class="text-end p-3">
                     <div class="p-0 ms-auto rounded-circle profile-photo-edit">
                         <input id="profile-foreground-img-file-input" type="file" class="profile-foreground-img-file-input">
-                        <!-- <label for="profile-foreground-img-file-input" class="profile-photo-edit btn btn-light">
-                            <i class="ri-image-edit-line align-bottom me-1"></i> Cambiando Datos
-                        </label> -->
                     </div>
                 </div>
             </div>
@@ -24,19 +21,18 @@
                 <div class="card-body p-4">
                     <div class="text-center">
                         <div class="profile-user position-relative d-inline-block mx-auto  mb-4">
-                        <form method="POST" action="{{ route('perfiles.update', $user->id) }}">
-                        @csrf
-                        @method('PUT')
-                        <img src="{{ asset($user->foto ? 'storage/assets/images/' . $user->foto : 'assets/images/sin-foto.png') }}" class="rounded-circle avatar-xl img-thumbnail user-profile-image" alt="user-profile-image">
-                            <div class="avatar-xs p-0 rounded-circle profile-photo-edit">
-                                <input id="profile-img-file-input" type="file" class="profile-img-file-input">
-                                <label for="profile-img-file-input" class="profile-photo-edit avatar-xs">
-                                    <span class="avatar-title rounded-circle bg-light text-body">
-                                        <i class="ri-camera-fill"></i>
-                                    </span>
-                                </label>
-                            </div>
+                        <img id="user-profile-image" src="{{ asset($user->foto ? 'storage/assets/images/' . $user->foto : 'assets/images/sin-foto.png') }}" class="rounded-circle avatar-xl img-thumbnail user-profile-image" alt="user-profile-image">
+                            <form method="POST" action="{{ route('perfiles.update', $user->id) }}" enctype="multipart/form-data" id="perfilForm">
+                            @csrf
+                            @method('PUT')
+                            <input id="profile-img-file-input" name="foto" type="file" class="profile-img-file-input">
+                            <label for="profile-img-file-input" class="profile-photo-edit avatar-xs">
+                                <span class="avatar-title rounded-circle bg-light text-body">
+                                    <i class="ri-camera-fill"></i>
+                                </span>
+                            </label>
                         </div>
+
                         <h5 class="fs-16 mb-1">{{ $user->name }}</h5>
                         <p class="text-muted mb-0">Usuario validado correctamente</p>
                     </div>
@@ -104,7 +100,6 @@
                 <div class="card-body p-4">
                     <div class="tab-content">
                         <div class="tab-pane active" id="personalDetails" role="tabpanel">
-                            <form action="javascript:void(0);">
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <div class="mb-3">
@@ -141,7 +136,7 @@
                                 <div class="col-lg-12">
                                         <div class="hstack gap-2 justify-content-end">
                                             <button type="submit" class="btn btn-primary">Actualizaciones</button>
-                                            <button type="button" class="btn btn-soft-success">Cancelar</button>
+                                            <a href="{{ route('perfiles.index') }}" class="btn btn-soft-success">Cancelar</a>
                                         </div>
                                     </div>
                             </form>
@@ -183,6 +178,21 @@
         </div>
     </div>
 </div>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        document.getElementById('profile-img-file-input').addEventListener('change', function (e) {
+            var selectedImage = e.target.files[0];
+
+            if (selectedImage) {
+                var imageUrl = URL.createObjectURL(selectedImage);
+
+                document.getElementById('user-profile-image').src = imageUrl;
+            }
+        });
+    });
+</script>
 
 @endsection
 
