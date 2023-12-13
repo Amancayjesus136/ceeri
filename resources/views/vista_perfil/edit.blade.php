@@ -56,11 +56,11 @@
                     </div>
                     <div class="mb-3 d-flex">
                         <div class="avatar-xs d-block flex-shrink-0 me-3">
-                            <span class="avatar-title rounded-circle fs-16 bg-info">
-                                <i class="ri-twitter-fill"></i>
+                            <span class="avatar-title rounded-circle fs-16 bg-danger">
+                                <i class="ri-instagram-fill"></i>
                             </span>
                         </div>
-                        <input type="text" class="form-control" id="websiteInput" placeholder="Nombre de usuario" value="">
+                        <input type="text" class="form-control" id="pinterestName" placeholder="Nombre de usario" value="">
                     </div>
                     <div class="mb-3 d-flex">
                         <div class="avatar-xs d-block flex-shrink-0 me-3">
@@ -70,13 +70,13 @@
                         </div>
                         <input type="text" class="form-control" id="dribbleName" placeholder="Número de whatsapp" value="">
                     </div>
-                    <div class="d-flex">
+                    <div class="mb-3 d-flex">
                         <div class="avatar-xs d-block flex-shrink-0 me-3">
-                            <span class="avatar-title rounded-circle fs-16 bg-danger">
-                                <i class="ri-instagram-fill"></i>
+                            <span class="avatar-title rounded-circle fs-16 bg-info">
+                                <i class="ri-twitter-fill"></i>
                             </span>
                         </div>
-                        <input type="text" class="form-control" id="pinterestName" placeholder="Nombre de usario" value="">
+                        <input type="text" class="form-control" id="websiteInput" placeholder="Nombre de usuario" value="">
                     </div>
                 </div>
             </div>
