@@ -12,7 +12,8 @@
         <div class="row g-4">
             <div class="col-auto">
                 <div class="avatar-lg">
-                    <img src="{{ asset($user->foto ? 'storage/assets/images/' . $user->foto : 'assets/images/sin-foto.png') }}" alt="user-img" class="img-thumbnail rounded-circle" />
+                <img src="{{ asset($user->foto ? 'storage/assets/images/' . $user->foto : 'assets/images/sin-foto.png') }}" class="avatar-xl img-thumbnail user-profile-image" alt="user-profile-image">
+
                 </div>
             </div>
             <div class="col">
