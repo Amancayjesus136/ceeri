@@ -84,7 +84,7 @@
             <div class="dropdown-menu dropdown-menu-end">
                 <!-- item-->
                 <h6 class="dropdown-header">Bienvenid@ {{ Auth::user()->name }}!</h6>
-                <a class="dropdown-item" href="{{ route('perfil.index') }}"><i class="mdi mdi-account-circle text-muted fs-16 align-middle me-1"></i> <span class="align-middle">Perfil</span></a>
+                <a class="dropdown-item" href="{{ route('perfiles.index') }}"><i class="mdi mdi-account-circle text-muted fs-16 align-middle me-1"></i> <span class="align-middle">Perfil</span></a>
                 <form method="POST" action="{{ route('logout') }}">
                 @csrf
                     <a class="dropdown-item" href="#" onclick="event.preventDefault(); this.closest('form').submit();">

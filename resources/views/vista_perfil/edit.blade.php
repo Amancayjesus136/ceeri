@@ -118,19 +118,19 @@
                                     <div class="col-lg-6">
                                         <div class="mb-3">
                                             <label for="phonenumberInput" class="form-label">Teléfono</label>
-                                            <input type="text" class="form-control" name="descripcion" id="phonenumberInput" placeholder="Ingrese su número telefónico" value="+(51) ">
+                                            <input type="text" class="form-control" name="descripcion" id="phonenumberInput" placeholder="Ingrese su número telefónico" value="+(51) {{ $user->telefono }} ">
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="mb-3">
                                             <label for="JoiningdatInput" class="form-label">Fecha de cumpleaños</label>
-                                            <input type="text" class="form-control" data-provider="flatpickr" name="cumpleanos" value="{{ $user->cumpleanos }}" id="JoiningdatInput" data-date-format="d M, Y" placeholder="Seleccione fecha" />
+                                            <input type="date" class="form-control" data-provider="" name="cumpleanos" value="{{ $user->cumpleanos }}" id="JoiningdatInput" data-date-format="d M, Y" placeholder="Seleccione fecha" />
                                         </div>
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="mb-3 pb-2">
                                             <label for="exampleFormControlTextarea" class="form-label">Descripción</label>
-                                            <textarea class="form-control" name="descripcion" id="exampleFormControlTextarea" value="{{ $user->descripcion }} placeholder="Introduce tu descripción" rows="3"></textarea>
+                                            <textarea class="form-control" name="descripcion" id="exampleFormControlTextarea" placeholder="Introduce tu descripción" rows="3">{{ $user->descripcion }}</textarea>
                                         </div>
                                     </div>
                                 </div>
