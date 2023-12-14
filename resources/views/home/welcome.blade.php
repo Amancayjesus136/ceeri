@@ -548,28 +548,55 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
                             <div class="text-center mb-5">
-                                <h1 class="mb-3 ff-secondary fw-semibold lh-base">{{ $cita->titulo_reservar }}</h1>
-                                <p class="text-muted">{{ $cita->descripcion_reservar }}</p>
+                                <h1 class="mb-3 ff-secondary fw-semibold lh-base">HAZ TU RESERVA!</h1>
+                                <p class="text-muted">para reservar tu cita tienes que:</p>
                             </div>
                         </div>
                         <!-- end col -->
                     </div>
                     <!--end row-->
                     <div class="row"> 
-                    @foreach($numeros as $numero)
-                        <div class="col-lg-3 col-md-6">
+                        <div class="col-lg-4 col-md-6">
                             <div class="card shadow-lg">
                                 <div class="card-body p-4">
                                     <h1 class="fw-bold display-5 ff-secondary mb-4 text-success position-relative">
                                         <div class="job-icon-effect"></div>
-                                        <span>{{ $numero->numero }}</span>
+                                        <span>1 </span>
+                                        <a href="https://www.facebook.com/centrodeterapiafisicaceeri" class="profile-title rounded-circle fs-16 bg-primary text-light d-inline-block p-2"><i class="ri-facebook-fill" style="font-size:30px;"></i></a>
+                                        <a href="https://wa.me/910558971" class="profile-title rounded-circle fs-16 bg-success text-light d-inline-block p-2"><i class="ri-whatsapp-fill" style="font-size:30px;"></i></a>
+                                        <a href="https://www.instagram.com/ceeri.terapiafisica/" class="profile-title rounded-circle fs-16 bg-danger text-light d-inline-block p-2"><i class="ri-instagram-fill" style="font-size:30px;"></i></a>
+
                                     </h1>
-                                    <h6 class="fs-17 mb-2">{{ $numero->titulo_numero }}</h6>
-                                    <p class="text-muted mb-0 fs-15">{{ $numero->descripcion_numero }}</p>
+                                    <h6 class="fs-17 mb-3"><b>Contáctanos</b></h6>
+                                    <p class="text-muted mb-0 fs-15"> Al contactarnos, te informaremos sobre nuestros horarios disponibles para adaptarnos a tus necesidades.</p>
                                 </div>
                             </div>
                         </div>
-                    @endforeach
+                        <div class="col-lg-4 col-md-6">
+                            <div class="card shadow-lg">
+                                <div class="card-body p-4">
+                                    <h1 class="fw-bold display-5 ff-secondary mb-4 text-success position-relative">
+                                        <div class="job-icon-effect"></div>
+                                        <span>2</span>
+                                    </h1>
+                                    <h6 class="fs-17 mb-3"><b>Reserva tu cita</b></h6>
+                                    <p class="text-muted mb-0 fs-15">Al hablar con recepcion este registrara tu cita en base a la disponibilidad y horario del terapeuta.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="card shadow-lg">
+                                <div class="card-body p-4">
+                                    <h1 class="fw-bold display-5 ff-secondary mb-4 text-success position-relative">
+                                        <div class="job-icon-effect"></div>
+                                        <span>3</span>
+                                    </h1>
+                                    <h6 class="fs-17 mb-2"><b>Confirmacíon de Reserva</b></h6>
+                                    <p class="text-muted mb-0 fs-15">
+                                        Al llegar a nuestro local, confirmaremos tu asistencia para ofrecerte una experiencia sin contratiempos.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <!--end container-->
@@ -581,7 +608,7 @@
                 <div class="container">
                     <div class="row align-items-center justify-content-lg-between justify-content-center gy-4">
                         <div class="col-lg-5 col-sm-7">
-                            <div class="about-img-section mb-5 mb-lg-0 text-center">
+                            <div class="about-img mb-5 mb-lg-0 text-center">
                                 
 
                                 <div class="card feedback-box">
@@ -603,16 +630,15 @@
                                         </div>
                                     </div>
                                 </div>
-                                <img src="assets/images/2.jpg" alt="" class="img-fluid mx-auto rounded-3" style="height: 400px;" />
+                                <img src="assets/images/2.jpg" alt="" class="img-fluid mx-auto rounded-3" style="height: 410px; width:520px; margin-bottom:20px;" />
                             </div>
                         </div>
                         
                         
                         <div class="col-lg-6">
                             <div class="text-muted">
-                                <h1 class="mb-3 lh-base"><span class="text-primary">{{ $conoceno->titulo_conocenos }}</h1>
-                                <p class="ff-secondary fs-16 mb-2">{{ $conoceno->descripcion_conocenos }}
-                                <p class="ff-secondary fs-16">{{ $conoceno->descripcion2_conocenos }}</p>
+                                <h1 class="mb-3 lh-base"><span class="text-primary">CONÓCENOS</h1>
+                                <p class="ff-secondary fs-16 mb-2">Somos el 1er Centro Especializado En Terapia Fisica y Rehabilitación del Cono Sur, Con profesionales TITULADAS - COLEGIADAS - HABILITADAS</p>
                                 <div class="vstack gap-2 mb-4 pb-1">
                                     <div class="d-flex align-items-center">
                                         <div class="flex-shrink-0 me-2">
@@ -623,7 +649,7 @@
                                             </div>
                                         </div>
                                         <div class="flex-grow-1">
-                                            <p class="mb-0">{{ $conoceno->sub1 }}</p>
+                                            <p class="mb-0">nuestro horario es Lunes a Sabado de 08:00 a 21:00.</p>
                                         </div>
                                     </div>
 
@@ -636,7 +662,7 @@
                                             </div>
                                         </div>
                                         <div class="flex-grow-1">
-                                            <p class="mb-0">{{ $conoceno->sub2 }}</p>
+                                            <p class="mb-0">nos encuentra en: <a href="https://www.google.com/maps/search/Mz+A+Lt3+Barrio2+Sector2+4Etapa.+Villa+El+Salvador,+Lima,+Peru/@-12.2265712,-76.9337685,15z/data=!3m1!4b1?entry=ttu">Mz A Lt3 Barrio2 Sector2 4Etapa. Villa El Salvador, Lima, Peru.</a></p>                                     
                                         </div>
                                     </div>
 
@@ -649,21 +675,9 @@
                                             </div>
                                         </div>
                                         <div class="flex-grow-1">
-                                            <p class="mb-0">{{ $conoceno->sub3 }}</p>
+                                            <p class="mb-0">telefono de contacto: 910 558 971</p>
                                         </div>
                                 
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <div class="flex-shrink-0 me-2">
-                                            <div class="avatar-xs icon-effect">
-                                                <div class="avatar-title bg-transparent text-success rounded-circle h2">
-                                                    <i class="ri-check-fill"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="flex-grow-1">
-                                            <p class="mb-0">{{ $conoceno->sub4 }}</p>
-                                        </div>
                                     </div>
                                 </div>
 
@@ -801,8 +815,8 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
                             <div class="text-center mb-5">
-                                <h1 class="mb-3 ff-secondary fw-semibold text-capitalize lh-base">MIRA NUESTRA <span class="text-primary">GALERÍA</span></h1>
-                                <p class="text-muted mb-4">Hiring experts costs more per hour than hiring entry- or mid-level freelancers, but they can usually get the work done faster—and better.</p>
+                                <h1 class="mb-3 ff-secondary fw-semibold text-capitalize lh-base">MIRA NUESTRA <span class="text-primary">GALERÍA DE TERAPUETAS</span></h1>
+                                <p class="text-muted mb-4">En esta seccion se muestran a nuestros terapeutas con su informacion sobre su profesion y experiencia</p>
                             </div>
                         </div>
                     </div>
@@ -813,7 +827,7 @@
                                     <div class="swiper-slide">
                                         <div class="card text-center">
                                             <div class="card-body p-4">
-                                                <img src="assets/images/G1.jpg" alt="" class="rounded-circle avatar-md mx-auto d-block">
+                                                <img src="assets/images/espe-psicologia/psi1.png" alt="" class="rounded-circle avatar-md mx-auto d-block">
                                                 <h5 class="fs-17 mt-3 mb-2">Nancy </h5>
                                                 <p class="text-muted fs-13 mb-3">Psicología</p>
 
@@ -831,7 +845,7 @@
                                     <div class="swiper-slide">
                                         <div class="card text-center">
                                             <div class="card-body p-4">
-                                                <img src="assets/images/G1.jpg" alt="" class="rounded-circle avatar-md mx-auto d-block">
+                                                <img src="assets/images/espe-psicologia/es2.png" alt="" class="rounded-circle avatar-md mx-auto d-block">
                                                 <h5 class="fs-17 mt-3 mb-2">Maria</h5>
                                                 <p class="text-muted fs-13 mb-3">Psicología</p>
                                         
@@ -847,7 +861,7 @@
                                     <div class="swiper-slide">
                                         <div class="card text-center">
                                             <div class="card-body p-4">
-                                                <img src="assets/images/G1.jpg" alt="" class="rounded-circle avatar-md mx-auto d-block">
+                                                <img src="assets/images/espe-psicologia/esocu.png" alt="" class="rounded-circle avatar-md mx-auto d-block">
                                                 <h5 class="fs-17 mt-3 mb-2">Rosa</h5>
                                                 <p class="text-muted fs-13 mb-3">Terapia de lenguaje</p>
                                         
@@ -865,7 +879,7 @@
                                     <div class="swiper-slide">
                                         <div class="card text-center">
                                             <div class="card-body p-4">
-                                                <img src="assets/images/G3.jpg" alt="" class="rounded-circle avatar-md mx-auto d-block" />
+                                                <img src="assets/images/espe-psicologia/espe3.png" alt="" class="rounded-circle avatar-md mx-auto d-block" />
                                                 <h5 class="fs-17 mt-3 mb-2">Angelica</h5>
                                                 <p class="text-muted fs-13 mb-3">Psicologia</p>
                                         
@@ -1239,7 +1253,7 @@
 </div>
 
 
-<!-- Modal de vista ROSA -->  
+<!-- Modal de vista ANGELICA -->  
 
 <div class="modal fade" id="ronal14" tabindex="-1" aria-labelledby="crearModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
@@ -1733,7 +1747,7 @@
     <div class="modal-dialog modal-xl">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="crearModalLabel">Equipos de técnologias</h5>
+                <h5 class="modal-title" id="crearModalLabel"></h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
             </div>
             <div class="modal-body">
@@ -1793,11 +1807,12 @@
             <div class="col-xl-6" >
                 <div class="card">
                     <div>
-                        <h2 class="text-center">Psicologia</h2>
+                        <h2 class="text-center">Equipos de técnologia</h2>
                     </div><hr>
 
                     <span class="text-justify-center" style="font-size: 15px;">
-                        En el Centro de Especialidad en Psicología, te extendemos una cálida bienvenida a un santuario dedicado a la exploración de la mente y el cultivo del bienestar emocional. En este espacio, nuestra misión va más allá de la educación convencional; aquí, nos sumergimos en un mar de aprendizaje enriquecedor donde los fundamentos de la psicología se entrelazan con una comprensión profunda y una atención dedicada a cada individuo.
+                        Ceeri cuenta con numerosos equipos tecnologicos de vanguardia para cumplir adecuadamente
+                        con todas los tipos de terapia que ofrecemos asi como profesionales capacitados en su manejo.
                     </span><br>
 
                     <ul>
@@ -1826,24 +1841,7 @@
                         </div>
                     </ul>
                 </div>
-            </div>  
-                <!-- Contenido
-            Ceeri cuenta con numerosos equipos tecnologicos de vanguardia para cumplir adecuadamente
-                                con todas los tipos de terapia que ofrecemos asi como profesionales capacitados en su manejo.                                              
-                                <b>entre los cuales incluimos:</b>
-                                <li>Laserterapia</li>
-                                <li>Magnetoterapia</li>
-                                <li>Ultrasonido</li>
-                                <li>Punsion seca</li>
-                                <li>Ondas de choque</li>
-                                <li>Magnetoterapia de 360º</li>
-                                <li>Electroterapia</li>
-            -->
-
-                </div>
-                <!-- codigo de contenido para todos -->
-                </div>
-            
+            </div>      
         </div>
     </div>
 </div>

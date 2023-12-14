@@ -61,20 +61,11 @@
                 <i class='bx bx-fullscreen fs-22'></i>
             </button>
         </div>
-
+        
         <div class="dropdown ms-sm-3 header-item topbar-user">
             <button type="button" class="btn" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <span class="d-flex align-items-center">
-                @if (empty(Auth::user()->foto))
-                {{-- Obtener la primera letra del nombre del usuario en mayúsculas --}}
-                <?php $primeraLetra = strtoupper(substr($user->name, 0, 1)); ?>
-            
-                {{-- Mostrar la imagen de la letra correspondiente --}}
-                <img src="{{ asset('assets/images/fotoPerfilSmall/'.$primeraLetra.'.png') }}" class="rounded-circle header-profile-user" alt="Letra de perfil">
-                @else
-                {{-- Mostrar la foto de perfil --}}
-                <img src="{{ asset('storage/assets/images/'.Auth::user()->foto) }}" class="rounded-circle header-profile-user" alt="Foto de perfil" >
-                @endif                    
+                                <img src="{{ asset(Auth::user()->foto ? 'storage/assets/images/' . Auth::user()->foto : 'assets/images/sin-foto.png') }}" class="rounded-circle header-profile-user" alt="user-profile-image">                  
                 <span class="text-start ms-xl-2">
                         <span class="d-none d-xl-inline-block ms-1 fw-medium user-name-text">{{ Auth::user()->name }}</span>
                         <!-- <span class="d-none d-xl-block ms-1 fs-12 text-muted user-name-sub-text">Admin-mid</span> -->
