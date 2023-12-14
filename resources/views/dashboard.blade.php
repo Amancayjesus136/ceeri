@@ -219,6 +219,7 @@ $porcentajeTerapiaLenguaje = ($totalFilas != 0) ? ($clienteFilasTerapiaLenguaje 
                 </div> <br>
             </div>  
         </div>
+
 </div>
 
 

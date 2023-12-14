@@ -79,7 +79,12 @@
 </script>
 
 <!-- listado -->
-        <div class="card">
+                <div class="hstack gap-2 justify-content-end d-print-none mt-4">
+                        <a href="javascript:window.print()" class="btn btn-success"><i class="ri-printer-line align-bottom me-1"></i> Print</a>
+                    <a href="javascript:void(0);" class="btn btn-primary"><i class="ri-download-2-line align-bottom me-1"></i> Download</a>
+            </div><!-- esto es para imprimir -->
+        
+            <div class="card">
             <div class="card-body">
                 <div class="live-preview">
                     <div class="table-responsive table-card">
@@ -167,8 +172,6 @@
     </div>
     
 </div>
-
-
 
 
 <!-- Modal para Crear Nuevo Tema -->
