@@ -630,7 +630,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <img src="assets/images/2.jpg" alt="" class="img-fluid mx-auto rounded-3" style="height: 410px; width:520px; margin-bottom:20px;" />
+                                <img src="assets/images/5.jpg" alt="" class="img-fluid mx-auto rounded-3" style="height: 410px; width:520px; margin-bottom:20px;" />
                             </div>
                         </div>
                         
@@ -791,7 +791,7 @@
                         <div class="col-lg-4 col-md-6">
                             <div class="card">
                                 <div class="card-body">
-                                    <img src="assets/images/N4.jpg" alt="" style="width: 325px; height: 310px;"/>
+                                    <img src="assets/images/equipos/img2.png" alt="" style="width: 325px; height: 310px;"/>
                                 </div>
                                 <div class="card-body">
                                     <a href="javascript:void(0);">
