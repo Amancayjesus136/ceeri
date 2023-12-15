@@ -128,7 +128,7 @@
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="https://wa.me/910558971">Reserva tu cita</a>
+                                <a class="nav-link" href="https://wa.me/910558971" target="blank">Reserva tu cita</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#contactanos">Contactanos</a>

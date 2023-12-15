@@ -24,6 +24,8 @@ use App\Http\Controllers\NumerosController;
 use App\Http\Controllers\PerfilController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PerfilesController;
+use App\Http\Controllers\ReporteController;
+
 
 
 use Illuminate\Support\Facades\Route;
@@ -120,7 +122,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::resource('perfiles', PerfilesController::class);
     Route::get('/editar', [PerfilesController::class, 'editar'])->name('editar.edit');
 
-    
+    Route::resource('reportes', ReporteController::class);
+
 
 
 

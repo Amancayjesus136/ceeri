@@ -25,7 +25,7 @@
                             <form method="POST" action="{{ route('perfiles.update', $user->id) }}" enctype="multipart/form-data" id="perfilForm">
                             @csrf
                             @method('PUT')
-                            <input id="profile-img-file-input" name="foto" type="file" class="profile-img-file-input">
+                            <input id="profile-img-file-input" name="foto" type="file" accept="image/*" class="profile-img-file-input">
                             <label for="profile-img-file-input" class="profile-photo-edit avatar-xs">
                                 <span class="avatar-title rounded-circle bg-light text-body">
                                     <i class="ri-camera-fill"></i>
