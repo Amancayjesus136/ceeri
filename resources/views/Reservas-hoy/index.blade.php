@@ -35,7 +35,7 @@
 <div class="row">
     <div class="col-12">
         <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-            <h4 class="mb-sm-0">Reportes de citas por especialidad</h4>
+            <h4 class="mb-sm-0">Las citas de hoy!</h4>
             <form method="GET" class="listado-busqueda">
                 <div class="form-group d-flex">
                     <select name="specialty" class="form-control input-sm">
@@ -86,23 +86,35 @@
                                 <!-- FILAS DE LA TABLA -->
                                 @php $contador = 1; @endphp
                                 @foreach($clientes as $cliente)
-                                    <tr>
-                                        <td>{{ $contador }}</td>
-                                        <td>{{ $cliente->especialidad }}</td>
-                                        <td>{{ $cliente->tipo_documento }}</td>
-                                        <td>{{ $cliente->numero_documento }}</td>
-                                        <td>{{ $cliente->nombres }}</td>
-                                        <td>{{ $cliente->apellidos }}</td>
-                                        <td>{{ $cliente->telefono }}</td>
-                                        <td>{{ $cliente->fecha_hora }}</td>
-                                        <td><span class="badge bg-success">{{ $cliente->estado }}</span>
-                                    </td>
-                                    </tr>
-                                    @php 
-                                        $contador++; 
+                                    @php
+                                        // Convertir la cadena de fecha_hora a un objeto DateTime
+                                        $fechaHoraCita = \Carbon\Carbon::parse($cliente->fecha_hora);
+                            
+                                        // Obtén la fecha actual en el formato adecuado
+                                        $fechaActual = now()->format('Y-m-d');
+                            
+                                        // Verifica si la fecha de la cita es igual a la fecha actual
+                                        $esCitaDeHoy = $fechaHoraCita->format('Y-m-d') == $fechaActual;
                                     @endphp
+                            
+                                    @if ($esCitaDeHoy)
+                                        <tr>
+                                            <td>{{ $contador }}</td>
+                                            <td>{{ $cliente->especialidad }}</td>
+                                            <td>{{ $cliente->tipo_documento }}</td>
+                                            <td>{{ $cliente->numero_documento }}</td>
+                                            <td>{{ $cliente->nombres }}</td>
+                                            <td>{{ $cliente->apellidos }}</td>
+                                            <td>{{ $cliente->telefono }}</td>
+                                            <td>{{ $fechaHoraCita }}</td>
+                                            <td><span class="badge bg-success">{{ $cliente->estado }}</span></td>
+                                        </tr>
+                                        @php 
+                                            $contador++; 
+                                        @endphp
+                                    @endif
                                 @endforeach
-                            </tbody>
+                            </tbody>                                                       
                         </table>
                     </div>
                 </div>

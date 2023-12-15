@@ -11,7 +11,7 @@ class SeleccionarController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
         $clientes = Cliente::get();
         $eventos = [];
@@ -22,6 +22,20 @@ class SeleccionarController extends Controller
                 'start' => $cliente->fecha_hora,
                 'end' => date('Y-m-d H.i:s', strtotime('+1 hour', strtotime($cliente->fecha_hora))),
             ]);
+        }
+
+        if (!empty($_GET['s'])) {
+            $searchTerm = $request->input('s');
+        $clientes = Cliente::where(function ($query) use ($searchTerm) {
+            $query->where('id', 'LIKE', "%$searchTerm%")
+                ->orWhere('especialidad', 'LIKE', "%$searchTerm%")
+                ->orWhere('tipo_documento', 'LIKE', "%$searchTerm%")
+                ->orWhere('numero_documento', 'LIKE', "%$searchTerm%")
+                ->orWhere('nombres', 'LIKE', "%$searchTerm%")
+                ->orWhere('apellidos', 'LIKE', "%$searchTerm%")
+                ->orWhere('telefono', 'LIKE', "%$searchTerm%")
+                ->orWhere('fecha_hora', 'LIKE', "%$searchTerm%");
+        })->get();
         }
         //return dd($eventos);
         return view('seleccionar.index', compact('clientes', 'eventos'));

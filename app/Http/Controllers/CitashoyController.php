@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Cliente;
 
 
-class ReporteController extends Controller
+class CitashoyController extends Controller
 {
     public function index()
     {
@@ -28,6 +28,6 @@ class ReporteController extends Controller
         $porPagina = 50;
         $clientes = $clientes->paginate($porPagina);
     
-        return view('reportes-vista.index', compact('clientes'));
+        return view('Reservas-hoy.index', compact('clientes'));
     }
 }

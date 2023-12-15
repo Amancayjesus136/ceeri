@@ -4,14 +4,8 @@ use App\Http\Controllers\EventosController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\ListadoUsuarioController;
 
-use App\Http\Controllers\ListadoPsicologiaController;
-use App\Http\Controllers\ListadoTerapiaFisicaController;
-use App\Http\Controllers\ListadoTerapiaInfantilController;
-use App\Http\Controllers\ListadoTerapiaLenguajeController;
-use App\Http\Controllers\ListadoTerapiaOcupacionalController;
-use App\Http\Controllers\CitasCanceladasController;
-use App\Http\Controllers\CitasCumplidasController;
-use App\Http\Controllers\CitasReservadasController;
+use App\Http\Controllers\ClientesController;
+use App\Http\Controllers\CitashoyController;
 
 use App\Http\Controllers\SeleccionarController;
 use App\Http\Controllers\footerPagesController;
@@ -93,26 +87,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
 
     //rutas para listado de los formularios
-    Route::resource('lstpsicologia', ListadoPsicologiaController::class);
-    Route::get('/formulario', [ListadoPsicologiaController::class, 'formulario'])->name('lstpsicologia.formulario');
+    Route::resource('Clientes', ClientesController::class);
+    
     Route::post('/actualizar-estado', 'PsicologiaController@actualizarEstado')->name('actualizar.estado');
-
-    Route::resource('lsttfisica', ListadoTerapiaFisicaController::class);
-    Route::get('/formulariofisica', [ListadoTerapiaFisicaController::class, 'formulario'])->name('lsttfisica.formulario');
-
-    Route::resource('lsttinfantil', ListadoTerapiaInfantilController::class);
-    Route::get('/formularioinfantil', [ListadoTerapiaInfantilController::class, 'formulario'])->name('lsttinfantil.formulario');
-
-    Route::resource('lsttlenguaje', ListadoTerapiaLenguajeController::class);
-    Route::get('/formulariolenguaje', [ListadoTerapiaLenguajeController::class, 'formulario'])->name('lsttlenguaje.formulario');
-
-    Route::resource('lsttocupacional', ListadoTerapiaOcupacionalController::class);
-    Route::get('/formularioocupacional', [ListadoTerapiaOcupacionalController::class, 'formulario'])->name('lsttocupacional.formulario');
-
-
-    Route::resource('ccanceladas', CitasCanceladasController::class);
-    Route::resource('ccumplidas', CitasCumplidasController::class);
-    Route::resource('creservadas', CitasReservadasController::class);
 
 
 
@@ -123,6 +100,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/editar', [PerfilesController::class, 'editar'])->name('editar.edit');
 
     Route::resource('reportes', ReporteController::class);
+    Route::resource('Citas-hoy', CitashoyController::class);
 
 
 

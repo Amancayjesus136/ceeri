@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Cliente;
 
 
-class ListadoPsicologiaController extends Controller
+class ClientesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,22 +16,29 @@ class ListadoPsicologiaController extends Controller
         $clientes = Cliente::query();
     
         if (!empty($_GET['s'])) {
-            $clientes = $clientes->where('id', 'LIKE', '%'.$_GET['s'].'%')
-                ->orWhere('especialidad', 'LIKE', '%'.$_GET['s'].'%')
-                ->orWhere('tipo_documento', 'LIKE', '%'.$_GET['s'].'%')
-                ->orWhere('numero_documento', 'LIKE', '%'.$_GET['s'].'%')
-                ->orWhere('nombres', 'LIKE', '%'.$_GET['s'].'%')
-                ->orWhere('apellidos', 'LIKE', '%'.$_GET['s'].'%')
-                ->orWhere('telefono', 'LIKE', '%'.$_GET['s'].'%')
-                ->orWhere('especialidad', 'LIKE', '%'.$_GET['s'].'%')
-                ->orWhere('fecha_hora', 'LIKE', '%'.$_GET['s'].'%');
+            $searchTerm = $_GET['s'];
+            $clientes->where(function($query) use ($searchTerm) {
+                $query->where('id', 'LIKE', "%$searchTerm%")
+                    ->orWhere('especialidad', 'LIKE', "%$searchTerm%")
+                    ->orWhere('tipo_documento', 'LIKE', "%$searchTerm%")
+                    ->orWhere('numero_documento', 'LIKE', "%$searchTerm%")
+                    ->orWhere('nombres', 'LIKE', "%$searchTerm%")
+                    ->orWhere('apellidos', 'LIKE', "%$searchTerm%")
+                    ->orWhere('telefono', 'LIKE', "%$searchTerm%")
+                    ->orWhere('fecha_hora', 'LIKE', "%$searchTerm%");
+            });
+        }
+    
+        if (!empty($_GET['specialty'])) {
+            $clientes->where('especialidad', $_GET['specialty']);
         }
     
         $porPagina = 50;
         $clientes = $clientes->paginate($porPagina);
     
-        return view('lstpsicologia.index', compact('clientes'));
+        return view('Clientes.index', compact('clientes'));
     }
+    
     
     /**
      * Show the form for creating a new resource.
@@ -39,12 +46,12 @@ class ListadoPsicologiaController extends Controller
     public function create()
     {
 
-        return view ('lstpsicologia.create');
+        return view ('Clientes.create');
 
     }
     public function formulario()
     {
-        return view ('lstpsicologia.formulario');
+        return view ('Clientes.formulario');
 
     }
 
@@ -73,7 +80,7 @@ class ListadoPsicologiaController extends Controller
         $cliente->estado = $request->estado;
 
         $cliente->save();
-    return redirect()->route('lstpsicologia.index');
+    return redirect()->route('Clientes.index');
     }
 
 
@@ -91,7 +98,7 @@ class ListadoPsicologiaController extends Controller
     public function edit(string $id)
     {
         $cliente = Cliente::findOrFail($id);
-        return view ('lstpsicologia.edit', compact('psicologia'));
+        return view ('Clientes.edit', compact('psicologia'));
     }
 
     /**
@@ -121,6 +128,6 @@ class ListadoPsicologiaController extends Controller
     {
         $cliente = Cliente::findOrFail($id);
         $cliente-> delete();
-        return redirect()->route('lstpsicologia.index');
+        return redirect()->route('Clientes.index');
     }
 }

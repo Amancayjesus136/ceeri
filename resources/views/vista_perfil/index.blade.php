@@ -86,7 +86,7 @@
                                         <h5 class="card-title mb-4">Redes Sociales</h5>
                                         <div class="d-flex flex-wrap gap-2">
                                             <div>
-                                                <a href="{{ $user->facebook }}" class="avatar-xs d-block">
+                                                <a href="{{ $user->facebook }}" target="blank" class="avatar-xs d-block">
                                                     <span class="avatar-title rounded-circle fs-16 bg-primary text-light">
                                                         <i class="ri-facebook-fill"></i>
                                                     </span>

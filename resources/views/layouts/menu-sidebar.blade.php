@@ -169,7 +169,7 @@
             <!-- Clientes -->     
             <!-- ============================================================== --> 
             <li class="nav-item">
-                <a class="nav-link menu-link" href="{{ route('lstpsicologia.index') }}">
+                <a class="nav-link menu-link" href="{{ route('Clientes.index') }}">
                 <i class="fa-solid fa-person"></i> <span data-key="t-Usuarios">Clientes</span>
                 </a>
             </li>
@@ -180,7 +180,17 @@
 
             <li class="nav-item">
                 <a class="nav-link menu-link" href="{{ route('reportes.index') }}">
-                <i class="fa-solid fa-person"></i> <span data-key="t-Usuarios">Reportes</span>
+                    <i class="fa-solid fa-book"></i> <span data-key="t-Usuarios">Reportes</span>
+                </a>
+            </li>
+
+            <!-- ============================================================== -->
+            <!-- Reporte -->     
+            <!-- ============================================================== --> 
+
+            <li class="nav-item">
+                <a class="nav-link menu-link" href="{{ route('Citas-hoy.index') }}">
+                    <i class="fa-regular fa-clock"></i> <span data-key="t-Usuarios">Reservas para hoy</span>
                 </a>
             </li>
                <!-- ============================================================== -->

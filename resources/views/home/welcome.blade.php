@@ -123,8 +123,6 @@
                                     <a class="dropdown-item" href="#process">Como reservar tu cita</a>
                                     <a class="dropdown-item" href="#blog">Lo que ofrecemos</a>
                                     <a class="dropdown-item" href="#candidates">Especialistas</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">Ayuda</a>
                                 </div>
                             </li>
                             <li class="nav-item">
@@ -134,10 +132,6 @@
                                 <a class="nav-link" href="#contactanos">Contactanos</a>
                             </li>
                         </ul>
-                    
-                        <div class="">
-                            <a href="{{ route('login') }}" class="btn btn-soft-primary"><i class="ri-user-3-line align-bottom me-1"></i> Iniciar Sesión</a>
-                        </div>
                     </div>
                     
 
@@ -341,7 +335,7 @@
                     <div class="row justify-content-between align-items-center">
                         <div class="col-lg-6">
                             <div>
-                            <h1 class="display-6 fw-semibold text-capitalize mb-3 lh-base texto-azul">Consulta tu cita en menos de lo que esperas.</h1>
+                            <h1 class="display-6 fw-semibold text mb-3 lh-base texto-azul">Consulta tu cita en menos de lo que esperas.</h1>
                                 <p  style="color: white;">Brindamos a nuestros usuarios la facilidad de consultar sus citas por si se les olvidaron.</p>
                                 
                             <!-- CODIGO PARA QUE FUNCIONE LA CONSULTA DE RESERVA  -->
@@ -526,7 +520,7 @@
                                 </div>
 
                                 
-                                <img src="assets/images/123.png" alt="" class="user-img" style="width: 420px; height:420px; margin-left: 60px;">
+                                <img src="assets/images/123.png" alt="" class="user-img" style="width: 420px; height:520px; margin-left: 60px; padding-bottom: 40px;">
 
                                 <div class="circle-effect">
                                     <div class="circle"></div>
@@ -548,7 +542,7 @@
                     <div class="row justify-content-center">
                         <div class="col-lg-8">
                             <div class="text-center mb-5">
-                                <h1 class="mb-3 ff-secondary fw-semibold lh-base">HAZ TU RESERVA!</h1>
+                                <h1 class="mb-3 ff-secondary fw-semibold lh-base" id="#reserva">HAZ TU RESERVA!</h1>
                                 <p class="text-muted">para reservar tu cita tienes que:</p>
                             </div>
                         </div>
@@ -562,9 +556,9 @@
                                     <h1 class="fw-bold display-5 ff-secondary mb-4 text-success position-relative">
                                         <div class="job-icon-effect"></div>
                                         <span>1 </span>
-                                        <a href="https://www.facebook.com/centrodeterapiafisicaceeri" class="profile-title rounded-circle fs-16 bg-primary text-light d-inline-block p-2"><i class="ri-facebook-fill" style="font-size:30px;"></i></a>
-                                        <a href="https://wa.me/910558971" class="profile-title rounded-circle fs-16 bg-success text-light d-inline-block p-2"><i class="ri-whatsapp-fill" style="font-size:30px;"></i></a>
-                                        <a href="https://www.instagram.com/ceeri.terapiafisica/" class="profile-title rounded-circle fs-16 bg-danger text-light d-inline-block p-2"><i class="ri-instagram-fill" style="font-size:30px;"></i></a>
+                                        <a href="https://www.facebook.com/centrodeterapiafisicaceeri" target="blank" class="profile-title rounded-circle fs-16 bg-primary text-light d-inline-block p-2"><i class="ri-facebook-fill" style="font-size:30px;"></i></a>
+                                        <a href="https://wa.me/910558971" target="blank" class="profile-title rounded-circle fs-16 bg-success text-light d-inline-block p-2"><i class="ri-whatsapp-fill" style="font-size:30px;"></i></a>
+                                        <a href="https://www.instagram.com/ceeri.terapiafisica/" target="blank" class="profile-title rounded-circle fs-16 bg-danger text-light d-inline-block p-2"><i class="ri-instagram-fill" style="font-size:30px;"></i></a>
 
                                     </h1>
                                     <h6 class="fs-17 mb-3"><b>Contáctanos</b></h6>
@@ -662,7 +656,7 @@
                                             </div>
                                         </div>
                                         <div class="flex-grow-1">
-                                            <p class="mb-0">nos encuentra en: <a href="https://www.google.com/maps/search/Mz+A+Lt3+Barrio2+Sector2+4Etapa.+Villa+El+Salvador,+Lima,+Peru/@-12.2265712,-76.9337685,15z/data=!3m1!4b1?entry=ttu">Mz A Lt3 Barrio2 Sector2 4Etapa. Villa El Salvador, Lima, Peru.</a></p>                                     
+                                            <p class="mb-0">nos encuentra en: <a href="https://www.google.com/maps/place/Cajas+Automaticas+Ivan/@-12.2424531,-76.9181751,20z/data=!4m17!1m10!4m9!1m4!2m2!1d-76.9297349!2d-12.203868!4e1!1m3!2m2!1d-76.9180345!2d-12.2426484!3m5!1s0x9105bbd44456b05f:0x3059215acc7dff93!8m2!3d-12.2422771!4d-76.918223!16s%2Fg%2F11h8qvy0g6?entry=ttu" target="blank">Mz A Lt3 Barrio2 Sector2 4Etapa. Villa El Salvador, Lima, Peru.</a></p>                                     
                                         </div>
                                     </div>
 
@@ -936,7 +930,7 @@
                                 <a href="https://wa.me/910558971"><i class="ri-whatsapp-line" style="font-size: 54px; color: green;"></i></a>
                             </div>
                             <div class="circle-text">
-                                <a href="https://wa.me/910558971">WhatsApp</a>
+                                <a href="https://wa.me/910558971" target="blank">WhatsApp</a>
                             </div>
                         </div>
                     </div>
@@ -1001,7 +995,6 @@
                                     <h5 class="text-white mb-0">Citas</h5>
                                     <div class="text-muted mt-3">
                                         <ul class="list-unstyled ff-secondary footer-list">
-                                            <li><a href="#">Reservar tu cita</a></li>
                                             <li><a href="#process">Como realizar tu reserva</a></li>
                                         </ul>
                                     </div>
@@ -1010,11 +1003,11 @@
                                     <h5 class="text-white mb-0">Contactanos</h5>
                                     <div class="text-muted mt-3">
                                         <ul class="list-unstyled ff-secondary footer-list">
-                                            <li><a href="https://wa.me/910558971">WhatsApp</a></li>
+                                            <li><a href="https://wa.me/910558971" target="blank">WhatsApp</a></li>
                                             <li><a href="">Correo Electrónico: ceerirehabilitacion14@gmail.com</a></li>
-                                            <li><a href="https://www.facebook.com/centrodeterapiafisicaceeri">Facebook</a></li>
-                                            <li><a href="https://www.instagram.com/ceeri.terapiafisica/">Instagram</a></li>
-                                            <li><a href="https://wa.me/910558971">Telefono personal</a></li>
+                                            <li><a href="https://www.facebook.com/centrodeterapiafisicaceeri" target="blank">Facebook</a></li>
+                                            <li><a href="https://www.instagram.com/ceeri.terapiafisica/" target="blank">Instagram</a></li>
+                                            <li><a href="https://wa.me/910558971" target="blank">Telefono personal</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -1035,10 +1028,10 @@
                             <div class="text-sm-end mt-3 mt-sm-0">
                                 <ul class="list-inline mb-0 footer-list gap-4 fs-13">
                                     <li class="list-inline-item">
-                                        <a href="{{ route('politicas') }}">Politica y privacidad</a>
+                                        <a href="{{ route('politicas') }}" target="blank">Politica y privacidad</a>
                                     </li>
                                     <li class="list-inline-item">
-                                        <a href="{{ route('condiciones') }}">Terminos y condiciones</a>
+                                        <a href="{{ route('condiciones') }}" target="blank">Terminos y condiciones</a>
                                     </li>
                                 </ul>
                             </div>
