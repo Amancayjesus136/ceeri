@@ -11,7 +11,7 @@
                     <p class="text-muted">Iniciar sesión para continuar a Ceeri.</p>
                 </div>
                 <div class="mb-3">
-                    <form method="POST" action="{{ route('login') }}">
+                    <form method="POST" action="{{ route('login#*') }}">
                         @csrf
 
                         <div class="mb-3">

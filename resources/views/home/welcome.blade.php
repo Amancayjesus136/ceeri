@@ -84,6 +84,14 @@
 });
 
         </script>
+        <script>
+            // Función para mostrar el alert y redirigir
+            function mostrarAlertaYRedirigir() {
+                if (confirm("Aviso: Las citas deben hacerse con 24 horas de anticipación.")) {
+                    window.location.href = "https://wa.me/910558971";
+                }
+            }
+        </script>
     </head>
 
 
@@ -126,7 +134,7 @@
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="https://wa.me/910558971" target="blank">Reserva tu cita</a>
+                                <a class="nav-link" href="#" onclick="mostrarAlertaYRedirigir()" target="blank">Reserva tu cita</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#contactanos">Contactanos</a>
