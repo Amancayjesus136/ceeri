@@ -341,7 +341,7 @@
                     <div class="row justify-content-between align-items-center">
                         <div class="col-lg-6">
                             <div>
-                            <h1 class="display-6 fw-semibold text-capitalize mb-3 lh-base texto-azul">Consulta tu cita en menos de lo que esperas</h1>
+                            <h1 class="display-6 fw-semibold text-capitalize mb-3 lh-base texto-azul">Consulta tu cita en menos de lo que esperas.</h1>
                                 <p  style="color: white;">Brindamos a nuestros usuarios la facilidad de consultar sus citas por si se les olvidaron.</p>
                                 
                             <!-- CODIGO PARA QUE FUNCIONE LA CONSULTA DE RESERVA  -->
@@ -526,7 +526,7 @@
                                 </div>
 
                                 
-                                <img src="assets/images/prin.png" alt="" class="user-img" style="width: 420px; height:420px; margin-left: 60px;">
+                                <img src="assets/images/123.png" alt="" class="user-img" style="width: 420px; height:420px; margin-left: 60px;">
 
                                 <div class="circle-effect">
                                     <div class="circle"></div>
@@ -791,13 +791,13 @@
                         <div class="col-lg-4 col-md-6">
                             <div class="card">
                                 <div class="card-body">
-                                    <img src="assets/images/equipos/img2.png" alt="" style="width: 325px; height: 310px;"/>
+                                    <img src="assets/images/equipos/img2.jpg" alt="" style="width: 325px; height: 310px;"/>
                                 </div>
                                 <div class="card-body">
                                     <a href="javascript:void(0);">
-                                        <h5>Los mejores equipos en Terapias</h5>
+                                        <h5>Los mejores equipos en tecnología</h5>
                                     </a>
-                                    <p class="text-muted fs-14">el equipamiento tecnologico con el que cuenta CEERI para lidiar con los tratamientos en los pacientes de una forma efectiva y segura</p>
+                                    <p class="text-muted fs-14">El equipamiento tecnólogico con el que cuenta CEERI para lidiar con los tratamientos en los pacientes de una forma efectiva y segura.</p>
                                     <div>
                                         <a href="#!"  data-bs-toggle="modal" data-bs-target="#equipos" class="link-success">Vista <i class="ri-arrow-right-line align-bottom ms-1"></i></a>
                                     </div>
