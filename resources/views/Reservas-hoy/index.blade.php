@@ -34,8 +34,8 @@
 <!-- cabecera -->
 <div class="row">
     <div class="col-12">
-        <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-            <h4 class="mb-sm-0">Las citas de hoy!</h4>
+        <div class="page-title-box d-sm-flex align-items-center justify-content-end">
+            <h4 class="mb-sm-0" style="margin-right: 590px;">Las citas de hoy!</h4>
             <form method="GET" class="listado-busqueda">
                 <div class="form-group d-flex">
                     <select name="specialty" class="form-control input-sm">
@@ -49,6 +49,17 @@
                     <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
                 </div>
             </form>
+                      
+            <div class="card-header align-items-center d-flex border-bottom-dashed" style="margin-left: 20px;">
+                <div class="flex-shrink-0">
+                    <form method="GET" class="listado-busqueda">
+                        <input type="text" placeholder="busca por otro dato" name="s" class="form-control input-sm"
+                                    value="<?php if (!empty($_GET['s'])) echo $_GET['s']; ?>" />
+                        <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+            </div>
+            
         </div>
     </div>
 </div>
@@ -80,6 +91,7 @@
                                     <th scope="col">Telefono</th>
                                     <th scope="col">Fecha y hora</th>
                                     <th scope="col">Estado</th>
+                                    <th scope="col" class="acciones" style="width: 150px;">Acciones</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -108,6 +120,20 @@
                                             <td>{{ $cliente->telefono }}</td>
                                             <td>{{ $fechaHoraCita }}</td>
                                             <td><span class="badge bg-success">{{ $cliente->estado }}</span></td>
+                                        
+                                            <td class="acciones">
+                                                <a href="#" class="btn btn-primary btn-sm"
+                                                    data-bs-toggle="modal"
+                                                    data-bs-target="#editarModal{{ $cliente->id }}">
+                                                    <i class="fas fa-pencil-alt"></i>
+                                                </a>
+
+                                                <a href="#" class="btn btn-sm btn-danger"
+                                                    data-bs-toggle="modal"
+                                                    data-bs-target="#eliminarModal{{ $cliente->id }}">
+                                                    <i class="fas fa-trash-alt"></i>
+                                                </a>
+                                            </td>
                                         </tr>
                                         @php 
                                             $contador++; 
@@ -120,7 +146,6 @@
                 </div>
             </div>
             
-        </div>
         <div style="margin-top: 10px; margin-bottom: 20px," class="d-flex justify-content-between ">
                 <p style="margin-left: 50px" class="text-start">Mostrando {{ $clientes->firstItem() }} a {{ $clientes->lastItem() }} de {{ $clientes->total() }} resultados</p>
 
@@ -145,9 +170,94 @@
                         @endif
                     </ul>
                 </div>
-</div>
+        </div>
 <!-- listado -->
+ <!-- Modal para Editar -->
+@foreach($clientes as $cliente)
+<div class="modal fade" id="editarModal{{ $cliente->id }}" tabindex="-1" aria-labelledby="editarModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editarModalLabel">Editar Registro</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form method="POST" action="{{ route('Clientes.update', $cliente->id) }}">
+                    @csrf
+                    @method('PUT')
+                        <div class="mb-3">
+                            <label for="estado" class="form-label">Actualizar estado</label>
+                            <select id="estado" class="form-select" name="estado" required>
+                                <option value="" disabled {{ $cliente->estado == '' ? 'selected' : '' }}>Seleccionar</option>
+                                <option value="pendiente" {{ $cliente->estado == 'pendiente' ? 'selected' : '' }}>Pendiente</option>
+                                <option value="cumplido" {{ $cliente->estado == 'cumplido' ? 'selected' : '' }}>Cumplido</option>
+                                <option value="cancelado" {{ $cliente->estado == 'cancelado' ? 'selected' : '' }}>Cancelado</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="especialidad" class="form-label">Especialidad</label>
+                            <select class="form-select" id="especialidad" name="especialidad" required>
+                                <option value="" disabled {{ $cliente->especialidad == '' ? 'selected' : '' }}>Seleccionar especialidad...</option>
+                                <option value="Psicologia" {{ $cliente->especialidad == 'Psicologia' ? 'selected' : '' }}>Psicologia</option>
+                                <option value="Terapia fisica" {{ $cliente->especialidad == 'Terapia fisica' ? 'selected' : '' }}>Terapia fisica</option>
+                            </select>
+                        </div>       
+                        <div class="mb-3">
+                            <label for="tipo_documento" class="form-label">Tipo de Documento</label>
+                            <select class="form-select" id="tipo_documento" name="tipo_documento" required>
+                                <option value="" disabled {{ $cliente->tipo_documento == '' ? 'selected' : '' }}>Seleccionar tipo de documento...</option>
+                                <option value="DNI" {{ $cliente->tipo_documento == 'DNI' ? 'selected' : '' }}>DNI</option>
+                                <option value="Pasaporte" {{ $cliente->tipo_documento == 'Pasaporte' ? 'selected' : '' }}>Pasaporte</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="numero_documento" class="form-label">Número de Documento</label>
+                            <input type="text" class="form-control" id="numero_documento" name="numero_documento" value="{{ $cliente->numero_documento }}" oninput="limitarCaracteres(this, 45)">
+                        </div>
+                        <div class="mb-3">
+                            <label for="nombres" class="form-label">Nombres</label>
+                            <input type="text" class="form-control" id="nombres" name="nombres" value="{{ $cliente->nombres }}" oninput="limitarCaracteres(this, 45)">
+                        </div>
+                        <div class="mb-3">
+                            <label for="apellidos" class="form-label">Apellidos</label>
+                            <input type="text" class="form-control" id="apellidos" name="apellidos" value="{{ $cliente->apellidos }}" oninput="limitarCaracteres(this, 45)">
+                        </div>
+                        <div class="mb-3">
+                            <label for="telefono" class="form-label">Teléfono</label>
+                            <input type="text" class="form-control" id="telefono" name="telefono" value="{{ $cliente->telefono }}" oninput="limitarCaracteres(this, 15)">
+                        </div>
+                                                
+                    <button type="submit" class="btn btn-primary">Actualizar</button>
+                </form>                
+            </div>
+        </div>
     </div>
-    
 </div>
+<!-- MODAL DE ELIMINAR -->
+    <!-- Button trigger modal -->
+
+
+<div class="modal fade" id="eliminarModal{{ $cliente->id }}" tabindex="-1" aria-labelledby="eliminarModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editarModalLabel">Eliminar Registro</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form method="POST" action="{{ route('Clientes.destroy', $cliente->id) }}">
+                    @csrf
+                    @method('DELETE')
+                    <label for="aviso" class="form-label">Esta seguro de eliminar este registro de forma permanente?</label>
+                    <button type="button" class="btn btn-primary btn-sm" data-bs-dismiss="modal">Cancelar</button>    
+                    <button type="submit" class="btn btn-sm btn-danger">eliminar</button>
+                </form>                
+            </div>
+        </div>
+    </div>
+</div>   
+<!-- MODAL DE ELIMINAR -->
+@endforeach    
+    
+
 @endsection

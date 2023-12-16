@@ -34,8 +34,8 @@
 <!-- cabecera -->
 <div class="row">
     <div class="col-12">
-        <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-            <h4 class="mb-sm-0">Reportes de citas por especialidad</h4>
+        <div class="page-title-box d-sm-flex align-items-center justify-content-end">
+            <h4 class="mb-sm-0" style="margin-right: 440px;">Reportes de citas por especialidad</h4>
             <form method="GET" class="listado-busqueda">
                 <div class="form-group d-flex">
                     <select name="specialty" class="form-control input-sm">
@@ -49,6 +49,15 @@
                     <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
                 </div>
             </form>
+            <div class="card-header align-items-center d-flex border-bottom-dashed" style="margin-left: 20px;">
+                <div class="flex-shrink-0">
+                    <form method="GET" class="listado-busqueda">
+                        <input type="text" placeholder="busca por otro dato" name="s" class="form-control input-sm"
+                                    value="<?php if (!empty($_GET['s'])) echo $_GET['s']; ?>" />
+                        <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 </div>

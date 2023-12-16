@@ -33,39 +33,31 @@
 
 <!-- cabecera -->
 <div class="row">
-    <div class="col-12">
-        <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-            <h4 class="mb-sm-0">Listado</h4>
-            @if(session('success'))
-                <div id="successAlert" class="alert alert-success alert-dismissible bg-success text-white alert-label-icon fade show" role="alert">
-                    <i class="ri-notification-off-line label-icon"></i><strong>Éxito</strong> - Reserva registrada correctamente
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
+<div class="col-12">
+        <div class="page-title-box d-sm-flex align-items-center justify-content-end">
+            <h4 class="mb-sm-0" style="margin-right: 500px;">Listado de citas generales</h4>
+            <form method="GET" class="listado-busqueda">
+                <div class="form-group d-flex">
+                    <select name="specialty" class="form-control input-sm">
+                        <option value="" <?php if (empty($_GET['specialty'])) echo 'selected'; ?>>especialidades</option>
+                        <option value="Psicologia" <?php if (!empty($_GET['specialty']) && $_GET['specialty'] == 'Psicologia') echo 'selected'; ?>>Psicología</option>
+                        <option value="Terapia fisica" <?php if (!empty($_GET['specialty']) && $_GET['specialty'] == 'Terapia fisica') echo 'selected'; ?>>Terapia Física</option>
+                        <option value="Terapia ocupacional" <?php if (!empty($_GET['specialty']) && $_GET['specialty'] == 'Terapia ocupacional') echo 'selected'; ?>>Terapia Ocupacional</option>
+                        <option value="Terapia infantil" <?php if (!empty($_GET['specialty']) && $_GET['specialty'] == 'Terapia infantil') echo 'selected'; ?>>Terapia Infantil</option>
+                        <option value="Terapia lenguaje" <?php if (!empty($_GET['specialty']) && $_GET['specialty'] == 'Terapia lenguaje') echo 'selected'; ?>>Terapia de Lenguaje</option>
+                    </select>
+                    <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
                 </div>
-            @endif
-            @if(session('successEdit'))
-                <div id="successAlertEdit" class="alert alert-success alert-dismissible bg-success text-white alert-label-icon fade show" role="alert">
-                    <i class="ri-notification-off-line label-icon"></i><strong>Éxito</strong> - Reserva editada correctamente
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
-            @endif
-            <div class="card-header align-items-center d-flex row">
-                <h4 class="card-title mb-0 flex-grow-2"></h4>
-                <form method="GET" class="listado-busqueda">
-                    <div class="form-group d-flex">
-                        <select name="specialty" class="form-control input-sm">
-                            <option value="" <?php if (empty($_GET['specialty'])) echo 'selected'; ?>>especialidades</option>
-                            <option value="Psicologia" <?php if (!empty($_GET['specialty']) && $_GET['specialty'] == 'Psicologia') echo 'selected'; ?>>Psicología</option>
-                            <option value="Terapia fisica" <?php if (!empty($_GET['specialty']) && $_GET['specialty'] == 'Terapia fisica') echo 'selected'; ?>>Terapia Física</option>
-                            <option value="Terapia ocupacional" <?php if (!empty($_GET['specialty']) && $_GET['specialty'] == 'Terapia ocupacional') echo 'selected'; ?>>Terapia Ocupacional</option>
-                            <option value="Terapia infantil" <?php if (!empty($_GET['specialty']) && $_GET['specialty'] == 'Terapia infantil') echo 'selected'; ?>>Terapia Infantil</option>
-                            <option value="Terapia lenguaje" <?php if (!empty($_GET['specialty']) && $_GET['specialty'] == 'Terapia lenguaje') echo 'selected'; ?>>Terapia de Lenguaje</option>
-                        </select>
+            </form>
+            <div class="card-header align-items-center d-flex border-bottom-dashed" style="margin-left: 20px;">
+                <div class="flex-shrink-0">
+                    <form method="GET" class="listado-busqueda">
+                        <input type="text" placeholder="busca por otro dato" name="s" class="form-control input-sm"
+                                    value="<?php if (!empty($_GET['s'])) echo $_GET['s']; ?>" />
                         <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i></button>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
-            
-
         </div>
     </div>
 </div>

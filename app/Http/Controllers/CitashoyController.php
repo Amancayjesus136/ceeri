@@ -20,9 +20,21 @@ class CitashoyController extends Controller
                     ->orWhere('especialidad', 'LIKE', "%$searchTerm%");
             });
         }
-    
+
         if (!empty($_GET['specialty'])) {
             $clientes->where('especialidad', $_GET['specialty']);
+        }
+    
+        if (!empty($_GET['s'])) {
+            $clientes = $clientes->where('id', 'LIKE', '%'.$_GET['s'].'%')
+                ->orWhere('especialidad', 'LIKE', '%'.$_GET['s'].'%')
+                ->orWhere('tipo_documento', 'LIKE', '%'.$_GET['s'].'%')
+                ->orWhere('numero_documento', 'LIKE', '%'.$_GET['s'].'%')
+                ->orWhere('nombres', 'LIKE', '%'.$_GET['s'].'%')
+                ->orWhere('apellidos', 'LIKE', '%'.$_GET['s'].'%')
+                ->orWhere('telefono', 'LIKE', '%'.$_GET['s'].'%')
+                ->orWhere('especialidad', 'LIKE', '%'.$_GET['s'].'%')
+                ->orWhere('fecha_hora', 'LIKE', '%'.$_GET['s'].'%');
         }
     
         $porPagina = 50;

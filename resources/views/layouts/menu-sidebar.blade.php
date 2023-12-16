@@ -152,7 +152,7 @@
             <!-- INICIO -->     
             <!-- ============================================================== --> 
             <li class="nav-item">
-                <a class="nav-link menu-link" href="{{ route('login') }}">
+                <a class="nav-link menu-link" href="{{ route('login#*') }}">
                     <i class="fas fa-home"></i> <span data-key="t-Usuarios">Inicio</span>
                 </a>
             </li>

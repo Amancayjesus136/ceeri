@@ -59,7 +59,7 @@
                                 <i class="ri-instagram-fill"></i>
                             </span>
                         </div>
-                        <input type="any" class="form-control" name="instagram" id="pinterestName" placeholder="Nombre de usario" value="{{ $user->instagram }}">
+                        <input type="any" class="form-control" name="instagram" id="pinterestName" placeholder="Nombre de usuario" value="{{ $user->instagram }}">
                     </div>
                     <div class="mb-3 d-flex">
                         <div class="avatar-xs d-block flex-shrink-0 me-3">
@@ -90,11 +90,7 @@
                                 <i class="fas fa-home"></i> Detalles personales
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-bs-toggle="tab" href="#changePassword" role="tab">
-                                <i class="far fa-user"></i> Cambiar la contraseña
-                            </a>
-                        </li>
+                        
                     </ul>
                 </div>
                 <div class="card-body p-4">
